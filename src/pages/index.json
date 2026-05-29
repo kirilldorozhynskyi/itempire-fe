@@ -1,0 +1,31 @@
+{
+	"template": "views/templates/homepage.twig",
+	"body_class": "home-page",
+	"flexible": [
+		{
+			"name": "hero",
+			"title": "Vite front-end twig boilerplate",
+			"text": "This repository contains a frontend boilerplate made with Vite, Tailwind, Twig.\n\nIt ships SVG sprite generation, image optimization, native lazy loading and a small Vue 3 layer for interactive components.",
+			"image": {
+				"pictureClass": "picture",
+				"image": {
+					"class": "h-auto max-w-full",
+					"src": "bootstrap-icons",
+					"src_2x": "bootstrap-icons@2x",
+					"ext": "png",
+					"webp": true,
+					"alt": "Hero logo",
+					"width": 642,
+					"height": 390
+				}
+			},
+			"button": {
+				"class": "bg-neutral-900 text-white",
+				"btn": {
+					"title": "Home",
+					"url": "/"
+				}
+			}
+		}
+	]
+}

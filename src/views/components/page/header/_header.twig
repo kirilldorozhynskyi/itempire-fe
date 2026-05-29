@@ -1,0 +1,50 @@
+{#
+ # File: /src/views/components/page/header/_header.twig
+ # Project: starter_frontend_twig
+ # Version: 3.2.0
+ # Created Date: Tuesday, March 31st 2026, 17:21:00
+ # Author: Kirill Dorozhynskyi - kyrylo.dorozhynskyi@justdev.org
+ # -----
+ # Last Modified: Friday, May 29th 2026 12:00:12
+ # Modified By: Kirill Dorozhynskyi
+ # -----
+ # Copyright (c) 2026 justDev
+ #}
+
+<page-header class="transit fixed top-0 right-0 left-0 z-[999] py-5 lg:py-6">
+	<template #default="{ toggleMenu, menuOpened }">
+		<div class="container max-xl:max-w-full">
+			<div class="offset flex items-center justify-between gap-10 xl:gap-20">
+				<a class="" href="/" aria-label="{{ site_title }}">
+					{% if logoRaw %}
+						{{ source(rootDir ~ '/public/assets/images/brand/logo.svg')|raw }}
+					{% else %}
+						{{ svg(logo) }}
+					{% endif %}
+				</a>
+
+				<div
+					id="primary-navigation"
+					class="max-lg:bg-white fixed top-0 right-0 z-1 h-dvh pt-24 transition-transform duration-200 ease-in-out max-lg:px-6 lg:relative lg:h-auto lg:translate-x-0 lg:bg-transparent lg:pt-0 lg:transition-none"
+					:class="menuOpened ? 'w-full max-w-100 translate-x-0' : 'translate-x-full'"
+				>
+					{% include 'main_navigation.twig' %}
+				</div>
+
+				<div class="relative z-3 lg:hidden">
+					<button
+						type="button"
+						class="flex h-10 w-10 cursor-pointer flex-col items-center justify-center gap-1 hover:bg-transparent"
+						:aria-controls="'primary-navigation'"
+						:aria-expanded="menuOpened ? 'true' : 'false'"
+						:aria-label="menuOpened ? 'Close menu' : 'Open menu'"
+						@click="toggleMenu()"
+					>
+						<span class="h-0.5 w-6 origin-center transition bg-black" :class="menuOpened ? 'translate-y-[2.5px] rotate-45' : ''"></span>
+						<span class="h-0.5 w-6 origin-center transition bg-black" :class="menuOpened ? '-translate-y-[2.5px] -rotate-45' : ''"></span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</template>
+</page-header>

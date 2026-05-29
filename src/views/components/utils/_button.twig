@@ -1,0 +1,36 @@
+{#
+ # File: /src/views/components/utils/_button.twig
+ # Project: starter_frontend_twig
+ # Version: 3.2.0
+ # Created Date: Friday, May 29th 2026, 11:52:07
+ # Author: Kirill Dorozhynskyi - kyrylo.dorozhynskyi@justdev.org
+ # -----
+ # Last Modified: Friday, May 29th 2026 11:59:55
+ # Modified By: Kirill Dorozhynskyi
+ # -----
+ # Copyright (c) 2026 justDev
+ #}
+
+{% set baseClass = 'btn inline-flex items-center justify-center gap-2 rounded px-4 py-2 transit' %}
+{% set finalClass = baseClass ~ (button.class ? ' ' ~ button.class) ~ (button.icon ? ' btn-icon') %}
+
+{% if button.span %}
+	<button type="button" class="{{ finalClass }}">
+		{{ button.btn.title }}
+		{% if button.icon %}
+			{{ sprite(button.icon) }}
+		{% endif %}
+	</button>
+{% else %}
+	<a
+		href="{{ button.btn.url }}"
+		title="{{ button.btn.title }}"
+		{{ button.btn.target ? 'target="' ~ button.btn.target ~ '" rel="noopener noreferrer"' }}
+		class="{{ finalClass }}"
+	>
+		{{ button.btn.title }}
+		{% if button.icon %}
+			{{ sprite(button.icon) }}
+		{% endif %}
+	</a>
+{% endif %}

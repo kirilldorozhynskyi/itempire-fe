@@ -1,0 +1,17 @@
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	RewriteCond %{THE_REQUEST} \ /+([^\ \?]+)\.html
+	RewriteRule ^ /%1 [L,R]
+	RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+	RewriteRule ^(.+)$ /$1.html [L]
+</IfModule>
+
+
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+	RewriteRule ^(.+)$ /$1.html [L]
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteRule ^(.*)$ /404.html [L]
+</IfModule>

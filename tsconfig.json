@@ -1,0 +1,24 @@
+{
+	"compilerOptions": {
+		"target": "ES2020",
+		"importHelpers": true,
+		"moduleResolution": "bundler",
+		"experimentalDecorators": true,
+		"allowSyntheticDefaultImports": true,
+		"allowJs": true,
+		"checkJs": false,
+		"esModuleInterop": true,
+		"sourceMap": true,
+		"lib": ["ES2020", "DOM"],
+		"resolveJsonModule": true,
+		"module": "ESNext",
+		"noEmit": true,
+		"allowImportingTsExtensions": true,
+		"skipLibCheck": true,
+		"verbatimModuleSyntax": true,
+		"ignoreDeprecations": "6.0",
+		"types": ["vite/client"]
+	},
+	"include": ["src/scripts/**/*.ts", "src/scripts/**/*.d.ts"],
+	"exclude": ["node_modules", "dist"]
+}

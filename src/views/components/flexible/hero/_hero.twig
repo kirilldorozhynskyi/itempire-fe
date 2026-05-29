@@ -1,0 +1,50 @@
+{#
+ # File: /src/views/components/flexible/hero/_hero.twig
+ # Project: starter_frontend_twig
+ # Version: 3.2.0
+ # Created Date: Friday, May 29th 2026, 11:51:56
+ # Author: Kirill Dorozhynskyi - kyrylo.dorozhynskyi@justdev.org
+ # -----
+ # Last Modified: Friday, May 29th 2026 12:00:18
+ # Modified By: Kirill Dorozhynskyi
+ # -----
+ # Copyright (c) 2026 justDev
+ #}
+
+<section class="hero py-16">
+	<div class="container">
+		<div class="grid items-center gap-8 md:grid-cols-2">
+			<div>
+				{% if ce.title %}
+					<h1 class="mb-4 text-balance text-4xl font-bold lg:text-5xl">{{ ce.title }}</h1>
+				{% endif %}
+
+				{% if ce.text %}
+					<p class="text-pretty text-lg text-neutral-600">
+						{{ ce.text }}
+					</p>
+				{% endif %}
+
+				{% if ce.button %}
+					<div class="mt-6">
+						{% include paths.btn_ex with {
+							button: ce.button
+						} only %}
+					</div>
+				{% endif %}
+			</div>
+
+			{% if ce.image %}
+				<div v-photoswipe>
+					<a
+						data-pswp-width="{{ ce.image.image.width }}"
+						data-pswp-height="{{ ce.image.image.height }}"
+						href="/assets/images/{{ ce.image.image.src ~ '.' ~ ce.image.image.ext }}"
+					>
+						{{ image(ce.image) }}
+					</a>
+				</div>
+			{% endif %}
+		</div>
+	</div>
+</section>

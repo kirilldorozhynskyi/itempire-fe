@@ -1,0 +1,27 @@
+{#
+ # File: /src/pages/navigation.twig
+ # Project: starter_frontend_twig
+ # Version: 3.2.0
+ # Created Date: Friday, May 29th 2026, 11:53:10
+ # Author: Kirill Dorozhynskyi - kyrylo.dorozhynskyi@justdev.org
+ # -----
+ # Last Modified: Friday, May 29th 2026 12:00:37
+ # Modified By: Kirill Dorozhynskyi
+ # -----
+ # Copyright (c) 2026 justDev
+ #}
+
+{% extends 'views/layouts/main.twig' %}
+
+{% block page %}
+	<section class="py-16">
+		<div class="container">
+			<h1 class="mb-6 text-2xl font-bold">Pages</h1>
+			<nav class="flex flex-col gap-2">
+				{% for item in navigation %}
+					<a class="text-neutral-700 underline-offset-2 hover:underline" href="{{ item }}">{{ item }}</a>
+				{% endfor %}
+			</nav>
+		</div>
+	</section>
+{% endblock %}

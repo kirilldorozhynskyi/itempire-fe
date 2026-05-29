@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"psi-header.variables": [
+			["projectname", "itempire-fe"],
+			["projectversion", "1.0.0"],
+			["authoremail", "kyrylo.dorozhynskyi@justdev.org"]
+		],
+		"files.exclude": {}
+	}
+}

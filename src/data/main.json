@@ -1,0 +1,50 @@
+{
+	"lang": "en",
+	"title": "justDev Twig Starter",
+	"site_title": "justDev Twig Starter",
+	"description": "justDev Twig Starter",
+	"background_color": "#fff",
+	"theme_color": "#fff",
+	"template": "views/templates/page.twig",
+	"body_class": "page",
+	"scrollToTop": true,
+	"logoRaw": true,
+	"logo": {
+		"title": "justDev Twig Starter",
+		"width": "40",
+		"height": "32",
+		"src": "/brand/logo.svg"
+	},
+	"layouts": {
+		"default": "../layouts/main.twig"
+	},
+	"paths": {
+		"components": "../components",
+		"btn_ex": "../../utils/_button.twig",
+		"forms": "../../utils/forms/"
+	},
+	"social": [
+		{
+			"title": "Instagram",
+			"icon": "instagram",
+			"url": "#",
+			"header": true
+		},
+		{
+			"title": "Facebook",
+			"icon": "facebook",
+			"url": "#",
+			"header": true
+		},
+		{
+			"title": "YouTube",
+			"icon": "youtube",
+			"url": "#",
+			"header": false
+		}
+	],
+	"footer": {
+		"copyright": "justDev Twig Starter. Developed by <a href=https://justdev.org target=_blank>justDev</a>"
+	},
+	"header": {}
+}
