@@ -1,0 +1,36 @@
+/*
+ * File: /src/styles/base/_btn.css
+ * Project: itempire-fe
+ * Version: 1.0.0
+ * Created Date: Tuesday, June 2nd 2026, 12:15:55
+ * Author: Kirill Dorozhynskyi - kyrylo.dorozhynskyi@justdev.org
+ * -----
+ * Last Modified: Wednesday, June 3rd 2026 11:26:10
+ * Modified By: Kirill Dorozhynskyi
+ * -----
+ * Copyright (c) 2026 justDev
+ */
+
+@utility btn {
+	@apply transit inline-flex items-center justify-center gap-2 rounded-sm border px-4.5 py-2.75 text-center leading-none font-medium tracking-tight whitespace-nowrap not-disabled:cursor-pointer;
+
+	.sprite-icon {
+		@apply text-base;
+	}
+}
+
+@utility btn-purple {
+	@apply btn hover:bg-purple/80 bg-purple border-purple hover:border-purple/10 text-white;
+}
+
+@utility btn-coffee {
+	@apply btn hover:bg-coffee-100 bg-coffee-300 border-coffee-300 hover:border-coffee-100 text-purple;
+}
+
+@utility btn-outline-neutral {
+	@apply btn border-neutral-300 hover:bg-neutral-300;
+}
+
+@utility btn-social {
+	@apply transit hover:text-purple flex rounded border border-neutral-300/30 p-2 text-2xl leading-none text-white hover:bg-neutral-300;
+}

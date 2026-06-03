@@ -1,0 +1,13 @@
+.git
+.gitignore
+.DS_Store
+node_modules
+dist
+dist-ssr
+logs
+*.log
+*.local
+.vscode
+.idea
+*.code-workspace
+doc

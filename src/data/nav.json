@@ -2,21 +2,101 @@
 	"header_menu": [
 		{
 			"url": "/",
-			"title": "Home"
+			"title": "Hardware"
 		},
 		{
 			"url": "/gdpr",
-			"title": "Cookies"
+			"title": "Software"
+		},
+		{
+			"url": "/gdpr",
+			"title": "Služby"
+		},
+		{
+			"url": "/gdpr",
+			"title": "Newsroom"
+		},
+		{
+			"url": "/gdpr",
+			"title": "Financovanie"
+		},
+		{
+			"url": "/gdpr",
+			"title": "O nás"
 		}
 	],
-	"footer_menu": [
-		{
-			"url": "/",
-			"title": "Home"
-		},
-		{
-			"url": "/gdpr",
-			"title": "Cookies"
-		}
-	]
+	"footer_1": {
+		"title": "Služby",
+		"items": [
+			{
+				"url": "/",
+				"title": "Core IT"
+			},
+			{
+				"url": "/",
+				"title": "Platformy a podpora"
+			},
+			{
+				"url": "/",
+				"title": "Špeciálne "
+			},
+			{
+				"url": "/",
+				"title": "Audity a compliance"
+			},
+			{
+				"url": "/",
+				"title": "Plán a test obnovy"
+			},
+			{
+				"url": "/",
+				"title": "Dodavky a licencie"
+			},
+			{
+				"url": "/",
+				"title": "Web a aplikacie"
+			},
+			{
+				"url": "/",
+				"title": "Smart workplace"
+			},
+			{
+				"url": "/",
+				"title": "Ďalšie služby"
+			}
+		]
+	},
+	"footer_2": {
+		"title": "Menu",
+		"items": [
+			{
+				"url": "/",
+				"title": "Domov"
+			},
+			{
+				"url": "/",
+				"title": "Hardware"
+			},
+			{
+				"url": "/",
+				"title": "Software"
+			},
+			{
+				"url": "/",
+				"title": "Newsroom"
+			},
+			{
+				"url": "/",
+				"title": "Financovanie"
+			},
+			{
+				"url": "/",
+				"title": "O nás"
+			},
+			{
+				"url": "/",
+				"title": "Kontakt"
+			}
+		]
+	}
 }

@@ -1,0 +1,372 @@
+/*
+ * File: /src/styles/base/_fonts.scss
+ * Project: itempire-fe
+ * Version: 1.0.0
+ * Created Date: Monday, September 25th 2023, 19:58:54
+ * Author: Kirill Dorozhynskyi - kyrylo.dorozhynskyi@justdev.org
+ * -----
+ * Last Modified: Tuesday, June 2nd 2026 10:30:26
+ * Modified By: Kirill Dorozhynskyi
+ * -----
+ * Copyright (c) 2026 justDev
+ */
+
+@font-face {
+	font-family: 'Jeko';
+	src:
+		url('~fonts/Jeko/Jeko-BlackItalic.woff2') format('woff2'),
+		url('~fonts/Jeko/Jeko-BlackItalic.woff') format('woff');
+	font-weight: 900;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Jeko';
+	src:
+		url('~fonts/Jeko/Jeko-Thin.woff2') format('woff2'),
+		url('~fonts/Jeko/Jeko-Thin.woff') format('woff');
+	font-weight: 100;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Jeko';
+	src:
+		url('~fonts/Jeko/Jeko-ThinItalic.woff2') format('woff2'),
+		url('~fonts/Jeko/Jeko-ThinItalic.woff') format('woff');
+	font-weight: 100;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Jeko';
+	src:
+		url('~fonts/Jeko/Jeko-SemiBold.woff2') format('woff2'),
+		url('~fonts/Jeko/Jeko-SemiBold.woff') format('woff');
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Jeko';
+	src:
+		url('~fonts/Jeko/Jeko-SemiBoldItalic.woff2') format('woff2'),
+		url('~fonts/Jeko/Jeko-SemiBoldItalic.woff') format('woff');
+	font-weight: 600;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Jeko';
+	src:
+		url('~fonts/Jeko/Jeko-Regular.woff2') format('woff2'),
+		url('~fonts/Jeko/Jeko-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Jeko';
+	src:
+		url('~fonts/Jeko/Jeko-RegularItalic.woff2') format('woff2'),
+		url('~fonts/Jeko/Jeko-RegularItalic.woff') format('woff');
+	font-weight: normal;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Jeko';
+	src:
+		url('~fonts/Jeko/Jeko-Medium.woff2') format('woff2'),
+		url('~fonts/Jeko/Jeko-Medium.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Jeko';
+	src:
+		url('~fonts/Jeko/Jeko-MediumItalic.woff2') format('woff2'),
+		url('~fonts/Jeko/Jeko-MediumItalic.woff') format('woff');
+	font-weight: 500;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Jeko';
+	src:
+		url('~fonts/Jeko/Jeko-Light.woff2') format('woff2'),
+		url('~fonts/Jeko/Jeko-Light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Jeko';
+	src:
+		url('~fonts/Jeko/Jeko-LightItalic.woff2') format('woff2'),
+		url('~fonts/Jeko/Jeko-LightItalic.woff') format('woff');
+	font-weight: 300;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Jeko';
+	src:
+		url('~fonts/Jeko/Jeko-ExtraLight.woff2') format('woff2'),
+		url('~fonts/Jeko/Jeko-ExtraLight.woff') format('woff');
+	font-weight: 200;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Jeko';
+	src:
+		url('~fonts/Jeko/Jeko-ExtraLightItalic.woff2') format('woff2'),
+		url('~fonts/Jeko/Jeko-ExtraLightItalic.woff') format('woff');
+	font-weight: 200;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Jeko';
+	src:
+		url('~fonts/Jeko/Jeko-ExtraBold.woff2') format('woff2'),
+		url('~fonts/Jeko/Jeko-ExtraBold.woff') format('woff');
+	font-weight: 800;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Jeko';
+	src:
+		url('~fonts/Jeko/Jeko-ExtraBoldItalic.woff2') format('woff2'),
+		url('~fonts/Jeko/Jeko-ExtraBoldItalic.woff') format('woff');
+	font-weight: 800;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Jeko';
+	src:
+		url('~fonts/Jeko/Jeko-Bold.woff2') format('woff2'),
+		url('~fonts/Jeko/Jeko-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Jeko';
+	src:
+		url('~fonts/Jeko/Jeko-BoldItalic.woff2') format('woff2'),
+		url('~fonts/Jeko/Jeko-BoldItalic.woff') format('woff');
+	font-weight: bold;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Jeko';
+	src:
+		url('~fonts/Jeko/Jeko-Black.woff2') format('woff2'),
+		url('~fonts/Jeko/Jeko-Black.woff') format('woff');
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Inter';
+	src:
+		url('~fonts/Inter/Inter18pt-ThinItalic.woff2') format('woff2'),
+		url('~fonts/Inter/Inter18pt-ThinItalic.woff') format('woff');
+	font-weight: 100;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Inter';
+	src:
+		url('~fonts/Inter/Inter18pt-Black.woff2') format('woff2'),
+		url('~fonts/Inter/Inter18pt-Black.woff') format('woff');
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Inter';
+	src:
+		url('~fonts/Inter/Inter18pt-BlackItalic.woff2') format('woff2'),
+		url('~fonts/Inter/Inter18pt-BlackItalic.woff') format('woff');
+	font-weight: 900;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Inter';
+	src:
+		url('~fonts/Inter/Inter18pt-Bold.woff2') format('woff2'),
+		url('~fonts/Inter/Inter18pt-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Inter';
+	src:
+		url('~fonts/Inter/Inter18pt-BoldItalic.woff2') format('woff2'),
+		url('~fonts/Inter/Inter18pt-BoldItalic.woff') format('woff');
+	font-weight: bold;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Inter';
+	src:
+		url('~fonts/Inter/Inter18pt-ExtraBold.woff2') format('woff2'),
+		url('~fonts/Inter/Inter18pt-ExtraBold.woff') format('woff');
+	font-weight: 800;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Inter';
+	src:
+		url('~fonts/Inter/Inter18pt-ExtraBoldItalic.woff2') format('woff2'),
+		url('~fonts/Inter/Inter18pt-ExtraBoldItalic.woff') format('woff');
+	font-weight: 800;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Inter';
+	src:
+		url('~fonts/Inter/Inter18pt-ExtraLight.woff2') format('woff2'),
+		url('~fonts/Inter/Inter18pt-ExtraLight.woff') format('woff');
+	font-weight: 200;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Inter';
+	src:
+		url('~fonts/Inter/Inter18pt-LightItalic.woff2') format('woff2'),
+		url('~fonts/Inter/Inter18pt-LightItalic.woff') format('woff');
+	font-weight: 300;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Inter';
+	src:
+		url('~fonts/Inter/Inter18pt-ExtraLightItalic.woff2') format('woff2'),
+		url('~fonts/Inter/Inter18pt-ExtraLightItalic.woff') format('woff');
+	font-weight: 200;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Inter';
+	src:
+		url('~fonts/Inter/Inter18pt-Italic.woff2') format('woff2'),
+		url('~fonts/Inter/Inter18pt-Italic.woff') format('woff');
+	font-weight: normal;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Inter';
+	src:
+		url('~fonts/Inter/Inter18pt-Light.woff2') format('woff2'),
+		url('~fonts/Inter/Inter18pt-Light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Inter';
+	src:
+		url('~fonts/Inter/Inter18pt-Medium.woff2') format('woff2'),
+		url('~fonts/Inter/Inter18pt-Medium.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Inter';
+	src:
+		url('~fonts/Inter/Inter18pt-MediumItalic.woff2') format('woff2'),
+		url('~fonts/Inter/Inter18pt-MediumItalic.woff') format('woff');
+	font-weight: 500;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Inter';
+	src:
+		url('~fonts/Inter/Inter18pt-Regular.woff2') format('woff2'),
+		url('~fonts/Inter/Inter18pt-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Inter';
+	src:
+		url('~fonts/Inter/Inter18pt-SemiBold.woff2') format('woff2'),
+		url('~fonts/Inter/Inter18pt-SemiBold.woff') format('woff');
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Inter';
+	src:
+		url('~fonts/Inter/Inter18pt-SemiBoldItalic.woff2') format('woff2'),
+		url('~fonts/Inter/Inter18pt-SemiBoldItalic.woff') format('woff');
+	font-weight: 600;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Inter';
+	src:
+		url('~fonts/Inter/Inter18pt-Thin.woff2') format('woff2'),
+		url('~fonts/Inter/Inter18pt-Thin.woff') format('woff');
+	font-weight: 100;
+	font-style: normal;
+	font-display: swap;
+}

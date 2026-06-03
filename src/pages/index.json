@@ -4,28 +4,55 @@
 	"flexible": [
 		{
 			"name": "hero",
-			"title": "Vite front-end twig boilerplate",
-			"text": "This repository contains a frontend boilerplate made with Vite, Tailwind, Twig.\n\nIt ships SVG sprite generation, image optimization, native lazy loading and a small Vue 3 layer for interactive components.",
-			"image": {
-				"pictureClass": "picture",
-				"image": {
-					"class": "h-auto max-w-full",
-					"src": "bootstrap-icons",
-					"src_2x": "bootstrap-icons@2x",
-					"ext": "png",
-					"webp": true,
-					"alt": "Hero logo",
-					"width": 642,
-					"height": 390
+			"title": "<span class='text-neutral-500'>Spoľahlivé</span><br>IT riešenia<br>pre vašu firmu",
+			"text": "Navrhujeme, spravujeme a rozvíjame IT infraštruktúru, ktorá podporuje rast vášho podnikania.",
+			"buttons": [
+				{
+					"class": "btn-purple",
+					"btn": {
+						"title": "Nezáväzná konzultácia",
+						"url": "#kontakt"
+					}
+				},
+				{
+					"class": "btn-outline-neutral",
+					"btn": {
+						"title": "Naše služby",
+						"url": "#sluzby"
+					}
 				}
-			},
-			"button": {
-				"class": "bg-neutral-900 text-white",
-				"btn": {
-					"title": "Home",
-					"url": "/"
+			],
+			"tags": [
+				{ "title": "Hybrid & Cloud riešenia", "position": "right", "left": "8%", "top": "62%" },
+				{ "title": "Kompletný IT ekosystém", "position": "left", "left": "15%", "top": "45%" },
+				{ "title": "Enterprise-ready infraštruktúra", "position": "left", "left": "15%", "top": "85%" }
+			],
+			"image": {
+				"pictureClass": "picture relative",
+				"image": {
+					"class": "h-auto w-full",
+					"src": "content/hero",
+					"src_2x": "content/hero@2x",
+					"ext": "png",
+					"webp": false,
+					"alt": "Hero logo",
+					"width": 560,
+					"height": 571
 				}
 			}
+		},
+		{
+			"name": "logos",
+			"text": "Dôverujú nám firmy naprieč odvetviami",
+			"logos": [
+				"/assets/images/logos/coinbase.svg",
+				"/assets/images/logos/doocusign.svg",
+				"/assets/images/logos/drips.svg",
+				"/assets/images/logos/hopin.svg",
+				"/assets/images/logos/sisyphus.svg",
+				"/assets/images/logos/square.svg",
+				"/assets/images/logos/zapier.svg"
+			]
 		}
 	]
 }

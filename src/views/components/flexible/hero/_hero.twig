@@ -1,48 +1,74 @@
 {#
  # File: /src/views/components/flexible/hero/_hero.twig
- # Project: starter_frontend_twig
- # Version: 3.2.0
+ # Project: itempire-fe
+ # Version: 1.0.0
  # Created Date: Friday, May 29th 2026, 11:51:56
  # Author: Kirill Dorozhynskyi - kyrylo.dorozhynskyi@justdev.org
  # -----
- # Last Modified: Friday, May 29th 2026 12:00:18
+ # Last Modified: Wednesday, June 3rd 2026 11:21:28
  # Modified By: Kirill Dorozhynskyi
  # -----
  # Copyright (c) 2026 justDev
  #}
 
-<section class="hero py-16">
+<section class="overflow-hidden md:py-21.5">
 	<div class="container">
-		<div class="grid items-center gap-8 md:grid-cols-2">
-			<div>
+		<div class="grid items-center gap-15 md:grid-cols-2">
+			<div class="flex flex-col gap-6">
 				{% if ce.title %}
-					<h1 class="mb-4 text-balance text-4xl font-bold lg:text-5xl">{{ ce.title }}</h1>
+					<h1 class="text-balance font-serif leading-none font-semibold text-4xl lg:text-6xl" v-jd-animate>{{ ce.title|raw }}</h1>
 				{% endif %}
 
 				{% if ce.text %}
-					<p class="text-pretty text-lg text-neutral-600">
+					<p class="text-pretty max-w-116 text-subtile tracking-tight" v-jd-animate>
 						{{ ce.text }}
 					</p>
 				{% endif %}
 
-				{% if ce.button %}
-					<div class="mt-6">
+				<div class="flex flex-wrap gap-4" v-jd-animate>
+					{% for button in ce.buttons %}
 						{% include paths.btn_ex with {
-							button: ce.button
+							button: button
 						} only %}
-					</div>
-				{% endif %}
+					{% endfor %}
+				</div>
 			</div>
 
 			{% if ce.image %}
-				<div v-photoswipe>
-					<a
-						data-pswp-width="{{ ce.image.image.width }}"
-						data-pswp-height="{{ ce.image.image.height }}"
-						href="/assets/images/{{ ce.image.image.src ~ '.' ~ ce.image.image.ext }}"
-					>
-						{{ image(ce.image) }}
-					</a>
+				<div class="relative">
+					<div class="absolute inset-0 aspect-square bg-neutral-100 w-7/10 left-2/5 top-3/20 translate-y-1/2"></div>
+
+					{{ image(ce.image) }}
+
+					{% if ce.tags %}
+						<div class="absolute inset-0 items-start flex flex-col max-md:p-4 max-md:gap-2 max-md:justify-end">
+							{% for tag in ce.tags %}
+								<div
+									v-jd-animate="{ delay: {{ loop.index0 * 1 }} }"
+									class="md:absolute flex items-center leading-none {{ tag.position == 'left' ? 'md:flex-row-reverse' : '' }}"
+									style="{{ tag.position }}:{{ tag.left }}; top:{{ tag.top }};"
+								>
+									<div class="bg-white rounded-sm p-1 flex items-center">
+										<div class="bg-purple text-white flex items-center rounded-xs text-2xl">
+											{{ sprite('check', 'check') }}
+										</div>
+									</div>
+
+									<svg class="-mx-px" width="9" height="18" viewBox="0 0 9 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<rect y="3" width="9" height="12" fill="white" />
+										<path d="M0 3H3C1.48612 2.69722 0.302776 1.51388 0 0V3Z" fill="white" />
+										<path d="M9 3H6C7.51388 2.69722 8.69722 1.51388 9 0V3Z" fill="white" />
+										<path d="M0 15H3C1.48612 15.3028 0.302776 16.4861 0 18V15Z" fill="white" />
+										<path d="M9 15H6C7.51388 15.3028 8.69722 16.4861 9 18V15Z" fill="white" />
+									</svg>
+
+									<div class="font-medium tracking-tight whitespace-nowrap bg-white text-purple p-2 rounded-sm">
+										{{ tag.title }}
+									</div>
+								</div>
+							{% endfor %}
+						</div>
+					{% endif %}
 				</div>
 			{% endif %}
 		</div>

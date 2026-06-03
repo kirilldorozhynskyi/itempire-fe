@@ -1,13 +1,52 @@
 <template>
-	<header>
-		<slot :toggle-menu="toggleMenu" :menu-opened="menuOpened" />
+	<header ref="headerEl" class="transit sticky top-0" :class="[hidden ? '-translate-y-full' : 'translate-y-0', solid || menuOpened ? 'bg-white' : ' ']">
+		<div>
+			<slot :toggle-menu="toggleMenu" :menu-opened="menuOpened" />
+		</div>
 	</header>
 </template>
 
 <script setup>
-import { onBeforeUnmount, ref, watch } from 'vue'
+import { onMounted, onBeforeUnmount, ref, watch } from 'vue'
 
+// Header reveal behavior (sticky, so it never shifts the page content):
+// - At the top of the page it sits in its natural position, transparent.
+// - Scrolling down slides it up and out of view.
+// - Scrolling up past the offset slides it back into view with an opaque background.
+const REVEAL_OFFSET = 200 // px scrolled before the show/hide-on-direction behavior kicks in
+const SCROLL_DELTA = 6 // min scroll movement to register a direction change (ignores jitter)
+
+const headerEl = ref(null)
+const lastScrollTop = ref(0)
+const hidden = ref(false) // slid up and out (scrolling down)
+const solid = ref(false) // opaque background once scrolled past the hero
 const menuOpened = ref(false)
+
+let ticking = false
+
+const update = () => {
+	ticking = false
+	const currentScrollTop = Math.max(window.scrollY || 0, 0)
+	const delta = currentScrollTop - lastScrollTop.value
+
+	solid.value = currentScrollTop > REVEAL_OFFSET
+
+	// Near the top — always visible, in its natural position.
+	if (currentScrollTop <= REVEAL_OFFSET) {
+		hidden.value = false
+		lastScrollTop.value = currentScrollTop
+		return
+	}
+
+	// Ignore sub-pixel jitter / trackpad momentum so the direction doesn't flip.
+	if (Math.abs(delta) < SCROLL_DELTA) return
+
+	// Scrolling down slides the header up and out; scrolling up brings it back.
+	// It stays sticky (in flow), so the page content never jumps.
+	hidden.value = delta > 0
+
+	lastScrollTop.value = currentScrollTop
+}
 
 const toggleMenu = () => {
 	menuOpened.value = !menuOpened.value
@@ -17,7 +56,21 @@ watch(menuOpened, (isOpened) => {
 	document.body.classList.toggle('overflow-hidden', isOpened)
 })
 
+const handleScroll = () => {
+	// Throttle to one update per animation frame.
+	if (ticking) return
+	ticking = true
+	window.requestAnimationFrame(update)
+}
+
+onMounted(() => {
+	window.addEventListener('scroll', handleScroll, { passive: true })
+	// Initialize state based on current position.
+	update()
+})
+
 onBeforeUnmount(() => {
+	window.removeEventListener('scroll', handleScroll)
 	document.body.classList.remove('overflow-hidden')
 })
 </script>

@@ -1,3 +1,5 @@
+/*
+ */
 /*!
  * 🚀 Exclusive Offer from justDev! 🚀
  *
@@ -15,14 +17,44 @@
 
 @import 'tailwindcss';
 
-@plugin "@tailwindcss/typography";
+@plugin '@tailwindcss/typography';
 
 @source '../scripts/**/**/**/**/**/*.vue';
 @source '../scripts/directives/**/*.js';
 @source '../views/**/**/**/**/**/*.twig';
-@source "./safelist.txt";
+@source './safelist.txt';
 
-@use './base/_typograph.scss';
+@import './base/_fonts';
+@import './base/_typograph';
+@import './base/_btn';
+
+@theme {
+	/* Font Family */
+	--font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+	--font-serif: 'Jeko', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+	/* Neutral */
+	--color-neutral-100: #f2f2f2; /* Background / Background */
+	--color-neutral-300: #d9d9d9; /* Border / Normal */
+	--color-subtile: #737373; /* Text / Subtile */
+	--color-primary: #101010; /* Text / Primary */
+
+	/* Purple */
+	--color-purple: #5b2b62; /* Text / Purple, Background / Purple, Border / Active */
+
+	/* Coffee */
+	--color-coffee-100: #f3efe3; /* Background / Coffee Pale */
+	--color-coffee-300: #dccfac; /* Background / Coffee */
+
+	/* State */
+	--color-green-600: #17a231; /* State / Success */
+	--color-red-800: #970101; /* State / Error */
+
+	--tracking-tight: -2%;
+	--tracking-tight: 1.2;
+
+	--text-6xl: 4rem;
+}
 
 @utility container {
 	margin-inline: auto;
@@ -31,4 +63,18 @@
 
 @utility transit {
 	@apply transition-all duration-300 ease-in-out;
+}
+
+body {
+	@apply text-primary;
+}
+
+.jd-init {
+	will-change: transform, opacity;
+	transform: translateY(40px);
+	opacity: 0;
+}
+.jd-animate {
+	transform: translateY(0);
+	opacity: 1;
 }

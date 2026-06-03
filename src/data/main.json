@@ -21,30 +21,51 @@
 	"paths": {
 		"components": "../components",
 		"btn_ex": "../../utils/_button.twig",
+		"decor_ex": "../../utils/_decor.twig",
 		"forms": "../../utils/forms/"
 	},
 	"social": [
 		{
 			"title": "Instagram",
 			"icon": "instagram",
-			"url": "#",
-			"header": true
+			"url": "#"
 		},
 		{
 			"title": "Facebook",
 			"icon": "facebook",
-			"url": "#",
-			"header": true
+			"url": "#"
 		},
 		{
-			"title": "YouTube",
-			"icon": "youtube",
-			"url": "#",
-			"header": false
+			"title": "LinkedIn",
+			"icon": "linkedin",
+			"url": "#"
 		}
 	],
 	"footer": {
-		"copyright": "justDev Twig Starter. Developed by <a href=https://justdev.org target=_blank>justDev</a>"
+		"title": "<span class='opacity-70'>Potrebujete</span> spoľahlivé  IT riešenie?",
+		"text": "Kontaktujte nás a dohodnite si nezáväznú konzultáciu <nobr>s naším odborníkom.</nobr>",
+		"image": {
+			"pictureClass": "picture relative w-full h-full",
+			"image": {
+				"class": "h-full w-full object-cover object-center",
+				"src": "6f19d080b16b7ec94f114f8e5e6d5344f7b6a0d9",
+				"src_2x": "6f19d080b16b7ec94f114f8e5e6d5344f7b6a0d9@2x",
+				"ext": "jpg",
+				"webp": false,
+				"alt": "Potrebujete spoľahlivé IT riešenie?",
+				"width": 1280,
+				"height": 624
+			}
+		},
+		"button": {
+			"class": "btn-coffee",
+			"btn": {
+				"title": "Nezáväzná konzultácia",
+				"url": "#kontakt"
+			}
+		},
+
+		"copyright": "ITempire s.r.o. Všetky práva vyhradené."
 	},
 	"header": {}
 }

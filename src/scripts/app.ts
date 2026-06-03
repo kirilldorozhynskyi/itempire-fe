@@ -1,14 +1,14 @@
 /*
  * File: /src/scripts/app.ts
- * Project: starter_frontend_twig
- * Version: 3.0.0
+ * Project: itempire-fe
+ * Version: 1.0.0
  * Created Date: Sunday, September 24th 2023, 12:07:59
  * Author: Kirill Dorozhynskyi - kyrylo.dorozhynskyi@justdev.org
  * -----
- * Last Modified: Friday, April 11th 2025 13:37:50
+ * Last Modified: Tuesday, June 2nd 2026 14:00:14
  * Modified By: Kirill Dorozhynskyi
  * -----
- * Copyright (c) 2025 justDev
+ * Copyright (c) 2026 justDev
  */
 
 import '../styles/app.css'
@@ -25,6 +25,7 @@ import { createI18n } from 'vue-i18n'
 
 // Directives
 import PhotoSwipeDirective from './directives/photoswipe'
+import Animation from './directives/animation'
 // import TooltipDirective from './directives/tooltip'
 // import CopyClipboard from './directives/clipboard'
 
@@ -32,6 +33,7 @@ import PageHeader from './components/PageHeader.vue'
 import i18nConfig from './util/i18n.ts'
 
 const SimpleGallery = defineAsyncComponent(() => import('./components/SimpleGallery.vue'))
+const Benefits = defineAsyncComponent(() => import('./components/Benefits.vue'))
 const i18n = createI18n(i18nConfig)
 
 const PREVENT_UNLOAD_SELECTORS = [
@@ -54,6 +56,7 @@ export const rootComponent = defineComponent({
 	components: {
 		PageHeader,
 		SimpleGallery,
+		Benefits,
 		// CustomScript,
 	},
 
@@ -63,6 +66,7 @@ export const rootComponent = defineComponent({
 	/* ======= DIRECTIVES ======= */
 	directives: {
 		photoswipe: PhotoSwipeDirective,
+		jdAnimate: Animation,
 		// 'scroll-to': VueScrollTo,  //NOTE: Include if needed
 	},
 
@@ -121,11 +125,7 @@ export const rootComponent = defineComponent({
 			const currentUrl = new URL(window.location.href)
 			const targetUrl = new URL(target.href, window.location.href)
 
-			if (
-				targetUrl.origin === currentUrl.origin
-				&& targetUrl.pathname === currentUrl.pathname
-				&& targetUrl.search === currentUrl.search
-			) {
+			if (targetUrl.origin === currentUrl.origin && targetUrl.pathname === currentUrl.pathname && targetUrl.search === currentUrl.search) {
 				return
 			}
 

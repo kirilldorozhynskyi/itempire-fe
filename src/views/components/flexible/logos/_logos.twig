@@ -1,0 +1,31 @@
+{#
+ # File: /src/views/components/flexible/logos/_logos.twig
+ # Project: itempire-fe
+ # Version: 1.0.0
+ # Created Date: Tuesday, June 2nd 2026, 14:00:55
+ # Author: Kirill Dorozhynskyi - kyrylo.dorozhynskyi@justdev.org
+ # -----
+ # Last Modified: Tuesday, June 2nd 2026 14:24:00
+ # Modified By: Kirill Dorozhynskyi
+ # -----
+ # Copyright (c) 2026 justDev
+ #}
+
+<section class="py-20 flex flex-col gap-6">
+	{% if ce.text %}
+		<div class="container">
+			<p class="text-pretty text-center leading-none text-subtile" v-jd-animate>
+				{{ ce.text }}
+			</p>
+		</div>
+	{% endif %}
+	<div class="logos-wrapper relative flex w-full items-center overflow-hidden h-auto">
+		<benefits :count="{{ ce.logos|length }}">
+			{% for logo in ce.logos %}
+				<div class="rfm-child w-43 flex items-center aspect-172/112">
+					<object class="w-full h-full object-contain object-center" lazy type="image/svg+xml" data-src="{{ logo }}"></object>
+				</div>
+			{% endfor %}
+		</benefits>
+	</div>
+</section>
