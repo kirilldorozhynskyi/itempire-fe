@@ -67,8 +67,8 @@ export default {
 				sprite($id, $classes) {
 					return twigFunctionsSprite($id, $classes)
 				},
-				image($image) {
-					return twigFunctionsImage($image)
+				image($image, $options = {}) {
+					return twigFunctionsImage($image, $options)
 				},
 				svg($image, $classes) {
 					return twigFunctionsSvg($image, $classes)

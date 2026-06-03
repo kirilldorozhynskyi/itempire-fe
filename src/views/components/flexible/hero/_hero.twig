@@ -38,7 +38,12 @@
 				<div class="relative">
 					<div class="absolute inset-0 aspect-square bg-neutral-100 w-7/10 left-2/5 top-3/20 translate-y-1/2"></div>
 
-					{{ image(ce.image) }}
+					{{ image(ce.image, {
+						lazy: false,
+						loading: 'eager',
+						decoding: 'async',
+						fetchpriority: 'high'
+					}) }}
 
 					{% if ce.tags %}
 						<div class="absolute inset-0 items-start flex flex-col max-md:p-4 max-md:gap-2 max-md:justify-end">
