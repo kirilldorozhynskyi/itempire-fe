@@ -18,7 +18,6 @@ import '../styles/app.css'
 
 import LazyLoad from 'vanilla-lazyload'
 import { computed, createApp, defineAsyncComponent, defineComponent, onBeforeUnmount, onMounted, provide } from 'vue'
-import { createI18n } from 'vue-i18n'
 
 // NOTE: Include if needed
 // import VueScrollTo from 'vue-scrollto'
@@ -30,11 +29,9 @@ import Animation from './directives/animation'
 // import CopyClipboard from './directives/clipboard'
 
 import PageHeader from './components/PageHeader.vue'
-import i18nConfig from './util/i18n.ts'
+import Benefits from './components/Benefits.vue'
 
 const SimpleGallery = defineAsyncComponent(() => import('./components/SimpleGallery.vue'))
-const Benefits = defineAsyncComponent(() => import('./components/Benefits.vue'))
-const i18n = createI18n(i18nConfig)
 
 const PREVENT_UNLOAD_SELECTORS = [
 	'.ajax',
@@ -200,7 +197,6 @@ export const rootComponent = defineComponent({
 
 const app = createApp(rootComponent)
 app.config.compilerOptions.isCustomElement = (tag) => tag === 'nobr'
-app.use(i18n)
 
 const appRoot = document.querySelector('#page')
 
