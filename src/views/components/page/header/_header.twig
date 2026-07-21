@@ -1,20 +1,20 @@
 {#
  # File: /src/views/components/page/header/_header.twig
- # Project: starter_frontend_twig
- # Version: 3.2.0
+ # Project: itempire-fe
+ # Version: 1.0.0
  # Created Date: Tuesday, March 31st 2026, 17:21:00
  # Author: Kirill Dorozhynskyi - kyrylo.dorozhynskyi@justdev.org
  # -----
- # Last Modified: Friday, May 29th 2026 12:00:12
+ # Last Modified: Tuesday, July 21st 2026 15:48:20
  # Modified By: Kirill Dorozhynskyi
  # -----
  # Copyright (c) 2026 justDev
  #}
 
-<page-header class="z-999 py-5 lg:py-6">
-	<template #default="{ toggleMenu, menuOpened }">
+<page-header class="z-999 py-5 lg:py-6 bg-white">
+	<template #default="{ toggleMenu, menuOpened, activeSubmenu, activeSubmenuItem, openSubmenu, openSubmenuItem, closeSubmenu }">
 		<div class="container max-xl:max-w-full">
-			<div class="offset flex items-center justify-between gap-10 xl:gap-20">
+			<div class="offset flex items-center gap-10 xl:gap-16">
 				<a class="" href="/" aria-label="{{ site_title }}">
 					{% if logoRaw %}
 						{{ source(rootDir ~ '/public/assets/images/brand/logo.svg')|raw }}
@@ -23,12 +23,26 @@
 					{% endif %}
 				</a>
 
-				<div
-					id="primary-navigation"
-					class="max-lg:bg-white fixed top-0 right-0 z-1 h-dvh pt-24 transition-transform duration-200 ease-in-out max-lg:px-6 lg:relative lg:h-auto lg:translate-x-0 lg:bg-transparent lg:pt-0 lg:transition-none"
-					:class="menuOpened ? 'w-full max-w-100 translate-x-0' : 'translate-x-full'"
-				>
+				<div id="primary-navigation">
 					{% include 'main_navigation.twig' %}
+				</div>
+
+				<div class="ms-auto flex items-center gap-2">
+					<button class="btn-outline-neutral p-1.5 relative">
+						<div
+							class="absolute translate-x-1/2 -translate-y-1/2 bg-purple text-white rounded-full flex items-center tracking-tight leading-none font-medium text-sm justify-center min-w-6 h-6 -top-0.25 right-0.75"
+						>
+							9
+						</div>
+
+						{{ sprite('shopping-bag', 'text-2xl!') }}
+					</button>
+					<button class="btn-outline-neutral p-1.5">{{ sprite('search', 'text-2xl!') }}</button>
+					<button class="btn-outline-neutral p-1.5">{{ sprite('user', 'text-2xl!') }}</button>
+					<button class="btn-outline-neutral px-2 py-2.75">EN</button>
+					{% include paths.btn_ex with {
+						button: header.button
+					} only %}
 				</div>
 
 				<div class="relative z-3 lg:hidden">

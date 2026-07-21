@@ -1,0 +1,52 @@
+{#
+ # File: /src/views/components/flexible/reviews/_reviews.twig
+ # Project: itempire-fe
+ # Version: 1.0.0
+ # Created Date: Monday, July 20th 2026, 11:17:37
+ # Author: Kirill Dorozhynskyi - kyrylo.dorozhynskyi@justdev.org
+ # -----
+ # Last Modified: Monday, July 20th 2026 12:41:03
+ # Modified By: Kirill Dorozhynskyi
+ # -----
+ # Copyright (c) 2026 justDev
+ #}
+
+<section class="bg-neutral-100 py-20 lg:py-36 overflow-hidden decor">
+	<div class="container flex flex-col gap-12 lg:gap-20">
+		<div class="flex flex-col items-center gap-6 mx-auto max-w-145 text-center">
+			{% include '../title/_title_content.twig' with {
+				ce: ce
+			} %}
+		</div>
+
+		<slider-wrapper class="w-full" :overflow="false" wrapper-class="md:-me-12" :dots="false" :nav="true">
+			{% for item in ce.reviews %}
+				<slider-item class="basis-full md:basis-13/20 2xl:basis-1/2 md:pe-12" v-jd-animate="{ delay: {{ loop.index * 100 }} }">
+					<div class="bg-white p-6 lg:p-12 flex gap-12">
+						<div class="flex flex-col gap-12">
+							<p class="lg:text-lg">
+								{{ item.text }}
+							</p>
+
+							<div class="flex gap-8 items-center">
+								<div class="aspect-square size-18">
+									{{ image(item.author.image) }}
+								</div>
+
+								<div class="flex flex-col">
+									<span class="text-lg font-serif font-semibold leading-tight">{{ item.author.name }}</span>
+									<span class="text-subtile text-sm">{{ item.author.position }}</span>
+								</div>
+							</div>
+						</div>
+						<div class="flex flex-col bg-neutral-100 lg:max-w-42 p-4 lg:p-6 justify-end">
+							<span class="font-serif leading-tight text-2xl lg:text-5xl font-semibold">{{ item.info.percent }}</span>
+
+							<span class="text-subtile text-sm">{{ item.info.text }}</span>
+						</div>
+					</div>
+				</slider-item>
+			{% endfor %}
+		</slider-wrapper>
+	</div>
+</section>

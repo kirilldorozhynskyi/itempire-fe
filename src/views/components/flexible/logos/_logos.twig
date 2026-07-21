@@ -5,13 +5,13 @@
  # Created Date: Tuesday, June 2nd 2026, 14:00:55
  # Author: Kirill Dorozhynskyi - kyrylo.dorozhynskyi@justdev.org
  # -----
- # Last Modified: Tuesday, June 2nd 2026 14:24:00
+ # Last Modified: Monday, July 20th 2026 10:52:03
  # Modified By: Kirill Dorozhynskyi
  # -----
  # Copyright (c) 2026 justDev
  #}
 
-<section class="py-20 flex flex-col gap-6">
+<section class="pt-20 flex flex-col gap-6">
 	{% if ce.text %}
 		<div class="container">
 			<p class="text-pretty text-center leading-none text-subtile" v-jd-animate>
@@ -23,7 +23,7 @@
 		<benefits :count="{{ ce.logos|length }}">
 			{% for logo in ce.logos %}
 				<div class="rfm-child w-43 flex items-center aspect-172/112">
-					<object class="w-full h-full object-contain object-center" lazy type="image/svg+xml" data-src="{{ logo }}"></object>
+					<object class="size-full object-contain object-center" lazy type="image/svg+xml" data-src="{{ logo }}"></object>
 				</div>
 			{% endfor %}
 		</benefits>

@@ -2,15 +2,175 @@
 	"header_menu": [
 		{
 			"url": "/",
-			"title": "Hardware"
+			"title": "Hardware",
+			"submenu": [
+				{
+					"url": "/",
+					"title": "Hardware",
+					"submenu": [
+						{
+							"url": "/",
+							"title": "Základné dosky"
+						},
+						{
+							"url": "/",
+							"title": "Procesory"
+						},
+						{
+							"url": "/",
+							"title": "Pamäte"
+						},
+						{
+							"url": "/",
+							"title": "Grafické karty"
+						},
+						{
+							"url": "/",
+							"title": "Pevné disky"
+						},
+						{
+							"url": "/",
+							"title": "Zdroje"
+						},
+						{
+							"url": "/",
+							"title": "Skrinky"
+						},
+						{
+							"url": "/",
+							"title": "Chladenie"
+						},
+						{
+							"url": "/",
+							"title": "Optické mechaniky"
+						},
+						{
+							"url": "/",
+							"title": "Radiče a rozširujúce karty"
+						}
+					]
+				},
+				{
+					"url": "/",
+					"title": "Mobilné prenosné zariadenia",
+					"submenu": [
+						{
+							"url": "/",
+							"title": "Hardware"
+						}
+					]
+				},
+				{
+					"url": "/",
+					"title": "Stolné počítače a tenké klienty",
+					"submenu": [
+						{
+							"url": "/",
+							"title": "Hardware"
+						}
+					]
+				},
+				{
+					"url": "/",
+					"title": "Servery a IT infraštruktúra",
+					"submenu": [
+						{
+							"url": "/",
+							"title": "Hardware"
+						}
+					]
+				},
+				{
+					"url": "/",
+					"title": "Tlačiarne, skenery a spotrebný materiál",
+					"submenu": [
+						{
+							"url": "/",
+							"title": "Hardware"
+						}
+					]
+				},
+				{
+					"url": "/",
+					"title": "Periférie a príslušenstvo",
+					"submenu": [
+						{
+							"url": "/",
+							"title": "Hardware"
+						}
+					]
+				},
+				{
+					"url": "/",
+					"title": "IT Komponenty",
+					"submenu": [
+						{
+							"url": "/",
+							"title": "Hardware"
+						}
+					]
+				},
+				{
+					"url": "/",
+					"title": "Kabeláž, redukcie a rozbočovače",
+					"submenu": [
+						{
+							"url": "/",
+							"title": "Hardware"
+						}
+					]
+				},
+				{
+					"url": "/",
+					"title": "Kamerové a dohľadové systémy",
+					"submenu": [
+						{
+							"url": "/",
+							"title": "Hardware"
+						}
+					]
+				},
+				{
+					"url": "/",
+					"title": "Kamerové a dohľadové systémy",
+					"submenu": [
+						{
+							"url": "/",
+							"title": "Hardware"
+						}
+					]
+				},
+				{
+					"url": "/",
+					"title": "Záložné zdroje",
+					"submenu": [
+						{
+							"url": "/",
+							"title": "Hardware"
+						}
+					]
+				}
+			]
 		},
 		{
 			"url": "/gdpr",
-			"title": "Software"
+			"title": "Software",
+			"submenu": [
+				{
+					"url": "/",
+					"title": "Hardware"
+				}
+			]
 		},
 		{
 			"url": "/gdpr",
-			"title": "Služby"
+			"title": "Služby",
+			"submenu": [
+				{
+					"url": "/",
+					"title": "Hardware"
+				}
+			]
 		},
 		{
 			"url": "/gdpr",

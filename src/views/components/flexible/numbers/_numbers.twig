@@ -1,0 +1,32 @@
+{#
+ # File: /src/views/components/flexible/numbers/_numbers.twig
+ # Project: itempire-fe
+ # Version: 1.0.0
+ # Created Date: Friday, July 10th 2026, 14:24:39
+ # Author: Kirill Dorozhynskyi - kyrylo.dorozhynskyi@justdev.org
+ # -----
+ # Last Modified: Thursday, July 16th 2026 10:16:24
+ # Modified By: Kirill Dorozhynskyi
+ # -----
+ # Copyright (c) 2026 justDev
+ #}
+
+<section class="py-20 lg:py-36">
+	<div class="container flex flex-col gap-20">
+		{% include '../title/_title.twig' with {
+			ce: ce
+		} %}
+
+		<div class="grid grid-cols-2 gap-4 lg:gap-6 lg:grid-cols-4">
+			{% for item in ce.numbers %}
+				<div v-jd-animate="{ delay: {{ loop.index * 100 }} }" class="flex flex-col gap-6 lg:gap-16 p-4 lg:p-6 bg-neutral-100 relative bg-remover">
+					<h3 class="text-balance font-serif leading-tight font-semibold text-2xl lg:text-5xl">{{ item.number }}</h3>
+
+					<p class="text-sm lg:text-lg text-subtile leading-normal">
+						{{ item.title }}
+					</p>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</section>

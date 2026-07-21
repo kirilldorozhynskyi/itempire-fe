@@ -1,7 +1,19 @@
 <template>
-	<header ref="headerEl" class="transit sticky top-0" :class="[hidden ? '-translate-y-full' : 'translate-y-0', solid || menuOpened ? 'bg-white' : ' ']">
+	<header
+		ref="headerEl"
+		class="transit sticky top-0"
+		:class="[hidden ? '-translate-y-full' : 'translate-y-0', solid || menuOpened || activeSubmenu !== null ? 'bg-white' : ' ']"
+	>
 		<div>
-			<slot :toggle-menu="toggleMenu" :menu-opened="menuOpened" />
+			<slot
+				:toggle-menu="toggleMenu"
+				:menu-opened="menuOpened"
+				:active-submenu="activeSubmenu"
+				:active-submenu-item="activeSubmenuItem"
+				:open-submenu="openSubmenu"
+				:open-submenu-item="openSubmenuItem"
+				:close-submenu="closeSubmenu"
+			/>
 		</div>
 	</header>
 </template>
@@ -21,6 +33,8 @@ const lastScrollTop = ref(0)
 const hidden = ref(false) // slid up and out (scrolling down)
 const solid = ref(false) // opaque background once scrolled past the hero
 const menuOpened = ref(false)
+const activeSubmenu = ref(null)
+const activeSubmenuItem = ref(1)
 
 let ticking = false
 
@@ -44,12 +58,42 @@ const update = () => {
 	// Scrolling down slides the header up and out; scrolling up brings it back.
 	// It stays sticky (in flow), so the page content never jumps.
 	hidden.value = delta > 0
+	if (hidden.value) closeSubmenu()
 
 	lastScrollTop.value = currentScrollTop
 }
 
 const toggleMenu = () => {
 	menuOpened.value = !menuOpened.value
+}
+
+const closeSubmenu = () => {
+	activeSubmenu.value = null
+	activeSubmenuItem.value = 1
+}
+
+const openSubmenu = (index) => {
+	const nextIndex = Number(index)
+
+	if (activeSubmenu.value === nextIndex) {
+		closeSubmenu()
+		return
+	}
+
+	activeSubmenu.value = nextIndex
+	activeSubmenuItem.value = 1
+}
+
+const openSubmenuItem = (index) => {
+	activeSubmenuItem.value = Number(index)
+}
+
+const handleDocumentClick = (event) => {
+	if (!headerEl.value?.contains(event.target)) closeSubmenu()
+}
+
+const handleKeydown = (event) => {
+	if (event.key === 'Escape') closeSubmenu()
 }
 
 watch(menuOpened, (isOpened) => {
@@ -65,12 +109,16 @@ const handleScroll = () => {
 
 onMounted(() => {
 	window.addEventListener('scroll', handleScroll, { passive: true })
+	document.addEventListener('click', handleDocumentClick)
+	document.addEventListener('keydown', handleKeydown)
 	// Initialize state based on current position.
 	update()
 })
 
 onBeforeUnmount(() => {
 	window.removeEventListener('scroll', handleScroll)
+	document.removeEventListener('click', handleDocumentClick)
+	document.removeEventListener('keydown', handleKeydown)
 	document.body.classList.remove('overflow-hidden')
 })
 </script>

@@ -1,0 +1,63 @@
+{#
+ # File: /src/views/components/flexible/cta_slider/_cta_slider.twig
+ # Project: itempire-fe
+ # Version: 1.0.0
+ # Created Date: Thursday, July 16th 2026, 12:55:29
+ # Author: Kirill Dorozhynskyi - kyrylo.dorozhynskyi@justdev.org
+ # -----
+ # Last Modified: Tuesday, July 21st 2026 13:49:06
+ # Modified By: Kirill Dorozhynskyi
+ # -----
+ # Copyright (c) 2026 justDev
+ #}
+
+<section>
+	<div class="max-w-520 mx-auto">
+		<slider-wrapper class="w-full aspect-1280/624" :dots="true" :nav="false" :fade="true" dots-class="absolute bottom-12 left-1/2 -translate-x-1/2 z-10">
+			{% for item in ce.items %}
+				<slider-item class="basis-full h-auto relative aspect-1280/624">
+					{{ image(item.image) }}
+					<div class="absolute inset-0">
+						<div class="container h-full flex items-center gap-6">
+							<div class="flex max-w-103 flex-col gap-12">
+								<div class="flex flex-col gap-6">
+									{% if item.title %}
+										<h2
+											class="text-balance font-serif leading-tight font-semibold text-white text-[1.375rem] lg:text-[2.25rem]"
+											v-jd-animate
+										>
+											{{ item.title }}
+										</h2>
+									{% endif %}
+
+									{% if item.text %}
+										<p class="text-balance text-white/70 tracking-tight" v-jd-animate>
+											{{ item.text }}
+										</p>
+									{% endif %}
+								</div>
+
+								<div v-jd-animate class="flex">
+									{% include paths.btn_ex with {
+										button: item.btn
+									} only %}
+								</div>
+							</div>
+							<div class="absolute -translate-x-1/2 -translate-y-1/2 leading-none" style="{{ item.info.style }}" v-jd-animate>
+								<div class="absolute bg-white text-purple uppercase font-medium right-6 w-fit top-0 py-2 px-4 -translate-y-1/2">
+									{{ item.info.tag }}
+								</div>
+								<div class="bg-purple p-6 text-balance font-serif leading-tight text-white font-semibold text-2xl lg:text-5xl">
+									{{ item.info.price }}
+								</div>
+								<div class="absolute bg-white left-6 w-fit bottom-0 py-2 px-4 translate-y-1/2">
+									{{ item.info.info }}
+								</div>
+							</div>
+						</div>
+					</div>
+				</slider-item>
+			{% endfor %}
+		</slider-wrapper>
+	</div>
+</section>

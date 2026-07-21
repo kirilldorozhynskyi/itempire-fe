@@ -5,14 +5,14 @@
  # Created Date: Friday, May 29th 2026, 11:52:07
  # Author: Kirill Dorozhynskyi - kyrylo.dorozhynskyi@justdev.org
  # -----
- # Last Modified: Tuesday, June 2nd 2026 12:35:14
+ # Last Modified: Thursday, July 16th 2026 10:21:48
  # Modified By: Kirill Dorozhynskyi
  # -----
  # Copyright (c) 2026 justDev
  #}
 
 {% if button.span %}
-	<button type="button" class="{{ button.class }}" aria-label="{{ button.btn.title }}">
+	<button type="button" class="{{ button.class }}" aria-label="{{ button.btn.title ?? button.btn.label }}">
 		{{ button.btn.title }}
 		{% if button.icon %}
 			{{ sprite(button.icon) }}

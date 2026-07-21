@@ -1,0 +1,65 @@
+{#
+ # File: /src/views/components/flexible/stepper/_stepper.twig
+ # Project: itempire-fe
+ # Version: 1.0.0
+ # Created Date: Monday, July 20th 2026, 15:19:59
+ # Author: Kirill Dorozhynskyi - kyrylo.dorozhynskyi@justdev.org
+ # -----
+ # Last Modified: Monday, July 20th 2026 17:59:20
+ # Modified By: Kirill Dorozhynskyi
+ # -----
+ # Copyright (c) 2026 justDev
+ #}
+
+<section class="overflow-hidden py-20 lg:py-36">
+	<div class="container flex flex-col gap-12 lg:gap-20">
+		{% include '../title/_title.twig' with {
+			ce: ce
+		} %}
+
+		<stepper-view class="grid grid-cols-2 gap-6" :speed="3000" :duration="{{ ce.items|length }}">
+			<template #default="{ openItem, hoverItem, leaveItem, active, progross }">
+				<div class="decor-r aspect-580/632 min-h-full max-h-full max-w-full">
+					{% for item in ce.items %}
+						<div class="w-full h-full" v-show="active === {{ loop.index }}">
+							{{ image(item.image) }}
+						</div>
+					{% endfor %}
+				</div>
+				<div class="ps-14 flex flex-col justify-center">
+					{% for item in ce.items %}
+						<button
+							@click="openItem({{ loop.index }})"
+							@mouseenter="hoverItem({{ loop.index }})"
+							@mouseleave="leaveItem({{ loop.index }})"
+							class="border-b relative border-neutral-300 py-8 flex flex-col gap-2 cursor-pointer group"
+						>
+							<div class="flex items-center gap-8">
+								<div
+									class="flex h-8 min-w-8 items-center justify-center text-center leading-none transit group-hover:bg-neutral-100"
+									:class="active === {{ loop.index }}
+									? 'bg-coffee-100 text-purple'
+									: 'text-subtile'"
+								>
+									{{ loop.index < 10 ? '0' ~ loop.index : loop.index }}
+								</div>
+
+								<div class="leading-tight font-serif font-semibold text-2x">
+									{{ item.title }}
+								</div>
+							</div>
+
+							<div class="ps-16" v-show="active === {{ loop.index }}">
+								<div class="text-subtile text-balance text-start tracking-tight max-w-107">
+									{{ item.text }}
+								</div>
+							</div>
+
+							<div class="absolute bottom-0 left-0 h-px bg-purple" v-show="active === {{ loop.index }}" :style="`width: ${ progross }%`"></div>
+						</button>
+					{% endfor %}
+				</div>
+			</template>
+		</stepper-view>
+	</div>
+</section>

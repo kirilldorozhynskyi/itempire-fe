@@ -1,23 +1,153 @@
 {#
  # File: /src/views/components/page/header/main_navigation.twig
- # Project: starter_frontend_twig
- # Version: 3.2.0
+ # Project: itempire-fe
+ # Version: 1.0.0
  # Created Date: Friday, May 29th 2026, 11:52:30
  # Author: Kirill Dorozhynskyi - kyrylo.dorozhynskyi@justdev.org
  # -----
- # Last Modified: Friday, May 29th 2026 12:00:09
+ # Last Modified: Tuesday, July 21st 2026 15:27:41
  # Modified By: Kirill Dorozhynskyi
  # -----
  # Copyright (c) 2026 justDev
  #}
 
 <nav class="main-nav">
-	<ul class="flex flex-col items-start justify-center gap-8 lg:flex-row lg:items-center xl:gap-8">
+	<ul class="flex flex-col items-start justify-center lg:flex-row lg:items-center gap-1">
 		{% for item in header_menu %}
-			<li class="main-nav-item {{ item.children ? 'has-children' }}">
-				<a href="{{ item.url }}" {{ item.target ? 'target="' ~ item.target ~ '"' }} {{ item.target == '_blank' ? 'rel="noopener noreferrer"' }}>
-					{{ item.title }}
-				</a>
+			<li class="main-nav-item {{ item.submenu ? 'has-children' }}">
+				{% if item.submenu %}
+					<button
+						type="button"
+						class="transit flex cursor-pointer items-center gap-2 rounded-sm p-2 hover:text-purple"
+						:class="activeSubmenu === {{ loop.index }} ? 'bg-neutral-100 text-purple' : ''"
+						:aria-expanded="activeSubmenu === {{ loop.index }} ? 'true' : 'false'"
+						aria-controls="submenu-{{ loop.index }}"
+						@click.stop="openSubmenu({{ loop.index }})"
+					>
+						<span>{{ item.title }}</span>
+						<span class="transition-transform" :class="activeSubmenu === {{ loop.index }} ? 'rotate-180' : ''">
+							{{ sprite('chevron-down', 'h-3 w-3') }}
+						</span>
+					</button>
+
+					{% set hasNestedSubmenu = false %}
+					{% for submenuItem in item.submenu %}
+						{% if submenuItem.submenu %}
+							{% set hasNestedSubmenu = true %}
+						{% endif %}
+					{% endfor %}
+
+					<div
+						id="submenu-{{ loop.index }}"
+						v-show="activeSubmenu === {{ loop.index }}"
+						class="fixed top-22 pointer-events-none left-1/2 z-20 w-full -translate-x-1/2"
+						@click.stop
+					>
+						<div class="container">
+							<div class="bg-white pointer-events-auto p-6 shadow-xl lg:p-8 rounded-b-sm">
+								<div class="grid gap-6 lg:grid-cols-3">
+									<div class="flex flex-col">
+										{% for submenuItem in item.submenu %}
+											{% if submenuItem.submenu %}
+												<button
+													type="button"
+													class="transit flex w-full cursor-pointer items-center justify-between rounded-sm px-3 py-3 text-start hover:bg-neutral-100 hover:text-purple"
+													:class="activeSubmenuItem === {{ loop.index }} ? 'bg-neutral-100 text-purple' : ''"
+													@click="openSubmenuItem({{ loop.index }})"
+												>
+													<span>{{ submenuItem.title }}</span>
+													{{ sprite('chevron-right', 'size-3') }}
+												</button>
+											{% else %}
+												<a
+													href="{{ submenuItem.url }}"
+													class="transit flex w-full items-center justify-between rounded-sm px-3 py-3 hover:bg-neutral-100 hover:text-purple"
+													{{ submenuItem.target ? 'target="' ~ submenuItem.target ~ '"' }}
+													{{ submenuItem.target == '_blank' ? 'rel="noopener noreferrer"' }}
+													@click="closeSubmenu()"
+												>
+													<span>{{ submenuItem.title }}</span>
+												</a>
+											{% endif %}
+										{% endfor %}
+									</div>
+
+									{% if hasNestedSubmenu %}
+										<div class="rounded-sm bg-neutral-100 p-2">
+											{% for submenuItem in item.submenu %}
+												{% if submenuItem.submenu %}
+													<div v-show="activeSubmenuItem === {{ loop.index }}" class="flex flex-col">
+														<div class="p-3">
+															<h3 class="text-lg font-semibold font-serif leading-tight">{{ submenuItem.title }}</h3>
+														</div>
+
+														{% for child in submenuItem.submenu %}
+															<a
+																href="{{ child.url }}"
+																class="transit rounded-sm p-3 hover:bg-white hover:text-purple"
+																{{ child.target ? 'target="' ~ child.target ~ '"' }}
+																{{ child.target == '_blank' ? 'rel="noopener noreferrer"' }}
+																@click="closeSubmenu()"
+															>
+																{{ child.title }}
+															</a>
+														{% endfor %}
+													</div>
+												{% endif %}
+											{% endfor %}
+										</div>
+									{% endif %}
+
+									<div class="flex flex-col gap-4 col-start-3">
+										<h3 class="text-lg font-semibold font-serif leading-tight">Aktuálna ponuka</h3>
+
+										<a href="{{ header.menu.url }}" class="aspect-340/280 relative flex max-lg:hidden rounded-sm overflow-hidden">
+											{{ image(header.menu.image) }}
+											<div class="absolute inset-0">
+												<div class="h-full flex gap-6 p-6">
+													<div class="flex flex-col gap-4">
+														{% if header.menu.title %}
+															<h2 class="text-balance font-serif leading-tight font-semibold text-white text-xl 2xl:text-2xl">
+																{{ header.menu.title }}
+															</h2>
+														{% endif %}
+
+														<div class="flex">
+															{% include paths.btn_ex with {
+																button: header.menu.btn
+															} only %}
+														</div>
+													</div>
+													<div class="absolute leading-none -translate-x-1/2 -translate-y-1/2 top-2/3 left-1/3 2xl:scale-110">
+														<div
+															class="absolute bg-white text-purple uppercase font-medium -right-6 w-fit top-1 py-1.5 px-2 -translate-y-full text-sm"
+														>
+															{{ header.menu.info.tag }}
+														</div>
+														<div
+															class="bg-purple px-4 py-2 text-balance font-serif leading-tight text-white font-semibold lg:text-lg"
+														>
+															{{ header.menu.info.price }}
+														</div>
+													</div>
+												</div>
+											</div>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				{% else %}
+					<a
+						href="{{ item.url }}"
+						class="transit flex cursor-pointer items-center rounded-sm p-2 hover:text-purple"
+						{{ item.target ? 'target="' ~ item.target ~ '"' }}
+						{{ item.target == '_blank' ? 'rel="noopener noreferrer"' }}
+					>
+						{{ item.title }}
+					</a>
+				{% endif %}
 			</li>
 		{% endfor %}
 	</ul>

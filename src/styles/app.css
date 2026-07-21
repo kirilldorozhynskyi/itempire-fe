@@ -27,6 +27,8 @@
 @import './base/_fonts';
 @import './base/_typograph';
 @import './base/_btn';
+@import './base/_elements';
+@import './vendor/primevue';
 
 @theme {
 	/* Font Family */
@@ -49,11 +51,17 @@
 	/* State */
 	--color-green-600: #17a231; /* State / Success */
 	--color-red-800: #970101; /* State / Error */
+	--color-success: var(--color-green-600);
+	--color-error: var(--color-red-800);
 
 	--tracking-tight: -2%;
-	--tracking-tight: 1.2;
+	--leading-tight: 1.2;
 
 	--text-6xl: 4rem;
+	--text-2xl: 1.625rem;
+	--text-2x: 1.5rem;
+
+	--breakpoint-uhd: 120rem;
 }
 
 @utility container {

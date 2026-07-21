@@ -5,7 +5,7 @@
  # Created Date: Friday, May 29th 2026, 11:51:48
  # Author: Kirill Dorozhynskyi - kyrylo.dorozhynskyi@justdev.org
  # -----
- # Last Modified: Wednesday, June 3rd 2026 12:02:21
+ # Last Modified: Monday, July 20th 2026 12:45:14
  # Modified By: Kirill Dorozhynskyi
  # -----
  # Copyright (c) 2026 justDev
@@ -17,22 +17,20 @@
 			{{ image(footer.image) }}
 		</div>
 
-		{% include paths.decor_ex with {
-			class: 'text-purple'
-		} %}
+		<div class="decor bg-purple -mt-14 pt-14">
+			<div class="py-36 flex items-center flex-col gap-16 text-center">
+				<div class="flex items-center flex-col gap-8 max-w-137">
+					<h2 class="text-balance font-serif font-semibold text-4xl lg:text-5xl text-white leading-tight" v-jd-animate>{{ footer.title }}</h2>
+					<p class="text-pretty" v-jd-animate>
+						{{ footer.text }}
+					</p>
+				</div>
 
-		<div class="py-36 flex items-center flex-col gap-16 text-center">
-			<div class="flex items-center flex-col gap-8 max-w-137">
-				<h2 class="text-balance font-serif font-semibold text-4xl lg:text-5xl text-white leading-tight" v-jd-animate>{{ footer.title }}</h2>
-				<p class="text-pretty" v-jd-animate>
-					{{ footer.text }}
-				</p>
-			</div>
-
-			<div class="flex justify-center" v-jd-animate>
-				{% include paths.btn_ex with {
-					button: footer.button
-				} only %}
+				<div class="flex justify-center" v-jd-animate>
+					{% include paths.btn_ex with {
+						button: footer.button
+					} only %}
+				</div>
 			</div>
 		</div>
 	</div>

@@ -1,0 +1,105 @@
+{#
+ # File: /src/views/components/flexible/studies/_studies.twig
+ # Project: itempire-fe
+ # Version: 1.0.0
+ # Created Date: Friday, July 10th 2026, 14:39:29
+ # Author: Kirill Dorozhynskyi - kyrylo.dorozhynskyi@justdev.org
+ # -----
+ # Last Modified: Monday, July 20th 2026 11:01:33
+ # Modified By: Kirill Dorozhynskyi
+ # -----
+ # Copyright (c) 2026 justDev
+ #}
+
+<section class="{{ ce.title and ce.button_side ? 'lg:py-36 py-20' : '' }}">
+	<div class="container flex flex-col gap-12 lg:gap-20">
+		{% if ce.title and ce.button_side %}
+			<div class="md:grid grid-cols-2 gap-6">
+				{% include '../title/_title.twig' with {
+					ce: ce
+				} %}
+
+				<div v-jd-animate class="flex max-md:hidden justify-end items-end">
+					{% include paths.btn_ex with {
+						button: ce.button_side
+					} only %}
+				</div>
+			</div>
+		{% else %}
+			{# <h1 class="text-balance font-serif leading-none font-semibold text-4xl lg:text-6xl" v-jd-animate>{{ ce.title|raw }}</h1> #}
+		{% endif %}
+
+		<div class="grid lg:grid-cols-2 gap-6">
+			<div>
+				{% for item in ce.studies|slice(0, 1) %}
+					<article class="relative aspect-580/492 group overflow-hidden min-h-full max-w-full max-h-full" v-jd-animate>
+						<a href="{{ item.url }}" aria-label="{{ item.title }}" class="size-full">
+							<div class="group-hover:scale-105 size-full transit">
+								{{ image(item.image) }}
+							</div>
+							<div class="absolute inset-0 bg-linear-to-b to-primary from-65% items-start flex justify-end flex-col gap-6 p-12">
+								<div class="flex flex-col gap-4 items-start">
+									<span class="tag-sm">{{ item.tag }}</span>
+
+									<h3
+										class="text-balance line-clamp-3 md:line-clamp-2 2xl:line-clamp-4 uhd:line-clamp-5 font-serif leading-tight font-semibold text-lg lg:text-2x text-white"
+									>
+										{{ item.title }}
+									</h3>
+								</div>
+								{% include paths.btn_ex with {
+									button: {
+										span: true,
+										icon: 'arrow-right',
+										class: 'btn-outline-neutral-30 p-2',
+										btn: {
+											label: 'Otvoriť: ' ~ item.title
+										}
+									}
+								} only %}
+							</div>
+						</a>
+					</article>
+				{% endfor %}
+			</div>
+
+			<div class="grid grid-cols-1 grid-rows-2 gap-6">
+				{% for item in ce.studies|slice(1) %}
+					<article class="relative bg-neutral-100 group-hover:bg-neutral-300 transit group overflow-hidden p-8" v-jd-animate>
+						<a href="{{ item.url }}" aria-label="{{ item.title }}">
+							<div class="items-start h-full flex justify-between flex-col gap-8">
+								<div class="flex flex-col gap-6 items-start">
+									<span class="tag-sm bg-white">{{ item.tag }}</span>
+
+									<h3
+										class="text-balance line-clamp-3 md:line-clamp-2 2xl:line-clamp-4 uhd:line-clamp-5 font-serif leading-tight font-semibold text-lg lg:text-2x"
+									>
+										{{ item.title }}
+									</h3>
+								</div>
+								{% include paths.btn_ex with {
+									button: {
+										span: true,
+										icon: 'arrow-right',
+										class: 'btn-outline-neutral p-2',
+										btn: {
+											label: 'Otvoriť: ' ~ item.title
+										}
+									}
+								} only %}
+							</div>
+						</a>
+					</article>
+				{% endfor %}
+			</div>
+		</div>
+
+		{% if ce.button_side %}
+			<div v-jd-animate class="flex md:hidden justify-center">
+				{% include paths.btn_ex with {
+					button: ce.button_side
+				} only %}
+			</div>
+		{% endif %}
+	</div>
+</section>

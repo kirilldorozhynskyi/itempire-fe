@@ -5,7 +5,7 @@
  * Created Date: Tuesday, June 2nd 2026, 12:15:55
  * Author: Kirill Dorozhynskyi - kyrylo.dorozhynskyi@justdev.org
  * -----
- * Last Modified: Wednesday, June 3rd 2026 11:26:10
+ * Last Modified: Monday, July 20th 2026 10:27:35
  * Modified By: Kirill Dorozhynskyi
  * -----
  * Copyright (c) 2026 justDev
@@ -31,6 +31,14 @@
 	@apply btn border-neutral-300 hover:bg-neutral-300;
 }
 
+@utility btn-outline-neutral-30 {
+	@apply btn border-neutral-300/30 not-hover:text-white hover:border-neutral-300 hover:bg-neutral-300;
+}
+
 @utility btn-social {
 	@apply transit hover:text-purple flex rounded border border-neutral-300/30 p-2 text-2xl leading-none text-white hover:bg-neutral-300;
+}
+
+@utility btn-white {
+	@apply transit hover:text-purple text-primary flex cursor-pointer rounded bg-white leading-none hover:bg-neutral-300;
 }

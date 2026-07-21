@@ -53,6 +53,585 @@
 				"/assets/images/logos/square.svg",
 				"/assets/images/logos/zapier.svg"
 			]
+		},
+		{
+			"name": "services",
+			"title": "Technológie, <br>ktoré podporujú rast",
+			"text": "Pripravíme technické riešenie na mieru podľa vašich procesov, rozpočtu a dlhodobej stratégie.",
+			"btn": {
+				"class": "btn-purple",
+				"btn": {
+					"title": "Nezáväzná konzultácia",
+					"url": "#kontakt"
+				}
+			},
+			"services": [
+				{
+					"icon": "ruler",
+					"title": "Riešenie na mieru",
+					"text": "Pripravíme technické riešenie presne podľa vašich potrieb.",
+					"url": "#"
+				},
+				{
+					"icon": "server",
+					"title": "Siete a servery",
+					"text": "Nastavíme spoľahlivú infraštruktúru pre vašu firmu.",
+					"url": "#"
+				},
+				{
+					"icon": "tool",
+					"title": "Potrebujem servis",
+					"text": "Poskytujeme profesionálnu a rýchlu technickú podporu.",
+					"url": "#"
+				},
+				{
+					"icon": "shield-check",
+					"title": "Lepšie zabezpečenie",
+					"text": "Ochráňte svoje dáta a systémy pred hrozbami.",
+					"url": "#"
+				}
+			]
+		},
+		{
+			"name": "cta_slider",
+			"items": [
+				{
+					"image": {
+						"pictureClass": "picture",
+						"image": {
+							"src": "834b86b1bcc5c7a06fae31b50d53cda66c035c6d",
+							"src_2x": "834b86b1bcc5c7a06fae31b50d53cda66c035c6d@2x",
+							"ext": "png",
+							"webp": false,
+							"alt": "Nvidia grafické karty rady RTX 5000",
+							"width": 1280,
+							"height": 624,
+							"class": "size-full object-cover object-center"
+						}
+					},
+					"title": "Nvidia grafické karty rady <span class='opacity-70'>RTX 5000</span>",
+					"text": "Vybavená masívnym výkonom umelej inteligencie umožňuje séria RTX 50 nové zážitky a grafickú kvalitu na úplne novej úrovni.",
+					"btn": {
+						"class": "btn-outline-neutral-30",
+						"btn": {
+							"title": "Preskúmať ponuku",
+							"url": "/"
+						}
+					},
+					"info": {
+						"style": "top: 60%; left: 60%;",
+						"tag": "Nová cena",
+						"price": "od 899 €",
+						"info": "ponuka platí do 16.2."
+					}
+				},
+				{
+					"image": {
+						"pictureClass": "picture",
+						"image": {
+							"src": "834b86b1bcc5c7a06fae31b50d53cda66c035c6d",
+							"src_2x": "834b86b1bcc5c7a06fae31b50d53cda66c035c6d@2x",
+							"ext": "png",
+							"webp": false,
+							"alt": "Nvidia grafické karty rady RTX 5000",
+							"width": 1280,
+							"height": 624,
+							"class": "size-full object-cover object-center"
+						}
+					},
+					"title": "Nvidia grafické karty rady <span class='opacity-70'>RTX 5000</span>",
+					"text": "Vybavená masívnym výkonom umelej inteligencie umožňuje séria RTX 50 nové zážitky a grafickú kvalitu na úplne novej úrovni.",
+					"btn": {
+						"class": "btn-outline-neutral-30",
+						"btn": {
+							"title": "Preskúmať ponuku",
+							"url": "/"
+						}
+					},
+					"info": {
+						"style": "top: 60%; left: 60%;",
+						"tag": "Nová cena",
+						"price": "od 899 €",
+						"info": "ponuka platí do 16.2."
+					}
+				}
+			]
+		},
+
+		{
+			"name": "stepper",
+			"tag": "SLužby",
+			"title": "<span class='text-subtile'>Zabezpečujeme</span> kompletný servis IT technológií. Od návrhu infraštruktúry až po dlhodobú správu a podporu.",
+			"items": [
+				{
+					"image": {
+						"pictureClass": "picture relative size-full object-cover object-center",
+						"image": {
+							"class": "size-full object-cover object-center",
+							"src": "52cfd27285ccf133dfd1d9917942f6a1967f8a0c",
+							"src_2x": "52cfd27285ccf133dfd1d9917942f6a1967f8a0c@2x",
+							"ext": "jpg",
+							"webp": false,
+							"alt": "Nadštandardný servis",
+							"width": 368,
+							"height": 304
+						}
+					},
+					"title": "Nadštandardný servis",
+					"text": "Dodávka a konfigurácia hardvéru a softvéru presne podľa potrieb vašej firmy."
+				},
+				{
+					"image": {
+						"pictureClass": "picture relative size-full object-cover object-center",
+						"image": {
+							"class": "size-full object-cover object-center",
+							"src": "d2b43023f46846c049412e9596e7387ac7ffc15e",
+							"src_2x": "d2b43023f46846c049412e9596e7387ac7ffc15e@2x",
+							"ext": "jpg",
+							"webp": false,
+							"alt": "Nadštandardný servis",
+							"width": 368,
+							"height": 304
+						}
+					},
+					"title": "Bezpečnosť",
+					"text": "Dodávka a konfigurácia hardvéru a softvéru presne podľa potrieb vašej firmy."
+				},
+				{
+					"image": {
+						"pictureClass": "picture relative size-full object-cover object-center",
+						"image": {
+							"class": "size-full object-cover object-center",
+							"src": "52cfd27285ccf133dfd1d9917942f6a1967f8a0c",
+							"src_2x": "52cfd27285ccf133dfd1d9917942f6a1967f8a0c@2x",
+							"ext": "jpg",
+							"webp": false,
+							"alt": "Audit a revízie",
+							"width": 368,
+							"height": 304
+						}
+					},
+					"title": "Audit a revízie",
+					"text": "Dodávka a konfigurácia hardvéru a softvéru presne podľa potrieb vašej firmy."
+				},
+				{
+					"image": {
+						"pictureClass": "picture relative size-full object-cover object-center",
+						"image": {
+							"class": "size-full object-cover object-center",
+							"src": "52cfd27285ccf133dfd1d9917942f6a1967f8a0c",
+							"src_2x": "52cfd27285ccf133dfd1d9917942f6a1967f8a0c@2x",
+							"ext": "jpg",
+							"webp": false,
+							"alt": "Implementácia riešení",
+							"width": 368,
+							"height": 304
+						}
+					},
+					"title": "Implementácia riešení",
+					"text": "Dodávka a konfigurácia hardvéru a softvéru presne podľa potrieb vašej firmy."
+				},
+				{
+					"image": {
+						"pictureClass": "picture relative size-full object-cover object-center",
+						"image": {
+							"class": "size-full object-cover object-center",
+							"src": "52cfd27285ccf133dfd1d9917942f6a1967f8a0c",
+							"src_2x": "52cfd27285ccf133dfd1d9917942f6a1967f8a0c@2x",
+							"ext": "jpg",
+							"webp": false,
+							"alt": "Outsourcing",
+							"width": 368,
+							"height": 304
+						}
+					},
+					"title": "Outsourcing",
+					"text": "Dodávka a konfigurácia hardvéru a softvéru presne podľa potrieb vašej firmy."
+				},
+				{
+					"image": {
+						"pictureClass": "picture relative size-full object-cover object-center",
+						"image": {
+							"class": "size-full object-cover object-center",
+							"src": "52cfd27285ccf133dfd1d9917942f6a1967f8a0c",
+							"src_2x": "52cfd27285ccf133dfd1d9917942f6a1967f8a0c@2x",
+							"ext": "jpg",
+							"webp": false,
+							"alt": "Siete a servery",
+							"width": 368,
+							"height": 304
+						}
+					},
+					"title": "Siete a servery",
+					"text": "Dodávka a konfigurácia hardvéru a softvéru presne podľa potrieb vašej firmy."
+				}
+			]
+		},
+
+		{
+			"name": "latest_products",
+			"tag": "E-shop",
+			"title": "<span class='text-subtile'>Overené</span> IT produkty pre vašu firmu",
+			"items": [
+				{
+					"title": "Hardware",
+					"products": [
+						{
+							"title": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
+							"url": "/",
+							"price": "881,05 €",
+							"tag": "Novinka",
+							"image": {
+								"pictureClass": "picture relative",
+								"image": {
+									"class": "size-full object-cover object-center",
+									"src": "products/product",
+									"src_2x": "products/product@2x",
+									"ext": "png",
+									"webp": false,
+									"alt": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
+									"width": 368,
+									"height": 304
+								}
+							}
+						},
+						{
+							"title": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
+							"url": "/",
+							"price": "881,05 €",
+							"tag": "Novinka",
+							"image": {
+								"pictureClass": "picture relative",
+								"image": {
+									"class": "size-full object-cover object-center",
+									"src": "products/product",
+									"src_2x": "products/product@2x",
+									"ext": "png",
+									"webp": false,
+									"alt": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
+									"width": 368,
+									"height": 304
+								}
+							}
+						},
+						{
+							"title": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
+							"url": "/",
+							"price": "881,05 €",
+							"tag": "Novinka",
+							"image": {
+								"pictureClass": "picture relative",
+								"image": {
+									"class": "size-full object-cover object-center",
+									"src": "products/product",
+									"src_2x": "products/product@2x",
+									"ext": "png",
+									"webp": false,
+									"alt": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
+									"width": 368,
+									"height": 304
+								}
+							}
+						},
+						{
+							"title": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
+							"url": "/",
+							"price": "881,05 €",
+							"tag": "Novinka",
+							"image": {
+								"pictureClass": "picture relative",
+								"image": {
+									"class": "size-full object-cover object-center",
+									"src": "products/product",
+									"src_2x": "products/product@2x",
+									"ext": "png",
+									"webp": false,
+									"alt": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
+									"width": 368,
+									"height": 304
+								}
+							}
+						},
+						{
+							"title": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
+							"url": "/",
+							"price": "881,05 €",
+							"tag": "Novinka",
+							"image": {
+								"pictureClass": "picture relative",
+								"image": {
+									"class": "size-full object-cover object-center",
+									"src": "products/product",
+									"src_2x": "products/product@2x",
+									"ext": "png",
+									"webp": false,
+									"alt": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
+									"width": 368,
+									"height": 304
+								}
+							}
+						}
+					]
+				},
+				{
+					"title": "Software",
+					"products": [
+						{
+							"title": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
+							"url": "/",
+							"price": "881,05 €",
+							"tag": "Novinka",
+							"image": {
+								"pictureClass": "picture relative",
+								"image": {
+									"class": "size-full object-cover object-center",
+									"src": "products/product",
+									"src_2x": "products/product@2x",
+									"ext": "png",
+									"webp": false,
+									"alt": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
+									"width": 368,
+									"height": 304
+								}
+							}
+						},
+						{
+							"title": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
+							"url": "/",
+							"price": "881,05 €",
+							"tag": "Novinka",
+							"image": {
+								"pictureClass": "picture relative",
+								"image": {
+									"class": "size-full object-cover object-center",
+									"src": "products/product",
+									"src_2x": "products/product@2x",
+									"ext": "png",
+									"webp": false,
+									"alt": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
+									"width": 368,
+									"height": 304
+								}
+							}
+						},
+						{
+							"title": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
+							"url": "/",
+							"price": "881,05 €",
+							"tag": "Novinka",
+							"image": {
+								"pictureClass": "picture relative",
+								"image": {
+									"class": "size-full object-cover object-center",
+									"src": "products/product",
+									"src_2x": "products/product@2x",
+									"ext": "png",
+									"webp": false,
+									"alt": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
+									"width": 368,
+									"height": 304
+								}
+							}
+						},
+						{
+							"title": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
+							"url": "/",
+							"price": "881,05 €",
+							"tag": "Novinka",
+							"image": {
+								"pictureClass": "picture relative",
+								"image": {
+									"class": "size-full object-cover object-center",
+									"src": "products/product",
+									"src_2x": "products/product@2x",
+									"ext": "png",
+									"webp": false,
+									"alt": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
+									"width": 368,
+									"height": 304
+								}
+							}
+						},
+						{
+							"title": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
+							"url": "/",
+							"price": "881,05 €",
+							"tag": "Novinka",
+							"image": {
+								"pictureClass": "picture relative",
+								"image": {
+									"class": "size-full object-cover object-center",
+									"src": "products/product",
+									"src_2x": "products/product@2x",
+									"ext": "png",
+									"webp": false,
+									"alt": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
+									"width": 368,
+									"height": 304
+								}
+							}
+						}
+					]
+				}
+			],
+			"btn": {
+				"class": "btn-outline-neutral",
+				"btn": {
+					"title": "Všetky produkty",
+					"url": "/"
+				}
+			}
+		},
+
+		{
+			"name": "numbers",
+			"tag": "O nás",
+			"title": "<span class='text-subtile'>Naše riešenia pomáhajú firmám</span> budovať stabilné, bezpečné a efektívne technologické prostredie.",
+			"button": {
+				"class": "btn-outline-neutral",
+				"btn": {
+					"title": "Viac o nás",
+					"url": "/"
+				}
+			},
+			"numbers": [
+				{
+					"number": "+15",
+					"title": "rokov skúseností"
+				},
+				{
+					"number": "+300",
+					"title": "spokojných klientov"
+				},
+				{
+					"number": "+2 000",
+					"title": "realizovaných projektov"
+				},
+				{
+					"number": "99 %",
+					"title": "dostupnosť služieb"
+				}
+			]
+		},
+		{
+			"name": "reviews",
+			"title": "Čo o nás hovoria klienti",
+			"reviews": [
+				{
+					"text": "„Spolupráca s IT Empire bola od začiatku veľmi efektívna a bezproblémová. Implementácia nášho IT riešenia prebehla rýchlo, v dohodnutom termíne a plne podľa našich potrieb. Už po krátkom čase sme zaznamenali výrazné zníženie technických problémov, menej výpadkov a vyššiu stabilitu systémov. Oceňujeme profesionálny prístup, spoľahlivú podporu a fakt, že naši zamestnanci môžu pracovať bez zbytočných obmedzení.“",
+					"author": {
+						"name": "Peter Novák",
+						"position": "Prevádzkový riaditeľ,<br>TechServis Group s.r.o.",
+						"image": {
+							"pictureClass": "picture relative",
+							"image": {
+								"class": "size-full object-cover object-center",
+								"src": "025edb7427d5adb8825bc5985f02dcbac32d247b",
+								"src_2x": "025edb7427d5adb8825bc5985f02dcbac32d247b@2x",
+								"ext": "jpg",
+								"webp": false,
+								"alt": "Peter Novák",
+								"width": 72,
+								"height": 72
+							}
+						}
+					},
+					"info": {
+						"percent": "-33%",
+						"text": "Menej kyberútokov"
+					}
+				},
+				{
+					"text": "„Spolupráca s IT Empire bola od začiatku veľmi efektívna a bezproblémová. Implementácia nášho IT riešenia prebehla rýchlo, v dohodnutom termíne a plne podľa našich potrieb. Už po krátkom čase sme zaznamenali výrazné zníženie technických problémov, menej výpadkov a vyššiu stabilitu systémov. Oceňujeme profesionálny prístup, spoľahlivú podporu a fakt, že naši zamestnanci môžu pracovať bez zbytočných obmedzení.“",
+					"author": {
+						"name": "Peter Novák",
+						"position": "Prevádzkový riaditeľ,<br>TechServis Group s.r.o.",
+						"image": {
+							"pictureClass": "picture relative",
+							"image": {
+								"class": "size-full object-cover object-center",
+								"src": "025edb7427d5adb8825bc5985f02dcbac32d247b",
+								"src_2x": "025edb7427d5adb8825bc5985f02dcbac32d247b@2x",
+								"ext": "jpg",
+								"webp": false,
+								"alt": "Peter Novák",
+								"width": 72,
+								"height": 72
+							}
+						}
+					},
+					"info": {
+						"percent": "-33%",
+						"text": "Menej kyberútokov"
+					}
+				},
+				{
+					"text": "„Spolupráca s IT Empire bola od začiatku veľmi efektívna a bezproblémová. Implementácia nášho IT riešenia prebehla rýchlo, v dohodnutom termíne a plne podľa našich potrieb. Už po krátkom čase sme zaznamenali výrazné zníženie technických problémov, menej výpadkov a vyššiu stabilitu systémov. Oceňujeme profesionálny prístup, spoľahlivú podporu a fakt, že naši zamestnanci môžu pracovať bez zbytočných obmedzení.“",
+					"author": {
+						"name": "Peter Novák",
+						"position": "Prevádzkový riaditeľ,<br>TechServis Group s.r.o.",
+						"image": {
+							"pictureClass": "picture relative",
+							"image": {
+								"class": "size-full object-cover object-center",
+								"src": "025edb7427d5adb8825bc5985f02dcbac32d247b",
+								"src_2x": "025edb7427d5adb8825bc5985f02dcbac32d247b@2x",
+								"ext": "jpg",
+								"webp": false,
+								"alt": "Peter Novák",
+								"width": 72,
+								"height": 72
+							}
+						}
+					},
+					"info": {
+						"percent": "-33%",
+						"text": "Menej kyberútokov"
+					}
+				}
+			]
+		},
+		{
+			"name": "studies",
+			"tag": "Prípadové štúdie",
+			"title": "<span class='text-subtile'>Reálne riešenia</span> <br>pre reálne firmy",
+			"button_side": {
+				"class": "btn-outline-neutral",
+				"btn": {
+					"title": "Všetky štúdie",
+					"url": "/"
+				}
+			},
+			"studies": [
+				{
+					"tag": "bezpečnosť",
+					"title": "Implementácia bezpečnostnej politiky v korporátnom prostredí",
+					"url": "/",
+					"image": {
+						"pictureClass": "picture relative",
+						"image": {
+							"class": "size-full object-cover object-center",
+							"src": "d2b43023f46846c049412e9596e7387ac7ffc15e",
+							"src_2x": "d2b43023f46846c049412e9596e7387ac7ffc15e@2x",
+							"ext": "jpg",
+							"webp": false,
+							"alt": "Implementácia bezpečnostnej politiky v korporátnom prostredí",
+							"width": 580,
+							"height": 492
+						}
+					}
+				},
+				{
+					"tag": "IT Outsourcing",
+					"title": "Kompletný IT outsourcing pre stredne veľkú firmu Kompletný IT outsourcing pre stredne veľkú firmu Kompletný IT outsourcing pre stredne veľkú firmu Kompletný IT outsourcing pre stredne veľkú firmu Kompletný IT outsourcing pre stredne veľkú firmu Kompletný IT outsourcing pre stredne veľkú firmu Kompletný IT outsourcing pre stredne veľkú firmu Kompletný IT outsourcing pre stredne veľkú firmu",
+					"url": "/"
+				},
+				{
+					"tag": "hardvér",
+					"title": "Nasadenie firemných pracovných staníc pre call centrum",
+					"url": "/"
+				}
+			]
 		}
 	]
 }

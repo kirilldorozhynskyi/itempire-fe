@@ -1,0 +1,59 @@
+/*
+ * File: /src/styles/base/_elements.css
+ * Project: itempire-fe
+ * Version: 1.0.0
+ * Created Date: Friday, July 10th 2026, 14:04:34
+ * Author: Kirill Dorozhynskyi - kyrylo.dorozhynskyi@justdev.org
+ * -----
+ * Last Modified: Monday, July 20th 2026 17:35:03
+ * Modified By: Kirill Dorozhynskyi
+ * -----
+ * Copyright (c) 2026 justDev
+ */
+
+@utility tag {
+	@apply relative bg-neutral-100 py-2.5 ps-5 pe-4 leading-none font-medium tracking-tight uppercase;
+	clip-path: polygon(
+		0 0,
+		100% 0,
+		100% 100%,
+		0 100%,
+		0 calc(50% + 0.5625rem),
+		0.25rem calc(50% + 0.5625rem),
+		0.25rem calc(50% - 0.5625rem),
+		0 calc(50% - 0.5625rem)
+	);
+}
+
+@utility tag-sm {
+	@apply relative bg-neutral-100 py-1.25 ps-3 pe-2 text-sm leading-none font-medium tracking-tight uppercase;
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 calc(50% + 0.5rem), 0.25rem calc(50% + 0.5rem), 0.25rem calc(50% - 0.5rem), 0 calc(50% - 0.5rem));
+}
+
+@utility decor {
+	@apply relative;
+	clip-path: polygon(0 0, 40% 0, 40% 3.5rem, 60% 3.5rem, 60% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+@utility decor-r {
+	@apply relative;
+	clip-path: polygon(0 0, 60% 0, 60% 3.5rem, 100% 3.5rem, 100% 100%, 0 100%);
+}
+
+/*
+.tag-remover {
+	@apply tag-manager bg-neutral-100;
+} */
+
+/* .tag {
+	@apply relative bg-neutral-100 py-2.5 ps-5 pe-4 leading-none font-medium tracking-[-2%] uppercase;
+	&:after {
+		@apply absolute top-1/2 left-0 h-4.5 w-1 -translate-y-1/2 bg-white content-[''];
+	}
+} */
+
+.bg-remover {
+	&:after {
+		@apply absolute top-0 right-0 h-4 w-15 bg-white content-[''] lg:h-6 lg:w-22;
+	}
+}

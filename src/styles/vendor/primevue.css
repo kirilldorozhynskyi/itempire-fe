@@ -1,0 +1,35 @@
+/*
+ * File: /src/styles/vendor/primevue.css
+ * Project: itempire-fe
+ * Version: 1.0.0
+ * Created Date: Monday, July 20th 2026, 13:50:33
+ * Author: Kirill Dorozhynskyi - kyrylo.dorozhynskyi@justdev.org
+ * -----
+ * Last Modified: Monday, July 20th 2026 14:56:11
+ * Modified By: Kirill Dorozhynskyi
+ * -----
+ * Copyright (c) 2026 justDev
+ */
+
+@layer primevue {
+	.p-tabpanels {
+		--p-tabs-tabpanel-background: transparent;
+		--p-tabs-tabpanel-color: var(--color-primary);
+		--p-tabs-tabpanel-padding: 0;
+	}
+
+	.p-tablist {
+		--p-tabs-tablist-background: transparent;
+		--p-tabs-tab-color: var(--color-subtile);
+		--p-tabs-tab-border-color: var(--color-neutral-300);
+		--p-tabs-tab-hover-border-color: var(--color-neutral-300);
+		--p-tabs-tab-border-width: 1px;
+		--p-tabs-active-bar-background: var(--color-purple);
+		--p-tabs-tab-active-color: var(--color-purple);
+		--p-tabs-tab-font-weight: 500;
+		border: none !important;
+		.p-tab {
+			@apply min-w-0 flex-1 justify-center border-t-0! border-r-0! border-l-0!;
+		}
+	}
+}
