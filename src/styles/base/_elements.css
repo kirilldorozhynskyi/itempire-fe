@@ -5,7 +5,7 @@
  * Created Date: Friday, July 10th 2026, 14:04:34
  * Author: Kirill Dorozhynskyi - kyrylo.dorozhynskyi@justdev.org
  * -----
- * Last Modified: Monday, July 20th 2026 17:35:03
+ * Last Modified: Thursday, July 23rd 2026 10:15:10
  * Modified By: Kirill Dorozhynskyi
  * -----
  * Copyright (c) 2026 justDev
@@ -33,6 +33,11 @@
 @utility decor {
 	@apply relative;
 	clip-path: polygon(0 0, 40% 0, 40% 3.5rem, 60% 3.5rem, 60% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+@utility decor-sm {
+	@apply relative;
+	clip-path: polygon(0 0, 40% 0, 40% 2rem, 60% 2rem, 60% 0, 100% 0, 100% 100%, 0 100%);
 }
 
 @utility decor-r {

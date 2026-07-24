@@ -5,13 +5,13 @@
  # Created Date: Monday, July 20th 2026, 14:17:09
  # Author: Kirill Dorozhynskyi - kyrylo.dorozhynskyi@justdev.org
  # -----
- # Last Modified: Monday, July 20th 2026 14:45:03
+ # Last Modified: Tuesday, July 21st 2026 18:01:28
  # Modified By: Kirill Dorozhynskyi
  # -----
  # Copyright (c) 2026 justDev
  #}
 
-<article class="bg-white hover:-translate-y-2 hover:shadow-2xl transit">
+<article class="bg-white hover:-translate-y-2 hover:shadow-2xl transit" {{ animation ? 'v-jd-animate' : '' }}>
 	<a href="{{ item.url }}" aria-label="{{ item.title }}">
 		<div class="aspect-368/304 relative">
 			<svg class="absolute top-0 left-0 w-13/20 h-auto" width="237" height="190" viewBox="0 0 237 190" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -48,7 +48,7 @@
 						button: {
 							span: true,
 							icon: 'shopping-bag',
-							class: 'btn-purple p-2',
+							class: 'btn-purple p-2 [&_svg]:text-2xl!',
 							btn: {
 								label: 'Pridať do košíku: ' ~ item.title
 							}

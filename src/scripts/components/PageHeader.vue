@@ -2,12 +2,15 @@
 	<header
 		ref="headerEl"
 		class="transit sticky top-0"
-		:class="[hidden ? '-translate-y-full' : 'translate-y-0', solid || menuOpened || activeSubmenu !== null ? 'bg-white' : ' ']"
+		:class="[hidden ? '-translate-y-full' : 'translate-y-0', solid || menuOpened || cartOpened || activeSubmenu !== null ? 'bg-white' : ' ']"
 	>
 		<div>
 			<slot
 				:toggle-menu="toggleMenu"
 				:menu-opened="menuOpened"
+				:toggle-cart="toggleCart"
+				:close-cart="closeCart"
+				:cart-opened="cartOpened"
 				:active-submenu="activeSubmenu"
 				:active-submenu-item="activeSubmenuItem"
 				:open-submenu="openSubmenu"
@@ -33,6 +36,7 @@ const lastScrollTop = ref(0)
 const hidden = ref(false) // slid up and out (scrolling down)
 const solid = ref(false) // opaque background once scrolled past the hero
 const menuOpened = ref(false)
+const cartOpened = ref(false)
 const activeSubmenu = ref(null)
 const activeSubmenuItem = ref(1)
 
@@ -58,13 +62,30 @@ const update = () => {
 	// Scrolling down slides the header up and out; scrolling up brings it back.
 	// It stays sticky (in flow), so the page content never jumps.
 	hidden.value = delta > 0
-	if (hidden.value) closeSubmenu()
+	if (hidden.value) closeOverlays()
 
 	lastScrollTop.value = currentScrollTop
 }
 
 const toggleMenu = () => {
 	menuOpened.value = !menuOpened.value
+	if (menuOpened.value) {
+		closeSubmenu()
+		closeCart()
+	}
+}
+
+const closeCart = () => {
+	cartOpened.value = false
+}
+
+const toggleCart = () => {
+	cartOpened.value = !cartOpened.value
+
+	if (cartOpened.value) {
+		menuOpened.value = false
+		closeSubmenu()
+	}
 }
 
 const closeSubmenu = () => {
@@ -82,18 +103,24 @@ const openSubmenu = (index) => {
 
 	activeSubmenu.value = nextIndex
 	activeSubmenuItem.value = 1
+	closeCart()
 }
 
 const openSubmenuItem = (index) => {
 	activeSubmenuItem.value = Number(index)
 }
 
+const closeOverlays = () => {
+	closeSubmenu()
+	closeCart()
+}
+
 const handleDocumentClick = (event) => {
-	if (!headerEl.value?.contains(event.target)) closeSubmenu()
+	if (!headerEl.value?.contains(event.target)) closeOverlays()
 }
 
 const handleKeydown = (event) => {
-	if (event.key === 'Escape') closeSubmenu()
+	if (event.key === 'Escape') closeOverlays()
 }
 
 watch(menuOpened, (isOpened) => {

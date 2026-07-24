@@ -1,0 +1,150 @@
+{
+	"template": "views/templates/page.twig",
+	"body_class": "page",
+	"flexible": [
+		{
+			"name": "breadcrumbs",
+			"crumbs": [
+				{
+					"link": "/",
+					"title": "Domov",
+					"icon": "smart-home"
+				},
+				{
+					"link": "/products/",
+					"title": "Hardware"
+				},
+				{
+					"title": "Mobilné prenosné zariadenia"
+				}
+			],
+			"title": "Mobilné prenosné <br>zariadenia",
+			"category": [
+				{
+					"title": "Smartfóny a mobilné telefóny",
+					"url": "/products/notebooky",
+					"image": {
+						"pictureClass": "picture relative",
+						"image": {
+							"class": "h-full object-content object-center",
+							"src": "products/f82213b87f4721b0ada3b4323a151124e80dcf9f",
+							"src_2x": "products/f82213b87f4721b0ada3b4323a151124e80dcf9f@2x",
+							"ext": "png",
+							"webp": false,
+							"alt": "Smartfóny a mobilné telefóny",
+							"width": 64,
+							"height": 64
+						}
+					}
+				},
+				{
+					"title": "Notebooky",
+					"url": "/products/notebooky",
+					"image": {
+						"pictureClass": "picture relative",
+						"image": {
+							"class": "h-full object-content object-center",
+							"src": "products/f82213b87f4721b0ada3b4323a151124e80dcf9f",
+							"src_2x": "products/f82213b87f4721b0ada3b4323a151124e80dcf9f@2x",
+							"ext": "png",
+							"webp": false,
+							"alt": "Notebooky",
+							"width": 64,
+							"height": 64
+						}
+					}
+				},
+				{
+					"title": "Tablety",
+					"url": "/products/notebooky",
+					"image": {
+						"pictureClass": "picture relative",
+						"image": {
+							"class": "h-full object-content object-center",
+							"src": "products/f82213b87f4721b0ada3b4323a151124e80dcf9f",
+							"src_2x": "products/f82213b87f4721b0ada3b4323a151124e80dcf9f@2x",
+							"ext": "png",
+							"webp": false,
+							"alt": "Tablety",
+							"width": 64,
+							"height": 64
+						}
+					}
+				},
+				{
+					"title": "Príslušenstvo",
+					"url": "/products/notebooky",
+					"image": {
+						"pictureClass": "picture relative",
+						"image": {
+							"class": "h-full object-content object-center",
+							"src": "products/f82213b87f4721b0ada3b4323a151124e80dcf9f",
+							"src_2x": "products/f82213b87f4721b0ada3b4323a151124e80dcf9f@2x",
+							"ext": "png",
+							"webp": false,
+							"alt": "Príslušenstvo",
+							"width": 64,
+							"height": 64
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "all_products",
+			"cta": {
+				"image": {
+					"pictureClass": "picture size-full",
+					"image": {
+						"src": "products/promo",
+						"src_2x": "products/promo@2x",
+						"ext": "jpg",
+						"webp": false,
+						"alt": "Nvidia grafické karty rady RTX 5000",
+						"width": 1280,
+						"height": 624,
+						"class": "size-full object-cover object-bottom "
+					}
+				},
+				"url": "/",
+
+				"title": "Nvidia grafické karty rady <span class='opacity-70'>RTX 5000</span>",
+				"text": "Vybavená masívnym výkonom umelej inteligencie umožňuje séria RTX 50 nové zážitky a grafickú kvalitu na úplne novej úrovni.",
+				"btn": {
+					"span": true,
+					"class": "btn-outline-neutral-30",
+					"btn": {
+						"title": "Preskúmať ponuku"
+					}
+				},
+				"info": {
+					"style": "top: 60%; left: 60%;",
+					"tag": "Nová cena",
+					"price": "od 899 €",
+					"info": "ponuka platí do 16.2."
+				}
+			},
+			"products": [
+				{
+					"title": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
+					"url": "/products/detail",
+					"price": "881,05 €",
+					"tag": "Novinka",
+					"image": {
+						"pictureClass": "picture relative",
+						"image": {
+							"class": "size-full object-cover object-center",
+							"src": "products/product",
+							"src_2x": "products/product@2x",
+							"ext": "png",
+							"webp": false,
+							"alt": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
+							"width": 368,
+							"height": 304
+						}
+					}
+				}
+			]
+		}
+	]
+}

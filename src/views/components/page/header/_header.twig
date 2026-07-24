@@ -5,14 +5,16 @@
  # Created Date: Tuesday, March 31st 2026, 17:21:00
  # Author: Kirill Dorozhynskyi - kyrylo.dorozhynskyi@justdev.org
  # -----
- # Last Modified: Tuesday, July 21st 2026 15:48:20
+ # Last Modified: Tuesday, July 21st 2026 15:52:38
  # Modified By: Kirill Dorozhynskyi
  # -----
  # Copyright (c) 2026 justDev
  #}
 
 <page-header class="z-999 py-5 lg:py-6 bg-white">
-	<template #default="{ toggleMenu, menuOpened, activeSubmenu, activeSubmenuItem, openSubmenu, openSubmenuItem, closeSubmenu }">
+	<template
+		#default="{ toggleMenu, menuOpened, toggleCart, closeCart, cartOpened, activeSubmenu, activeSubmenuItem, openSubmenu, openSubmenuItem, closeSubmenu }"
+	>
 		<div class="container max-xl:max-w-full">
 			<div class="offset flex items-center gap-10 xl:gap-16">
 				<a class="" href="/" aria-label="{{ site_title }}">
@@ -28,9 +30,17 @@
 				</div>
 
 				<div class="ms-auto flex items-center gap-2">
-					<button class="btn-outline-neutral p-1.5 relative">
+					<button
+						type="button"
+						class="btn-outline-neutral p-1.5 relative"
+						:class="cartOpened ? 'bg-neutral-100 text-purple' : ''"
+						:aria-expanded="cartOpened ? 'true' : 'false'"
+						aria-controls="header-cart"
+						aria-label="Otvoriť košík"
+						@click.stop="toggleCart()"
+					>
 						<div
-							class="absolute translate-x-1/2 -translate-y-1/2 bg-purple text-white rounded-full flex items-center tracking-tight leading-none font-medium text-sm justify-center min-w-6 h-6 -top-0.25 right-0.75"
+							class="absolute translate-x-1/2 -translate-y-1/2 bg-purple text-white rounded-full flex items-center tracking-tight leading-none font-medium text-sm justify-center min-w-6 h-6 -top-px right-0.75"
 						>
 							9
 						</div>
@@ -43,6 +53,16 @@
 					{% include paths.btn_ex with {
 						button: header.button
 					} only %}
+				</div>
+
+				<div id="header-cart" v-show="cartOpened" class="fixed top-22 left-1/2 z-20 w-full -translate-x-1/2 pointer-events-none" @click.stop>
+					<div class="container flex justify-end">
+						<div class="pointer-events-auto w-full max-w-100 rounded-b-sm bg-white p-6 shadow-xl">
+							<div class="flex items-center justify-between gap-6">
+								<h2 class="font-serif text-xl font-semibold leading-tight">Nákupný košík</h2>
+							</div>
+						</div>
+					</div>
 				</div>
 
 				<div class="relative z-3 lg:hidden">

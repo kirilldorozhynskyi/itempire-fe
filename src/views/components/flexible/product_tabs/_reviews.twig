@@ -1,0 +1,121 @@
+{#
+ # File: /src/views/components/flexible/product_tabs/_reviews.twig
+ # Project: itempire-fe
+ #}
+
+<div class="flex flex-col gap-6">
+	<h2 class="font-serif text-2xl lg:text-4xl font-semibold leading-tight" v-jd-animate>Recenzie</h2>
+
+	<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:divide-x divide-neutral-300" v-jd-animate>
+		<div class="flex items-start justify-between lg:pe-8">
+			<div class="flex flex-col gap-2">
+				<div class="tracking-tight">
+					Počet recenzií
+				</div>
+				<div class="div">
+					<div class="font-serif text-5xl font-semibold leading-tight">
+						{{ reviews.count }}
+					</div>
+
+					<div class="mt-6">
+						<review-drawer button-text="Pridať recenziu" title="Pridajte vaše hodnotenie">
+							<template #default="{ close }">
+								<form class="flex flex-col gap-6" action="" method="post">
+									<star-rating name="rating"></star-rating>
+
+									<div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+										<label class="focus-within:border-purple flex flex-col rounded-sm border border-neutral-300 px-4 py-2">
+											<span class="text-sm font-medium">Meno*</span>
+											<input class="outline-none" name="firstName" type="text" placeholder="Martin" required />
+										</label>
+
+										<label class="focus-within:border-purple flex flex-col rounded-sm border border-neutral-300 px-4 py-2">
+											<span class="text-sm font-medium">Priezvisko*</span>
+											<input class="outline-none" name="lastName" type="text" placeholder="Chynoranský" required />
+										</label>
+									</div>
+
+									<label class="focus-within:border-purple flex min-h-60 flex-col rounded-sm border border-neutral-300 px-4 py-2">
+										<span class="text-sm font-medium">Popíšte svoju skúsenosť</span>
+										<textarea class="min-h-48 resize-none outline-none" name="text" placeholder="Priestor pre vašu recenziu" required></textarea>
+									</label>
+
+									<button type="submit" class="btn-purple w-full justify-center">Uložiť</button>
+									<button type="button" class="btn-outline-neutral w-full justify-center" @click="close">Vrátiť späť</button>
+								</form>
+							</template>
+						</review-drawer>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="flex items-center gap-6 lg:px-8">
+				<div>
+					<div>
+						Priemerné hodnotenie
+					</div>
+					<div class="font-serif text-5xl font-semibold leading-tight">
+						{{ reviews.average }}
+					</div>
+				</div>
+
+				{% include './_stars.twig' with {
+					rating: reviews.average,
+					class: 'text-2xl'
+				} only %}
+			</div>
+
+			<div class="flex flex-col gap-2 lg:ps-8">
+				{% for item in reviews.distribution %}
+					<div class="grid grid-cols-[2rem_1fr_auto] items-center gap-3">
+						<div class="flex items-center gap-1">
+							{{ sprite('star', 'text-purple') }}
+							<span>{{ item.rating }}</span>
+						</div>
+						<div class="h-1.5 bg-neutral-300">
+							<div class="h-full bg-purple" style="width: {{ item.percent }}%"></div>
+						</div>
+						<span>{{ item.count }}x</span>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+
+		<div>
+			{% for item in reviews.items %}
+				<article class="grid grid-cols-1 lg:grid-cols-[21rem_1fr] gap-6 lg:gap-12 py-8 border-b border-neutral-300" v-jd-animate>
+					<div class="flex gap-4">
+						<div class="size-16 shrink-0 flex items-center justify-center bg-neutral-200 text-3xl text-white">
+							{{ sprite('user-avatar') }}
+						</div>
+						<div>
+							<h3 class="font-serif text-lg font-semibold leading-tight">{{ item.author }}</h3>
+							<div>
+								{{ item.product }}
+							</div>
+						</div>
+					</div>
+
+					<div class="flex flex-col gap-5">
+						<div class="flex flex-wrap items-center gap-3">
+							{% include './_stars.twig' with {
+								rating: item.rating,
+								class: 'text-xl'
+							} only %}
+							<time datetime="{{ item.dateIso }}">{{ item.date }}</time>
+						</div>
+						<p>
+							{{ item.text }}
+						</p>
+					</div>
+				</article>
+			{% endfor %}
+		</div>
+
+		{% if reviews.moreCount %}
+			<div class="flex justify-center">
+				<button type="button" class="btn-outline-neutral">Načítať viac ({{ reviews.moreCount }})</button>
+			</div>
+		{% endif %}
+	</div>

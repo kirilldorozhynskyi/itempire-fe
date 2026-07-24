@@ -1,0 +1,18 @@
+{#
+ # File: /src/views/components/flexible/product_tabs/description/_content.twig
+ # Project: itempire-fe
+ #}
+
+<div class="flex flex-col gap-6" v-jd-animate>
+	{% if ce.title %}
+		<h3 class="text-balance font-serif leading-tight font-semibold text-xl lg:text-2xl">
+			{{ ce.title }}
+		</h3>
+	{% endif %}
+
+	{% if ce.text %}
+		<div class="wysiwyg">
+			{{ ce.text|raw }}
+		</div>
+	{% endif %}
+</div>

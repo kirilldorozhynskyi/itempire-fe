@@ -1,0 +1,36 @@
+{#
+ # File: /src/views/components/posts/news/_teaser.twig
+ # Project: itempire-fe
+ #}
+
+<article class="group h-full {{ class|default('bg-neutral-100') }} transit hover:-translate-y-2 hover:shadow-2xl" v-jd-animate>
+	<a href="{{ item.url }}" aria-label="{{ item.title }}" class="flex h-full flex-col">
+		<div class="p-2">
+			<div class="aspect-368/304 overflow-hidden">
+				<div class="size-full">
+					{{ image(item.image) }}
+				</div>
+			</div>
+		</div>
+
+		<div class="flex flex-1 flex-col items-start gap-4 p-6">
+			<div class="flex flex-col items-start gap-6">
+				<span class="tag-sm bg-white uppercase">{{ item.tag }}</span>
+
+				<h2 class="text-balance font-serif text-lg font-semibold leading-tight line-clamp-2">{{ item.title }}</h2>
+			</div>
+			<div class="mt-auto">
+				{% include '../../utils/_button.twig' with {
+					button: {
+						span: true,
+						icon: 'arrow-right',
+						class: 'btn-outline-neutral p-2',
+						btn: {
+							label: 'Otvoriť: ' ~ item.title
+						}
+					}
+				} only %}
+			</div>
+		</div>
+	</a>
+</article>

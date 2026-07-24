@@ -91,14 +91,13 @@
 					"class": "size-full object-cover object-center"
 				}
 			},
+			"url": "/",
 			"title": "Nvidia grafické karty <br>rady <span class='opacity-70'>RTX 5000</span>",
 			"btn": {
 				"span": true,
 				"icon": "arrow-right",
 				"class": "btn-outline-neutral-30 p-2",
-				"btn": {
-					"url": "/"
-				}
+				"btn": {}
 			},
 			"info": {
 				"tag": "Nová cena",

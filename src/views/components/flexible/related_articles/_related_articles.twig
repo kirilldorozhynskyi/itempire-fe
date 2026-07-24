@@ -1,0 +1,33 @@
+{#
+ # File: /src/views/components/flexible/related_articles/_related_articles.twig
+ # Project: itempire-fe
+ #}
+
+<section class="decor overflow-hidden bg-neutral-100 py-20 lg:py-36">
+	<div class="container flex flex-col gap-12 lg:gap-20">
+		<div class="mx-auto flex max-w-145 flex-col items-center gap-6 text-center">
+			{% include '../title/_title_content.twig' with {
+				ce: ce
+			} %}
+		</div>
+
+		<slider-wrapper class="w-full" :overflow="false" wrapper-class="md:-me-12" :dots="false" :nav="true">
+			{% for article in ce.articles %}
+				<slider-item class="basis-full md:basis-1/3 2xl:basis-1/4 md:pe-12" v-jd-animate="{ delay: {{ loop.index * 100 }} }">
+					{% include '../../posts/news/_teaser.twig' with {
+						item: article,
+						class: 'bg-white'
+					} only %}
+				</slider-item>
+			{% endfor %}
+		</slider-wrapper>
+
+		{% if ce.btn %}
+			<div class="flex justify-center" v-jd-animate>
+				{% include paths.btn_ex with {
+					button: ce.btn
+				} only %}
+			</div>
+		{% endif %}
+	</div>
+</section>

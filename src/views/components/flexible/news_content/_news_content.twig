@@ -1,0 +1,28 @@
+{#
+ # File: /src/views/components/flexible/news_content/_news_content.twig
+ # Project: itempire-fe
+ #}
+
+<section class="pt-16 pb-20 lg:pb-36">
+	<div class="container flex flex-col gap-16">
+		{% for item in ce.items %}
+			{% if item.name == 'content' %}
+				<div class="mx-auto w-full max-w-196 px-6 lg:px-12" v-jd-animate>
+					{% if item.tag %}
+						<div class="mb-6">
+							<span class="tag-sm uppercase">{{ item.tag }}</span>
+						</div>
+					{% endif %}
+
+					<div class="article-prose">
+						{{ item.text|raw }}
+					</div>
+				</div>
+			{% elseif item.name == 'image' %}
+				<div class="{{ item.fluid ? 'w-full' : 'mx-auto w-full max-w-196 px-6 lg:px-12' }}" v-jd-animate>
+					{{ image(item.image) }}
+				</div>
+			{% endif %}
+		{% endfor %}
+	</div>
+</section>

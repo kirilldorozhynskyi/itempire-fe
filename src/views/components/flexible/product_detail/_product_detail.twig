@@ -1,0 +1,176 @@
+{#
+ # File: /src/views/components/flexible/product_detail/_product_detail.twig
+ # Project: itempire-fe
+ # Version: 1.0.0
+ # Created Date: Wednesday, July 22nd 2026, 17:45:26
+ # Author: Kirill Dorozhynskyi - kyrylo.dorozhynskyi@justdev.org
+ # -----
+ # Last Modified: Thursday, July 23rd 2026 10:30:16
+ # Modified By: Kirill Dorozhynskyi
+ # -----
+ # Copyright (c) 2026 justDev
+ #}
+
+<section>
+	<div class="container">
+		<div class="grid gap-8 lg:grid-cols-2">
+			<div class="min-w-0">
+				<product-gallery>
+					<template #main="{ activeIndex }">
+						<div class="relative aspect-580/466 overflow-hidden">
+							<svg
+								class="absolute top-0 left-0 w-13/20 h-auto"
+								width="237"
+								height="190"
+								viewBox="0 0 237 190"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<g opacity="0.6">
+									<path d="M189.607 94.9465V142.434H47.4189V189.922H0V47.4253H47.4189V94.9465H189.607Z" fill="#F2F2F2" />
+									<path d="M237 -0.078125H47.4174V47.4203H237V-0.078125Z" fill="#F2F2F2" />
+								</g>
+							</svg>
+
+							{% for item in ce.images %}
+								<div v-show="activeIndex === {{ loop.index0 }}" class="absolute inset-0 flex items-center justify-center [&_picture]:size-full">
+									{{ image(item.image) }}
+								</div>
+							{% endfor %}
+						</div>
+					</template>
+
+					<template #thumbnails="{ activeIndex, select }">
+						{% for item in ce.images %}
+							<button
+								type="button"
+								data-gallery-thumbnail
+								class="min-w-0 shrink-0 basis-1/3 cursor-pointer px-1 sm:basis-1/4 lg:basis-1/5 uhd:basis-1/6"
+								:aria-current="activeIndex === {{ loop.index0 }} ? 'true' : undefined"
+								aria-label="Show image {{ loop.index }}"
+								@click="select({{ loop.index0 }})"
+							>
+								<div class="aspect-square w-full">
+									<span
+										class="flex size-full items-center justify-center border rounded-sm bg-white transition-colors [&_picture]:size-full"
+										:class="activeIndex === {{ loop.index0 }} ? 'border-purple' : 'border-transparent hover:border-neutral-300'"
+									>
+										{{ image(item.image) }}
+									</span>
+								</div>
+							</button>
+						{% endfor %}
+					</template>
+				</product-gallery>
+			</div>
+			<div class="min-w-0">
+				<div class="bg-neutral-100 decor-sm flex flex-col gap-8 p-6 lg:p-12">
+					<div class="flex flex-col gap-4 items-start">
+						<div class="bg-coffee-300 py-1 px-2 tracking-tight uppercase font-medium text-sm">
+							{{ ce.tag }}
+						</div>
+						<h1 class="text-lg lg:text-2x font-serif leading-tight font-medium">{{ ce.title }}</h1>
+						<p class="text-subtile">
+							{{ ce.text }}
+						</p>
+					</div>
+
+					<div class="flex flex-col gap-8">
+						{% if ce.memoryOptions %}
+							<fieldset class="flex flex-col gap-4">
+								<legend class="mb-4 font-medium">Kapacita pamäte</legend>
+								<div class="flex flex-wrap gap-2">
+									{% for item in ce.memoryOptions %}
+										<div>
+											<input
+												type="radio"
+												class="peer sr-only"
+												name="memory"
+												value="{{ item.value }}"
+												id="memory-{{ loop.index }}"
+												{{ item.selected ? 'checked' }}
+											/>
+											<label
+												for="memory-{{ loop.index }}"
+												class="flex h-9 cursor-pointer items-center rounded-sm border border-neutral-300 bg-white px-2 transition-colors hover:border-purple peer-checked:border-primary peer-checked:text-primary"
+											>
+												{{ item.label }}
+											</label>
+										</div>
+									{% endfor %}
+								</div>
+							</fieldset>
+						{% endif %}
+
+						{% if ce.storageOptions %}
+							<fieldset class="flex flex-col gap-4">
+								<legend class="mb-4 font-medium">Kapacita disku</legend>
+								<div class="flex flex-wrap gap-2">
+									{% for item in ce.storageOptions %}
+										<div>
+											<input
+												type="radio"
+												class="peer sr-only"
+												name="storage"
+												value="{{ item.value }}"
+												id="storage-{{ loop.index }}"
+												{{ item.selected ? 'checked' }}
+											/>
+											<label
+												for="storage-{{ loop.index }}"
+												class="flex h-9 cursor-pointer items-center rounded-sm border border-neutral-300 bg-white px-2 transition-colors hover:border-purple peer-checked:border-primary peer-checked:text-primary"
+											>
+												{{ item.label }}
+											</label>
+										</div>
+									{% endfor %}
+								</div>
+							</fieldset>
+						{% endif %}
+
+						{% if ce.careOptions %}
+							<fieldset class="flex flex-col gap-4">
+								<legend class="mb-4 font-medium">Výnimočná starostlivosť</legend>
+								<div class="flex flex-col gap-4">
+									{% for item in ce.careOptions %}
+										<div class="form-check flex items-center gap-3">
+											<input class="form-check-input" type="checkbox" name="care[]" value="{{ item.value }}" id="care-{{ loop.index }}" />
+											<label class="form-check-label flex min-w-0 flex-1 cursor-pointer items-center justify-between gap-4" for="care-{{ loop.index }}">
+												<span>{{ item.label }}</span>
+												<span class="shrink-0 text-primary">{{ item.price }}</span>
+											</label>
+										</div>
+									{% endfor %}
+								</div>
+							</fieldset>
+						{% endif %}
+					</div>
+
+					<div class="grid gap-6 border-t border-neutral-300 pt-8 sm:grid-cols-2 sm:items-end">
+						<div class="flex flex-col gap-2">
+							<strong class="font-serif text-2x font-semibold leading-none">{{ ce.price }}</strong>
+							<span class="text-subtile">bez DPH {{ ce.priceWithoutVat }}</span>
+						</div>
+						<div class="flex flex-col gap-2">
+							<span class="text-subtile">alebo</span>
+							<strong class="font-serif text-2x font-semibold leading-none">{{ ce.installment }}</strong>
+						</div>
+
+						<div class="flex items-center gap-4 text-sm font-medium sm:col-span-2">
+							<span class="size-2 bg-success"></span>
+							<span>{{ ce.stock }}</span>
+						</div>
+					</div>
+
+					<div class="flex flex-col gap-4 sm:flex-row">
+						<button type="button" class="btn-purple flex flex-1 items-center justify-center gap-4">
+							{{ sprite('shopping-bag', 'text-2xl!') }}
+							<span>Pridať do košíka</span>
+						</button>
+						<quantity-input></quantity-input>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

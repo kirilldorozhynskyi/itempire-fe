@@ -5,7 +5,7 @@
  * Created Date: Sunday, September 24th 2023, 12:07:59
  * Author: Kirill Dorozhynskyi - kyrylo.dorozhynskyi@justdev.org
  * -----
- * Last Modified: Monday, July 20th 2026 17:19:36
+ * Last Modified: Wednesday, July 22nd 2026 17:17:59
  * Modified By: Kirill Dorozhynskyi
  * -----
  * Copyright (c) 2026 justDev
@@ -18,7 +18,7 @@ import '../styles/app.css'
 
 import LazyLoad from 'vanilla-lazyload'
 import PrimeVue from 'primevue/config'
-import { computed, createApp, defineAsyncComponent, defineComponent, onBeforeUnmount, onMounted, provide } from 'vue'
+import { computed, createApp, defineAsyncComponent, defineComponent, onBeforeUnmount, onMounted, provide, ref } from 'vue'
 import Aura from '@primeuix/themes/aura'
 
 // NOTE: Include if needed
@@ -32,19 +32,32 @@ import Animation from './directives/animation'
 
 import PageHeader from './components/PageHeader.vue'
 import Benefits from './components/Benefits.vue'
-import CustomScript from './components/CustomScript.vue'
 
 const SliderWrapper = defineAsyncComponent(() => import('./components/Slider/SliderWrapper.vue'))
 // const SliderVideo = defineAsyncComponent(() => import('./components/Slider/SliderVideo.vue'))
 const SliderItem = defineAsyncComponent(() => import('./components/Slider/SliderItem.vue'))
 const SimpleGallery = defineAsyncComponent(() => import('./components/SimpleGallery.vue'))
 const StepperView = defineAsyncComponent(() => import('./components/StepperView.vue'))
+const Range = defineAsyncComponent(() => import('./components/Range.vue'))
+const ShowMore = defineAsyncComponent(() => import('./components/ShowMore.vue'))
+const DropDown = defineAsyncComponent(() => import('./components/DropDown.vue'))
+const ProductGallery = defineAsyncComponent(() => import('./components/ProductGallery.vue'))
+const QuantityInput = defineAsyncComponent(() => import('./components/QuantityInput.vue'))
+const ReviewDrawer = defineAsyncComponent(() => import('./components/ReviewDrawer.vue'))
+const StarRating = defineAsyncComponent(() => import('./components/StarRating.vue'))
 
 const Tabs = defineAsyncComponent(() => import('primevue/tabs'))
 const TabList = defineAsyncComponent(() => import('primevue/tablist'))
 const Tab = defineAsyncComponent(() => import('primevue/tab'))
 const TabPanels = defineAsyncComponent(() => import('primevue/tabpanels'))
 const TabPanel = defineAsyncComponent(() => import('primevue/tabpanel'))
+const Accordion = defineAsyncComponent(() => import('primevue/accordion'))
+const AccordionPanel = defineAsyncComponent(() => import('primevue/accordionpanel'))
+const AccordionHeader = defineAsyncComponent(() => import('primevue/accordionheader'))
+const AccordionContent = defineAsyncComponent(() => import('primevue/accordioncontent'))
+
+const CustomScript = defineAsyncComponent(() => import('./components/CustomScript.vue'))
+const CustomScriptSrc = defineAsyncComponent(() => import('./components/CustomScriptSrc.vue'))
 
 const PREVENT_UNLOAD_SELECTORS = [
 	'.ajax',
@@ -70,12 +83,24 @@ export const rootComponent = defineComponent({
 		SliderWrapper,
 		SliderItem,
 		CustomScript,
+		CustomScriptSrc,
 		Tabs,
 		TabList,
 		Tab,
 		TabPanels,
 		TabPanel,
+		Accordion,
+		AccordionPanel,
+		AccordionHeader,
+		AccordionContent,
 		StepperView,
+		Range,
+		ShowMore,
+		DropDown,
+		ProductGallery,
+		QuantityInput,
+		ReviewDrawer,
+		StarRating,
 	},
 
 	/* ======= OPTIONS ======= */
@@ -90,6 +115,7 @@ export const rootComponent = defineComponent({
 
 	/* ======== SETUP ======== */
 	setup() {
+		const activeAccordions = ref(initialAccordionValues)
 		const lazyLoad = new LazyLoad({
 			threshold: 0,
 			elements_selector: '[lazy]',
@@ -209,12 +235,15 @@ export const rootComponent = defineComponent({
 		})
 
 		return {
+			activeAccordions,
 			lazyLoad,
 			scrollOffset,
 			scrollToTop,
 		}
 	},
 })
+
+const initialAccordionValues = Array.from(document.querySelectorAll('accordion-panel'), (panel) => panel.getAttribute('value')).filter(Boolean)
 
 const app = createApp(rootComponent)
 app.use(PrimeVue, {

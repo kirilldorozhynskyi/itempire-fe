@@ -5,6 +5,10 @@
 	line-height: 1;
 }
 
+.article-prose {
+	@apply prose text-balance text-primary-500 prose-headings:mt-6 prose-headings:mb-6 prose-headings:font-serif prose-headings:font-semibold prose-headings:leading-tight prose-headings:text-primary-500 prose-h1:text-4xl lg:prose-h1:text-6xl prose-h2:text-2xl lg:prose-h2:text-4xl prose-h3:text-xl lg:prose-h3:text-2xl prose-p:leading-relaxed prose-p:text-primary-500 prose-li:leading-relaxed prose-li:m-0 prose-li:p-0 prose-li:text-primary-500 prose-strong:font-semibold prose-strong:text-primary-500 prose-blockquote:text-primary-500 prose-code:text-primary-500 prose-figcaption:text-primary-500 prose-th:text-primary-500 prose-td:text-primary-500 prose-a:text-purple prose-a:no-underline hover:prose-a:underline [&_li::marker]:text-primary-500 [&>*:first-child]:mt-0 [&>*:last-child]:mb-0 max-w-none;
+}
+
 .link-hover-underlined {
 	position: relative;
 	&::after {

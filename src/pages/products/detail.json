@@ -1,0 +1,653 @@
+{
+	"template": "views/templates/page.twig",
+	"body_class": "page",
+	"flexible": [
+		{
+			"name": "breadcrumbs",
+			"crumbs": [
+				{
+					"link": "/",
+					"title": "Domov",
+					"icon": "smart-home"
+				},
+				{
+					"link": "/products/",
+					"title": "Hardware"
+				},
+				{
+					"link": "/products/",
+					"title": "Mobilné prenosné zariadenia"
+				},
+				{
+					"link": "/products/notebooky",
+					"title": "Notebooky"
+				},
+				{
+					"title": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver"
+				}
+			]
+		},
+		{
+			"name": "product_detail",
+			"images": [
+				{
+					"image": {
+						"pictureClass": "picture relative",
+						"image": {
+							"class": "size-full object-contain object-center",
+							"src": "products/product",
+							"src_2x": "products/product@2x",
+							"ext": "png",
+							"webp": false,
+							"alt": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
+							"width": 368,
+							"height": 304
+						}
+					}
+				},
+				{
+					"image": {
+						"pictureClass": "picture relative",
+						"image": {
+							"class": "size-full object-contain object-center",
+							"src": "products/product",
+							"src_2x": "products/product@2x",
+							"ext": "png",
+							"webp": false,
+							"alt": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
+							"width": 368,
+							"height": 304
+						}
+					}
+				},
+				{
+					"image": {
+						"pictureClass": "picture relative",
+						"image": {
+							"class": "size-full object-contain object-center",
+							"src": "products/product",
+							"src_2x": "products/product@2x",
+							"ext": "png",
+							"webp": false,
+							"alt": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
+							"width": 368,
+							"height": 304
+						}
+					}
+				},
+				{
+					"image": {
+						"pictureClass": "picture relative",
+						"image": {
+							"class": "size-full object-contain object-center",
+							"src": "products/product",
+							"src_2x": "products/product@2x",
+							"ext": "png",
+							"webp": false,
+							"alt": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
+							"width": 368,
+							"height": 304
+						}
+					}
+				},
+				{
+					"image": {
+						"pictureClass": "picture relative",
+						"image": {
+							"class": "size-full object-contain object-center",
+							"src": "products/product",
+							"src_2x": "products/product@2x",
+							"ext": "png",
+							"webp": false,
+							"alt": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
+							"width": 368,
+							"height": 304
+						}
+					}
+				},
+				{
+					"image": {
+						"pictureClass": "picture relative",
+						"image": {
+							"class": "size-full object-contain object-center",
+							"src": "products/product",
+							"src_2x": "products/product@2x",
+							"ext": "png",
+							"webp": false,
+							"alt": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
+							"width": 368,
+							"height": 304
+						}
+					}
+				}
+			],
+			"title": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
+			"text": "Notebook – Intel Core Ultra 5 226V, 14\" OLED lesklý 1920 × 1200, RAM 16 GB LPDDR5x, Intel Intel Arc Graphics 130V, SSD 512 GB, podsvietená klávesnica, copilot, webkamera, USB 3.2 Gen 1, WiFi 6E, Bluetooth, hmotnosť 1,4 kg, Windows 11 Home",
+			"price": "895,74 €",
+			"priceWithoutVat": "728,24 €",
+			"installment": "72x 25,43 €",
+			"stock": "Na sklade",
+			"tag": "Novinka",
+			"memoryOptions": [
+				{
+					"label": "16 GB",
+					"value": "16",
+					"selected": true
+				},
+				{
+					"label": "32 GB",
+					"value": "32"
+				}
+			],
+			"storageOptions": [
+				{
+					"label": "512 GB",
+					"value": "512",
+					"selected": true
+				},
+				{
+					"label": "1 TB",
+					"value": "1000"
+				}
+			],
+			"careOptions": [
+				{
+					"label": "Predĺžená záruka + 1 rok",
+					"value": "warranty-1",
+					"price": "183,00 €"
+				},
+				{
+					"label": "Predĺžená záruka + 2 roky",
+					"value": "warranty-2",
+					"price": "183,00 €"
+				}
+			]
+		},
+		{
+			"name": "product_tabs",
+			"description": {
+				"title": "Prednosti notebooku Acer Aspire 14 AI",
+				"flexible": [
+					{
+						"name": "image_with_text",
+						"imagePosition": "right",
+						"title": "Notebook Acer Aspire 14 AI na vašu väčšiu produktivitu a kreativitu",
+						"text": "<p>Aspire 14 AI je notebook kategórie Copilot+ PC, ktorý pomôže vyriešiť vaše úlohy s podporou umelej inteligencie. Prispôsobí sa vašim potrebám a ponúkne nové spôsoby riešenia pri práci na vašich projektoch. Notebook vyniká tiež odolným, tenkým a ľahkým hliníkovým šasi s pútavým dizajnom a 180° závesom.</p>",
+						"image": {
+							"pictureClass": "picture relative w-full",
+							"image": {
+								"class": "size-full object-cover object-center",
+								"src": "products/19deb46150037510ac8feda299dd637815dab13e",
+								"src_2x": "products/19deb46150037510ac8feda299dd637815dab13e@2x",
+								"ext": "png",
+								"webp": false,
+								"alt": "Myš Logitech MX Anywhere 3S Graphite",
+								"width": 580,
+								"height": 393
+							}
+						}
+					},
+					{
+						"name": "image_with_text",
+						"imagePosition": "left",
+						"title": "Laptop Acer Aspire 14 AI so silou umelej inteligencie",
+						"text": "<p>Copilot vo Windows je asistent využívajúci umelú inteligenciu – pomôže získať odpovede z webu a podporí vašu kreativitu a sústredenie na splnenie úlohy. Creator vytvára umelecké diela interpretáciou vašich obrazových alebo textových podkladov.</p>",
+						"image": {
+							"pictureClass": "picture relative w-full",
+							"image": {
+								"class": "size-full object-cover object-center",
+								"src": "products/34677bd22b52074f11c98544dcd6c412decfe7b6",
+								"src_2x": "products/34677bd22b52074f11c98544dcd6c412decfe7b6@2x",
+								"ext": "png",
+								"webp": false,
+								"alt": "Myš Logitech MX Anywhere 3S Graphite",
+								"width": 580,
+								"height": 393
+							}
+						}
+					},
+					{
+						"name": "fluid_image",
+						"image": {
+							"pictureClass": "picture relative w-full",
+							"image": {
+								"class": "w-full h-auto object-cover object-center",
+								"src": "products/f0bc8c757cf9ef3295dbba039dbb771562c5b0b8",
+								"src_2x": "products/f0bc8c757cf9ef3295dbba039dbb771562c5b0b8@2x",
+								"ext": "png",
+								"webp": false,
+								"alt": "Myš Logitech MX Anywhere 3S Graphite",
+								"width": 1184,
+								"height": 424
+							}
+						}
+					},
+					{
+						"name": "content",
+						"title": "Notebook Acer Aspire 14 AI na vašu väčšiu produktivitu a kreativitu",
+						"text": "<p>Aspire 14 AI je notebook kategórie Copilot+ PC, ktorý pomôže vyriešiť vaše úlohy s podporou umelej inteligencie. Prispôsobí sa vašim potrebám a ponúkne nové spôsoby riešenia pri práci na vašich projektoch. Notebook vyniká tiež odolným, tenkým a ľahkým hliníkovým šasi s pútavým dizajnom a 180° závesom a má obal zo 100 % recyklovateľných materiálov.</p>"
+					}
+				]
+			},
+			"parameters": [
+				{
+					"items": [
+						{
+							"label": "SSD kapacita",
+							"value": "512 GB (0,51 TB)"
+						},
+						{
+							"label": "Veľkosť operačnej pamäte RAM",
+							"value": "16 GB"
+						},
+						{
+							"label": "Modelové označenie procesora",
+							"value": "Intel Core Ultra 5 226V"
+						},
+						{
+							"label": "Frekvencia procesora",
+							"value": "3,5 GHz (3 500 MHz)"
+						},
+						{
+							"label": "Typ úložiska",
+							"value": "SSD"
+						},
+						{
+							"label": "Uhlopriečka displeja",
+							"value": "14\""
+						},
+						{
+							"label": "Kapacita úložiska (celková)",
+							"value": "512 GB"
+						},
+						{
+							"label": "Výbava",
+							"value": "Copilot tlačidlo, Operačný systém, Podsvietená klávesnica, Windows Hello"
+						}
+					]
+				},
+				{
+					"title": "Displej",
+					"items": [
+						{
+							"label": "Uhlopriečka displeja",
+							"value": "14\""
+						},
+						{
+							"label": "Svietivosť",
+							"value": "400 Nitov"
+						},
+						{
+							"label": "Typ displeja",
+							"value": "Lesklý"
+						},
+						{
+							"label": "Rozlíšenie displeja",
+							"value": "1920 × 1200 px"
+						},
+						{
+							"label": "Typ panelu",
+							"value": "OLED"
+						}
+					]
+				},
+				{
+					"title": "Procesor",
+					"items": [
+						{
+							"label": "Typ procesora",
+							"value": "Intel Core Ultra 5"
+						},
+						{
+							"label": "Generácia procesora Intel",
+							"value": "Lunar Lake"
+						},
+						{
+							"label": "Typ displeja",
+							"value": "Lesklý"
+						},
+						{
+							"label": "Modelové označenie procesora",
+							"value": "Intel Core Ultra 5 226V"
+						},
+						{
+							"label": "Počet jadier procesora",
+							"value": "8 ×"
+						},
+						{
+							"label": "Frekvencia procesora",
+							"value": "3,5 GHz (3 500 MHz)"
+						},
+						{
+							"label": "Cache procesora",
+							"value": "8 MB"
+						}
+					]
+				}
+			],
+			"reviews": {
+				"count": 526,
+				"average": "4.8",
+				"moreCount": 16,
+				"distribution": [
+					{
+						"rating": 5,
+						"percent": 80,
+						"count": 410
+					},
+					{
+						"rating": 4,
+						"percent": 40,
+						"count": 64
+					},
+					{
+						"rating": 3,
+						"percent": 10,
+						"count": 28
+					},
+					{
+						"rating": 2,
+						"percent": 5,
+						"count": 14
+					},
+					{
+						"rating": 1,
+						"percent": 20,
+						"count": 10
+					}
+				],
+				"items": [
+					{
+						"author": "Martin Chynoranský",
+						"product": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
+						"rating": 4,
+						"date": "24. 4. 2026",
+						"dateIso": "2026-04-24",
+						"text": "Používam Acer Aspire 14 AI A14-53M-56LA OLED približne mesiac ako pracovný notebook na bežnú kancelársku agendu, prehliadač s viacerými kartami, videohovory a občasnú úpravu grafiky. Najväčší rozdiel oproti predchádzajúcemu zariadeniu je OLED displej — kontrast a čitateľnosť textu sú citeľne lepšie, najmä večer. Výkon je pre typické pracovné úlohy viac než dostatočný, systém reaguje okamžite a ventilátor sa zapína len zriedka."
+					},
+					{
+						"author": "Martin Chynoranský",
+						"product": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
+						"rating": 4,
+						"date": "24. 4. 2026",
+						"dateIso": "2026-04-24",
+						"text": "Používam Acer Aspire 14 AI približne mesiac ako pracovný notebook. Oceňujem tichú prevádzku, nízku hmotnosť pri prenášaní medzi kanceláriou a domovom a kvalitný OLED displej."
+					},
+					{
+						"author": "Martin Chynoranský",
+						"product": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
+						"rating": 4,
+						"date": "24. 4. 2026",
+						"dateIso": "2026-04-24",
+						"text": "Notebook má dostatočný výkon pre každodennú prácu, systém reaguje rýchlo a ventilátor sa zapína len zriedka. Spracovanie pôsobí pevne a zariadenie sa dobre prenáša."
+					}
+				]
+			},
+			"accessoryGroups": [
+				{
+					"title": "Myši",
+					"products": [
+						{
+							"title": "Myš Logitech MX Anywhere 3S Graphite",
+							"url": "/",
+							"price": "80 €",
+							"tag": "Novinka",
+							"image": {
+								"pictureClass": "picture relative",
+								"image": {
+									"class": "size-full object-cover object-center",
+									"src": "products/product",
+									"src_2x": "products/product@2x",
+									"ext": "png",
+									"webp": false,
+									"alt": "Myš Logitech MX Anywhere 3S Graphite",
+									"width": 368,
+									"height": 304
+								}
+							}
+						},
+						{
+							"title": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
+							"url": "/",
+							"price": "881,05 €",
+							"tag": "Novinka",
+							"image": {
+								"pictureClass": "picture relative",
+								"image": {
+									"class": "size-full object-cover object-center",
+									"src": "products/product",
+									"src_2x": "products/product@2x",
+									"ext": "png",
+									"webp": false,
+									"alt": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
+									"width": 368,
+									"height": 304
+								}
+							}
+						},
+						{
+							"title": "Myš Logitech MX Vertical",
+							"url": "/",
+							"price": "80,27 €",
+							"tag": "Novinka",
+							"image": {
+								"pictureClass": "picture relative",
+								"image": {
+									"class": "size-full object-cover object-center",
+									"src": "products/product",
+									"src_2x": "products/product@2x",
+									"ext": "png",
+									"webp": false,
+									"alt": "Myš Logitech MX Vertical",
+									"width": 368,
+									"height": 304
+								}
+							}
+						},
+						{
+							"title": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
+							"url": "/",
+							"price": "881,05 €",
+							"tag": "Novinka",
+							"image": {
+								"pictureClass": "picture relative",
+								"image": {
+									"class": "size-full object-cover object-center",
+									"src": "products/product",
+									"src_2x": "products/product@2x",
+									"ext": "png",
+									"webp": false,
+									"alt": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
+									"width": 368,
+									"height": 304
+								}
+							}
+						}
+					]
+				},
+				{
+					"title": "Softvér",
+					"products": [
+						{
+							"title": "Kancelársky softvér Microsoft 365 pre rodiny (elektronická)",
+							"url": "/",
+							"price": "145,90 €",
+							"tag": "Novinka",
+							"image": {
+								"pictureClass": "picture relative",
+								"image": {
+									"class": "size-full object-cover object-center",
+									"src": "products/product",
+									"src_2x": "products/product@2x",
+									"ext": "png",
+									"webp": false,
+									"alt": "Kancelársky softvér Microsoft 365 pre rodiny",
+									"width": 368,
+									"height": 304
+								}
+							}
+						},
+						{
+							"title": "Kancelársky softvér Microsoft 365 pre jednotlivcov",
+							"url": "/",
+							"price": "112,90 €",
+							"tag": "Novinka",
+							"image": {
+								"pictureClass": "picture relative",
+								"image": {
+									"class": "size-full object-cover object-center",
+									"src": "products/product",
+									"src_2x": "products/product@2x",
+									"ext": "png",
+									"webp": false,
+									"alt": "Kancelársky softvér Microsoft 365 pre jednotlivcov",
+									"width": 368,
+									"height": 304
+								}
+							}
+						},
+						{
+							"title": "Microsoft Office 2024 pre domácnosti a podnikateľov",
+							"url": "/",
+							"price": "263,56 €",
+							"tag": "Novinka",
+							"image": {
+								"pictureClass": "picture relative",
+								"image": {
+									"class": "size-full object-cover object-center",
+									"src": "products/product",
+									"src_2x": "products/product@2x",
+									"ext": "png",
+									"webp": false,
+									"alt": "Microsoft Office 2024 pre domácnosti a podnikateľov",
+									"width": 368,
+									"height": 304
+								}
+							}
+						},
+						{
+							"title": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
+							"url": "/",
+							"price": "881,05 €",
+							"tag": "Novinka",
+							"image": {
+								"pictureClass": "picture relative",
+								"image": {
+									"class": "size-full object-cover object-center",
+									"src": "products/product",
+									"src_2x": "products/product@2x",
+									"ext": "png",
+									"webp": false,
+									"alt": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
+									"width": 368,
+									"height": 304
+								}
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "related_products",
+			"title": "Podobné produkty",
+			"products": [
+				{
+					"title": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
+					"url": "/",
+					"price": "881,05 €",
+					"tag": "Novinka",
+					"image": {
+						"pictureClass": "picture relative",
+						"image": {
+							"class": "size-full object-cover object-center",
+							"src": "products/product",
+							"src_2x": "products/product@2x",
+							"ext": "png",
+							"webp": false,
+							"alt": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
+							"width": 368,
+							"height": 304
+						}
+					}
+				},
+				{
+					"title": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
+					"url": "/",
+					"price": "881,05 €",
+					"tag": "Novinka",
+					"image": {
+						"pictureClass": "picture relative",
+						"image": {
+							"class": "size-full object-cover object-center",
+							"src": "products/product",
+							"src_2x": "products/product@2x",
+							"ext": "png",
+							"webp": false,
+							"alt": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
+							"width": 368,
+							"height": 304
+						}
+					}
+				},
+				{
+					"title": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
+					"url": "/",
+					"price": "881,05 €",
+					"tag": "Novinka",
+					"image": {
+						"pictureClass": "picture relative",
+						"image": {
+							"class": "size-full object-cover object-center",
+							"src": "products/product",
+							"src_2x": "products/product@2x",
+							"ext": "png",
+							"webp": false,
+							"alt": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
+							"width": 368,
+							"height": 304
+						}
+					}
+				},
+				{
+					"title": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
+					"url": "/",
+					"price": "881,05 €",
+					"tag": "Novinka",
+					"image": {
+						"pictureClass": "picture relative",
+						"image": {
+							"class": "size-full object-cover object-center",
+							"src": "products/product",
+							"src_2x": "products/product@2x",
+							"ext": "png",
+							"webp": false,
+							"alt": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
+							"width": 368,
+							"height": 304
+						}
+					}
+				},
+				{
+					"title": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
+					"url": "/",
+					"price": "881,05 €",
+					"tag": "Novinka",
+					"image": {
+						"pictureClass": "picture relative",
+						"image": {
+							"class": "size-full object-cover object-center",
+							"src": "products/product",
+							"src_2x": "products/product@2x",
+							"ext": "png",
+							"webp": false,
+							"alt": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
+							"width": 368,
+							"height": 304
+						}
+					}
+				}
+			]
+		}
+	]
+}

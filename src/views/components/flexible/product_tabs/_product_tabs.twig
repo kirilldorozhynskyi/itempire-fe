@@ -1,0 +1,80 @@
+{#
+ # File: /src/views/components/flexible/product_tabs/_product_tabs.twig
+ # Project: itempire-fe
+ # Version: 1.0.0
+ # Created Date: Friday, July 24th 2026
+ # Author: Kirill Dorozhynskyi - kyrylo.dorozhynskyi@justdev.org
+ # -----
+ # Copyright (c) 2026 justDev
+ #}
+
+<section class="py-20 overflow-hidden">
+	<div class="container">
+		<tabs :value="0">
+			<tab-list>
+				<tab :value="0">
+					Popis produktu
+				</tab>
+				<tab :value="1">
+					Parametre
+				</tab>
+				<tab :value="2">
+					Príslušenstvo
+				</tab>
+				<tab :value="3">
+					Recenzie
+				</tab>
+			</tab-list>
+
+			<tab-panels class="pt-12!">
+				<tab-panel :value="0">
+					{% if ce.description.title %}
+						<h2 class="text-balance text-center font-serif leading-tight font-semibold text-2xl lg:text-4xl my-12" v-jd-animate>
+							{{ ce.description.title }}
+						</h2>
+					{% endif %}
+
+					<div class="flex flex-col gap-8 lg:gap-12">
+						{% for item in ce.description.flexible %}
+							{% include './description/_' ~ item.name ~ '.twig' with {
+								ce: item
+							} only %}
+						{% endfor %}
+					</div>
+				</tab-panel>
+
+				<tab-panel :value="1">
+					{% include './_parameters.twig' with {
+						groups: ce.parameters
+					} only %}
+				</tab-panel>
+
+				<tab-panel :value="2">
+					<div class="flex flex-col gap-16 lg:gap-24">
+						{% for group in ce.accessoryGroups %}
+							<div class="flex flex-col gap-8 lg:gap-12">
+								<h2 class="text-balance font-serif leading-tight font-semibold text-2xl lg:text-4xl" v-jd-animate>{{ group.title }}</h2>
+
+								<slider-wrapper class="w-full" :overflow="false" wrapper-class="md:-me-12" :dots="false" :nav="true">
+									{% for product in group.products %}
+										<slider-item class="basis-full md:basis-1/3 2xl:basis-1/4 md:pe-12" v-jd-animate="{ delay: {{ loop.index * 100 }} }">
+											{% include paths.posts ~ 'products/_teaser.twig' with {
+												item: product
+											} only %}
+										</slider-item>
+									{% endfor %}
+								</slider-wrapper>
+							</div>
+						{% endfor %}
+					</div>
+				</tab-panel>
+
+				<tab-panel :value="3">
+					{% include './_reviews.twig' with {
+						reviews: ce.reviews
+					} only %}
+				</tab-panel>
+			</tab-panels>
+		</tabs>
+	</div>
+</section>

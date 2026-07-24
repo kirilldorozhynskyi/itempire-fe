@@ -1,0 +1,295 @@
+{#
+ # File: /src/views/components/flexible/all_products/_all_products.twig
+ # Project: itempire-fe
+ # Version: 1.0.0
+ # Created Date: Tuesday, July 21st 2026, 17:34:33
+ # Author: Kirill Dorozhynskyi - kyrylo.dorozhynskyi@justdev.org
+ # -----
+ # Last Modified: Wednesday, July 22nd 2026 17:31:34
+ # Modified By: Kirill Dorozhynskyi
+ # -----
+ # Copyright (c) 2026 justDev
+ #}
+{% set panelIndex = (panelIndex|default(0)) + 1 %}
+
+{% set developer = [
+	{
+		name: 'Lenovo',
+		count: 32
+	},
+	{
+		name: 'Dell',
+		count: 32
+	},
+	{
+		name: 'Acer',
+		count: 32
+	},
+	{
+		name: 'HP',
+		count: 32
+	}
+] %}
+{% set product = [
+	{
+		name: 'Notebook',
+		count: 540
+	},
+	{
+		name: 'Dotykové 2v1',
+		count: 123
+	}
+] %}
+{% set display = [
+	{
+		name: '1366 x 768',
+		count: 2
+	},
+	{
+		name: '1920 x 1080 FHD',
+		count: 12
+	},
+	{
+		name: '1920 x 1280',
+		count: 12
+	},
+	{
+		name: '2560 x 1440',
+		count: 12
+	},
+	{
+		name: '3840 x 2160',
+		count: 12
+	},
+	{
+		name: '3840 x 2400',
+		count: 12
+	}
+] %}
+
+<section class="bg-neutral-100 py-20 lg:py-36 decor">
+	<div class="container flex flex-col gap-6">
+		<div class="flex justify-between">
+			<span class="tracking-tight" v-jd-animate>
+				<span class="opacity-60">Našli sme</span>
+				347 produktov
+			</span>
+
+			<div v-jd-animate>
+				<drop-down class="relative">
+					<option>
+						Odporúčané
+					</option>
+					<option>
+						Dalsie
+					</option>
+					<option>
+						Dalsie
+					</option>
+				</drop-down>
+			</div>
+		</div>
+
+		<div class="flex gap-4 pb-16">
+			<div class="w-75 uhd:w-100 shrink-0" v-jd-animate>
+				{# NOTE: <div class="sticky top-20 bg-white p-6 filters max-h-[80vh] overflow-y-auto"> Ak by sme chceli sticky #}
+				<div class="bg-white p-6 filters flex flex-col gap-8">
+					<div class="flex flex-col gap-4">
+						<div class="relative w-full">
+							<div class="flex items-center absolute top-1/2 left-4 -translate-y-1/2">
+								{{ sprite('search', 'text-2xl') }}
+							</div>
+
+							<input
+								id="search-input"
+								class="border w-full border-neutral-300 rounded-sm ps-16 py-4 pe-4 flex gap-4 items-center hover:border-primary transit focus:border-primary focus:outline-none text-primary font-medium"
+								type="text"
+								placeholder="Vyhľadávanie..."
+							/>
+						</div>
+
+						<div class="flex flex-wrap gap-1">
+							<button class="btn-outline-neutral px-2 gap-1 py-1" type="button" aria-label="Vymazať: ASUS">
+								<span class="text-sm leading-snug">ASUS (32)</span>
+
+								{{ sprite('x') }}
+							</button>
+
+							<button class="btn-outline-neutral px-2 gap-1 py-1" type="button" aria-label="Vymazať: matný">
+								<span class="text-sm leading-snug">matný (70)</span>
+
+								{{ sprite('x') }}
+							</button>
+
+							<button class="btn-outline-neutral px-2 gap-1 py-1" type="button" aria-label="Vymazať: 512 GB">
+								<span class="text-sm leading-snug">512 GB</span>
+
+								{{ sprite('x') }}
+							</button>
+						</div>
+
+						<div class="flex">
+							<button class="btn border-0 p-0 gap-4 hover:text-purple" type="button" aria-label="Resetovať filtre">
+								{{ sprite('x', 'text-2xl!') }} Resetovať filtre
+							</button>
+						</div>
+					</div>
+
+					<Accordion v-model:value="activeAccordions" multiple class="w-full max-w-md flex flex-col gap-8">
+						<accordion-panel value="{{ panelIndex }}">
+							<accordion-header>
+								Cena
+							</accordion-header>
+							<accordion-content>
+								<Range :min="456.19" :max="4349" :current-min="456.19" :current-max="4349" id="price-range" text-from="od" text-to="do"></Range>
+							</accordion-content>
+						</accordion-panel>
+						{% set panelIndex = panelIndex + 1 %}
+						<accordion-panel value="{{ panelIndex }}">
+							<accordion-header>
+								Výrobca
+							</accordion-header>
+							<accordion-content>
+								<show-more :visible-count="2" more-text="Zobraziť viac" less-text="Skryť">
+									<template #default="{ isVisible }">
+										<div class="flex flex-col gap-4">
+											{% for item in developer %}
+												<div class="form-check" data-show-more-item v-show="isVisible({{ loop.index0 }})">
+													<input class="form-check-input" type="checkbox" value="{{ item.name }}" id="developer-{{ loop.index }}" />
+													<label class="form-check-label" for="developer-{{ loop.index }}">{{ item.name }} ({{ item.count }})</label>
+												</div>
+											{% endfor %}
+										</div>
+									</template>
+								</show-more>
+							</accordion-content>
+						</accordion-panel>
+						{% set panelIndex = panelIndex + 1 %}
+
+						<accordion-panel value="{{ panelIndex }}">
+							<accordion-header>
+								Typ produktu
+							</accordion-header>
+							<accordion-content>
+								<show-more :visible-count="-1" more-text="Zobraziť viac" less-text="Skryť">
+									<template #default="{ isVisible }">
+										<div class="flex flex-col gap-4">
+											{% for item in product %}
+												<div class="form-check" data-show-more-item v-show="isVisible({{ loop.index0 }})">
+													<input class="form-check-input" type="checkbox" value="{{ item.name }}" id="product-{{ loop.index }}" />
+													<label class="form-check-label" for="product-{{ loop.index }}">{{ item.name }} ({{ item.count }})</label>
+												</div>
+											{% endfor %}
+										</div>
+									</template>
+								</show-more>
+							</accordion-content>
+						</accordion-panel>
+						{% set panelIndex = panelIndex + 1 %}
+
+						<accordion-panel value="{{ panelIndex }}">
+							<accordion-header>
+								Displej
+							</accordion-header>
+							<accordion-content>
+								<Range
+									:min="29.5"
+									:max="41.05"
+									id="display-range"
+									format-type="display"
+									text-label="Veľkosť displeja"
+									text-from="od"
+									text-to="do"
+								></Range>
+
+								<show-more :visible-count="4" more-text="Zobraziť viac" less-text="Skryť" text-label="Rozlíšenie displeja">
+									<template #default="{ isVisible }">
+										<div class="flex flex-col gap-4">
+											{% for item in display %}
+												<div class="form-check" data-show-more-item v-show="isVisible({{ loop.index0 }})">
+													<input class="form-check-input" type="checkbox" value="{{ item.name }}" id="display-{{ loop.index }}" />
+													<label class="form-check-label" for="display-{{ loop.index }}">{{ item.name }} ({{ item.count }})</label>
+												</div>
+											{% endfor %}
+										</div>
+									</template>
+								</show-more>
+							</accordion-content>
+						</accordion-panel>
+						{% set panelIndex = panelIndex + 1 %}
+						<accordion-panel value="{{ panelIndex }}">
+							<accordion-header>
+								Kontrast
+							</accordion-header>
+							<accordion-content>
+								<Range :min="500" :max="1000000" id="contrast-range" format-type="contrast" text-from="od" text-to="do"></Range>
+							</accordion-content>
+						</accordion-panel>
+					</Accordion>
+				</div>
+			</div>
+			<div class="min-w-0 flex-1 flex flex-col gap-6">
+				<div class="grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-2 md:grid-cols-3">
+					{% for fake in 0..1 %}
+						{% for product in ce.products %}
+							{% include paths.posts ~ 'products/_teaser.twig' with {
+								item: product,
+								animation: true
+							} only %}
+						{% endfor %}
+					{% endfor %}
+
+					<a href="{{ ce.cta.url }}" class="relative flex overflow-hidden h-full min-h-0" v-jd-animate>
+						<div class="absolute inset-0">
+							{{ image(ce.cta.image) }}
+						</div>
+						<div class="absolute inset-0">
+							<div class="h-full flex gap-6 p-6">
+								<div class="flex flex-col gap-4">
+									<div class="flex flex-col gap-2">
+										{% if ce.cta.title %}
+											<h2 class="text-balance font-serif leading-tight font-semibold text-white text-xl 2xl:text-2xl">
+												{{ ce.cta.title }}
+											</h2>
+										{% endif %}
+
+										{% if ce.cta.text %}
+											<p class="text-balance text-white/70 tracking-tight">
+												{{ ce.cta.text }}
+											</p>
+										{% endif %}
+									</div>
+
+									<div class="flex">
+										{% include paths.btn_ex with {
+											button: ce.cta.btn
+										} only %}
+									</div>
+								</div>
+								<div class="absolute leading-none -translate-x-1/2 -translate-y-1/2 top-5/6 left-1/5 2xl:scale-110">
+									<div class="absolute bg-white text-purple uppercase font-medium -right-6 w-fit top-1 py-1.5 px-2 -translate-y-full text-sm">
+										{{ ce.cta.info.tag }}
+									</div>
+									<div class="bg-purple px-4 py-2 text-balance font-serif leading-tight text-white font-semibold lg:text-lg">
+										{{ ce.cta.info.price }}
+									</div>
+								</div>
+							</div>
+						</div>
+					</a>
+					{% for fake in 0..11 %}
+						{% for product in ce.products %}
+							{% include paths.posts ~ 'products/_teaser.twig' with {
+								item: product,
+								animation: true
+							} only %}
+						{% endfor %}
+					{% endfor %}
+				</div>
+				<div class="-mb-16 flex justify-center">
+					<button class="btn-outline-neutral" aria-label="Načítať viac (74)">Načítať viac (74)</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

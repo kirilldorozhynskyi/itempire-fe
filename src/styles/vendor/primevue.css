@@ -5,7 +5,7 @@
  * Created Date: Monday, July 20th 2026, 13:50:33
  * Author: Kirill Dorozhynskyi - kyrylo.dorozhynskyi@justdev.org
  * -----
- * Last Modified: Monday, July 20th 2026 14:56:11
+ * Last Modified: Wednesday, July 22nd 2026 17:27:16
  * Modified By: Kirill Dorozhynskyi
  * -----
  * Copyright (c) 2026 justDev
@@ -32,4 +32,103 @@
 			@apply min-w-0 flex-1 justify-center border-t-0! border-r-0! border-l-0!;
 		}
 	}
+	.p-slider-track {
+		--p-slider-track-background: var(--color-subtile);
+		--p-slider-range-background: var(--color-neutral-300);
+	}
+	.p-slider-handle {
+		--p-slider-handle-height: 1rem;
+		--p-slider-handle-width: 1.625rem;
+		--p-slider-handle-border-radius: 0.25rem;
+		--p-slider-handle-background: var(--color-purple);
+		--p-slider-handle-hover-background: var(--color-primary);
+		&::before {
+			content: none !important;
+		}
+	}
+
+	.p-floatlabel {
+		--p-floatlabel-focus-color: var(--color-primary);
+		--p-floatlabel-active-color: var(--color-subtile);
+		--p-floatlabel-active-font-size: 0.875rem;
+		--p-floatlabel-active-font-weight: 500;
+	}
+
+	.p-inputtext {
+		--p-inputtext-border-color: var(--color-neutral-300);
+		--p-inputtext-focus-border-color: var(--color-primary);
+		--p-inputtext-color: var(--color-primary);
+		--p-inputtext-font-size: 1rem;
+		--p-inputtext-border-radius: 0.25rem;
+		@apply tracking-tight;
+	}
+
+	.filters {
+		--p-accordion-header-active-hover-color: var(--color-primary);
+		--p-accordion-header-active-color: var(--color-primary);
+		--p-accordion-header-color: var(--color-primary);
+		--p-accordion-header-font-weight: normal;
+		--px-icon-size: 1.5rem;
+		--p-accordion-panel-border-width: 0;
+		--p-accordion-header-padding: 0;
+		--p-accordion-content-padding: 1rem 0 0 0;
+		--p-accordion-header-font-size: 1.125rem;
+	}
+
+	.p-accordionheader {
+		@apply text-primary font-serif;
+	}
+
+	.p-accordioncontent-content {
+		@apply flex flex-col items-start gap-6;
+	}
+
+	.drop-down {
+		--p-select-shadow: none;
+		--p-select-background: none;
+		--p-select-border-radiu: 0;
+		--p-select-padding-y: 0;
+		--p-select-padding-x: 0;
+		--p-select-color: var(--color-primary);
+		--p-select-dropdown-color: var(--color-primary);
+		--p-select-font-size: 1rem;
+		--px-icon-size: 1rem;
+		--p-select-dropdown-width: 1rem;
+		@apply gap-2 border-none! tracking-tight;
+	}
+
+	.p-select-dropdown {
+		@apply transit;
+	}
+	.p-select-open {
+		.p-select-dropdown {
+			@apply rotate-180;
+		}
+	}
+}
+
+.form-check {
+	@apply flex items-center gap-2.5;
+}
+.form-check-input {
+	@apply hover:border-purple transit checked:border-purple checked:bg-purple relative size-5 shrink-0 cursor-pointer appearance-none rounded-none border border-neutral-300 bg-white transition-colors;
+}
+
+.form-check-input:checked[type='checkbox'] {
+	background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23fff' d='M19.4697 6.46967C19.7626 6.17678 20.2373 6.17678 20.5302 6.46967C20.8231 6.76256 20.8231 7.23732 20.5302 7.53022L10.5302 17.5302C10.2373 17.8231 9.76256 17.8231 9.46967 17.5302L4.46967 12.5302C4.17678 12.2373 4.17678 11.7626 4.46967 11.4697C4.76256 11.1768 5.23732 11.1768 5.53022 11.4697L9.99994 15.9394L19.4697 6.46967Z'/%3E%3C/svg%3E");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 1.25rem 1.25rem;
+}
+
+.form-check-label {
+	@apply text-subtile cursor-pointer transition-colors;
+}
+
+.form-check:hover .form-check-label {
+	@apply text-purple;
+}
+
+.form-check-input:checked + .form-check-label {
+	@apply text-primary;
 }

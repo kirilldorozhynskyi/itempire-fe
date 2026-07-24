@@ -1,0 +1,22 @@
+{#
+ # File: /src/views/components/flexible/product_tabs/_stars.twig
+ # Project: itempire-fe
+ #}
+
+<div class="flex {{ class }}" role="img" aria-label="{{ rating }} z 5 hviezdičiek">
+	{% for star in 1..5 %}
+		{% set fill = (rating - (star - 1)) * 100 %}
+		{% set fill = fill > 100 ? 100 : fill %}
+		{% set fill = fill < 0 ? 0 : fill %}
+
+		<span class="relative block size-[1em] shrink-0 text-neutral-300">
+			{{ sprite('star', 'block size-full') }}
+
+			{% if fill > 0 %}
+				<span class="absolute inset-y-0 left-0 overflow-hidden text-purple" style="width: {{ fill }}%">
+					{{ sprite('star', 'block size-[1em] max-w-none') }}
+				</span>
+			{% endif %}
+		</span>
+	{% endfor %}
+</div>

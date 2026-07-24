@@ -1,0 +1,36 @@
+{#
+ # File: /src/views/components/flexible/news_archive/_news_archive.twig
+ # Project: itempire-fe
+ #}
+
+<section class="pt-12 pb-16 lg:pb-20">
+	<div class="container flex flex-col gap-6">
+		<div class="max-md:-mx-4 overflow-x-auto max-md:px-4" v-jd-animate>
+			<div class="flex w-max min-w-full gap-2">
+				{% for category in ce.categories %}
+					<button
+						type="button"
+						class="{{ category.active ? 'btn-purple' : 'btn-outline-neutral' }} shrink-0 px-4 py-2"
+						aria-pressed="{{ category.active ? 'true' : 'false' }}"
+					>
+						{{ category.title }}
+					</button>
+				{% endfor %}
+			</div>
+		</div>
+
+		<div class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+			{% for item in ce.items %}
+				{% include '../../posts/news/_teaser.twig' with {
+					item: item
+				} only %}
+			{% endfor %}
+		</div>
+
+		{% if ce.moreCount %}
+			<div class="flex justify-center">
+				<button type="button" class="btn-outline-neutral">Načítať viac ({{ ce.moreCount }})</button>
+			</div>
+		{% endif %}
+	</div>
+</section>

@@ -40,6 +40,7 @@
 	--color-neutral-300: #d9d9d9; /* Border / Normal */
 	--color-subtile: #737373; /* Text / Subtile */
 	--color-primary: #101010; /* Text / Primary */
+	--color-primary-500: #13191e; /* Text / Primary */
 
 	/* Purple */
 	--color-purple: #5b2b62; /* Text / Purple, Background / Purple, Border / Active */
@@ -56,6 +57,7 @@
 
 	--tracking-tight: -2%;
 	--leading-tight: 1.2;
+	--leading-snug: 1.3;
 
 	--text-6xl: 4rem;
 	--text-2xl: 1.625rem;

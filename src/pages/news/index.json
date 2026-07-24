@@ -1,0 +1,244 @@
+{
+	"template": "views/templates/homepage.twig",
+	"body_class": "home-page",
+	"flexible": [
+		{
+			"name": "breadcrumbs",
+			"crumbs": [
+				{
+					"link": "/",
+					"title": "Domov",
+					"icon": "smart-home"
+				},
+				{
+					"title": "Newsroom"
+				}
+			],
+			"title": "Newsroom"
+		},
+		{
+			"name": "studies",
+			"title": "Newsroom",
+
+			"studies": [
+				{
+					"tag": "bezpečnosť",
+					"title": "Implementácia bezpečnostnej politiky v korporátnom prostredí",
+					"url": "/",
+					"image": {
+						"pictureClass": "picture relative",
+						"image": {
+							"class": "size-full object-cover object-center",
+							"src": "d2b43023f46846c049412e9596e7387ac7ffc15e",
+							"src_2x": "d2b43023f46846c049412e9596e7387ac7ffc15e@2x",
+							"ext": "jpg",
+							"webp": false,
+							"alt": "Implementácia bezpečnostnej politiky v korporátnom prostredí",
+							"width": 580,
+							"height": 492
+						}
+					}
+				},
+				{
+					"tag": "IT Outsourcing",
+					"title": "Kompletný IT outsourcing pre stredne veľkú firmu Kompletný IT outsourcing pre stredne veľkú firmu Kompletný IT outsourcing pre stredne veľkú firmu Kompletný IT outsourcing pre stredne veľkú firmu Kompletný IT outsourcing pre stredne veľkú firmu Kompletný IT outsourcing pre stredne veľkú firmu Kompletný IT outsourcing pre stredne veľkú firmu Kompletný IT outsourcing pre stredne veľkú firmu",
+					"url": "/"
+				},
+				{
+					"tag": "hardvér",
+					"title": "Nasadenie firemných pracovných staníc pre call centrum",
+					"url": "/"
+				}
+			]
+		},
+		{
+			"name": "news_archive",
+			"moreCount": 74,
+			"categories": [
+				{
+					"title": "Všetko",
+					"active": true
+				},
+				{
+					"title": "Novinky"
+				},
+				{
+					"title": "Štúdie"
+				},
+				{
+					"title": "IT Outsourcing"
+				},
+				{
+					"title": "Hardvér"
+				},
+				{
+					"title": "Bezpečnosť"
+				}
+			],
+			"items": [
+				{
+					"tag": "Bezpečnosť",
+					"title": "Ako znížiť výpadky firemnej IT infraštruktúry",
+					"url": "/",
+					"image": {
+						"pictureClass": "picture relative size-full",
+						"image": {
+							"class": "size-full object-cover object-center",
+							"src": "d2b43023f46846c049412e9596e7387ac7ffc15e",
+							"src_2x": "d2b43023f46846c049412e9596e7387ac7ffc15e@2x",
+							"ext": "jpg",
+							"webp": false,
+							"alt": "Ako znížiť výpadky firemnej IT infraštruktúry",
+							"width": 368,
+							"height": 304
+						}
+					}
+				},
+				{
+					"tag": "Bezpečnosť",
+					"title": "5 znakov, že vaša sieť potrebuje modernizáciu",
+					"url": "/",
+					"image": {
+						"pictureClass": "picture relative size-full",
+						"image": {
+							"class": "size-full object-cover object-center",
+							"src": "6f19d080b16b7ec94f114f8e5e6d5344f7b6a0d9",
+							"src_2x": "6f19d080b16b7ec94f114f8e5e6d5344f7b6a0d9@2x",
+							"ext": "jpg",
+							"webp": false,
+							"alt": "5 znakov, že vaša sieť potrebuje modernizáciu",
+							"width": 368,
+							"height": 304
+						}
+					}
+				},
+				{
+					"tag": "IT Outsourcing",
+					"title": "IT outsourcing: Kedy sa firme skutočne oplatí",
+					"url": "/",
+					"image": {
+						"pictureClass": "picture relative size-full",
+						"image": {
+							"class": "size-full object-cover object-center",
+							"src": "025edb7427d5adb8825bc5985f02dcbac32d247b",
+							"src_2x": "025edb7427d5adb8825bc5985f02dcbac32d247b@2x",
+							"ext": "jpg",
+							"webp": false,
+							"alt": "IT outsourcing: Kedy sa firme skutočne oplatí",
+							"width": 368,
+							"height": 304
+						}
+					}
+				},
+				{
+					"tag": "Bezpečnosť",
+					"title": "Najčastejšie bezpečnostné riziká v malých a stredných firmách",
+					"url": "/",
+					"image": {
+						"pictureClass": "picture relative size-full",
+						"image": {
+							"class": "size-full object-cover object-center",
+							"src": "52cfd27285ccf133dfd1d9917942f6a1967f8a0c",
+							"src_2x": "52cfd27285ccf133dfd1d9917942f6a1967f8a0c@2x",
+							"ext": "jpg",
+							"webp": false,
+							"alt": "Najčastejšie bezpečnostné riziká v malých a stredných firmách",
+							"width": 368,
+							"height": 304
+						}
+					}
+				},
+				{
+					"tag": "Hardvér",
+					"title": "Cloud vs. lokálne servery: Ako sa správne rozhodnúť",
+					"url": "/",
+					"image": {
+						"pictureClass": "picture relative size-full",
+						"image": {
+							"class": "size-full object-cover object-center",
+							"src": "d2b43023f46846c049412e9596e7387ac7ffc15e",
+							"src_2x": "d2b43023f46846c049412e9596e7387ac7ffc15e@2x",
+							"ext": "jpg",
+							"webp": false,
+							"alt": "Cloud vs. lokálne servery: Ako sa správne rozhodnúť",
+							"width": 368,
+							"height": 304
+						}
+					}
+				},
+				{
+					"tag": "Bezpečnosť",
+					"title": "Prečo je pravidelný IT audit kľúčový pre stabilitu firmy",
+					"url": "/",
+					"image": {
+						"pictureClass": "picture relative size-full",
+						"image": {
+							"class": "size-full object-cover object-center",
+							"src": "6f19d080b16b7ec94f114f8e5e6d5344f7b6a0d9",
+							"src_2x": "6f19d080b16b7ec94f114f8e5e6d5344f7b6a0d9@2x",
+							"ext": "jpg",
+							"webp": false,
+							"alt": "Prečo je pravidelný IT audit kľúčový pre stabilitu firmy",
+							"width": 368,
+							"height": 304
+						}
+					}
+				},
+				{
+					"tag": "Bezpečnosť",
+					"title": "Ako nastaviť firemnú kybernetickú bezpečnosť v roku 2026",
+					"url": "/",
+					"image": {
+						"pictureClass": "picture relative size-full",
+						"image": {
+							"class": "size-full object-cover object-center",
+							"src": "025edb7427d5adb8825bc5985f02dcbac32d247b",
+							"src_2x": "025edb7427d5adb8825bc5985f02dcbac32d247b@2x",
+							"ext": "jpg",
+							"webp": false,
+							"alt": "Ako nastaviť firemnú kybernetickú bezpečnosť v roku 2026",
+							"width": 368,
+							"height": 304
+						}
+					}
+				},
+				{
+					"tag": "IT Outsourcing",
+					"title": "Optimalizácia IT nákladov bez zníženia výkonu",
+					"url": "/",
+					"image": {
+						"pictureClass": "picture relative size-full",
+						"image": {
+							"class": "size-full object-cover object-center",
+							"src": "52cfd27285ccf133dfd1d9917942f6a1967f8a0c",
+							"src_2x": "52cfd27285ccf133dfd1d9917942f6a1967f8a0c@2x",
+							"ext": "jpg",
+							"webp": false,
+							"alt": "Optimalizácia IT nákladov bez zníženia výkonu",
+							"width": 368,
+							"height": 304
+						}
+					}
+				},
+				{
+					"tag": "Hardvér",
+					"title": "Čo by mala obsahovať moderná IT infraštruktúra",
+					"url": "/",
+					"image": {
+						"pictureClass": "picture relative size-full",
+						"image": {
+							"class": "size-full object-cover object-center",
+							"src": "d2b43023f46846c049412e9596e7387ac7ffc15e",
+							"src_2x": "d2b43023f46846c049412e9596e7387ac7ffc15e@2x",
+							"ext": "jpg",
+							"webp": false,
+							"alt": "Čo by mala obsahovať moderná IT infraštruktúra",
+							"width": 368,
+							"height": 304
+						}
+					}
+				}
+			]
+		}
+	]
+}

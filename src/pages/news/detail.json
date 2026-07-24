@@ -1,0 +1,173 @@
+{
+	"template": "views/templates/page.twig",
+	"body_class": "home-page",
+	"flexible": [
+		{
+			"name": "breadcrumbs",
+			"crumbs": [
+				{
+					"link": "/",
+					"title": "Domov",
+					"icon": "smart-home"
+				},
+				{
+					"link": "/news/",
+					"title": "Newsroom"
+				},
+				{
+					"title": "IT outsourcing: Kedy sa firme skutočne oplatí"
+				}
+			]
+		},
+		{
+			"name": "post_hero",
+			"tag": "IT Outsourcing",
+			"title": "IT outsourcing: Kedy sa firme skutočne oplatí",
+			"text": "IT outsourcing umožňuje firmám zabezpečiť stabilné fungovanie technológií bez budovania vlastného IT oddelenia. Najväčší prínos má tam, kde IT nie je hlavnou činnosťou firmy, ale len podpornou infraštruktúrou."
+		},
+		{
+			"name": "news_content",
+			"items": [
+				{
+					"name": "image",
+					"fluid": true,
+					"image": {
+						"pictureClass": "picture relative w-full",
+						"image": {
+							"class": "w-full h-auto object-cover object-center",
+							"src": "d2b43023f46846c049412e9596e7387ac7ffc15e",
+							"src_2x": "d2b43023f46846c049412e9596e7387ac7ffc15e@2x",
+							"ext": "jpg",
+							"webp": false,
+							"alt": "IT outsourcing pre firmy",
+							"width": 1280,
+							"height": 720
+						}
+					}
+				},
+				{
+					"name": "content",
+					"text": "<h2>Keď IT nemá byť vaša starosť</h2><p>Firmy z oblasti výroby, obchodu či služieb často nepotrebujú interný tím špecialistov na plný úväzok. Externý partner dokáže pokryť správu sietí, serverov, aktualizácie aj používateľskú podporu efektívnejšie a bez personálnych výpadkov.</p><h3>Výsledok pre firmu</h3><ul><li>používateľská podpora,</li><li>bezpečnostné aktualizácie,</li><li>monitoring systémov.</li></ul>"
+				},
+				{
+					"name": "image",
+					"image": {
+						"pictureClass": "picture relative w-full",
+						"image": {
+							"class": "w-full h-auto object-cover object-center",
+							"src": "52cfd27285ccf133dfd1d9917942f6a1967f8a0c",
+							"src_2x": "52cfd27285ccf133dfd1d9917942f6a1967f8a0c@2x",
+							"ext": "jpg",
+							"webp": false,
+							"alt": "Moderné technológie vo firme",
+							"width": 688,
+							"height": 440
+						}
+					}
+				},
+				{
+					"name": "content",
+					"text": "<h2>Keď firma rastie</h2><p>S rastom pribúdajú zariadenia, používatelia aj bezpečnostné požiadavky. Outsourcing umožňuje škálovať infraštruktúru bez toho, aby IT začalo brzdiť prevádzku alebo projekty.</p><p>Interné IT znamená fixné náklady na mzdy, školenia a zastupiteľnosť. Externá správa funguje najčastejšie formou mesačného paušálu, čo zjednodušuje plánovanie rozpočtu a eliminuje nečakané výdavky.</p>"
+				},
+				{
+					"name": "image",
+					"image": {
+						"pictureClass": "picture relative w-full",
+						"image": {
+							"class": "w-full h-auto object-cover object-center",
+							"src": "6f19d080b16b7ec94f114f8e5e6d5344f7b6a0d9",
+							"src_2x": "6f19d080b16b7ec94f114f8e5e6d5344f7b6a0d9@2x",
+							"ext": "jpg",
+							"webp": false,
+							"alt": "Rastúci firemný tím",
+							"width": 688,
+							"height": 440
+						}
+					}
+				},
+				{
+					"name": "content",
+					"text": "<h2>Záver</h2><p>Outsourcing sa oplatí firmám, ktoré chcú spoľahlivé a bezpečné IT bez budovania vlastného tímu. <strong>Správne nastavená spolupráca</strong> dokáže premeniť IT z operatívneho problému na stabilnú podporu podnikania.</p>"
+				}
+			]
+		},
+		{
+			"name": "related_articles",
+			"title": "Podobné články",
+			"articles": [
+				{
+					"tag": "Bezpečnosť",
+					"title": "Ako znížiť výpadky firemnej IT infraštruktúry",
+					"url": "/",
+					"image": {
+						"pictureClass": "picture relative size-full",
+						"image": {
+							"class": "size-full object-cover object-center",
+							"src": "d2b43023f46846c049412e9596e7387ac7ffc15e",
+							"src_2x": "d2b43023f46846c049412e9596e7387ac7ffc15e@2x",
+							"ext": "jpg",
+							"webp": false,
+							"alt": "Ako znížiť výpadky firemnej IT infraštruktúry",
+							"width": 368,
+							"height": 304
+						}
+					}
+				},
+				{
+					"tag": "IT Outsourcing",
+					"title": "Optimalizácia IT nákladov bez zníženia výkonu",
+					"url": "/",
+					"image": {
+						"pictureClass": "picture relative size-full",
+						"image": {
+							"class": "size-full object-cover object-center",
+							"src": "6f19d080b16b7ec94f114f8e5e6d5344f7b6a0d9",
+							"src_2x": "6f19d080b16b7ec94f114f8e5e6d5344f7b6a0d9@2x",
+							"ext": "jpg",
+							"webp": false,
+							"alt": "Optimalizácia IT nákladov bez zníženia výkonu",
+							"width": 368,
+							"height": 304
+						}
+					}
+				},
+				{
+					"tag": "Hardvér",
+					"title": "Cloud vs. lokálne servery: Ako sa správne rozhodnúť",
+					"url": "/",
+					"image": {
+						"pictureClass": "picture relative size-full",
+						"image": {
+							"class": "size-full object-cover object-center",
+							"src": "52cfd27285ccf133dfd1d9917942f6a1967f8a0c",
+							"src_2x": "52cfd27285ccf133dfd1d9917942f6a1967f8a0c@2x",
+							"ext": "jpg",
+							"webp": false,
+							"alt": "Cloud vs. lokálne servery: Ako sa správne rozhodnúť",
+							"width": 368,
+							"height": 304
+						}
+					}
+				},
+				{
+					"tag": "Bezpečnosť",
+					"title": "Čo by mala obsahovať moderná IT infraštruktúra",
+					"url": "/",
+					"image": {
+						"pictureClass": "picture relative size-full",
+						"image": {
+							"class": "size-full object-cover object-center",
+							"src": "d2b43023f46846c049412e9596e7387ac7ffc15e",
+							"src_2x": "d2b43023f46846c049412e9596e7387ac7ffc15e@2x",
+							"ext": "jpg",
+							"webp": false,
+							"alt": "Čo by mala obsahovať moderná IT infraštruktúra",
+							"width": 368,
+							"height": 304
+						}
+					}
+				}
+			]
+		}
+	]
+}

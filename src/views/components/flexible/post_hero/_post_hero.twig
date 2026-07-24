@@ -1,0 +1,24 @@
+{#
+ # File: /src/views/components/flexible/post_hero/_post_hero.twig
+ # Project: itempire-fe
+ #}
+
+<section class="">
+	<div class="container">
+		<div class="mx-auto flex w-full max-w-196 flex-col items-start gap-6 px-6 lg:px-12">
+			{% if ce.tag %}
+				<span class="tag-sm uppercase" v-jd-animate>{{ ce.tag }}</span>
+			{% endif %}
+
+			{% if ce.title %}
+				<h1 class="text-balance font-serif text-2xl font-semibold leading-tight lg:text-5xl" v-jd-animate>{{ ce.title }}</h1>
+			{% endif %}
+
+			{% if ce.text %}
+				<p class="text-pretty leading-relaxed" v-jd-animate>
+					{{ ce.text }}
+				</p>
+			{% endif %}
+		</div>
+	</div>
+</section>
