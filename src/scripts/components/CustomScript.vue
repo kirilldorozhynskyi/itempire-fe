@@ -3,9 +3,6 @@
 </template>
 
 <script>
-/* eslint-disable */
-import postscribe from 'postscribe'
-
 export default {
 	props: {
 		src: {
@@ -14,10 +11,10 @@ export default {
 		}
 	},
 	mounted() {
-		let script = `<script>`
-		script += this.src
-		script += '<\/script>'
-		postscribe(this.$el, script)
+		const script = document.createElement('script')
+
+		script.textContent = this.src
+		this.$el.appendChild(script)
 	}
 }
 </script>

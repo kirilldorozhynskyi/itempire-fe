@@ -13,11 +13,11 @@
 
 <page-header class="z-999 py-5 lg:py-6 bg-white">
 	<template
-		#default="{ toggleMenu, menuOpened, toggleCart, closeCart, cartOpened, searchOpened, searchQuery, updateSearchQuery, openSearch, closeSearch, activeSubmenu, activeSubmenuItem, openSubmenu, openSubmenuItem, closeSubmenu }"
+		#default="{ toggleMenu, menuOpened, toggleCart, closeCart, cartOpened, searchOpened, searchQuery, updateSearchQuery, openSearch, closeSearch, mobileSearchOpened, openMobileSearch, closeMobileSearch, mobileSubmenu, mobileSubmenuItem, openMobileSubmenu, openMobileSubmenuItem, closeMobileSubmenu, closeMobileSubmenuItem, activeSubmenu, activeSubmenuItem, openSubmenu, openSubmenuItem, closeSubmenu }"
 	>
 		<div class="container max-xl:max-w-full">
-			<div class="offset flex items-center gap-10 xl:gap-16">
-				<a class="" href="/" aria-label="{{ site_title }}">
+			<div class="offset flex items-center gap-10 max-lg:justify-between xl:gap-16">
+				<a class="shrink-0 max-lg:[&_svg]:h-9.5 max-lg:[&_svg]:w-37" href="/" aria-label="{{ site_title }}">
 					{% if logoRaw %}
 						{{ source(rootDir ~ '/public/assets/images/brand/logo.svg')|raw }}
 					{% else %}
@@ -25,11 +25,11 @@
 					{% endif %}
 				</a>
 
-				<div id="primary-navigation">
+				<div id="primary-navigation" class="max-lg:hidden">
 					{% include 'main_navigation.twig' %}
 				</div>
 
-				<div class="ms-auto flex items-center gap-2">
+				<div class="ms-auto flex items-center gap-2 max-lg:hidden">
 					<button
 						type="button"
 						class="btn-outline-neutral p-1.5 relative"
@@ -219,18 +219,223 @@
 					</div>
 				</teleport>
 
-				<div class="relative z-3 lg:hidden">
+				<div class="relative z-3 flex items-center gap-2 lg:hidden">
 					<button
 						type="button"
-						class="flex h-10 w-10 cursor-pointer flex-col items-center justify-center gap-1 hover:bg-transparent"
-						:aria-controls="'primary-navigation'"
+						class="btn-outline-neutral relative size-10 p-1.5"
+						:class="cartOpened ? 'bg-neutral-100 text-purple' : ''"
+						:aria-expanded="cartOpened ? 'true' : 'false'"
+						aria-controls="header-cart"
+						aria-label="Otvoriť košík"
+						@click.stop="toggleCart()"
+					>
+						{{ sprite('shopping-bag', 'text-2xl!') }}
+					</button>
+
+					<button
+						type="button"
+						class="btn-outline-neutral flex h-10 cursor-pointer items-center justify-center gap-2 px-2"
+						:aria-controls="'mobile-navigation'"
 						:aria-expanded="menuOpened ? 'true' : 'false'"
 						:aria-label="menuOpened ? 'Close menu' : 'Open menu'"
 						@click="toggleMenu()"
 					>
-						<span class="h-0.5 w-6 origin-center transition bg-black" :class="menuOpened ? 'translate-y-[2.5px] rotate-45' : ''"></span>
-						<span class="h-0.5 w-6 origin-center transition bg-black" :class="menuOpened ? '-translate-y-[2.5px] -rotate-45' : ''"></span>
+						<span>Menu</span>
+						<span v-show="!menuOpened">{{ sprite('menu', 'text-2xl!') }}</span>
+						<span v-show="menuOpened">{{ sprite('x', 'text-2xl!') }}</span>
 					</button>
+				</div>
+			</div>
+		</div>
+
+		<div
+			id="mobile-navigation"
+			v-show="menuOpened"
+			class="absolute inset-x-0 top-full z-30 h-[calc(100svh-5rem)] overflow-y-auto bg-white lg:hidden"
+			style="display: none"
+			@click.stop
+		>
+			<div class="container flex min-h-full flex-col px-6 pb-8">
+				<div class="mt-6">
+					<button
+						v-if="!mobileSearchOpened"
+						type="button"
+						class="btn-outline-neutral h-12 w-full justify-start gap-4 px-4"
+						@click="openMobileSearch"
+					>
+						{{ sprite('search', 'text-2xl!') }}
+						<span>Vyhľadávanie...</span>
+					</button>
+
+					<div v-else class="flex h-12 items-center rounded-sm border border-neutral-300 pl-1">
+						<button
+							type="button"
+							class="flex size-10 shrink-0 items-center justify-center"
+							aria-label="Zatvoriť vyhľadávanie"
+							@click="updateSearchQuery(''); closeMobileSearch()"
+						>
+							{{ sprite('x', 'text-2xl!') }}
+						</button>
+						<input
+							id="mobile-menu-search-input"
+							:value="searchQuery"
+							type="search"
+							class="h-full min-w-0 flex-1 px-3 outline-none"
+							placeholder="Vyhľadávanie..."
+							autocomplete="off"
+							@input="updateSearchQuery($event.target.value)"
+						/>
+						<a href="/search/" class="btn-purple m-1 flex size-10 shrink-0 items-center justify-center p-0" aria-label="Vyhľadať">
+							{{ sprite('search', 'text-2xl!') }}
+						</a>
+					</div>
+				</div>
+
+				<div v-show="mobileSearchOpened" class="-mx-6 flex min-h-0 flex-1 flex-col overflow-y-auto pb-16">
+					<div class="flex flex-col pt-6">
+						<button type="button" class="px-6 py-2 text-left">acer</button>
+						<button type="button" class="px-6 py-2 text-left">acer <strong>aspire</strong></button>
+						<button type="button" class="px-6 py-2 text-left">acer <strong>nitro</strong></button>
+						<button type="button" class="px-6 py-2 text-left">acer <strong>predator</strong></button>
+					</div>
+
+					<div class="flex items-center gap-4 px-6 pt-4 pb-2">
+						<strong>Tovar</strong>
+						<div class="h-px flex-1 bg-neutral-300"></div>
+					</div>
+
+					<div class="flex flex-col">
+						{% set mobileSearchProducts = [
+							{
+								title: 'ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver',
+								price: '683,00 €',
+								image: '/assets/images/products/product.png'
+							},
+							{
+								title: 'Hyper HyperDrive Next 11 Port USB-C Hub - Midnight Blue',
+								price: '183,00 €',
+								image: '/assets/images/products/product.png'
+							},
+							{
+								title: 'Hyper HyperDrive Next 11 Port USB-C Hub - Midnight Blue',
+								price: '183,00 €',
+								image: '/assets/images/products/product.png'
+							},
+							{
+								title: 'ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver',
+								price: '683,00 €',
+								image: '/assets/images/products/product.png'
+							}
+						] %}
+						{% for product in mobileSearchProducts %}
+							<a href="/" class="grid grid-cols-[2.5rem_minmax(0,1fr)_auto] items-center gap-2.5 px-6 py-2">
+								<img src="{{ product.image }}" alt="" class="size-10 object-contain" />
+								<span>{{ product.title }}</span>
+								<span class="whitespace-nowrap">{{ product.price }}</span>
+							</a>
+						{% endfor %}
+					</div>
+
+					<div class="flex items-center gap-4 px-6 py-2">
+						<strong>Kategórie</strong>
+						<div class="h-px flex-1 bg-neutral-300"></div>
+					</div>
+					<a href="/" class="px-6 py-2">Mobilné a prenosné zariadenia</a>
+					<a href="/" class="px-6 py-2">Príslušenstvo</a>
+
+					<div class="sticky bottom-0 mt-auto bg-white px-6 py-2">
+						<a href="/search/" class="btn-purple h-10 w-full justify-center gap-3">
+							{{ sprite('search', 'text-2xl!') }}
+							Zobraziť všetky výsledky
+						</a>
+					</div>
+				</div>
+
+				<nav v-show="!mobileSearchOpened && mobileSubmenu === null" class="mt-6" aria-label="Mobilná navigácia">
+					<ul class="flex flex-col">
+						{% for item in header_menu %}
+							<li>
+								{% if item.submenu %}
+									<button
+										type="button"
+										class="flex w-full items-center justify-between py-4 text-left font-serif text-lg font-semibold leading-tight"
+										@click="openMobileSubmenu({{ loop.index }})"
+									>
+										<span>{{ item.title }}</span>
+										{{ sprite('chevron-right', 'size-4') }}
+									</button>
+								{% else %}
+									<a href="{{ item.url }}" class="flex w-full py-4 font-serif text-lg font-semibold leading-tight hover:text-purple" @click="toggleMenu()">
+										{{ item.title }}
+									</a>
+								{% endif %}
+							</li>
+						{% endfor %}
+					</ul>
+				</nav>
+
+				{% for item in header_menu %}
+					{% if item.submenu %}
+						<div v-show="!mobileSearchOpened && mobileSubmenu === {{ loop.index }} && mobileSubmenuItem === null" class="mt-6 flex flex-col">
+							<button
+								type="button"
+								class="flex items-center gap-2 py-4 text-left text-sm font-medium"
+								aria-label="Späť do hlavného menu"
+								@click="closeMobileSubmenu()"
+							>
+								{{ sprite('arrow-left', 'size-5') }}
+								<span>{{ item.title }}</span>
+							</button>
+							{% for submenuItem in item.submenu %}
+								{% if submenuItem.title != item.title %}
+									{% if submenuItem.submenu or submenuItem.title == 'IT Komponenty' %}
+										<button
+											type="button"
+											class="flex w-full items-center justify-between py-4 text-left"
+											@click="openMobileSubmenuItem({{ loop.index }})"
+										>
+											<span>{{ submenuItem.title }}</span>
+											{{ sprite('chevron-right', 'size-4') }}
+										</button>
+									{% else %}
+										<a href="{{ submenuItem.url }}" class="py-4">{{ submenuItem.title }}</a>
+									{% endif %}
+								{% endif %}
+							{% endfor %}
+						</div>
+
+						{% set parentIndex = loop.index %}
+						{% for submenuItem in item.submenu %}
+							{% if submenuItem.submenu or submenuItem.title == 'IT Komponenty' %}
+								{% set nestedItems = submenuItem.submenu %}
+								{% if submenuItem.title == 'IT Komponenty' and item.submenu[0].submenu %}
+									{% set nestedItems = item.submenu[0].submenu %}
+								{% endif %}
+								<div v-show="!mobileSearchOpened && mobileSubmenu === {{ parentIndex }} && mobileSubmenuItem === {{ loop.index }}" class="mt-6 flex flex-col">
+									<button
+										type="button"
+										class="flex items-center gap-2 py-4 text-left text-sm font-medium"
+										aria-label="Späť do {{ item.title }}"
+										@click="closeMobileSubmenuItem()"
+									>
+										{{ sprite('arrow-left', 'size-5') }}
+										<span>{{ submenuItem.title }}</span>
+									</button>
+									{% for child in nestedItems %}
+										<a href="{{ child.url }}" class="py-4">{{ child.title }}</a>
+									{% endfor %}
+								</div>
+							{% endif %}
+						{% endfor %}
+					{% endif %}
+				{% endfor %}
+
+				<div v-show="!mobileSearchOpened && mobileSubmenu === null" class="mt-8 flex flex-col gap-4">
+					<a href="{{ header.button.btn.url }}" class="btn-outline-neutral h-12 w-full justify-center">{{ header.button.btn.title }}</a>
+					<div class="grid grid-cols-2 gap-2">
+						<button type="button" class="btn-purple h-12 justify-center">SK</button>
+						<button type="button" class="btn-outline-neutral h-12 justify-center">EN</button>
+					</div>
 				</div>
 			</div>
 		</div>

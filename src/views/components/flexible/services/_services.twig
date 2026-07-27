@@ -5,29 +5,33 @@
  # Created Date: Thursday, July 16th 2026, 9:42:14
  # Author: Kirill Dorozhynskyi - kyrylo.dorozhynskyi@justdev.org
  # -----
- # Last Modified: Monday, July 20th 2026 10:27:38
+ # Last Modified: Monday, July 27th 2026 14:32:00
  # Modified By: Kirill Dorozhynskyi
  # -----
  # Copyright (c) 2026 justDev
  #}
 
-<section class="services overflow-hidden py-20 lg:py-36">
-	<div class="container flex flex-col gap-12 lg:gap-20">
+<section class="services overflow-hidden py-20 md:py-24 lg:py-36">
+	<div class="container flex flex-col gap-12 md:gap-16 lg:gap-20">
 		<div class="flex flex-col items-center gap-6 mx-auto max-w-145 text-center">
 			{% include '../title/_title_content.twig' with {
 				ce: ce
 			} %}
 		</div>
 
-		<slider-wrapper class="w-full" :overflow="false" wrapper-class="md:-me-6" :dots="true" :nav="false">
+		<slider-wrapper class="w-full" :overflow="false" wrapper-class="lg:-me-6 -me-2" :dots="true" :nav="false">
 			{% for item in ce.services %}
-				<slider-item class="basis-full md:basis-1/4 md:pe-6" v-jd-animate="{ delay: {{ loop.index * 100 }} }">
-					<a href="{{ item.url }}" aria-label="{{ item.title }}" class="flex flex-col gap-6 lg:gap-16 p-4 lg:p-6 bg-neutral-100 relative bg-remover">
+				<slider-item class="basis-4/5 md:basis-1/2 pe-2 lg:pe-6 lg:basis-1/4" v-jd-animate="{ delay: {{ loop.index * 100 }} }">
+					<a
+						href="{{ item.url }}"
+						aria-label="{{ item.title }}"
+						class="bg-remover relative flex min-h-full flex-col gap-10 bg-neutral-100 p-6 lg:gap-16"
+					>
 						{{ sprite(item.icon, 'text-[3.5rem]') }}
 
-						<div class="flex flex-col gap-6 mt-auto items-start">
+						<div class="flex flex-1 flex-col items-start justify-end gap-6">
 							<div class="flex flex-col gap-2">
-								<h3 class="text-balance font-serif leading-tight font-semibold lg:text-lg">{{ item.title }}</h3>
+								<h3 class="text-balance font-serif text-base leading-tight font-semibold lg:text-lg">{{ item.title }}</h3>
 
 								<p class="text-sm text-subtile leading-normal">
 									{{ item.text }}

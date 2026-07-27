@@ -16,6 +16,15 @@
 				:update-search-query="updateSearchQuery"
 				:open-search="openSearch"
 				:close-search="closeSearch"
+				:mobile-search-opened="mobileSearchOpened"
+				:open-mobile-search="openMobileSearch"
+				:close-mobile-search="closeMobileSearch"
+				:mobile-submenu="mobileSubmenu"
+				:mobile-submenu-item="mobileSubmenuItem"
+				:open-mobile-submenu="openMobileSubmenu"
+				:open-mobile-submenu-item="openMobileSubmenuItem"
+				:close-mobile-submenu="closeMobileSubmenu"
+				:close-mobile-submenu-item="closeMobileSubmenuItem"
 				:active-submenu="activeSubmenu"
 				:active-submenu-item="activeSubmenuItem"
 				:open-submenu="openSubmenu"
@@ -43,6 +52,9 @@ const solid = ref(false) // opaque background once scrolled past the hero
 const menuOpened = ref(false)
 const cartOpened = ref(false)
 const searchOpened = ref(false)
+const mobileSearchOpened = ref(false)
+const mobileSubmenu = ref(null)
+const mobileSubmenuItem = ref(null)
 const searchQuery = ref('')
 const activeSubmenu = ref(null)
 const activeSubmenuItem = ref(1)
@@ -79,6 +91,10 @@ const toggleMenu = () => {
 	if (menuOpened.value) {
 		closeSubmenu()
 		closeCart()
+		closeMobileSubmenu()
+	} else {
+		closeMobileSearch()
+		closeMobileSubmenu()
 	}
 }
 
@@ -88,6 +104,10 @@ const closeCart = () => {
 
 const closeSearch = () => {
 	searchOpened.value = false
+}
+
+const closeMobileSearch = () => {
+	mobileSearchOpened.value = false
 }
 
 const updateSearchQuery = (value) => {
@@ -103,6 +123,47 @@ const openSearch = () => {
 	nextTick(() => {
 		document.querySelector('#header-search-input')?.focus()
 	})
+}
+
+const openMobileSearch = () => {
+	mobileSearchOpened.value = true
+	closeMobileSubmenu()
+	closeCart()
+	closeSubmenu()
+
+	nextTick(() => {
+		document.querySelector('#mobile-navigation')?.scrollTo({ top: 0 })
+		document.querySelector('#mobile-menu-search-input')?.focus()
+	})
+}
+
+const resetMobileMenuScroll = () => {
+	nextTick(() => {
+		document.querySelector('#mobile-navigation')?.scrollTo({ top: 0 })
+	})
+}
+
+const closeMobileSubmenuItem = () => {
+	mobileSubmenuItem.value = null
+	resetMobileMenuScroll()
+}
+
+const closeMobileSubmenu = () => {
+	mobileSubmenu.value = null
+	mobileSubmenuItem.value = null
+	resetMobileMenuScroll()
+}
+
+const openMobileSubmenu = (index) => {
+	mobileSubmenu.value = Number(index)
+	mobileSubmenuItem.value = null
+	closeMobileSearch()
+	resetMobileMenuScroll()
+}
+
+const openMobileSubmenuItem = (index) => {
+	mobileSubmenuItem.value = Number(index)
+	resetMobileMenuScroll()
 }
 
 const toggleCart = () => {
@@ -141,6 +202,8 @@ const closeOverlays = () => {
 	closeSubmenu()
 	closeCart()
 	closeSearch()
+	closeMobileSearch()
+	closeMobileSubmenu()
 }
 
 const handleDocumentClick = (event) => {

@@ -1,6 +1,6 @@
 <template>
-	<div>
-		<div v-if="topNav" class="mb-6">
+	<div class="flex flex-col" :class="{ 'gap-6': topNav }">
+		<div v-if="topNav" :class="responsiveControls ? 'hidden lg:block' : ''">
 			<div class="flex items-center gap-2.5">
 				<button type="button" class="btn-white size-11 p-0!" @click="scrollPrev" :disabled="isPrevDisabled" aria-label="Previous">
 					<SvgIcon name="angle" class="rotate-180 text-xl!" />
@@ -20,7 +20,8 @@
 
 			<div
 				v-if="!(isPrevDisabled && isNextDisabled) && nav && sideNav"
-				class="nav-side pointer-events-none absolute inset-y-0 -right-12 -left-12 z-10 flex items-center justify-between"
+				class="nav-side pointer-events-none absolute inset-y-0 -right-12 -left-12 z-10 items-center justify-between"
+				:class="responsiveControls ? 'hidden lg:flex' : 'flex'"
 			>
 				<button
 					type="button"
@@ -42,7 +43,11 @@
 				</button>
 			</div>
 
-			<div v-if="dots && scrollSnaps.length > 1" class="dots flex items-center justify-center gap-2" :class="dotsClass ? dotsClass : 'mt-6'">
+			<div
+				v-if="dots && scrollSnaps.length > 1"
+				class="dots flex items-center justify-center gap-2"
+				:class="[dotsClass ? dotsClass : 'pt-6', { 'lg:hidden': responsiveControls }]"
+			>
 				<div class="flex gap-2">
 					<button
 						v-for="(_, index) in scrollSnaps"
@@ -51,6 +56,7 @@
 						class="transit size-2 cursor-pointer rounded-xs"
 						:class="{
 							'bg-white': dotsClass,
+							'bg-purple': !dotsClass,
 							'opacity-60': index != selectedIndex
 						}"
 						@click="scrollTo(index)"
@@ -59,7 +65,11 @@
 				</div>
 			</div>
 
-			<div v-if="!(isPrevDisabled && isNextDisabled) && nav" class="mt-8 flex items-center gap-2">
+			<div
+				v-if="!(isPrevDisabled && isNextDisabled) && nav"
+				class="items-center gap-2 pt-8"
+				:class="responsiveControls ? 'hidden lg:flex' : 'flex'"
+			>
 				<button type="button" class="btn-outline-neutral p-2" @click="scrollPrev" :disabled="isPrevDisabled" aria-label="Previous">
 					<SvgIcon name="arrow-left" />
 				</button>
@@ -89,7 +99,8 @@ const props = defineProps({
 	topNav: { type: Boolean, default: false },
 	dark: { type: Boolean, default: false },
 	dotsNode: { type: String, default: '' },
-	dotsClass: { type: String, default: '' }
+	dotsClass: { type: String, default: '' },
+	responsiveControls: { type: Boolean, default: false }
 })
 
 const [emblaRef, emblaApi] = emblaCarouselVue({ align: props.align, loop: props.loop }, props.fade ? [Fade()] : [])

@@ -11,28 +11,28 @@
  # Copyright (c) 2026 justDev
  #}
 
-<section class="overflow-hidden py-20 lg:py-36">
-	<div class="container flex flex-col gap-12 lg:gap-20">
+<section class="overflow-hidden py-20 md:py-24 lg:py-36">
+	<div class="container flex flex-col gap-12 md:gap-16 lg:gap-20">
 		{% include '../title/_title.twig' with {
 			ce: ce
 		} %}
 
-		<stepper-view class="grid grid-cols-2 gap-6" :speed="3000" :duration="{{ ce.items|length }}">
+		<stepper-view class="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-6" :speed="3000" :duration="{{ ce.items|length }}">
 			<template #default="{ openItem, hoverItem, leaveItem, active, progross }">
-				<div class="decor-r aspect-580/632 min-h-full max-h-full max-w-full">
+				<div class="decor-r aspect-342/360 w-full overflow-hidden md:aspect-16/10 lg:aspect-580/632 lg:min-h-full lg:max-h-full lg:max-w-full">
 					{% for item in ce.items %}
 						<div class="w-full h-full" v-show="active === {{ loop.index }}">
 							{{ image(item.image) }}
 						</div>
 					{% endfor %}
 				</div>
-				<div class="ps-14 flex flex-col justify-center">
+				<div class="flex flex-col justify-center lg:ps-14">
 					{% for item in ce.items %}
 						<button
 							@click="openItem({{ loop.index }})"
 							@mouseenter="hoverItem({{ loop.index }})"
 							@mouseleave="leaveItem({{ loop.index }})"
-							class="border-b relative border-neutral-300 py-8 flex flex-col gap-2 cursor-pointer group"
+							class="group relative flex cursor-pointer flex-col gap-4 border-b border-neutral-300 py-6 text-left lg:gap-2 lg:py-8"
 						>
 							<div class="flex items-center gap-8">
 								<div
@@ -44,12 +44,12 @@
 									{{ loop.index < 10 ? '0' ~ loop.index : loop.index }}
 								</div>
 
-								<div class="leading-tight font-serif font-semibold text-2x">
+								<div class="font-serif text-base leading-tight font-semibold lg:text-2x">
 									{{ item.title }}
 								</div>
 							</div>
 
-							<div class="ps-16" v-show="active === {{ loop.index }}">
+							<div class="ps-16 md:ps-18" v-show="active === {{ loop.index }}">
 								<div class="text-subtile text-balance text-start tracking-tight max-w-107">
 									{{ item.text }}
 								</div>

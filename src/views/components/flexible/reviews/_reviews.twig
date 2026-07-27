@@ -5,41 +5,41 @@
  # Created Date: Monday, July 20th 2026, 11:17:37
  # Author: Kirill Dorozhynskyi - kyrylo.dorozhynskyi@justdev.org
  # -----
- # Last Modified: Monday, July 20th 2026 12:41:03
+ # Last Modified: Monday, July 27th 2026 14:30:32
  # Modified By: Kirill Dorozhynskyi
  # -----
  # Copyright (c) 2026 justDev
  #}
 
-<section class="bg-neutral-100 py-20 lg:py-36 overflow-hidden decor">
-	<div class="container flex flex-col gap-12 lg:gap-20">
+<section class="decor overflow-hidden bg-neutral-100 py-20 md:py-24 lg:py-36">
+	<div class="container flex flex-col gap-12 md:gap-16 lg:gap-20">
 		<div class="flex flex-col items-center gap-6 mx-auto max-w-145 text-center">
 			{% include '../title/_title_content.twig' with {
 				ce: ce
 			} %}
 		</div>
 
-		<slider-wrapper class="w-full" :overflow="false" wrapper-class="md:-me-12" :dots="false" :nav="true">
+		<slider-wrapper class="w-full" :overflow="false" wrapper-class="-me-2 lg:-me-6" :dots="true" :nav="true" responsive-controls>
 			{% for item in ce.reviews %}
-				<slider-item class="basis-full md:basis-13/20 2xl:basis-1/2 md:pe-12" v-jd-animate="{ delay: {{ loop.index * 100 }} }">
-					<div class="bg-white p-6 lg:p-12 flex gap-12">
-						<div class="flex flex-col gap-12">
-							<p class="lg:text-lg">
+				<slider-item class="basis-full pe-2 md:basis-4/5 lg:pe-6 lg:basis-13/20 2xl:basis-1/2" v-jd-animate="{ delay: {{ loop.index * 100 }} }">
+					<div class="flex flex-col gap-12 bg-white p-6 md:p-8 lg:flex-row lg:p-12">
+						<div class="flex flex-col gap-8 md:gap-12">
+							<p class="text-base lg:text-lg">
 								{{ item.text }}
 							</p>
 
-							<div class="flex gap-8 items-center">
-								<div class="aspect-square size-18">
+							<div class="flex items-center gap-6 md:gap-8">
+								<div class="aspect-square size-16 md:size-18">
 									{{ image(item.author.image) }}
 								</div>
 
 								<div class="flex flex-col">
-									<span class="text-lg font-serif font-semibold leading-tight">{{ item.author.name }}</span>
+									<span class="font-serif text-base leading-tight font-semibold lg:text-lg">{{ item.author.name }}</span>
 									<span class="text-subtile text-sm">{{ item.author.position }}</span>
 								</div>
 							</div>
 						</div>
-						<div class="flex flex-col bg-neutral-100 lg:max-w-42 p-4 lg:p-6 justify-end">
+						<div class="flex items-center gap-6 bg-neutral-100 p-4 md:p-6 lg:max-w-42 lg:flex-col lg:items-start lg:justify-end">
 							<span class="font-serif leading-tight text-2xl lg:text-5xl font-semibold">{{ item.info.percent }}</span>
 
 							<span class="text-subtile text-sm">{{ item.info.text }}</span>

@@ -5,19 +5,19 @@
 
 <profile-actions>
 	<template #default="{ openAddress, confirmDelete }">
-		<tabs :value="0">
+		<tabs value="0">
 			<div class="container">
 				<div class="overflow-x-auto">
 					<tab-list class="min-w-150">
-						<tab :value="0">Fakturačné údaje</tab>
-						<tab :value="1">Doručovacie adresy</tab>
-						<tab :value="2">Objednávky</tab>
+						<tab value="0">Fakturačné údaje</tab>
+						<tab value="1">Doručovacie adresy</tab>
+						<tab value="2">Objednávky</tab>
 					</tab-list>
 				</div>
 			</div>
 
 			<tab-panels>
-				<tab-panel :value="0">
+				<tab-panel value="0">
 					<section class="bg-neutral-100 py-12 lg:py-16">
 						<div class="container flex flex-col gap-10">
 							<h1 class="font-serif text-4xl font-semibold leading-tight">Fakturačné údaje</h1>
@@ -75,7 +75,7 @@
 					</section>
 				</tab-panel>
 
-				<tab-panel :value="1">
+				<tab-panel value="1">
 					<section class="bg-neutral-100 py-12 lg:py-16">
 						<div class="container flex flex-col gap-10">
 							<h1 class="font-serif text-4xl font-semibold leading-tight">Doručovacie adresy</h1>
@@ -119,7 +119,7 @@
 					</section>
 				</tab-panel>
 
-				<tab-panel :value="2">
+				<tab-panel value="2">
 					<section class="bg-neutral-100 py-12 lg:py-16">
 						<div class="container flex flex-col gap-10">
 							<h1 class="font-serif text-4xl font-semibold leading-tight">Objednávky</h1>

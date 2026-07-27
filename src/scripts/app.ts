@@ -18,9 +18,18 @@ import '../styles/app.css'
 
 import LazyLoad from 'vanilla-lazyload'
 import PrimeVue from 'primevue/config'
-import { computed, createApp, defineAsyncComponent, defineComponent, onBeforeUnmount, onMounted, provide, ref } from 'vue'
+import { computed, createApp, defineComponent, onBeforeUnmount, onMounted, provide, ref } from 'vue'
 import Aura from '@primeuix/themes/aura'
 import { CustomMarker as GoogleMarker } from 'vue3-google-map'
+import Accordion from 'primevue/accordion'
+import AccordionContent from 'primevue/accordioncontent'
+import AccordionHeader from 'primevue/accordionheader'
+import AccordionPanel from 'primevue/accordionpanel'
+import Tab from 'primevue/tab'
+import TabList from 'primevue/tablist'
+import TabPanel from 'primevue/tabpanel'
+import TabPanels from 'primevue/tabpanels'
+import Tabs from 'primevue/tabs'
 
 // NOTE: Include if needed
 // import VueScrollTo from 'vue-scrollto'
@@ -33,35 +42,23 @@ import Animation from './directives/animation'
 
 import PageHeader from './components/PageHeader.vue'
 import Benefits from './components/Benefits.vue'
+import CustomScript from './components/CustomScript.vue'
+import CustomScriptSrc from './components/CustomScriptSrc.vue'
+import DropDown from './components/DropDown.vue'
 import FloatField from './components/FloatField.vue'
-
-const SliderWrapper = defineAsyncComponent(() => import('./components/Slider/SliderWrapper.vue'))
-// const SliderVideo = defineAsyncComponent(() => import('./components/Slider/SliderVideo.vue'))
-const SliderItem = defineAsyncComponent(() => import('./components/Slider/SliderItem.vue'))
-const SimpleGallery = defineAsyncComponent(() => import('./components/SimpleGallery.vue'))
-const StepperView = defineAsyncComponent(() => import('./components/StepperView.vue'))
-const Range = defineAsyncComponent(() => import('./components/Range.vue'))
-const ShowMore = defineAsyncComponent(() => import('./components/ShowMore.vue'))
-const DropDown = defineAsyncComponent(() => import('./components/DropDown.vue'))
-const ProductGallery = defineAsyncComponent(() => import('./components/ProductGallery.vue'))
-const QuantityInput = defineAsyncComponent(() => import('./components/QuantityInput.vue'))
-const ReviewDrawer = defineAsyncComponent(() => import('./components/ReviewDrawer.vue'))
-const StarRating = defineAsyncComponent(() => import('./components/StarRating.vue'))
-const ProfileActions = defineAsyncComponent(() => import('./components/ProfileActions.vue'))
-const GoogleMap = defineAsyncComponent(() => import('./components/GoogleMap.vue'))
-
-const Tabs = defineAsyncComponent(() => import('primevue/tabs'))
-const TabList = defineAsyncComponent(() => import('primevue/tablist'))
-const Tab = defineAsyncComponent(() => import('primevue/tab'))
-const TabPanels = defineAsyncComponent(() => import('primevue/tabpanels'))
-const TabPanel = defineAsyncComponent(() => import('primevue/tabpanel'))
-const Accordion = defineAsyncComponent(() => import('primevue/accordion'))
-const AccordionPanel = defineAsyncComponent(() => import('primevue/accordionpanel'))
-const AccordionHeader = defineAsyncComponent(() => import('primevue/accordionheader'))
-const AccordionContent = defineAsyncComponent(() => import('primevue/accordioncontent'))
-
-const CustomScript = defineAsyncComponent(() => import('./components/CustomScript.vue'))
-const CustomScriptSrc = defineAsyncComponent(() => import('./components/CustomScriptSrc.vue'))
+import GoogleMap from './components/GoogleMap.vue'
+import ProductGallery from './components/ProductGallery.vue'
+import ProfileActions from './components/ProfileActions.vue'
+import QuantityInput from './components/QuantityInput.vue'
+import Range from './components/Range.vue'
+import ReviewDrawer from './components/ReviewDrawer.vue'
+import ShowMore from './components/ShowMore.vue'
+import SimpleGallery from './components/SimpleGallery.vue'
+import SliderItem from './components/Slider/SliderItem.vue'
+// import SliderVideo from './components/Slider/SliderVideo.vue'
+import SliderWrapper from './components/Slider/SliderWrapper.vue'
+import StarRating from './components/StarRating.vue'
+import StepperView from './components/StepperView.vue'
 
 const PREVENT_UNLOAD_SELECTORS = [
 	'.ajax',

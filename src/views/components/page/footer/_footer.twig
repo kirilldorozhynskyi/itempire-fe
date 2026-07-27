@@ -5,7 +5,7 @@
  # Created Date: Friday, May 29th 2026, 11:51:48
  # Author: Kirill Dorozhynskyi - kyrylo.dorozhynskyi@justdev.org
  # -----
- # Last Modified: Monday, July 20th 2026 12:45:14
+ # Last Modified: Monday, July 27th 2026 14:59:36
  # Modified By: Kirill Dorozhynskyi
  # -----
  # Copyright (c) 2026 justDev
@@ -13,14 +13,14 @@
 
 <footer class="bg-purple text-white/70">
 	<div>
-		<div class="aspect-1280/624">
+		<div class="aspect-390/336 md:aspect-1280/624">
 			{{ image(footer.image) }}
 		</div>
 
-		<div class="decor bg-purple -mt-14 pt-14">
-			<div class="py-36 flex items-center flex-col gap-16 text-center">
+		<div class="decor bg-purple -mt-8 lg:-mt-14 pt-8 lg:pt-14">
+			<div class="py-20 lg:py-36 flex items-center flex-col gap-8 text-center">
 				<div class="flex items-center flex-col gap-8 max-w-137">
-					<h2 class="text-balance font-serif font-semibold text-4xl lg:text-5xl text-white leading-tight" v-jd-animate>{{ footer.title }}</h2>
+					<h2 class="text-balance font-serif font-semibold text-2xl lg:text-5xl text-white leading-tight" v-jd-animate>{{ footer.title }}</h2>
 					<p class="text-pretty" v-jd-animate>
 						{{ footer.text }}
 					</p>
@@ -67,7 +67,7 @@
 					{% endif %}
 				</div>
 
-				<div class="lg:col-span-4 grid lg:grid-cols-3 gap-6">
+				<div class="[20rem]:grid-cols-2 lg:col-span-4 grid lg:grid-cols-3 gap-6">
 					{% include '_navigation.twig' with {
 						menu: footer_1
 					} %}
@@ -108,19 +108,21 @@
 				</div>
 			</div>
 
-			<div class="grid lg:grid-cols-3 items-center text-sm">
+			<div class="grid lg:grid-cols-3 gap-4 items-center text-sm">
 				{% if footer.copyright %}
 					<div class="">
 						{{ '© ' ~ ('now'|date('Y')) ~ ' ' ~ footer.copyright }}
 					</div>
 				{% endif %}
 
-				<div class="flex justify-center text-center">
+				<div class="flex lg:justify-center lg:text-center">
 					<a href="/gdpr" class="link-hover-underlined">Ochrana súkromia a cookies</a>
 				</div>
 
-				<div class="flex justify-end text-end">
-					Designed by Juraj Porubän. Developed by&nbsp;<a href="https://justdev.org" target="_blank">justDev</a>
+				<div class="flex flex-wrap lg:justify-end lg:text-end">
+					<div>
+						Designed by Juraj Porubän. Developed by&nbsp;<a href="https://justdev.org" target="_blank">justDev</a>
+					</div>
 				</div>
 			</div>
 		</div>
