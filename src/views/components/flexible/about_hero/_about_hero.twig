@@ -1,0 +1,38 @@
+{#
+ # File: /src/views/components/flexible/about_hero/_about_hero.twig
+ # Project: itempire-fe
+ # Version: 1.0.0
+ # Created Date: Monday, July 27th 2026, 15:17:46
+ # Author: Kirill Dorozhynskyi - kyrylo.dorozhynskyi@justdev.org
+ # -----
+ # Last Modified: Monday, July 27th 2026 17:53:27
+ # Modified By: Kirill Dorozhynskyi
+ # -----
+ # Copyright (c) 2026 justDev
+ #}
+
+<section class="overflow-hidden">
+	<div class="container flex flex-col items-center gap-12 pt-17.5 lg:gap-20 lg:pt-36">
+		<div class="flex w-full min-w-0 max-w-194 flex-col items-center gap-6 text-center">
+			<h1 class="text-balance font-serif text-4xl leading-none font-semibold lg:text-6xl" v-jd-animate>{{ ce.title|raw }}</h1>
+
+			<p class="max-w-116 text-pretty text-base tracking-tight text-subtile" v-jd-animate>
+				{{ ce.text }}
+			</p>
+		</div>
+
+		<div class="relative aspect-340/349 w-full overflow-hidden lg:aspect-1186/472">
+			{{
+				image(
+					ce.image,
+					{
+						lazy: false,
+						loading: 'eager',
+						decoding: 'async',
+						fetchpriority: 'high'
+					}
+				)
+			}}
+		</div>
+	</div>
+</section>

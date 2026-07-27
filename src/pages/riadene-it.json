@@ -1,0 +1,157 @@
+{
+	"title": "Riadené IT a infraštruktúra pre firmy",
+	"description": "Riadená IT prevádzka, infraštruktúra, monitoring a zálohovanie pre firmy.",
+	"flexible": [
+		{
+			"name": "hero_with_card",
+			"tag": "Riadené IT a infraštruktúra pre firmy",
+			"title": "<span class='text-subtile'>IT prevádzka</span> bez chaosu, výpadkov a nejasnej zodpovednosti",
+			"text": "Spravujeme firemné siete, servery, zálohy, monitoring a podporu ako jeden prepojený celok. Pomáhame firmám znížiť výpadky, odstrániť chaos v infraštruktúre a nastaviť IT tak, aby bolo stabilné, bezpečné a predvídateľné.",
+			"button": {
+				"class": "btn-purple",
+				"btn": {
+					"title": "Dohodnúť audit infraštruktúry",
+					"url": "#kontakt"
+				}
+			},
+			"image": {
+				"pictureClass": "picture size-full",
+				"image": {
+					"class": "size-full object-cover object-center",
+					"src": "48a0cfdfdbb3cd4a6691cf9d7396fb5d4f5074cc",
+					"ext": "jpg",
+					"webp": false,
+					"alt": "Technik kontrolujúci firemnú serverovú infraštruktúru",
+					"width": 2752,
+					"height": 1536
+				}
+			},
+			"card": {
+				"title": "Keď IT rastie bez plánu, problémy sa najskôr objavia nenápadne",
+				"text": "Slabšie Wi-Fi, pomalší server, nejasné zálohy. Postupne vznikne prostredie, kde nikto nevie, čo je kritické, čo obnoviť a kto za čo zodpovedá."
+			}
+		},
+		{
+			"name": "services",
+			"variant": "icons",
+			"align": "left",
+			"center": true,
+			"loop": true,
+			"autoplay": true,
+			"autoplayDelay": 3000,
+			"nav": false,
+			"dots": true,
+			"tag": "Naše riešenie",
+			"title": "<span class='text-subtile'>Riadené IT</span> znamená jasnú štruktúru: monitoring, SLA, dokumentácia, pravidelná údržba, kontrola záloh, plán obnovy a definované zodpovednosti.",
+			"subtitle": "Čo služba zahŕňa",
+			"class": "pt-20 md:pt-24 lg:pt-36",
+			"services": [
+				{ "icon": "wifi", "title": "Návrh a správa LAN, Wi-Fi a pobočkových pripojení" },
+				{ "icon": "brand-openvpn", "title": "VPN, SD-WAN, QoS a segmentácia siete" },
+				{ "icon": "server", "title": "Windows/Linux servery, virtualizácia, úložiská" },
+				{ "icon": "database-import", "title": "Zálohy, snapshoty, replikácia, RPO/RTO" },
+				{ "icon": "chart-column", "title": "Monitoring dostupnosti, výkonu a kapacity" }
+			]
+		},
+		{
+			"name": "image_with_text",
+			"title": "Keď infraštruktúra<br>pracuje pre vás",
+			"paragraphs": [
+				"Riadené IT znižuje výpadky, zrýchľuje riešenie problémov a dáva vám úplný prehľad bez toho, aby ste sa museli o infraštruktúru starať sami."
+			],
+			"items": [
+				"menej neplánovaných výpadkov",
+				"rýchlejšie riešenie incidentov",
+				"lepší prehľad o infraštruktúre",
+				"overiteľné zálohy a plán obnovy",
+				"jasná zodpovednosť za IT prevádzku",
+				"infraštruktúra pripravená na rast firmy"
+			],
+			"image": {
+				"pictureClass": "picture size-full",
+				"image": {
+					"class": "size-full object-cover object-center",
+					"src": "43eecbc66a4997fc036f68c73bdaedf77014dcca",
+					"ext": "jpg",
+					"webp": false,
+					"alt": "Správa firemnej IT infraštruktúry",
+					"width": 2048,
+					"height": 2048
+				}
+			}
+		},
+		{
+			"name": "logos",
+			"text": "Dôverujú nám firmy naprieč odvetviami",
+			"class": "pb-20 lg:pb-36",
+			"logos": [
+				"/assets/images/logos/coinbase.svg",
+				"/assets/images/logos/doocusign.svg",
+				"/assets/images/logos/drips.svg",
+				"/assets/images/logos/hopin.svg",
+				"/assets/images/logos/sisyphus.svg",
+				"/assets/images/logos/square.svg",
+				"/assets/images/logos/zapier.svg"
+			]
+		},
+		{
+			"name": "stepper",
+			"class": "decor bg-neutral-100",
+			"tagWhite": true,
+			"variant": "medium",
+			"tag": "Náš proces",
+			"title": "<span class='text-subtile'>Systematický</span><br>postup, ktorý premení chaotické IT na predvídateľný a kontrolovaný celok.",
+			"image": {
+				"pictureClass": "picture size-full",
+				"image": {
+					"class": "size-full object-cover object-center",
+					"src": "89861c28fd2d0664de723b5892438fef0a1cc9bb",
+					"ext": "jpg",
+					"webp": false,
+					"alt": "Konzultácia o stave IT infraštruktúry",
+					"width": 2048,
+					"height": 2048
+				}
+			},
+			"items": [
+				{ "title": "Zmapujeme stav", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+				{ "title": "Určíme priority", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+				{ "title": "Stabilizujeme", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+				{ "title": "Nastavíme prevádzkový model", "text": "SLA, zodpovednosti, eskalácie, reporting a údržbu" },
+				{ "title": "Pripravíme rozvoj", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." }
+			]
+		},
+		{
+			"name": "image_with_text",
+			"title": "Pre koho je služba vhodná?",
+			"paragraphs": [
+				"Firmy s vlastnými servermi, viacerými pobočkami, rastúcim počtom používateľov, kritickými aplikáciami alebo interným IT tímom, ktorý potrebuje partnera pre operatívu a projekty."
+			],
+			"image": {
+				"pictureClass": "picture size-full",
+				"image": {
+					"class": "size-full object-cover object-center",
+					"src": "e55829761b39f6bf02886471470ec94ce78e4525",
+					"ext": "jpg",
+					"webp": false,
+					"alt": "Firma využívajúca riadenú IT podporu",
+					"width": 2048,
+					"height": 2048
+				}
+			}
+		},
+		{
+			"name": "faq",
+			"title": "Často kladené otázky",
+			"open": "1",
+			"items": [
+				{ "title": "Viete prevziať správu existujúcej infraštruktúry?", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+				{
+					"title": "Ako funguje monitoring a SLA?",
+					"text": "Monitoring, zodpovednosti, eskalácie a reakčné časy nastavíme podľa kritickosti vašej prevádzky."
+				},
+				{ "title": "Kontrolujete aj funkčnosť záloh?", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." }
+			]
+		}
+	]
+}

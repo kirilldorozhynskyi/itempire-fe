@@ -1,0 +1,40 @@
+{#
+ # File: /src/views/components/flexible/team/_team.twig
+ # Project: itempire-fe
+ # Version: 1.0.0
+ # Created Date: Monday, July 27th 2026, 15:17:46
+ # Author: Kirill Dorozhynskyi - kyrylo.dorozhynskyi@justdev.org
+ # -----
+ # Last Modified: Monday, July 27th 2026 15:38:37
+ # Modified By: Kirill Dorozhynskyi
+ # -----
+ # Copyright (c) 2026 justDev
+ #}
+
+<section class="decor bg-neutral-100 py-20 lg:py-36">
+	<div class="container flex flex-col gap-12 md:gap-16 lg:gap-20">
+		<div class="flex max-w-246 flex-col items-start gap-8">
+			{% include '../title/_title_content.twig' with {
+				ce: ce,
+				tag_white: true
+			} %}
+		</div>
+
+		<div class="grid gap-4 md:grid-cols-2 md:gap-6 lg:grid-cols-3 lg:gap-y-8">
+			{% for item in ce.items %}
+				<article class="overflow-hidden bg-white" v-jd-animate="{ delay: {{ loop.index * 100 }} }">
+					<div class="aspect-368/304 overflow-hidden">
+						{{ image(item.image) }}
+					</div>
+
+					<div class="flex flex-col gap-2 p-8">
+						<h3 class="text-balance font-serif text-lg leading-tight font-semibold lg:text-2xl">{{ item.name }}</h3>
+						<p class="text-sm text-subtile lg:text-base">
+							{{ item.position }}
+						</p>
+					</div>
+				</article>
+			{% endfor %}
+		</div>
+	</div>
+</section>

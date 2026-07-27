@@ -1,0 +1,191 @@
+{
+	"title": "EDU technológie",
+	"description": "Technológie pre školy a vzdelávacie organizácie.",
+	"flexible": [
+		{
+			"name": "hero_with_card",
+			"tag": "EDU technológie pre školy a vzdelávacie organizácie",
+			"title": "<span class='text-subtile'>Technológie,</span> ktoré pomáhajú škole učiť, spravovať a chrániť digitálne prostredie",
+			"text": "Pomáhame školám a vzdelávacím organizáciám s interaktívnymi tabuľami, školskou infraštruktúrou, Wi-Fi, zariadeniami, MDM, Microsoft 365, bezpečnosťou a podporou používateľov. Technológie navrhujeme tak, aby boli použiteľné pre učiteľov, žiakov aj administráciu.",
+			"button": {
+				"class": "btn-purple",
+				"btn": {
+					"title": "Pripraviť technologický plán pre školu",
+					"url": "#kontakt"
+				}
+			},
+			"image": {
+				"pictureClass": "picture size-full",
+				"image": {
+					"class": "size-full object-cover object-center",
+					"src": "00af9a995f876a0f395fc6f1097e5a108a721c48",
+					"ext": "jpg",
+					"webp": false,
+					"alt": "Digitálne technológie vo vyučovaní",
+					"width": 2752,
+					"height": 1536
+				}
+			},
+			"card": {
+				"title": "Pre školy, ktoré sa chcú sústrediť na kvalitnú výučbu",
+				"text": "Interaktívne tabule, notebooky, Wi-Fi, účty a správa zariadení bez jednotného prístupu vytvárajú prostredie, ktoré je ťažké spravovať aj bezpečne používať."
+			}
+		},
+		{
+			"name": "services",
+			"variant": "icons",
+			"align": "left",
+			"center": true,
+			"loop": true,
+			"autoplay": true,
+			"autoplayDelay": 3000,
+			"nav": false,
+			"dots": true,
+			"tag": "Naše riešenie",
+			"title": "<span class='text-subtile'>Služba spája</span> EDU infraštruktúru, zariadenia, učebné technológie, správu prístupov, MDM a podporu tak, aby škola mala stabilné digitálne prostredie pre výučbu aj administratívu.",
+			"subtitle": "Čo služba zahŕňa",
+			"class": "pt-20 md:pt-24 lg:pt-36",
+			"services": [
+				{
+					"icon": "brand-onedrive",
+					"title": "Microsoft 365, účty, Teams a zdieľanie dokumentov"
+				},
+				{
+					"icon": "device-desktop-code",
+					"title": "Interaktívne tabule a prezentačné technológie"
+				},
+				{
+					"icon": "wifi",
+					"title": "Školská LAN/Wi-Fi a internetová infraštruktúra"
+				},
+				{
+					"icon": "devices",
+					"title": "Notebooky, tablety a zariadenia pre učiteľov alebo žiakov"
+				},
+				{
+					"icon": "keyboard",
+					"title": "MDM a správa školských zariadení"
+				}
+			]
+		},
+		{
+			"name": "image_with_text",
+			"title": "Technológie,<br>ktoré škole slúžia",
+			"paragraphs": ["Každé riešenie navrhujeme tak, aby ho učitelia aj IT správcovia zvládli bez zbytočnej záťaže a škola ho mohla rozvíjať vlastným tempom."],
+			"items": [
+				"technológie použiteľné vo výučbe",
+				"stabilnejšia školská Wi-Fi a infraštruktúra",
+				"jednoduchšia správa tabletov a notebookov",
+				"bezpečnejšie účty a prístupy",
+				"lepšia podpora učiteľov a administrácie",
+				"možnosť plánovať rozvoj školy postupne"
+			],
+			"image": {
+				"pictureClass": "picture size-full",
+				"image": {
+					"class": "size-full object-cover object-center",
+					"src": "f4f304dc5728f682eecf7cd9702ee18548865ba9",
+					"ext": "jpg",
+					"webp": false,
+					"alt": "Študent pracujúci s notebookom v škole",
+					"width": 1024,
+					"height": 1024
+				}
+			}
+		},
+		{
+			"name": "logos",
+			"text": "Dôverujú nám firmy naprieč odvetviami",
+			"class": "pb-20 lg:pb-36",
+			"logos": [
+				"/assets/images/logos/coinbase.svg",
+				"/assets/images/logos/doocusign.svg",
+				"/assets/images/logos/drips.svg",
+				"/assets/images/logos/hopin.svg",
+				"/assets/images/logos/sisyphus.svg",
+				"/assets/images/logos/square.svg",
+				"/assets/images/logos/zapier.svg"
+			]
+		},
+		{
+			"name": "stepper",
+			"class": "decor bg-neutral-100",
+			"tagWhite": true,
+			"variant": "medium",
+			"tag": "Náš proces",
+			"title": "<span class='text-subtile'>Technický plán,</span><br>ktorý rastie so školou",
+			"image": {
+				"pictureClass": "picture size-full",
+				"image": {
+					"class": "size-full object-cover object-center",
+					"src": "87ba0d30c1713b60ac0dce1173c57e8b048d4325",
+					"ext": "jpg",
+					"webp": false,
+					"alt": "Technik nastavujúci školskú sieť",
+					"width": 1024,
+					"height": 1024
+				}
+			},
+			"items": [
+				{
+					"title": "Zmapujeme školské prostredie",
+					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+				},
+				{
+					"title": "Navrhneme technický plán",
+					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+				},
+				{
+					"title": "Dodáme a nastavíme technológie",
+					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+				},
+				{
+					"title": "Zaškolíme používateľov",
+					"text": "Učitelia, administrácia a správcovia"
+				},
+				{
+					"title": "Podporujeme prevádzku",
+					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+				}
+			]
+		},
+		{
+			"name": "image_with_text",
+			"title": "Pre koho je služba vhodná?",
+			"paragraphs": [
+				"Základné školy, stredné školy, súkromné školy, vzdelávacie centrá, školiace organizácie a zriaďovatelia, ktorí chcú mať školské technológie stabilné, bezpečné a spravovateľné."
+			],
+			"image": {
+				"pictureClass": "picture size-full",
+				"image": {
+					"class": "size-full object-cover object-center",
+					"src": "6584f7ce4205470b96da43fdfc60e2172836d45b",
+					"ext": "jpg",
+					"webp": false,
+					"alt": "Chodba modernej školy",
+					"width": 1024,
+					"height": 1024
+				}
+			}
+		},
+		{
+			"name": "faq",
+			"title": "Často kladené otázky",
+			"open": "1",
+			"items": [
+				{
+					"title": "Riešite interaktívne tabule?",
+					"text": "Áno. Navrhneme vhodné prezentačné technológie, zabezpečíme dodanie, montáž, nastavenie aj zaškolenie používateľov."
+				},
+				{
+					"title": "Viete spravovať aj školské zariadenia?",
+					"text": "Áno. Pomocou MDM vieme centrálne spravovať notebooky a tablety, nastavovať prístupy, aplikácie aj bezpečnostné pravidlá."
+				},
+				{
+					"title": "Pomáhate aj s Microsoft 365 pre školy?",
+					"text": "Áno. Pomôžeme s licenciami, účtami, Microsoft Teams, zdieľaním dokumentov, nastavením prístupov aj podporou používateľov."
+				}
+			]
+		}
+	]
+}

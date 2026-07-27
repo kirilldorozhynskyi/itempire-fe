@@ -1,0 +1,181 @@
+{
+	"title": "Financovanie",
+	"description": "Moderné IT bez jednorazovej veľkej investície.",
+	"flexible": [
+		{
+			"name": "hero_with_card",
+			"tag": "Financovanie",
+			"title": "<span class='text-subtile'>Moderné IT</span> bez jednorazovej veľkej investície",
+			"text": "Technológie sa menia rýchlo. Financovanie vám umožní pracovať s aktuálnym vybavením, rozložiť náklady v čase a zachovať cash flow pre to, čo firmu skutočne posúva.",
+			"button": {
+				"class": "btn-purple",
+				"btn": {
+					"title": "Pripraviť návrh financovania",
+					"url": "#kontakt"
+				}
+			},
+			"image": {
+				"pictureClass": "picture size-full",
+				"image": {
+					"class": "size-full object-cover object-center",
+					"src": "fbf45e38f050077d2f8e8702952a12b0dd04cf16",
+					"ext": "jpg",
+					"webp": false,
+					"alt": "Moderné IT financovanie pre firmy",
+					"width": 2752,
+					"height": 1536
+				}
+			},
+			"card": {
+				"title": "Kúpa nie je vždy najlepšia voľba",
+				"text": "Jednorazová investícia viaže kapitál a problém sa o pár rokov vráti. Financovanie vám dáva aktuálne technológie, predvídateľné náklady a flexibilitu rásť."
+			}
+		},
+		{
+			"name": "services",
+			"variant": "icons",
+			"align": "left",
+			"center": true,
+			"loop": true,
+			"autoplay": true,
+			"autoplayDelay": 3000,
+			"nav": false,
+			"dots": true,
+			"tag": "Rozsah financovania",
+			"title": "<span class='text-subtile'>Financujeme</span> takmer všetko,<br>čo firma potrebuje",
+			"subtitle": "Čo služba zahŕňa",
+			"services": [
+				{
+					"icon": "video",
+					"title": "Bezpečnostné riešenia a kamerové systémy"
+				},
+				{
+					"icon": "server-bolt",
+					"title": "Servery, úložiská a sieťová infraštruktúra"
+				},
+				{
+					"icon": "devices",
+					"title": "Notebooky, tablety a pracovné stanice"
+				},
+				{
+					"icon": "printer",
+					"title": "Tlačiarne a multifunkčné zariadenia"
+				},
+				{
+					"icon": "brand-onedrive",
+					"title": "Softvérové licencie a cloudové predplatné"
+				}
+			]
+		},
+		{
+			"name": "stepper",
+			"class": "decor bg-neutral-100",
+			"tagWhite": true,
+			"variant": "landscape",
+			"tag": "Ako to môže vyzerať",
+			"title": "<span class='text-subtile'>Štyri</span> modely financovania",
+			"image": {
+				"pictureClass": "picture size-full",
+				"image": {
+					"class": "size-full object-cover object-center",
+					"src": "f01adce27af0ce02ef94b1516e4f5954ccb885b6",
+					"ext": "jpg",
+					"webp": false,
+					"alt": "Plánovanie modelu financovania",
+					"width": 1024,
+					"height": 1024
+				}
+			},
+			"items": [
+				{
+					"title": "Operatívny leasing",
+					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+				},
+				{
+					"title": "HaaS, Hardware as a Service",
+					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+				},
+				{
+					"title": "Splátkový predaj",
+					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+				},
+				{
+					"title": "Projektové financovanie",
+					"text": "Väčší IT projekt, migrácia, nová infraštruktúra alebo kompletné vybavenie prevádzky — financovaný ako celok s jednou mesačnou splátkou."
+				}
+			]
+		},
+		{
+			"name": "image_with_text",
+			"title": "Čo firma získa?",
+			"paragraphs": [
+				"Každá euro investované do IT má svoje miesto v rozpočte, nie ako jednorazový výdavok, ale ako predvídateľná položka. Financovanie zachová prevádzkový kapitál a uvoľní zdroje pre iné priority."
+			],
+			"items": [
+				"predvídateľné náklady",
+				"zachovaný prevádzkový rozpočet a cash flow",
+				"daňovo uznateľné splátky pri operatívnom leasingu",
+				"pravidelná obnova zariadení bez investičného tlaku",
+				"jeden partner pre nákup, financovanie aj servis",
+				"flexibilita pri zmene rozsahu alebo technológií"
+			],
+			"image": {
+				"pictureClass": "picture size-full",
+				"image": {
+					"class": "size-full object-cover object-center",
+					"src": "e7dfedd17133772c0d922d62c4d9f6d058e4cfd8",
+					"ext": "jpg",
+					"webp": false,
+					"alt": "Moderné pracovisko vybavené financovanou technológiou",
+					"width": 1024,
+					"height": 1024
+				}
+			}
+		},
+		{
+			"name": "numbered_cards",
+			"title": "Ako to funguje?",
+			"items": [
+				{
+					"title": "Povieme nám, čo potrebujete",
+					"text": "Zariadenia, projekt alebo kompletné IT riešenie. Nemusíte mať pripravené detailné špecifikácie."
+				},
+				{
+					"title": "Pripravíme návrh",
+					"text": "Odporúčime technológiu, navrhneme model financovania a ukážeme, ako budú vyzerať mesačné náklady."
+				},
+				{
+					"title": "Podpíšeme a dodáme",
+					"text": "Vybavíme papiere, zabezpečíme dodávku a nastavíme zariadenia. Vy sa môžete sústrediť na prácu."
+				}
+			]
+		},
+		{
+			"name": "faq",
+			"title": "Často kladené otázky",
+			"open": "1",
+			"items": [
+				{
+					"title": "Aká je minimálna výška financovania?",
+					"text": "Minimálna výška závisí od zvoleného modelu a typu technológie. Konkrétne možnosti vám pripravíme podľa rozsahu riešenia."
+				},
+				{
+					"title": "Môžem financovať aj existujúce zariadenia?",
+					"text": "V niektorých prípadoch áno, formou spätného leasingu alebo refinancovania. Posúdime to individuálne."
+				},
+				{
+					"title": "Čo sa stane po skončení zmluvy?",
+					"text": "Podľa zvoleného modelu môžete zariadenia odkúpiť, vrátiť alebo ich nahradiť novou technológiou."
+				},
+				{
+					"title": "Kto je finančným partnerom?",
+					"text": "Spolupracujeme s overenými finančnými partnermi a vhodného vyberáme podľa typu a rozsahu projektu."
+				},
+				{
+					"title": "Môžem kombinovať nákup a financovanie?",
+					"text": "Áno. Pri jednom projekte vieme skombinovať priamy nákup s financovaním vybraných zariadení alebo služieb."
+				}
+			]
+		}
+	]
+}

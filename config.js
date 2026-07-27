@@ -1,14 +1,14 @@
 /*
  * File: /config.js
- * Project: starter_frontend_twig
- * Version: 3.0.0
+ * Project: itempire-fe
+ * Version: 1.0.0
  * Created Date: Thursday, September 28th 2023, 14:36:16
  * Author: Kirill Dorozhynskyi - kyrylo.dorozhynskyi@justdev.org
  * -----
- * Last Modified: Friday, April 11th 2025 13:35:57
+ * Last Modified: Monday, July 27th 2026 16:38:42
  * Modified By: Kirill Dorozhynskyi
  * -----
- * Copyright (c) 2025 justDev
+ * Copyright (c) 2026 justDev
  */
 
 const config = {
@@ -23,7 +23,7 @@ const config = {
 	},
 
 	htmlMinify: {
-		enable: true,
+		enable: false,
 		options: {
 			collapseWhitespace: true,
 			removeAttributeQuotes: false,
@@ -35,7 +35,7 @@ const config = {
 	htmlBeautify: {
 		inDir: 'dist',
 		html: {
-			enabled: false
+			enabled: true
 		},
 		js: {
 			enabled: false

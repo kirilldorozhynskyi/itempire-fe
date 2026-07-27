@@ -1,0 +1,193 @@
+{
+	"title": "Tlačové a dokumentové služby",
+	"description": "Riadené tlačové a dokumentové služby pre firmy.",
+	"flexible": [
+		{
+			"name": "hero_with_card",
+			"tag": "Tlačové a dokumentové služby",
+			"title": "<span class='text-subtile'>Tlač pod kontrolou:</span> menej<br>nákladov, viac bezpečnosti<br>a menej operatívy",
+			"text": "Pomáhame firmám nastaviť tlačové prostredie tak, aby bolo prehľadné, bezpečné a ekonomicky zvládnuté. Riešime predaj a prenájom multifunkčných zariadení, servis, bezpečnú tlač, audit tlače, optimalizáciu nákladov a správu spotrebného materiálu.",
+			"button": {
+				"class": "btn-purple",
+				"btn": {
+					"title": "Dohodnúť audit tlače",
+					"url": "#kontakt"
+				}
+			},
+			"image": {
+				"pictureClass": "picture size-full",
+				"image": {
+					"class": "size-full object-cover object-center",
+					"src": "22dff3ad1ef84d4430bfb17629709233b3be2887",
+					"ext": "png",
+					"webp": false,
+					"alt": "Multifunkčná tlačiareň v kancelárii",
+					"width": 1248,
+					"height": 697
+				}
+			},
+			"card": {
+				"title": "Tlač, ktorá stojí menej a funguje spoľahlivejšie",
+				"text": "Zariadenia pribúdajú náhodne, servis rieši viacero dodávateľov a citlivé dokumenty môžu zostať vo výstupnom zásobníku bez povšimnutia."
+			}
+		},
+		{
+			"name": "services",
+			"variant": "icons",
+			"align": "left",
+			"center": true,
+			"loop": true,
+			"autoplay": true,
+			"autoplayDelay": 3000,
+			"nav": false,
+			"dots": true,
+			"tag": "Naše riešenie",
+			"title": "<span class='text-subtile'>Služba mení tlač</span> z náhodnej prevádzkovej položky na riadenú dokumentovú službu. Zákazník získa prehľad o zariadeniach, nákladoch, používaní, bezpečnosti a servisnom modeli.",
+			"subtitle": "Čo služba zahŕňa",
+			"class": "pt-20 md:pt-24 lg:pt-36",
+			"services": [
+				{
+					"icon": "adjustments",
+					"title": "Optimalizácia zariadení a spotrebného materiálu"
+				},
+				{
+					"icon": "printer",
+					"title": "Predaj a prenájom multifunkčných zariadení"
+				},
+				{
+					"icon": "tool",
+					"title": "Servis tlačiarní a multifunkčných zariadení"
+				},
+				{
+					"icon": "password-fingerprint",
+					"title": "Bezpečná tlač a používateľské prístupy"
+				},
+				{
+					"icon": "file-analytics",
+					"title": "Audit tlače, objemov a nákladov"
+				}
+			]
+		},
+		{
+			"name": "image_with_text",
+			"title": "Menej zariadení,<br>menej nákladov,<br>viac prehľadu",
+			"paragraphs": [
+				"Každá strana má svoju cenu, každé zariadenie svojho správcu a každý dokument svoje pravidlá, takže tlač prestane byť neviditeľným nákladom."
+			],
+			"items": [
+				"nižšie a prehľadnejšie tlačové náklady",
+				"vyššia bezpečnosť dokumentov",
+				"menej operatívnych servisných problémov",
+				"lepšie využitie zariadení",
+				"jasný model správy a spotrebného materiálu",
+				"prehľad o tom, kto, kde a koľko tlačí"
+			],
+			"image": {
+				"pictureClass": "picture size-full",
+				"image": {
+					"class": "size-full object-cover object-center",
+					"src": "d93e8fa26551a998ff5ae973b18a2be0eb23acb9",
+					"ext": "jpg",
+					"webp": false,
+					"alt": "Kontrola tlačových nákladov a dokumentov",
+					"width": 2048,
+					"height": 2048
+				}
+			}
+		},
+		{
+			"name": "logos",
+			"text": "Dôverujú nám firmy naprieč odvetviami",
+			"class": "pb-20 lg:pb-36",
+			"logos": [
+				"/assets/images/logos/coinbase.svg",
+				"/assets/images/logos/doocusign.svg",
+				"/assets/images/logos/drips.svg",
+				"/assets/images/logos/hopin.svg",
+				"/assets/images/logos/sisyphus.svg",
+				"/assets/images/logos/square.svg",
+				"/assets/images/logos/zapier.svg"
+			]
+		},
+		{
+			"name": "stepper",
+			"class": "decor bg-neutral-100",
+			"tagWhite": true,
+			"variant": "medium",
+			"tag": "Náš proces",
+			"title": "<span class='text-subtile'>Od auditu tlače</span><br>po plne riadené prostredie",
+			"image": {
+				"pictureClass": "picture size-full",
+				"image": {
+					"class": "size-full object-cover object-center",
+					"src": "b6c08ca4e25a3372d39953b2efd3227ed51a734a",
+					"ext": "jpg",
+					"webp": false,
+					"alt": "Audit multifunkčného tlačového zariadenia",
+					"width": 1024,
+					"height": 1024
+				}
+			},
+			"items": [
+				{
+					"title": "Zmapujeme tlačové prostredie",
+					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+				},
+				{
+					"title": "Vyhodnotíme úspory",
+					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+				},
+				{
+					"title": "Navrhneme model",
+					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+				},
+				{
+					"title": "Nasadíme riešenie",
+					"text": "Zariadenia, prístupy, pravidlá a servisný režim"
+				},
+				{
+					"title": "Reportujeme a optimalizujeme",
+					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+				}
+			]
+		},
+		{
+			"name": "image_with_text",
+			"title": "Pre koho je služba vhodná?",
+			"paragraphs": [
+				"Firmy s viacerými tlačiarňami, kanceláriami, administratívou, účtovníctvom, skladmi, školami alebo prostredím, kde sa tlačia citlivé dokumenty a náklady nie sú pod kontrolou."
+			],
+			"image": {
+				"pictureClass": "picture size-full",
+				"image": {
+					"class": "size-full object-cover object-center",
+					"src": "e9a6fdb208d24d00469f64383d849fbf0ce0aa7a",
+					"ext": "png",
+					"webp": false,
+					"alt": "Spracovanie tlačených dokumentov v kancelárii",
+					"width": 1024,
+					"height": 1024
+				}
+			}
+		},
+		{
+			"name": "faq",
+			"title": "Často kladené otázky",
+			"open": "1",
+			"items": [
+				{
+					"title": "Čo je audit tlače?",
+					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+				},
+				{
+					"title": "Viete zabezpečiť bezpečnú tlač?",
+					"text": "Áno. Bezpečná tlač umožní uvoľniť dokument až po overení používateľa pri zariadení."
+				},
+				{
+					"title": "Riešite aj prenájom MFD?",
+					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+				}
+			]
+		}
+	]
+}

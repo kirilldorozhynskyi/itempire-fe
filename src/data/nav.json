@@ -167,21 +167,65 @@
 			"title": "Služby",
 			"submenu": [
 				{
-					"url": "/",
-					"title": "Hardware"
+					"url": "/riadene-it",
+					"title": "Riadené IT a infraštruktúra"
+				},
+				{
+					"url": "/kyberneticka-bezpecnost",
+					"title": "Kybernetická bezpečnosť"
+				},
+				{
+					"url": "/cloud-microsoft-365",
+					"title": "Cloud a Microsoft 365"
+				},
+				{
+					"url": "/pouzivatelska-podpora",
+					"title": "Používateľská podpora"
+				},
+				{
+					"url": "/technologicke-dodavky",
+					"title": "Technologické dodávky"
+				},
+				{
+					"url": "/fyzicka-infrastruktura",
+					"title": "Fyzická infraštruktúra"
+				},
+				{
+					"url": "/edu-technologie",
+					"title": "EDU technológie"
+				},
+				{
+					"url": "/specialne-systemy",
+					"title": "Špeciálne systémy"
+				},
+				{
+					"url": "/servis-migracie",
+					"title": "Servis a migrácie"
+				},
+				{
+					"url": "/tlacove-sluzby",
+					"title": "Tlačové služby"
+				},
+				{
+					"url": "/digitalne-riesenia",
+					"title": "Digitálne riešenia"
+				},
+				{
+					"url": "/smart-workplace",
+					"title": "Smart workplace"
 				}
 			]
 		},
 		{
-			"url": "/gdpr",
+			"url": "/news",
 			"title": "Newsroom"
 		},
 		{
-			"url": "/gdpr",
+			"url": "/financovanie",
 			"title": "Financovanie"
 		},
 		{
-			"url": "/gdpr",
+			"url": "/o-nas",
 			"title": "O nás"
 		}
 	],
@@ -189,40 +233,52 @@
 		"title": "Služby",
 		"items": [
 			{
-				"url": "/",
-				"title": "Core IT"
+				"url": "/riadene-it",
+				"title": "Riadené IT"
 			},
 			{
-				"url": "/",
-				"title": "Platformy a podpora"
+				"url": "/servis-migracie",
+				"title": "Servis a migrácie"
 			},
 			{
-				"url": "/",
-				"title": "Špeciálne "
+				"url": "/tlacove-sluzby",
+				"title": "Tlačové služby"
 			},
 			{
-				"url": "/",
-				"title": "Audity a compliance"
+				"url": "/specialne-systemy",
+				"title": "Špeciálne systémy"
 			},
 			{
-				"url": "/",
-				"title": "Plán a test obnovy"
+				"url": "/kyberneticka-bezpecnost",
+				"title": "Kybernetická bezpečnosť"
 			},
 			{
-				"url": "/",
-				"title": "Dodavky a licencie"
+				"url": "/cloud-microsoft-365",
+				"title": "Cloud a Microsoft 365"
 			},
 			{
-				"url": "/",
-				"title": "Web a aplikacie"
+				"url": "/technologicke-dodavky",
+				"title": "Dodávky a licencie"
 			},
 			{
-				"url": "/",
+				"url": "/pouzivatelska-podpora",
+				"title": "Používateľská podpora"
+			},
+			{
+				"url": "/fyzicka-infrastruktura",
+				"title": "Fyzická infraštruktúra"
+			},
+			{
+				"url": "/digitalne-riesenia",
+				"title": "Digitálne riešenia"
+			},
+			{
+				"url": "/smart-workplace",
 				"title": "Smart workplace"
 			},
 			{
-				"url": "/",
-				"title": "Ďalšie služby"
+				"url": "/edu-technologie",
+				"title": "EDU technológie"
 			}
 		]
 	},
@@ -242,19 +298,19 @@
 				"title": "Software"
 			},
 			{
-				"url": "/",
+				"url": "/news",
 				"title": "Newsroom"
 			},
 			{
-				"url": "/",
+				"url": "/financovanie",
 				"title": "Financovanie"
 			},
 			{
-				"url": "/",
+				"url": "/o-nas",
 				"title": "O nás"
 			},
 			{
-				"url": "/",
+				"url": "/contact",
 				"title": "Kontakt"
 			}
 		]

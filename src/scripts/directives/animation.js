@@ -1,5 +1,9 @@
 export default {
 	mounted(el, binding) {
+		if (binding.value === false) {
+			return
+		}
+
 		const { effect = 'fade-up', once = false, delay = 0, duration = 2000 } = binding.value || {}
 
 		el.classList.add('jd-init', effect)

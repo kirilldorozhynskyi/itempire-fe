@@ -1,0 +1,191 @@
+{
+	"title": "Smart workplace, smart building a monitoring serverovní",
+	"description": "Smart workplace, smart building a monitoring serverovní.",
+	"flexible": [
+		{
+			"name": "hero_with_card",
+			"tag": "Smart workplace, smart building a monitoring serverovní",
+			"title": "<span class='text-subtile'>Včasné upozornenia</span><br>namiesto neskorých škôd",
+			"text": "Nasadzujeme IoT senzory, smart scenáre a monitoring serverovní alebo technických miestností. Sledujeme teplotu, vlhkosť, vodu, dym, dvere, napájanie, PDU, spotrebu a kritické udalosti s notifikáciami cez Teams, SMS alebo e-mail.",
+			"button": {
+				"class": "btn-purple",
+				"btn": {
+					"title": "Spustiť mini pilot monitoringu",
+					"url": "#kontakt"
+				}
+			},
+			"image": {
+				"pictureClass": "picture size-full",
+				"image": {
+					"class": "size-full object-cover object-center",
+					"src": "4124ac8b9efe6499d805c9260720721161422d42",
+					"ext": "jpg",
+					"webp": false,
+					"alt": "Technická pracovníčka inštaluje monitorovací senzor",
+					"width": 2752,
+					"height": 1536
+				}
+			},
+			"card": {
+				"title": "Prostredie, ktoré upozorní skôr, ako nastane problém",
+				"text": "Serverovňa môže zlyhať kvôli teplote, vode alebo výpadku napájania. Kancelária bez smart riadenia plytvá energiou. V oboch prípadoch záleží na tom, ako rýchlo sa firma o probléme dozvie."
+			}
+		},
+		{
+			"name": "services",
+			"variant": "icons",
+			"align": "left",
+			"center": true,
+			"loop": true,
+			"autoplay": true,
+			"autoplayDelay": 3000,
+			"nav": false,
+			"dots": true,
+			"tag": "Naše riešenie",
+			"title": "<span class='text-subtile'>Služba prináša dohľad</span> nad prostredím a automatizáciu priestorov. Senzory a notifikácie odhaľujú riziká včas a riadia vybrané scenáre v budovách aj technických miestnostiach.",
+			"subtitle": "Čo služba zahŕňa",
+			"class": "pt-20 md:pt-24 lg:pt-36",
+			"services": [
+				{
+					"icon": "photo-sensor-2",
+					"title": "Integrácia s kamerami, alarmami a prístupmi"
+				},
+				{
+					"icon": "devices",
+					"title": "Senzory teploty, vlhkosti, dymu, vody, dverí a pohybu"
+				},
+				{
+					"icon": "chart-column",
+					"title": "PDU, meranie spotreby, napájanie a environmentálne udalosti"
+				},
+				{
+					"icon": "bell-ringing",
+					"title": "Notifikácie cez Teams, SMS alebo e-mail"
+				},
+				{
+					"icon": "bulb",
+					"title": "Smart osvetlenie, HVAC, žalúzie a scenáre"
+				}
+			]
+		},
+		{
+			"name": "image_with_text",
+			"title": "Dohľad, ktorý<br>pracuje nepretržite",
+			"paragraphs": ["Správne umiestnené senzory a dobre nastavené notifikácie rozdielu medzi malým problémom a veľkým výpadkom."],
+			"items": [
+				"rýchle upozornenie na kritické udalosti",
+				"nižšie riziko poškodenia technológií",
+				"lepší prehľad o serverovni a technických priestoroch",
+				"komfortnejšie a efektívnejšie pracovisko",
+				"možnosť začať malým pilotom",
+				"dáta pre rozhodovanie o prevádzke budovy"
+			],
+			"image": {
+				"pictureClass": "picture size-full",
+				"image": {
+					"class": "size-full object-cover object-center",
+					"src": "b050eca9070f1171448472a844755ba05c5e5fa2",
+					"ext": "jpg",
+					"webp": false,
+					"alt": "Monitorovaný zasadací priestor",
+					"width": 2048,
+					"height": 2048
+				}
+			}
+		},
+		{
+			"name": "logos",
+			"text": "Dôverujú nám firmy naprieč odvetviami",
+			"class": "pb-20 lg:pb-36",
+			"logos": [
+				"/assets/images/logos/coinbase.svg",
+				"/assets/images/logos/doocusign.svg",
+				"/assets/images/logos/drips.svg",
+				"/assets/images/logos/hopin.svg",
+				"/assets/images/logos/sisyphus.svg",
+				"/assets/images/logos/square.svg",
+				"/assets/images/logos/zapier.svg"
+			]
+		},
+		{
+			"name": "stepper",
+			"class": "decor bg-neutral-100",
+			"tagWhite": true,
+			"variant": "medium",
+			"tag": "Náš proces",
+			"title": "<span class='text-subtile'>Od prvého senzora</span><br>po celú budovu",
+			"image": {
+				"pictureClass": "picture size-full",
+				"image": {
+					"class": "size-full object-cover object-center",
+					"src": "ab269f01c9f71bd2027228133a9ecaf08e9de09d",
+					"ext": "jpg",
+					"webp": false,
+					"alt": "Plánovanie senzorov v budove",
+					"width": 2048,
+					"height": 2048
+				}
+			},
+			"items": [
+				{
+					"title": "Vyberieme kritické miesta",
+					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+				},
+				{
+					"title": "Navrhneme senzory",
+					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+				},
+				{
+					"title": "Nasadíme pilot",
+					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+				},
+				{
+					"title": "Nastavíme notifikácie",
+					"text": "Teams, SMS, e-mail a eskalačné pravidlá"
+				},
+				{
+					"title": "Rozšírime scenáre",
+					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+				}
+			]
+		},
+		{
+			"name": "image_with_text",
+			"title": "Pre koho je služba vhodná?",
+			"paragraphs": [
+				"Firmy so serverovňami, technickými miestnosťami, skladmi, výrobnými priestormi, kanceláriami, budovami s kritickou infraštruktúrou alebo potrebou smart scenárov."
+			],
+			"image": {
+				"pictureClass": "picture size-full",
+				"image": {
+					"class": "size-full object-cover object-center",
+					"src": "4d99a84667200e5aa2723e86a213ea94999e6823",
+					"ext": "jpg",
+					"webp": false,
+					"alt": "Inteligentná administratívna budova",
+					"width": 2048,
+					"height": 2048
+				}
+			}
+		},
+		{
+			"name": "faq",
+			"title": "Často kladené otázky",
+			"open": "1",
+			"items": [
+				{
+					"title": "Dá sa začať malým pilotom?",
+					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+				},
+				{
+					"title": "Ako prichádzajú upozornenia?",
+					"text": "Notifikácie môžu chodiť cez Teams, SMS alebo e-mail podľa dohody a kritickosti udalosti."
+				},
+				{
+					"title": "Viete sledovať aj spotrebu energie?",
+					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+				}
+			]
+		}
+	]
+}

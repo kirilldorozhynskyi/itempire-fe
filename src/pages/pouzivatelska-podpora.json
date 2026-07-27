@@ -1,0 +1,148 @@
+{
+	"title": "Používateľská podpora a firemná komunikácia",
+	"description": "Helpdesk, správa zariadení a moderná firemná komunikácia.",
+	"flexible": [
+		{
+			"name": "hero_with_card",
+			"tag": "Používateľská podpora a firemná komunikácia",
+			"title": "<span class='text-subtile'>Ľudia potrebujú pracovať,</span> nie riešiť technické prekážky",
+			"text": "Helpdesk, správa zariadení, onboarding, offboarding, Teams volania, VoIP, SIP trunk, SBC a call centrum dávajú používateľom podporu, ktorá ich nezdržiava od práce. Komunikácia, zariadenia a podpora fungujú ako jeden celok.",
+			"button": { "class": "btn-purple", "btn": { "title": "Nastaviť helpdesk a firemnú komunikáciu", "url": "#kontakt" } },
+			"image": {
+				"pictureClass": "picture size-full",
+				"image": {
+					"class": "size-full object-cover object-center",
+					"src": "a0209f44aec63901cd655273b86ea758eb68948f",
+					"ext": "jpg",
+					"webp": false,
+					"alt": "Pracovník používateľskej podpory",
+					"width": 2752,
+					"height": 1536
+				}
+			},
+			"card": {
+				"title": "IT podpora, ktorú ľudia skutočne cítia",
+				"text": "Používateľ vníma IT podľa toho, či mu funguje notebook, aplikácie, Teams hovor alebo tlač. Keď majú požiadavky jasný kanál a pravidlá, technické problémy zostávajú problémami a neprerástajú do frustrácie."
+			}
+		},
+		{
+			"name": "services",
+			"variant": "icons",
+			"align": "left",
+			"center": true,
+			"loop": true,
+			"autoplay": true,
+			"autoplayDelay": 3000,
+			"nav": false,
+			"dots": true,
+			"tag": "Naše riešenie",
+			"title": "<span class='text-subtile'>Služba spája</span> používateľský helpdesk, správu koncových zariadení a firemnú komunikáciu. Cieľom je jasný proces podpory, bezpečný životný cyklus používateľa a spoľahlivé volania.",
+			"subtitle": "Čo služba zahŕňa",
+			"class": "pt-20 md:pt-24 lg:pt-36",
+			"services": [
+				{ "icon": "user-screen", "title": "Helpdesk, ticketing, SLA a kategorizácia požiadaviek" },
+				{ "icon": "device-desktop-cog", "title": "Správa PC, notebookov, aktualizácie a softvérový katalóg" },
+				{ "icon": "devices", "title": "Asset management a evidencia zariadení" },
+				{ "icon": "user-up", "title": "Onboarding a offboarding používateľov" },
+				{ "icon": "phone", "title": "Teams volania, VoIP, SIP trunk, SBC a nahrávanie" }
+			]
+		},
+		{
+			"name": "image_with_text",
+			"title": "IT podpora, ktorá<br>šetrí čas aj nervy",
+			"paragraphs": [
+				"Kvalita IT podpory sa prejaví v čase, ktorý ľudia stratia čakaním na riešenie a v dôvere, že keď niečo prestane fungovať, niekto to vyrieši."
+			],
+			"items": [
+				"rýchlejšie riešenie používateľských problémov",
+				"vyššia spokojnosť zamestnancov",
+				"bezpečnejší nástup a odchod používateľov",
+				"prehľad o zariadeniach a softvéri",
+				"spoľahlivejšie volania a meetingy",
+				"merateľná kvalita podpory aj komunikácie"
+			],
+			"image": {
+				"pictureClass": "picture size-full",
+				"image": {
+					"class": "size-full object-cover object-center",
+					"src": "b748a6ad1c47b7e0d913fd8ba9c1ce6caa39aa76",
+					"ext": "jpg",
+					"webp": false,
+					"alt": "Používateľ pracujúci s podporovaným zariadením",
+					"width": 2048,
+					"height": 2048
+				}
+			}
+		},
+		{
+			"name": "logos",
+			"text": "Dôverujú nám firmy naprieč odvetviami",
+			"class": "pb-20 lg:pb-36",
+			"logos": [
+				"/assets/images/logos/coinbase.svg",
+				"/assets/images/logos/doocusign.svg",
+				"/assets/images/logos/drips.svg",
+				"/assets/images/logos/hopin.svg",
+				"/assets/images/logos/sisyphus.svg",
+				"/assets/images/logos/square.svg",
+				"/assets/images/logos/zapier.svg"
+			]
+		},
+		{
+			"name": "stepper",
+			"class": "decor bg-neutral-100",
+			"tagWhite": true,
+			"variant": "medium",
+			"tag": "Náš proces",
+			"title": "<span class='text-subtile'>Štruktúra,</span><br>za ktorou stoja merateľné výsledky",
+			"image": {
+				"pictureClass": "picture size-full",
+				"image": {
+					"class": "size-full object-cover object-center",
+					"src": "6deb9efcc369394c4f1d5d6787afbb663ede3812",
+					"ext": "jpg",
+					"webp": false,
+					"alt": "Nastavenie procesov používateľskej podpory",
+					"width": 2048,
+					"height": 2048
+				}
+			},
+			"items": [
+				{ "title": "Nastavíme kanály podpory", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+				{ "title": "Definujeme priority", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+				{ "title": "Upravíme správu zariadení", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+				{ "title": "Prepojíme komunikáciu", "text": "Teams, VoIP, SIP trunk, SBC, nahrávanie alebo call centrum" },
+				{ "title": "Meriame kvalitu", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." }
+			]
+		},
+		{
+			"name": "image_with_text",
+			"title": "Pre koho je služba vhodná?",
+			"paragraphs": [
+				"Firmy s rastúcim počtom používateľov, hybridnou prácou, obchodnými alebo servisnými tímami, pobočkami, interným IT tímom bez kapacity alebo organizácie, ktoré chcú zaviesť merateľný helpdesk a moderné volania."
+			],
+			"image": {
+				"pictureClass": "picture size-full",
+				"image": {
+					"class": "size-full object-cover object-center",
+					"src": "8f8e794fb545bca757aaabefd137222732faab13",
+					"ext": "jpg",
+					"webp": false,
+					"alt": "Firemný tím využívajúci používateľskú podporu",
+					"width": 2048,
+					"height": 2048
+				}
+			}
+		},
+		{
+			"name": "faq",
+			"title": "Často kladené otázky",
+			"open": "1",
+			"items": [
+				{ "title": "Ako môžu používatelia kontaktovať helpdesk?", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+				{ "title": "Viete spravovať aj firemné volania?", "text": "Áno. Riešime Teams volania, VoIP, SIP trunk, SBC, nahrávanie aj call centrá." },
+				{ "title": "Pomôžete s onboardingom a offboardingom?", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." }
+			]
+		}
+	]
+}

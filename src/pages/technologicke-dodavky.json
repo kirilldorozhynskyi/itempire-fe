@@ -1,0 +1,146 @@
+{
+	"title": "Technologické dodávky, licencie a financovanie IT",
+	"description": "Plánované dodávky technológií, licencie a financovanie IT.",
+	"flexible": [
+		{
+			"name": "hero_with_card",
+			"tag": "Technologické dodávky, licencie a financovanie IT",
+			"title": "<span class='text-subtile'>Nakupujte</span> technológie podľa plánu, nie pod tlakom",
+			"text": "Pomáhame firmám vyberať, dodávať, financovať, nasadzovať a obnovovať hardvér, softvér a licencie tak, aby dávali zmysel technicky aj ekonomicky. Riešime procurement, logistiku, licenčnú optimalizáciu, financovanie a životný cyklus IT.",
+			"button": { "class": "btn-purple", "btn": { "title": "Pripraviť návrh technológií a financovania", "url": "#kontakt" } },
+			"image": {
+				"pictureClass": "picture size-full",
+				"image": {
+					"class": "size-full object-cover object-center",
+					"src": "89ec84e37733840b50a47f7717db77ec31557dc3",
+					"ext": "jpg",
+					"webp": false,
+					"alt": "Plánovanie dodávky firemných technológií",
+					"width": 2752,
+					"height": 1536
+				}
+			},
+			"card": {
+				"title": "Plánovaný nákup IT je vždy lacnejší ako nákup pod tlakom",
+				"text": "Keď server doslúži, notebooky nestíhajú a licencie sa obnovujú automaticky, firma nakupuje bez rozmyslu. Prehľad o zariadeniach a plán obnovy znamenajú nižšie náklady a lepšie rozhodnutia."
+			}
+		},
+		{
+			"name": "services",
+			"variant": "icons",
+			"align": "left",
+			"center": true,
+			"loop": true,
+			"autoplay": true,
+			"autoplayDelay": 3000,
+			"nav": false,
+			"dots": true,
+			"tag": "Naše riešenie",
+			"title": "<span class='text-subtile'>Služba pokrýva</span> celý životný cyklus technológií: výber, dodávku, financovanie, nasadenie, evidenciu, správu, optimalizáciu licencií a plán obnovy.",
+			"subtitle": "Čo služba zahŕňa",
+			"class": "pt-20 md:pt-24 lg:pt-36",
+			"services": [
+				{ "icon": "devices", "title": "Notebooky, PC, monitory, servery, úložiská, sieťové prvky a firewally" },
+				{ "icon": "file-description", "title": "M365, AV/EDR, backup, VoIP a ďalšie softvérové licencie" },
+				{ "icon": "shopping-bag", "title": "Procurement, logistika, evidovanie a nasadenie" },
+				{ "icon": "calendar-repeat", "title": "Optimalizácia licencií a životného cyklu HW/SW" },
+				{ "icon": "chart-bar", "title": "Operatívny alebo finančný leasing cez partnera" }
+			]
+		},
+		{
+			"name": "image_with_text",
+			"title": "Nákup, za ktorým<br>stojí plán",
+			"paragraphs": ["Každé odporúčanie vychádza z toho, čo firma reálne používa, ako rastie a čo plánuje, nie z aktuálneho ceníka."],
+			"items": [
+				"technológie vhodné pre reálne prostredie",
+				"nižšie riziko zlého nákupu",
+				"prehľad o zariadeniach a licenciách",
+				"lepšie plánovanie rozpočtu",
+				"možnosť rozložiť investície v čase",
+				"jeden kontakt pre nákup, servis aj prevádzku"
+			],
+			"image": {
+				"pictureClass": "picture size-full",
+				"image": {
+					"class": "size-full object-cover object-center",
+					"src": "1976e9584abd331f2618082e7ab9cdd2c8578b2a",
+					"ext": "jpg",
+					"webp": false,
+					"alt": "Dodávka a príprava firemnej techniky",
+					"width": 2048,
+					"height": 2048
+				}
+			}
+		},
+		{
+			"name": "logos",
+			"text": "Dôverujú nám firmy naprieč odvetviami",
+			"class": "pb-20 lg:pb-36",
+			"logos": [
+				"/assets/images/logos/coinbase.svg",
+				"/assets/images/logos/doocusign.svg",
+				"/assets/images/logos/drips.svg",
+				"/assets/images/logos/hopin.svg",
+				"/assets/images/logos/sisyphus.svg",
+				"/assets/images/logos/square.svg",
+				"/assets/images/logos/zapier.svg"
+			]
+		},
+		{
+			"name": "stepper",
+			"class": "decor bg-neutral-100",
+			"tagWhite": true,
+			"variant": "medium",
+			"tag": "Náš proces",
+			"title": "<span class='text-subtile'>Od prvej požiadavky</span><br>po plán obnovy",
+			"image": {
+				"pictureClass": "picture size-full",
+				"image": {
+					"class": "size-full object-cover object-center",
+					"src": "003f44ece8511373b2f7d8ed8a0d307d8fccaba4",
+					"ext": "jpg",
+					"webp": false,
+					"alt": "Príprava technologickej dodávky",
+					"width": 2048,
+					"height": 2048
+				}
+			},
+			"items": [
+				{ "title": "Zistíme potrebu", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+				{ "title": "Navrhneme riešenie", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+				{ "title": "Zabezpečíme dodávku", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+				{ "title": "Nasadíme a zaevidujeme", "text": "Inventár, licencie, záruky, životný cyklus" },
+				{ "title": "Plánujeme obnovu", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." }
+			]
+		},
+		{
+			"name": "image_with_text",
+			"title": "Pre koho je služba vhodná?",
+			"paragraphs": [
+				"Firmy plánujúce obnovu IT, nákup serverov, notebookov, licencií, bezpečnostných riešení, backupu, VoIP alebo väčších projektov, pri ktorých dáva zmysel financovanie alebo riadený životný cyklus."
+			],
+			"image": {
+				"pictureClass": "picture size-full",
+				"image": {
+					"class": "size-full object-cover object-center",
+					"src": "d02a7e0b67290bb29fd260f0c68032dd2e12dbbb",
+					"ext": "jpg",
+					"webp": false,
+					"alt": "Firma plánujúca obnovu technológií",
+					"width": 2048,
+					"height": 2048
+				}
+			}
+		},
+		{
+			"name": "faq",
+			"title": "Často kladené otázky",
+			"open": "1",
+			"items": [
+				{ "title": "Viete dodať hardvér aj softvérové licencie?", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+				{ "title": "Je možné technológie financovať?", "text": "Áno. Podľa projektu vieme pripraviť operatívny alebo finančný leasing cez partnera." },
+				{ "title": "Pomôžete aj s evidenciou a plánom obnovy?", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." }
+			]
+		}
+	]
+}

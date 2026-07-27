@@ -44,20 +44,21 @@
 			</div>
 
 			<div
-				v-if="dots && scrollSnaps.length > 1"
+				v-if="dots && visibleScrollSnaps.length > 1"
 				class="dots flex items-center justify-center gap-2"
 				:class="[dotsClass ? dotsClass : 'pt-6', { 'lg:hidden': responsiveControls }]"
 			>
 				<div class="flex gap-2">
 					<button
-						v-for="(_, index) in scrollSnaps"
+						v-for="(_, index) in visibleScrollSnaps"
 						:key="`dot-${index}`"
 						type="button"
 						class="transit size-2 cursor-pointer rounded-xs"
 						:class="{
 							'bg-white': dotsClass,
-							'bg-purple': !dotsClass,
-							'opacity-60': index != selectedIndex
+							'bg-neutral-300': !dotsClass,
+							'bg-primary': !dotsClass && index == selectedDotIndex,
+							'opacity-60': dotsClass && index != selectedDotIndex
 						}"
 						@click="scrollTo(index)"
 						:aria-label="`Go to slide ${index + 1}`"
@@ -65,11 +66,7 @@
 				</div>
 			</div>
 
-			<div
-				v-if="!(isPrevDisabled && isNextDisabled) && nav"
-				class="items-center gap-2 pt-8"
-				:class="responsiveControls ? 'hidden lg:flex' : 'flex'"
-			>
+			<div v-if="!(isPrevDisabled && isNextDisabled) && nav" class="items-center gap-2 pt-8" :class="responsiveControls ? 'hidden lg:flex' : 'flex'">
 				<button type="button" class="btn-outline-neutral p-2" @click="scrollPrev" :disabled="isPrevDisabled" aria-label="Previous">
 					<SvgIcon name="arrow-left" />
 				</button>
@@ -84,7 +81,7 @@
 <script setup>
 import Fade from 'embla-carousel-fade'
 import emblaCarouselVue from 'embla-carousel-vue'
-import { ref, watch } from 'vue'
+import { computed, onBeforeUnmount, ref, watch } from 'vue'
 import SvgIcon from '../SvgIcon.vue'
 
 const props = defineProps({
@@ -100,7 +97,10 @@ const props = defineProps({
 	dark: { type: Boolean, default: false },
 	dotsNode: { type: String, default: '' },
 	dotsClass: { type: String, default: '' },
-	responsiveControls: { type: Boolean, default: false }
+	responsiveControls: { type: Boolean, default: false },
+	autoplay: { type: Boolean, default: false },
+	autoplayDelay: { type: Number, default: 3000 },
+	dotsCount: { type: Number, default: 0 }
 })
 
 const [emblaRef, emblaApi] = emblaCarouselVue({ align: props.align, loop: props.loop }, props.fade ? [Fade()] : [])
@@ -108,6 +108,9 @@ const isPrevDisabled = ref(true)
 const isNextDisabled = ref(true)
 const selectedIndex = ref(0)
 const scrollSnaps = ref([])
+const visibleScrollSnaps = computed(() => (props.dotsCount > 0 ? scrollSnaps.value.slice(0, props.dotsCount) : scrollSnaps.value))
+const selectedDotIndex = computed(() => (props.dotsCount > 0 ? selectedIndex.value % props.dotsCount : selectedIndex.value))
+let autoplayTimer
 
 function scrollPrev() {
 	emblaApi.value?.scrollPrev()
@@ -157,6 +160,27 @@ const handleReInit = () => {
 	updateDots()
 }
 
+function stopAutoplay() {
+	if (!autoplayTimer) {
+		return
+	}
+
+	window.clearInterval(autoplayTimer)
+	autoplayTimer = undefined
+}
+
+function startAutoplay() {
+	stopAutoplay()
+
+	if (!props.autoplay || !emblaApi.value) {
+		return
+	}
+
+	autoplayTimer = window.setInterval(() => {
+		emblaApi.value?.scrollNext()
+	}, props.autoplayDelay)
+}
+
 watch(
 	emblaApi,
 	(api) => {
@@ -166,7 +190,10 @@ watch(
 		api.on('select', handleSelect)
 		api.on('reInit', handleReInit)
 		handleReInit()
+		startAutoplay()
 	},
 	{ immediate: true }
 )
+
+onBeforeUnmount(stopAutoplay)
 </script>

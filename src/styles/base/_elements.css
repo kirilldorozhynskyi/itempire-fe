@@ -5,14 +5,14 @@
  * Created Date: Friday, July 10th 2026, 14:04:34
  * Author: Kirill Dorozhynskyi - kyrylo.dorozhynskyi@justdev.org
  * -----
- * Last Modified: Monday, July 27th 2026 15:00:58
+ * Last Modified: Monday, July 27th 2026 16:22:04
  * Modified By: Kirill Dorozhynskyi
  * -----
  * Copyright (c) 2026 justDev
  */
 
-@utility tag {
-	@apply relative bg-neutral-100 py-2.5 ps-5 pe-4 leading-none font-medium tracking-tight uppercase;
+@utility tags {
+	@apply relative py-2.5 ps-5 pe-4 leading-none font-medium tracking-tight uppercase;
 	clip-path: polygon(
 		0 0,
 		100% 0,
@@ -25,9 +25,21 @@
 	);
 }
 
-@utility tag-sm {
-	@apply relative bg-neutral-100 py-1.25 ps-3 pe-2 text-sm leading-none font-medium tracking-tight uppercase;
+@utility tag {
+	@apply tags bg-neutral-100;
+}
+
+@utility tag-white {
+	@apply tags bg-white;
+}
+
+@utility tags-sm {
+	@apply relative py-1.25 ps-3 pe-2 text-sm leading-none font-medium tracking-tight uppercase;
 	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 calc(50% + 0.5rem), 0.25rem calc(50% + 0.5rem), 0.25rem calc(50% - 0.5rem), 0 calc(50% - 0.5rem));
+}
+
+@utility tag-sm {
+	@apply tags-sm bg-neutral-100;
 }
 
 @utility decor {
@@ -36,6 +48,11 @@
 	@media (max-width: 1024px) {
 		clip-path: polygon(0 0, 32% 0, 32% 2rem, 68% 2rem, 68% 0, 100% 0, 100% 100%, 0 100%);
 	}
+}
+
+@utility decor-md {
+	@apply relative;
+	clip-path: polygon(0 0, 40% 0, 40% 3rem, 60% 3rem, 60% 0, 100% 0, 100% 100%, 0 100%);
 }
 
 @utility decor-sm {
@@ -118,7 +135,9 @@
 } */
 
 .bg-remover {
-	&:after {
-		@apply absolute top-0 right-0 h-4 w-15 bg-white content-[''] lg:h-6 lg:w-22;
+	clip-path: polygon(0 0, calc(100% - 3.75rem) 0, calc(100% - 3.75rem) 1rem, 100% 1rem, 100% 100%, 0 100%);
+
+	@media (min-width: 64rem) {
+		clip-path: polygon(0 0, calc(100% - 5.5rem) 0, calc(100% - 5.5rem) 1.5rem, 100% 1.5rem, 100% 100%, 0 100%);
 	}
 }

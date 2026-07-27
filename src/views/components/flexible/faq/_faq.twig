@@ -1,0 +1,20 @@
+<section class="py-20 lg:py-36">
+	<div class="container flex flex-col items-center gap-12 lg:gap-20">
+		<h2 class="text-balance text-center font-serif text-2xl leading-tight font-semibold lg:text-5xl">{{ ce.title }}</h2>
+
+		<accordion value="{{ ce.open|default('1') }}" class="faq-list flex w-full max-w-145 flex-col gap-4">
+			{% for item in ce.items %}
+				<accordion-panel value="{{ loop.index0 }}">
+					<accordion-header>
+						{{ item.title }}
+					</accordion-header>
+					<accordion-content>
+						<p class="text-base leading-normal tracking-tight text-subtile">
+							{{ item.text }}
+						</p>
+					</accordion-content>
+				</accordion-panel>
+			{% endfor %}
+		</accordion>
+	</div>
+</section>

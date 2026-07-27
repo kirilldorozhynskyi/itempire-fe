@@ -5,14 +5,14 @@
  # Created Date: Friday, July 10th 2026, 14:12:31
  # Author: Kirill Dorozhynskyi - kyrylo.dorozhynskyi@justdev.org
  # -----
- # Last Modified: Monday, July 20th 2026 14:28:47
+ # Last Modified: Monday, July 27th 2026 15:38:51
  # Modified By: Kirill Dorozhynskyi
  # -----
  # Copyright (c) 2026 justDev
  #}
 
 {% if ce.tag %}
-	<span class="tag" v-jd-animate>{{ ce.tag }}</span>
+	<span class="{{ tag_white ? 'tag-white' : 'tag' }}" v-jd-animate>{{ ce.tag }}</span>
 {% endif %}
 {% if ce.title %}
 	<h2 class="text-balance font-serif leading-tight font-semibold text-2xl lg:text-5xl" v-jd-animate>{{ ce.title }}</h2>

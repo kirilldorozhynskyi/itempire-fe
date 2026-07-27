@@ -1,0 +1,151 @@
+{
+	"title": "Kybernetická bezpečnosť a odolnosť firmy",
+	"description": "Riadená kybernetická bezpečnosť, ochrana dát a príprava na NIS2.",
+	"flexible": [
+		{
+			"name": "hero_with_card",
+			"tag": "Kybernetická bezpečnosť a odolnosť firmy",
+			"title": "<span class='text-subtile'>Bezpečnosť,</span> ktorá chráni prevádzku, nie iba zariadenia",
+			"text": "Chránime zariadenia, identity, dáta, sieť, cloud a zálohy. Pomáhame firmám pripraviť sa na incidenty, audit, NIS2 a reálne bezpečnostné riziká bez zbytočnej paniky a bez prázdnych smerníc.",
+			"button": { "class": "btn-purple", "btn": { "title": "Začať bezpečnostnou gap analýzou", "url": "#kontakt" } },
+			"image": {
+				"pictureClass": "picture size-full",
+				"image": {
+					"class": "size-full object-cover object-center",
+					"src": "9ef1d1834afb4623b87d1f30516bf825a38a2d61",
+					"ext": "jpg",
+					"webp": false,
+					"alt": "Bezpečnostné monitorovacie centrum",
+					"width": 2752,
+					"height": 1536
+				}
+			},
+			"card": {
+				"title": "Bezpečnosť nie je produkt. Je to proces.",
+				"text": "Slabé heslo, neotestovaná záloha alebo rizikový e-mail sa ukážu až vo chvíli, keď už firma stojí. Bezpečnosť musí byť riadený proces, nie jednorazová inštalácia."
+			}
+		},
+		{
+			"name": "services",
+			"variant": "icons",
+			"align": "left",
+			"center": true,
+			"loop": true,
+			"autoplay": true,
+			"autoplayDelay": 3000,
+			"nav": false,
+			"dots": true,
+			"tag": "Naše riešenie",
+			"title": "<span class='text-subtile'>Služba spája technické opatrenia,</span> procesy a dokumentáciu do jedného celku. Pokrýva ochranu pred útokmi, detekciu hrozieb, reakciu na incident aj obnovu prevádzky.",
+			"subtitle": "Čo služba zahŕňa",
+			"class": "pt-20 md:pt-24 lg:pt-36",
+			"services": [
+				{ "icon": "list-check", "title": "NIS2 readiness, ISO 27001/9001 podklady a dokumentácia" },
+				{ "icon": "shield-lock", "title": "Firewall, segmentácia siete, MFA a hardening" },
+				{ "icon": "devices-check", "title": "EDR ochrana koncových zariadení a serverov" },
+				{ "icon": "file-analytics", "title": "SIEM/MDR, logovanie a dohľad nad udalosťami" },
+				{ "icon": "mail-check", "title": "E-mailová ochrana, patch management a správa zraniteľností" }
+			]
+		},
+		{
+			"name": "image_with_text",
+			"title": "Menej zraniteľností,<br>viac istoty",
+			"paragraphs": [
+				"Každé opatrenie, ktoré zavedieme, má merateľný dopad na odolnosť vašej firmy, či už ide o správu prístupov, zálohovaciu politiku alebo pripravenosť tímu na incident."
+			],
+			"items": [
+				"nižšie riziko ransomvéru a úniku dát",
+				"lepšia pripravenosť na audit a NIS2",
+				"bezpečnejšie identity a prístupy",
+				"rýchlejšia detekcia podozrivých udalostí",
+				"jasný incident response postup",
+				"odolnosť firmy pri výpadku alebo útoku"
+			],
+			"image": {
+				"pictureClass": "picture size-full",
+				"image": {
+					"class": "size-full object-cover object-center",
+					"src": "81bf33deaf4e73fd00eb3398635c913da82e45d6",
+					"ext": "jpg",
+					"webp": false,
+					"alt": "Bezpečnostná konzultácia vo firme",
+					"width": 2048,
+					"height": 2048
+				}
+			}
+		},
+		{
+			"name": "logos",
+			"text": "Dôverujú nám firmy naprieč odvetviami",
+			"class": "pb-20 lg:pb-36",
+			"logos": [
+				"/assets/images/logos/coinbase.svg",
+				"/assets/images/logos/doocusign.svg",
+				"/assets/images/logos/drips.svg",
+				"/assets/images/logos/hopin.svg",
+				"/assets/images/logos/sisyphus.svg",
+				"/assets/images/logos/square.svg",
+				"/assets/images/logos/zapier.svg"
+			]
+		},
+		{
+			"name": "stepper",
+			"class": "decor bg-neutral-100",
+			"tagWhite": true,
+			"variant": "medium",
+			"tag": "Náš proces",
+			"title": "<span class='text-subtile'>Najskôr vidíme celok,</span><br>potom riešime detaily",
+			"image": {
+				"pictureClass": "picture size-full",
+				"image": {
+					"class": "size-full object-cover object-center",
+					"src": "72ab8d3f45a1aa4e9a57e49c65373b333a211509",
+					"ext": "jpg",
+					"webp": false,
+					"alt": "Analýza bezpečnostných rizík",
+					"width": 2048,
+					"height": 2048
+				}
+			},
+			"items": [
+				{ "title": "Zmapujeme riziká", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+				{ "title": "Navrhneme opatrenia", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+				{ "title": "Nasadíme ochranu", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+				{ "title": "Doplníme procesy", "text": "Incident management, zodpovednosti, reportovanie a dokumentáciu" },
+				{ "title": "Otestujeme pripravenosť", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." }
+			]
+		},
+		{
+			"name": "image_with_text",
+			"title": "Pre koho je služba vhodná?",
+			"paragraphs": [
+				"Firmy pripravujúce sa na NIS2, organizácie s citlivými dátami, výrobné firmy, školy, služby, zdravotnícke a odborné pracoviská, firmy po incidente alebo organizácie, ktoré potrebujú bezpečnosť dostať pod kontrolu."
+			],
+			"image": {
+				"pictureClass": "picture size-full",
+				"image": {
+					"class": "size-full object-cover object-center",
+					"src": "3baf0d0ffedd49b7faf13b01b469e4f10d4ddfd4",
+					"ext": "jpg",
+					"webp": false,
+					"alt": "Tím plánujúci kybernetickú bezpečnosť",
+					"width": 2048,
+					"height": 2048
+				}
+			}
+		},
+		{
+			"name": "faq",
+			"title": "Často kladené otázky",
+			"open": "1",
+			"items": [
+				{ "title": "Pomôžete nám s prípravou na NIS2?", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+				{
+					"title": "Čo zahŕňa bezpečnostná gap analýza?",
+					"text": "Zmapujeme technické opatrenia, procesy, identity, zálohy, zraniteľnosti aj pripravenosť na incident."
+				},
+				{ "title": "Viete zabezpečiť nepretržitý dohľad?", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." }
+			]
+		}
+	]
+}

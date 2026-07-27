@@ -1,0 +1,191 @@
+{
+	"title": "Digitálne riešenia, weby, aplikácie a integrácie",
+	"description": "Digitálne riešenia, weby, aplikácie a integrácie pre firmy.",
+	"flexible": [
+		{
+			"name": "hero_with_card",
+			"tag": "Digitálne riešenia, weby, aplikácie a integrácie",
+			"title": "<span class='text-subtile'>Digitálne riešenia,</span> ktoré<br>nepôsobia iba dobre, ale<br>reálne pracujú pre firmu",
+			"text": "Tvoríme webové stránky, e-shopy, interné aplikácie, zákaznícke portály, CRM/ERP integrácie, hosting, DNS a digitálne stratégie. Riešenia navrhujeme tak, aby podporovali obchod, prevádzku, automatizáciu a zákaznícku skúsenosť.",
+			"button": {
+				"class": "btn-purple",
+				"btn": {
+					"title": "Navrhnúť digitálne riešenie",
+					"url": "#kontakt"
+				}
+			},
+			"image": {
+				"pictureClass": "picture size-full",
+				"image": {
+					"class": "size-full object-cover object-center",
+					"src": "bee0e3993055e4ded9894e39d2432986eef800a2",
+					"ext": "jpg",
+					"webp": false,
+					"alt": "Tvorba digitálneho riešenia na počítači",
+					"width": 2752,
+					"height": 1536
+				}
+			},
+			"card": {
+				"title": "Digitálne nástroje, ktoré skutočne pracujú za vás",
+				"text": "Pekný web nestačí, ak interné procesy bežia v tabuľkách a systémy spolu nekomunikujú. Výsledkom je ručné prepisovanie dát a digitálne riešenia, ktoré rast firmy skôr brzdia."
+			}
+		},
+		{
+			"name": "services",
+			"variant": "icons",
+			"align": "left",
+			"center": true,
+			"loop": true,
+			"autoplay": true,
+			"autoplayDelay": 3000,
+			"nav": false,
+			"dots": true,
+			"tag": "Naše riešenie",
+			"title": "<span class='text-subtile'>Služba prepája</span> web, aplikácie, integrácie, hosting a marketingovú stratégiu. Každé digitálne riešenie má jasnú úlohu: získavať dopyty, obsluhovať zákazníkov alebo zjednodušovať procesy.",
+			"subtitle": "Čo služba zahŕňa",
+			"class": "pt-20 md:pt-24 lg:pt-36",
+			"services": [
+				{
+					"icon": "device-desktop-code",
+					"title": "Webstránky a e-shopy"
+				},
+				{
+					"icon": "settings-search",
+					"title": "Technické SEO, analytika a meranie výkonu"
+				},
+				{
+					"icon": "logic-buffer",
+					"title": "Interné aplikácie, portály, formuláre a workflow"
+				},
+				{
+					"icon": "layers-intersect",
+					"title": "CRM/ERP integrácie, platby a API prepojenia"
+				},
+				{
+					"icon": "brand-onedrive",
+					"title": "Hosting, DNS, domény a SLA prevádzka"
+				}
+			]
+		},
+		{
+			"name": "image_with_text",
+			"title": "Digitálne prostredie,<br>ktoré rastie s firmou",
+			"paragraphs": ["Každé riešenie navrhujeme tak, aby prinášalo merateľný výsledok od prvého dňa a zvládlo to, čo firma bude potrebovať zajtra."],
+			"items": [
+				"lepší zber dopytov a zákazníckych dát",
+				"menej ručného prepisovania",
+				"prepojené systémy a procesy",
+				"vyššia dôveryhodnosť značky",
+				"lepšie SEO a meranie výkonu",
+				"riešenie pripravené na ďalší rozvoj"
+			],
+			"image": {
+				"pictureClass": "picture size-full",
+				"image": {
+					"class": "size-full object-cover object-center",
+					"src": "175aa945efe1fcd1285bfdc3d9f863d07012f1a7",
+					"ext": "jpg",
+					"webp": false,
+					"alt": "Práca s digitálnym riešením",
+					"width": 2048,
+					"height": 2048
+				}
+			}
+		},
+		{
+			"name": "logos",
+			"text": "Dôverujú nám firmy naprieč odvetviami",
+			"class": "pb-20 lg:pb-36",
+			"logos": [
+				"/assets/images/logos/coinbase.svg",
+				"/assets/images/logos/doocusign.svg",
+				"/assets/images/logos/drips.svg",
+				"/assets/images/logos/hopin.svg",
+				"/assets/images/logos/sisyphus.svg",
+				"/assets/images/logos/square.svg",
+				"/assets/images/logos/zapier.svg"
+			]
+		},
+		{
+			"name": "stepper",
+			"class": "decor bg-neutral-100",
+			"tagWhite": true,
+			"variant": "medium",
+			"tag": "Náš proces",
+			"title": "<span class='text-subtile'>Najprv stratégia,</span><br>potom každý riadok kódu",
+			"image": {
+				"pictureClass": "picture size-full",
+				"image": {
+					"class": "size-full object-cover object-center",
+					"src": "17facb5a352029b85a499b3acf89e941f12dc7cc",
+					"ext": "jpg",
+					"webp": false,
+					"alt": "Plánovanie digitálneho riešenia",
+					"width": 2048,
+					"height": 2048
+				}
+			},
+			"items": [
+				{
+					"title": "Pochopíme cieľ",
+					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+				},
+				{
+					"title": "Navrhneme architektúru",
+					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+				},
+				{
+					"title": "Vytvoríme riešenie",
+					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+				},
+				{
+					"title": "Prepojíme systémy",
+					"text": "CRM, ERP, platby, formuláre, analytika alebo automatizácie"
+				},
+				{
+					"title": "Prevádzkujeme a rozvíjame",
+					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+				}
+			]
+		},
+		{
+			"name": "image_with_text",
+			"title": "Pre koho je služba vhodná?",
+			"paragraphs": [
+				"Firmy, ktoré chcú modernizovať web, spustiť e-shop, vytvoriť internú aplikáciu, zákaznícky portál, prepojiť CRM/ERP alebo pripraviť digitálnu stratégiu s merateľným výsledkom."
+			],
+			"image": {
+				"pictureClass": "picture size-full",
+				"image": {
+					"class": "size-full object-cover object-center",
+					"src": "94779455a97140e1c910281006a79906ada8cfcf",
+					"ext": "png",
+					"webp": false,
+					"alt": "Prevádzka firmy podporená digitálnym riešením",
+					"width": 1024,
+					"height": 1024
+				}
+			}
+		},
+		{
+			"name": "faq",
+			"title": "Často kladené otázky",
+			"open": "1",
+			"items": [
+				{
+					"title": "Robíte aj digitálnu stratégiu?",
+					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+				},
+				{
+					"title": "Viete napojiť web na CRM alebo ERP?",
+					"text": "Áno. Riešime API integrácie, formuláre, objednávky, zákaznícke dáta, platobné integrácie a workflow."
+				},
+				{
+					"title": "Zabezpečujete hosting a DNS?",
+					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+				}
+			]
+		}
+	]
+}

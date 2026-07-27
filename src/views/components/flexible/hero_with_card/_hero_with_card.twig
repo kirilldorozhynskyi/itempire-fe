@@ -1,0 +1,59 @@
+{#
+ # File: /src/views/components/flexible/hero_with_card/_hero_with_card.twig
+ # Project: itempire-fe
+ # Version: 1.0.0
+ # Created Date: Monday, July 27th 2026, 16:00:57
+ # Author: Kirill Dorozhynskyi - kyrylo.dorozhynskyi@justdev.org
+ # -----
+ # Last Modified: Monday, July 27th 2026 17:53:47
+ # Modified By: Kirill Dorozhynskyi
+ # -----
+ # Copyright (c) 2026 justDev
+ #}
+
+<section class="overflow-hidden">
+	<div class="container flex flex-col gap-12 pt-17.5 lg:gap-20 lg:pt-20">
+		<div class="flex max-w-220 flex-col items-start gap-6">
+			<span class="tag" v-jd-animate>{{ ce.tag }}</span>
+
+			<h1 class="text-balance font-serif text-4xl leading-none font-semibold lg:text-6xl" v-jd-animate>{{ ce.title|raw }}</h1>
+
+			<p class="max-w-145 text-pretty text-base tracking-tight text-subtile" v-jd-animate>
+				{{ ce.text }}
+			</p>
+
+			<div class="w-full sm:w-auto [&>*]:w-full" v-jd-animate>
+				{% include paths.btn_ex with {
+					button: ce.button
+				} only %}
+			</div>
+		</div>
+	</div>
+
+	<div class="mt-12 px-6 lg:mt-20 lg:px-0">
+		<div class="relative aspect-342/551 w-full overflow-hidden lg:aspect-1280/624">
+			{{
+				image(
+					ce.image,
+					{
+						lazy: false,
+						loading: 'eager',
+						decoding: 'async',
+						fetchpriority: 'high'
+					}
+				)
+			}}
+
+			<div class="absolute inset-0">
+				<div class="md:container h-full p-2 lg:py-12 flex justify-end items-end">
+					<div class="bg-white p-6 lg:p-8 max-w-100 flex flex-col gap-4">
+						<h2 class="text-balance font-serif text-2xl leading-tight font-semibold">{{ ce.card.title }}</h2>
+						<p class="text-balance text-sm leading-normal text-subtile lg:text-base">
+							{{ ce.card.text }}
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

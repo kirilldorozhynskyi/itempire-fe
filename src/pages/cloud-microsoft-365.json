@@ -1,0 +1,148 @@
+{
+	"title": "Cloud, Microsoft 365 a moderné pracovisko",
+	"description": "Bezpečný Microsoft 365, cloud, správa identít a moderné pracovisko.",
+	"flexible": [
+		{
+			"name": "hero_with_card",
+			"tag": "Cloud, Microsoft 365 a moderné pracovisko",
+			"title": "<span class='text-subtile'>Bezpečná práca</span> odkiaľkoľvek bez straty kontroly nad dátami",
+			"text": "Microsoft 365 nastavujeme tak, aby nebol iba balík licencií, ale bezpečné pracovné prostredie pre e-maily, dokumenty, tímy, zariadenia, identity a prístupy. Pomáhame s migráciou, správou, bezpečnosťou, adopciou aj prípravou na Copilot.",
+			"button": { "class": "btn-purple", "btn": { "title": "Skontrolovať Microsoft 365 prostredie", "url": "#kontakt" } },
+			"image": {
+				"pictureClass": "picture size-full",
+				"image": {
+					"class": "size-full object-cover object-center",
+					"src": "b236a959d8cf1c471a8e8a2ec6242f66bb0b2b77",
+					"ext": "jpg",
+					"webp": false,
+					"alt": "Práca v cloudovom prostredí Microsoft 365",
+					"width": 2752,
+					"height": 1536
+				}
+			},
+			"card": {
+				"title": "Microsoft 365 funguje naplno, keď je správne nastavený",
+				"text": "Správne nakonfigurovať identity, prístupy, zariadenia a bezpečnosť si vyžaduje vlastnú disciplínu. Dobrý governance znamená čisté oprávnenia, poriadok v dokumentoch a licencie, ktoré sa reálne využívajú."
+			}
+		},
+		{
+			"name": "services",
+			"variant": "icons",
+			"align": "left",
+			"center": true,
+			"loop": true,
+			"autoplay": true,
+			"autoplayDelay": 3000,
+			"nav": false,
+			"dots": true,
+			"tag": "Naše riešenie",
+			"title": "<span class='text-subtile'>Služba pokrýva</span> cloudové pracovisko od migrácie a bezpečnosti až po správu používateľov, zariadení, dokumentov a spolupráce. Cieľom je, aby používatelia pracovali jednoducho a firma mala kontrolu nad prístupmi a dátami.",
+			"subtitle": "Čo služba zahŕňa",
+			"class": "pt-20 md:pt-24 lg:pt-36",
+			"services": [
+				{ "icon": "transfer", "title": "Migrácie do Microsoft 365 a podľa potreby Azure služby" },
+				{ "icon": "brand-onedrive", "title": "Exchange Online, SharePoint, OneDrive a Teams" },
+				{ "icon": "password-user", "title": "Entra ID, MFA, podmienené prístupy a identity" },
+				{ "icon": "devices", "title": "Intune, správa zariadení, politiky a compliance" },
+				{ "icon": "adjustments", "title": "Governance, licenčná optimalizácia a bezpečnostné pravidlá" }
+			]
+		},
+		{
+			"name": "image_with_text",
+			"title": "Prostredie, v ktorom<br>všetko funguje ako má",
+			"paragraphs": [
+				"Každá funkcia, každá licencia a každé oprávnenie má svoje miesto a spoločne tvoria prostredie, v ktorom ľudia pracujú efektívne a bezpečne."
+			],
+			"items": [
+				"bezpečnejší prístup k firemným dátam",
+				"prehľadnejšia spolupráca v Teams a SharePointe",
+				"lepšia správa zariadení cez Intune",
+				"menej zbytočných licencií",
+				"pripravenosť na Copilot a automatizáciu",
+				"jednoduchší onboarding a offboarding"
+			],
+			"image": {
+				"pictureClass": "picture size-full",
+				"image": {
+					"class": "size-full object-cover object-center",
+					"src": "6131abb307d4bcf81af43425a4f1f6d167fb4c2e",
+					"ext": "jpg",
+					"webp": false,
+					"alt": "Moderné pracovisko využívajúce cloud",
+					"width": 2048,
+					"height": 2048
+				}
+			}
+		},
+		{
+			"name": "logos",
+			"text": "Dôverujú nám firmy naprieč odvetviami",
+			"class": "pb-20 lg:pb-36",
+			"logos": [
+				"/assets/images/logos/coinbase.svg",
+				"/assets/images/logos/doocusign.svg",
+				"/assets/images/logos/drips.svg",
+				"/assets/images/logos/hopin.svg",
+				"/assets/images/logos/sisyphus.svg",
+				"/assets/images/logos/square.svg",
+				"/assets/images/logos/zapier.svg"
+			]
+		},
+		{
+			"name": "stepper",
+			"class": "decor bg-neutral-100",
+			"tagWhite": true,
+			"variant": "medium",
+			"tag": "Náš proces",
+			"title": "<span class='text-subtile'>Od analýzy</span><br>po prostredie, ktoré ľudia skutočne používajú",
+			"image": {
+				"pictureClass": "picture size-full",
+				"image": {
+					"class": "size-full object-cover object-center",
+					"src": "735042bc215c1ac6c36971fa16e68e48b83d288d",
+					"ext": "jpg",
+					"webp": false,
+					"alt": "Návrh moderného pracovného prostredia",
+					"width": 2048,
+					"height": 2048
+				}
+			},
+			"items": [
+				{ "title": "Zhodnotíme prostredie", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+				{ "title": "Navrhneme cieľový stav", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+				{ "title": "Zrealizujeme migráciu alebo úpravy", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+				{ "title": "Zabezpečíme prostredie", "text": "Identity, zariadenia, prístupy, dáta a bezpečnostné pravidlá" },
+				{ "title": "Podporíme adopciu", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." }
+			]
+		},
+		{
+			"name": "image_with_text",
+			"title": "Pre koho je služba vhodná?",
+			"paragraphs": [
+				"Firmy využívajúce Microsoft 365, organizácie s hybridnou prácou, pobočkami, externými používateľmi, neprehľadným SharePointom, nejasnými licenciami alebo potrebou pripraviť sa na Copilot a moderné pracovisko."
+			],
+			"image": {
+				"pictureClass": "picture size-full",
+				"image": {
+					"class": "size-full object-cover object-center",
+					"src": "752b1aaaecd7de5e47330bf246ffe78320632c52",
+					"ext": "jpg",
+					"webp": false,
+					"alt": "Tím pracujúci v modernom hybridnom prostredí",
+					"width": 2048,
+					"height": 2048
+				}
+			}
+		},
+		{
+			"name": "faq",
+			"title": "Často kladené otázky",
+			"open": "1",
+			"items": [
+				{ "title": "Pomôžete nám s migráciou do Microsoft 365?", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+				{ "title": "Viete optimalizovať existujúce licencie?", "text": "Áno. Skontrolujeme využitie licencií, funkcií aj prístupov a navrhneme cieľový stav." },
+				{ "title": "Pripravíte prostredie aj na Copilot?", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." }
+			]
+		}
+	]
+}

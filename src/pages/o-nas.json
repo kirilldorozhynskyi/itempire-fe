@@ -1,0 +1,270 @@
+{
+	"title": "O nás",
+	"description": "IT Empire je partner pre stabilné, bezpečné a efektívne firemné IT.",
+	"flexible": [
+		{
+			"name": "about_hero",
+			"title": "<span class='text-subtile'>IT partner,</span> ktorý pozná prevádzku zvnútra",
+			"text": "Nepredávame krabicové riešenia. Navrhujeme IT prostredie, ktoré zodpovedá tomu, ako firma reálne funguje a stojíme za ním aj po odovzdaní.",
+			"image": {
+				"pictureClass": "picture size-full",
+				"image": {
+					"class": "size-full object-cover object-center",
+					"src": "bg-about",
+					"src_2x": "bg-about@2x",
+					"ext": "jpg",
+					"webp": false,
+					"alt": "IT partner, ktorý pozná prevádzku zvnútra",
+					"width": 1186,
+					"height": 472
+				}
+			}
+		},
+		{
+			"name": "image_with_text",
+			"title": "Začínali sme<br>s jednoduchým presvedčením",
+			"paragraphs": [
+				"IT Empire vzniklo z presvedčenia, že firmy si zaslúžia IT partnera, ktorý rozumie nielen technológiám, ale aj prevádzke, ľuďom a rastu.",
+				"Začínali sme s jasným cieľom: byť partnerom, nie len dodávateľom. Dnes pokrývame celé spektrum firemného IT, od infraštruktúry a bezpečnosti po cloud, digitálne riešenia a fyzické prostredie budov. Každý projekt riešime ako celok, nie ako súbor izolovaných zásahov."
+			],
+			"image": {
+				"pictureClass": "picture size-full",
+				"image": {
+					"class": "size-full object-cover object-center",
+					"src": "ee0df8779582777ebb30b69c37cee4e90dfee640",
+					"src_2x": "ee0df8779582777ebb30b69c37cee4e90dfee640@2x",
+					"ext": "jpg",
+					"webp": false,
+					"alt": "Tím IT Empire pri pracovnom stretnutí",
+					"width": 580,
+					"height": 571
+				}
+			}
+		},
+		{
+			"name": "services",
+			"class": "pt-20 pb-0 lg:pt-0",
+			"title": "Štyri veci, ktoré robíme inak",
+			"showArrows": false,
+			"services": [
+				{
+					"icon": "ruler",
+					"title": "Jeden partner, celé IT",
+					"text": "Nerozosielajú vás medzi dodávateľmi. Infraštruktúra, bezpečnosť, cloud, zariadenia aj podpora všetko riešime pod jednou strechou.",
+					"url": "#"
+				},
+				{
+					"icon": "server",
+					"title": "Najprv pochopíme, potom navrhneme",
+					"text": "Každý projekt začína analýzou skutočného stavu. Odporúčame to, čo dáva zmysel technicky aj ekonomicky.",
+					"url": "#"
+				},
+				{
+					"icon": "tool",
+					"title": "Zodpovednosť nekončí odovzdaním",
+					"text": "Nastavíme prostredie a podporujeme jeho prevádzku. SLA, reporting a jasné eskalácie sú súčasťou každej spolupráce.",
+					"url": "#"
+				},
+				{
+					"icon": "shield-check",
+					"title": "Hovoríme jazykom firmy, nie len IT",
+					"text": "Manažéri a majitelia potrebujú vedieť, čo IT stojí a čo prináša. Komunikujeme zrozumiteľne a ľudsky.",
+					"url": "#"
+				}
+			]
+		},
+		{
+			"name": "logos",
+			"class": "pt-12 lg:pt-36 lg:pb-36",
+			"text": "Dôverujú nám firmy naprieč odvetviami",
+			"logos": [
+				"/assets/images/logos/drips.svg",
+				"/assets/images/logos/sisyphus.svg",
+				"/assets/images/logos/zapier.svg",
+				"/assets/images/logos/doocusign.svg",
+				"/assets/images/logos/coinbase.svg",
+				"/assets/images/logos/square.svg",
+				"/assets/images/logos/hopin.svg"
+			]
+		},
+		{
+			"name": "team",
+			"tag": "Náš tím",
+			"title": "<span class='text-subtile'>Technológie</span> sú len také dobré,<br>ako ľudia, ktorí za nimi stoja",
+			"items": [
+				{
+					"name": "Martin Pinter",
+					"position": "Founder, CEO",
+					"image": {
+						"pictureClass": "picture size-full",
+						"image": {
+							"class": "size-full object-cover object-center",
+							"src": "a6bb1aa119e96307e8c684d250cbd0ae58303012",
+							"ext": "jpg",
+							"webp": false,
+							"alt": "Martin Pinter",
+							"width": 368,
+							"height": 304
+						}
+					}
+				},
+				{
+					"name": "Petra Kováčová",
+					"position": "Vedúca IT projektov",
+					"image": {
+						"pictureClass": "picture size-full",
+						"image": {
+							"class": "size-full object-cover object-center",
+							"src": "e33d19608a07fcdf2b6d480c63755a774d8c945c",
+							"ext": "jpg",
+							"webp": false,
+							"alt": "Petra Kováčová",
+							"width": 368,
+							"height": 304
+						}
+					}
+				},
+				{
+					"name": "Zuzana Blahová",
+					"position": "Manažérka zákazníckej podpory",
+					"image": {
+						"pictureClass": "picture size-full",
+						"image": {
+							"class": "size-full object-cover object-center",
+							"src": "267503ac60643ef37ca1e54c63e989f67a4b6062",
+							"ext": "jpg",
+							"webp": false,
+							"alt": "Zuzana Blahová",
+							"width": 368,
+							"height": 304
+						}
+					}
+				},
+				{
+					"name": "Jana Slobodová",
+					"position": "Špecialista kybernetickej bezpečnosti",
+					"image": {
+						"pictureClass": "picture size-full",
+						"image": {
+							"class": "size-full object-cover object-center",
+							"src": "2e24c7d0d792db48965164cbeffdff1b36094bd6",
+							"ext": "jpg",
+							"webp": false,
+							"alt": "Jana Slobodová",
+							"width": 368,
+							"height": 304
+						}
+					}
+				},
+				{
+					"name": "Nino Kuzma",
+					"position": "CSO (Chief Sales Officer)",
+					"image": {
+						"pictureClass": "picture size-full",
+						"image": {
+							"class": "size-full object-cover object-center",
+							"src": "52e4fc233a947bded66a1c3d8e6f8be70ff7053b",
+							"ext": "jpg",
+							"webp": false,
+							"alt": "Nino Kuzma",
+							"width": 368,
+							"height": 304
+						}
+					}
+				},
+				{
+					"name": "Filip Šlosár",
+					"position": "Co founder",
+					"image": {
+						"pictureClass": "picture size-full",
+						"image": {
+							"class": "size-full object-cover object-center",
+							"src": "78f2dfa47cff7b4b8e9ddba5d74145685fa94a22",
+							"ext": "jpg",
+							"webp": false,
+							"alt": "Filip Šlosár",
+							"width": 368,
+							"height": 304
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "numbers",
+			"title": "<span class='text-subtile'>Niekoľko čísel,</span><br>ktoré hovoria za nás",
+			"numbers": [
+				{
+					"number": "+15",
+					"title": "rokov skúseností"
+				},
+				{
+					"number": "+300",
+					"title": "spokojných klientov"
+				},
+				{
+					"number": "+2 000",
+					"title": "realizovaných projektov"
+				},
+				{
+					"number": "99 %",
+					"title": "dostupnosť služieb"
+				}
+			]
+		},
+		{
+			"name": "reviews",
+			"title": "Čo o nás hovoria klienti",
+			"reviews": [
+				{
+					"text": "„Spolupráca s IT Empire bola od začiatku veľmi efektívna a bezproblémová. Implementácia nášho IT riešenia prebehla rýchlo, v dohodnutom termíne a plne podľa našich potrieb. Už po krátkom čase sme zaznamenali výrazné zníženie technických problémov, menej výpadkov a vyššiu stabilitu systémov.“",
+					"author": {
+						"name": "Peter Novák",
+						"position": "Prevádzkový riaditeľ,<br>TechServis Group s.r.o.",
+						"image": {
+							"pictureClass": "picture size-full",
+							"image": {
+								"class": "size-full object-cover object-center",
+								"src": "025edb7427d5adb8825bc5985f02dcbac32d247b",
+								"src_2x": "025edb7427d5adb8825bc5985f02dcbac32d247b@2x",
+								"ext": "jpg",
+								"webp": false,
+								"alt": "Peter Novák",
+								"width": 72,
+								"height": 72
+							}
+						}
+					},
+					"info": {
+						"percent": "-33%",
+						"text": "Menej kyberútokov"
+					}
+				},
+				{
+					"text": "„Oceňujeme profesionálny prístup, spoľahlivú podporu a fakt, že naši zamestnanci môžu pracovať bez zbytočných obmedzení. IT Empire je partner, na ktorého sa môžeme spoľahnúť pri každodennej prevádzke aj ďalšom raste.“",
+					"author": {
+						"name": "Jana Kováčová",
+						"position": "Finančná riaditeľka,<br>NovaTech s.r.o.",
+						"image": {
+							"pictureClass": "picture size-full",
+							"image": {
+								"class": "size-full object-cover object-center",
+								"src": "025edb7427d5adb8825bc5985f02dcbac32d247b",
+								"src_2x": "025edb7427d5adb8825bc5985f02dcbac32d247b@2x",
+								"ext": "jpg",
+								"webp": false,
+								"alt": "Jana Kováčová",
+								"width": 72,
+								"height": 72
+							}
+						}
+					},
+					"info": {
+						"percent": "+24%",
+						"text": "Vyššia produktivita"
+					}
+				}
+			]
+		}
+	]
+}

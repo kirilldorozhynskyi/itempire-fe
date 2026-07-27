@@ -5,18 +5,16 @@
  # Created Date: Tuesday, June 2nd 2026, 14:00:55
  # Author: Kirill Dorozhynskyi - kyrylo.dorozhynskyi@justdev.org
  # -----
- # Last Modified: Monday, July 20th 2026 10:52:03
+ # Last Modified: Monday, July 27th 2026 16:57:20
  # Modified By: Kirill Dorozhynskyi
  # -----
  # Copyright (c) 2026 justDev
  #}
 
-<section class="flex flex-col gap-6 pt-12 md:pt-16 lg:pt-20">
+<section class="flex flex-col gap-6 {{ ce.class|default('pt-12 md:pt-16 lg:pt-20') }}">
 	{% if ce.text %}
 		<div class="container">
-			<p class="text-pretty text-center text-sm leading-none text-subtile" v-jd-animate>
-				{{ ce.text }}
-			</p>
+			<h3 class="text-center lg:text-lg leading-none text-subtile" v-jd-animate>{{ ce.text }}</h3>
 		</div>
 	{% endif %}
 	<div class="logos-wrapper relative flex w-full items-center overflow-hidden h-auto">

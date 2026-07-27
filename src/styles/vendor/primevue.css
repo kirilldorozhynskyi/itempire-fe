@@ -5,7 +5,7 @@
  * Created Date: Monday, July 20th 2026, 13:50:33
  * Author: Kirill Dorozhynskyi - kyrylo.dorozhynskyi@justdev.org
  * -----
- * Last Modified: Monday, July 27th 2026 12:16:25
+ * Last Modified: Monday, July 27th 2026 16:16:06
  * Modified By: Kirill Dorozhynskyi
  * -----
  * Copyright (c) 2026 justDev
@@ -102,7 +102,7 @@
 		}
 
 		.p-textarea {
-			@apply h-26 min-h-0 max-h-26 pt-7;
+			@apply h-26 max-h-26 min-h-0 pt-7;
 		}
 	}
 
@@ -125,6 +125,43 @@
 		--p-accordion-header-padding: 0;
 		--p-accordion-content-padding: 1rem 0 0 0;
 		--p-accordion-header-font-size: 1.125rem;
+	}
+
+	.faq-list {
+		--p-accordion-panel-border-width: 0.0625rem;
+		--p-accordion-header-background: var(--color-white);
+		--p-accordion-header-hover-background: var(--color-white);
+		--p-accordion-header-active-background: var(--color-white);
+		--p-accordion-header-active-hover-background: var(--color-white);
+		--p-accordion-header-color: var(--color-primary);
+		--p-accordion-header-active-color: var(--color-primary);
+		--p-accordion-header-hover-color: var(--color-primary-500);
+		--p-accordion-header-active-hover-color: var(--color-primary-500);
+		--p-accordion-header-padding: 1rem;
+		--p-accordion-header-font-size: 1.125rem;
+		--p-accordion-header-font-weight: 600;
+		--p-accordion-content-background: var(--color-white);
+		--p-accordion-content-color: var(--color-subtile);
+		--p-accordion-content-padding: 0 1rem 1rem;
+		--px-icon-size: 1.5rem;
+
+		.p-accordionpanel {
+			@apply overflow-hidden;
+			border: 1px solid var(--color-neutral-300);
+			border-radius: 0.25rem;
+		}
+
+		.p-accordionheader {
+			@apply items-start gap-4 leading-tight;
+		}
+
+		.p-accordionheader-toggle-icon {
+			@apply size-6 shrink-0;
+		}
+
+		.p-accordioncontent-content {
+			@apply gap-4;
+		}
 	}
 
 	.p-accordionheader {

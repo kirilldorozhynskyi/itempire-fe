@@ -11,20 +11,33 @@
  # Copyright (c) 2026 justDev
  #}
 
-<section class="overflow-hidden py-20 md:py-24 lg:py-36">
+<section class="overflow-hidden py-20 md:py-24 lg:py-36 {{ ce.class }}">
 	<div class="container flex flex-col gap-12 md:gap-16 lg:gap-20">
 		{% include '../title/_title.twig' with {
-			ce: ce
+			ce: ce,
+			tag_white: ce.tagWhite
 		} %}
 
 		<stepper-view class="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-6" :speed="3000" :duration="{{ ce.items|length }}">
 			<template #default="{ openItem, hoverItem, leaveItem, active, progross }">
-				<div class="decor-r aspect-342/360 w-full overflow-hidden md:aspect-16/10 lg:aspect-580/632 lg:min-h-full lg:max-h-full lg:max-w-full">
-					{% for item in ce.items %}
-						<div class="w-full h-full" v-show="active === {{ loop.index }}">
-							{{ image(item.image) }}
+				<div
+					class="decor-r w-full overflow-hidden {{
+					ce.variant == 'landscape'
+						? 'aspect-342/373 md:aspect-16/10 lg:aspect-580/464'
+						: ce.variant == 'medium' ? 'aspect-342/373 md:aspect-16/10 lg:aspect-580/520' : 'aspect-342/360 md:aspect-16/10 lg:aspect-580/632'
+					}}"
+				>
+					{% if ce.image %}
+						<div class="size-full">
+							{{ image(ce.image) }}
 						</div>
-					{% endfor %}
+					{% else %}
+						{% for item in ce.items %}
+							<div class="size-full" v-show="active === {{ loop.index }}">
+								{{ image(item.image) }}
+							</div>
+						{% endfor %}
+					{% endif %}
 				</div>
 				<div class="flex flex-col justify-center lg:ps-14">
 					{% for item in ce.items %}

@@ -5,58 +5,92 @@
  # Created Date: Thursday, July 16th 2026, 9:42:14
  # Author: Kirill Dorozhynskyi - kyrylo.dorozhynskyi@justdev.org
  # -----
- # Last Modified: Monday, July 27th 2026 14:32:00
+ # Last Modified: Monday, July 27th 2026 16:57:10
  # Modified By: Kirill Dorozhynskyi
  # -----
  # Copyright (c) 2026 justDev
  #}
 
-<section class="services overflow-hidden py-20 md:py-24 lg:py-36">
+<section class="services overflow-hidden {{ ce.class|default('py-20 md:py-24 lg:py-36') }}">
 	<div class="container flex flex-col gap-12 md:gap-16 lg:gap-20">
-		<div class="flex flex-col items-center gap-6 mx-auto max-w-145 text-center">
+		<div class="flex flex-col gap-6 {{ ce.align == 'left' ? 'items-start' : 'mx-auto max-w-145 items-center text-center' }}">
 			{% include '../title/_title_content.twig' with {
 				ce: ce
 			} %}
 		</div>
 
-		<slider-wrapper class="w-full" :overflow="false" wrapper-class="lg:-me-6 -me-2" :dots="true" :nav="false">
-			{% for item in ce.services %}
-				<slider-item class="basis-4/5 md:basis-1/2 pe-2 lg:pe-6 lg:basis-1/4" v-jd-animate="{ delay: {{ loop.index * 100 }} }">
-					<a
-						href="{{ item.url }}"
-						aria-label="{{ item.title }}"
-						class="bg-remover relative flex min-h-full flex-col gap-10 bg-neutral-100 p-6 lg:gap-16"
-					>
-						{{ sprite(item.icon, 'text-[3.5rem]') }}
+		<div class="flex flex-col gap-8 lg:gap-12">
+			{% if ce.subtitle %}
+				<h3 class="text-center lg:text-lg leading-none text-subtile" v-jd-animate>{{ ce.subtitle }}</h3>
+			{% endif %}
 
-						<div class="flex flex-1 flex-col items-start justify-end gap-6">
-							<div class="flex flex-col gap-2">
-								<h3 class="text-balance font-serif text-base leading-tight font-semibold lg:text-lg">{{ item.title }}</h3>
+			<slider-wrapper
+				class="w-full"
+				:overflow="false"
+				wrapper-class="-me-2 lg:-me-6"
+				:dots="{{ ce.dots is same as(false) ? 'false' : 'true' }}"
+				:nav="{{ ce.nav ? 'true' : 'false' }}"
+				:loop="{{ ce.loop ? 'true' : 'false' }}"
+				:autoplay="{{ ce.autoplay ? 'true' : 'false' }}"
+				:autoplay-delay="{{ ce.autoplayDelay|default(3000) }}"
+				:dots-count="{{ ce.loop ? ce.services|length : 0 }}"
+				align="{{ ce.center ? 'center' : 'start' }}"
+			>
+				{% set repeats = ce.loop ? 2 : 1 %}
+				{% for repeat in 1..repeats %}
+					{% for item in ce.services %}
+						<slider-item class="basis-4/5 pe-2 md:basis-1/2 lg:basis-1/4 lg:pe-6" aria-hidden="{{ repeat > 1 ? 'true' : 'false' }}">
+							<div class="bg-remover bg-remover h-full" v-jd-animate="{{ ce.loop ? 'false' : '{ delay: ' ~ loop.index * 100 ~ ' }' }}">
+								{% if ce.variant == 'icons' %}
+									<div class="flex min-h-full flex-col gap-16 bg-neutral-100 p-6">
+										{{ sprite(item.icon, 'text-[3.5rem]') }}
+										<h3 class="mt-auto text-balance font-serif text-lg leading-tight font-semibold">{{ item.title }}</h3>
+									</div>
+								{% else %}
+									<a
+										href="{{ item.url }}"
+										aria-label="{{ item.title }}"
+										tabindex="{{ repeat > 1 ? '-1' : '0' }}"
+										class="bg-remover relative flex min-h-full flex-col gap-10 bg-neutral-100 p-6 lg:gap-16"
+									>
+										{{ sprite(item.icon, 'text-[3.5rem]') }}
 
-								<p class="text-sm text-subtile leading-normal">
-									{{ item.text }}
-								</p>
+										<div class="flex flex-1 flex-col items-start justify-end gap-6">
+											<div class="flex flex-col gap-2">
+												<h3 class="text-balance font-serif text-base leading-tight font-semibold lg:text-lg">{{ item.title }}</h3>
+
+												<p class="text-sm leading-normal text-subtile">
+													{{ item.text }}
+												</p>
+											</div>
+											{% if ce.showArrows is not same as(false) %}
+												{% include paths.btn_ex with {
+													button: {
+														span: true,
+														icon: 'arrow-right',
+														class: 'btn-white p-2',
+														btn: {
+															label: 'Otvoriť: ' ~ item.title
+														}
+													}
+												} only %}
+											{% endif %}
+										</div>
+									</a>
+								{% endif %}
 							</div>
-							{% include paths.btn_ex with {
-								button: {
-									span: true,
-									icon: 'arrow-right',
-									class: 'btn-white p-2',
-									btn: {
-										label: 'Otvoriť: ' ~ item.title
-									}
-								}
-							} only %}
-						</div>
-					</a>
-				</slider-item>
-			{% endfor %}
-		</slider-wrapper>
-
-		<div v-jd-animate class="flex justify-center">
-			{% include paths.btn_ex with {
-				button: ce.btn
-			} only %}
+						</slider-item>
+					{% endfor %}
+				{% endfor %}
+			</slider-wrapper>
 		</div>
+
+		{% if ce.btn %}
+			<div v-jd-animate class="flex justify-center">
+				{% include paths.btn_ex with {
+					button: ce.btn
+				} only %}
+			</div>
+		{% endif %}
 	</div>
 </section>

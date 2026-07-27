@@ -1,0 +1,43 @@
+{#
+ # File: /src/views/components/flexible/image_with_text/_image_with_text.twig
+ # Project: itempire-fe
+ # Version: 1.0.0
+ # Created Date: Monday, July 27th 2026, 15:17:46
+ # Author: Kirill Dorozhynskyi - kyrylo.dorozhynskyi@justdev.org
+ # -----
+ # Last Modified: Monday, July 27th 2026 16:24:36
+ # Modified By: Kirill Dorozhynskyi
+ # -----
+ # Copyright (c) 2026 justDev
+ #}
+
+<section class="py-20 lg:py-36">
+	<div class="container grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+		<div class="flex flex-col gap-6 max-w-120">
+			<h2 class="text-balance font-serif text-4xl leading-tight font-semibold lg:text-5xl" v-jd-animate>{{ ce.title|raw }}</h2>
+
+			<div class="flex flex-col gap-4 text-base tracking-tight text-subtile" v-jd-animate>
+				{% for paragraph in ce.paragraphs %}
+					<p>
+						{{ paragraph }}
+					</p>
+				{% endfor %}
+			</div>
+
+			{% if ce.items %}
+				<ul class="flex flex-col gap-2">
+					{% for item in ce.items %}
+						<li class="grid grid-cols-[1.5rem_minmax(0,1fr)] items-start gap-4" v-jd-animate>
+							{{ sprite('check', 'text-2xl') }}
+							<span>{{ item }}</span>
+						</li>
+					{% endfor %}
+				</ul>
+			{% endif %}
+		</div>
+
+		<div class="decor-md relative aspect-342/336 w-full overflow-hidden lg:aspect-580/571" v-jd-animate>
+			{{ image(ce.image) }}
+		</div>
+	</div>
+</section>

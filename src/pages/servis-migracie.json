@@ -1,0 +1,191 @@
+{
+	"title": "Servis, migrácie a životný cyklus zariadení",
+	"description": "Servis, migrácie, upgrady a podpora počas celého životného cyklu zariadení.",
+	"flexible": [
+		{
+			"name": "hero_with_card",
+			"tag": "Servis, migrácie a životný cyklus zariadení",
+			"title": "<span class='text-subtile'>Keď treba</span> systém<br>presunúť, opraviť<br>alebo bezpečne obnoviť",
+			"text": "Zabezpečujeme pozáručné opravy, náhradné diely, SLA servis, migrácie systémov, upgrady a zapožičanie náhradných zariadení. Pomáhame firmám zvládnuť technické zmeny bez zbytočných prestojov a rizík.",
+			"button": {
+				"class": "btn-purple",
+				"btn": {
+					"title": "Pripraviť servisný alebo migračný plán",
+					"url": "#kontakt"
+				}
+			},
+			"image": {
+				"pictureClass": "picture size-full",
+				"image": {
+					"class": "size-full object-cover object-center",
+					"src": "bf2491f96f3a2123e901d291a9db1900e783932d",
+					"ext": "jpg",
+					"webp": false,
+					"alt": "Technik pracujúci na servisnom zásahu",
+					"width": 2752,
+					"height": 1536
+				}
+			},
+			"card": {
+				"title": "Projekty, ktoré sa neoplatí odkladať",
+				"text": "Starý server, nepodporovaný systém alebo porucha zariadenia vytvára tlak, ktorý zvyšuje riziko výpadku. Zvládneme to aj v krátkom čase a s minimálnym dopadom na prevádzku."
+			}
+		},
+		{
+			"name": "services",
+			"variant": "icons",
+			"align": "left",
+			"center": true,
+			"loop": true,
+			"autoplay": true,
+			"autoplayDelay": 3000,
+			"nav": false,
+			"dots": true,
+			"tag": "Naše riešenie",
+			"title": "<span class='text-subtile'>Služba pokrýva</span> praktické servisné a migračné situácie: opravy, diely, náhradné zariadenia, upgrady, presuny systémov, obnovu po poruche a technickú asistenciu pri zmenách.",
+			"subtitle": "Čo služba zahŕňa",
+			"class": "pt-20 md:pt-24 lg:pt-36",
+			"services": [
+				{
+					"icon": "settings-search",
+					"title": "Pozáručné opravy a technická diagnostika"
+				},
+				{
+					"icon": "settings-up",
+					"title": "Upgrady hardvéru, softvéru a infraštruktúry"
+				},
+				{
+					"icon": "tool",
+					"title": "Náhradné diely a servisné zásahy"
+				},
+				{
+					"icon": "server-bolt",
+					"title": "SLA servis podľa kritickosti zariadení"
+				},
+				{
+					"icon": "transfer",
+					"title": "Migrácie systémov, serverov a aplikácií"
+				}
+			]
+		},
+		{
+			"name": "image_with_text",
+			"title": "Technické zmeny bez zbytočného stresu",
+			"paragraphs": ["Každý projekt plánujeme tak, aby prebehol čo najrýchlejšie, s jasným postupom a zálohou pre prípad neočakávaného."],
+			"items": [
+				"kratší čas výpadku pri poruche",
+				"bezpečnejšie migrácie a upgrady",
+				"nižšie riziko improvizácie",
+				"dostupnosť náhradného riešenia",
+				"predĺženie životnosti vybraných zariadení",
+				"jasný plán pre technické zmeny"
+			],
+			"image": {
+				"pictureClass": "picture size-full",
+				"image": {
+					"class": "size-full object-cover object-center",
+					"src": "e510b5fb4428ad7a65d888b0117f817471be9960",
+					"ext": "jpg",
+					"webp": false,
+					"alt": "Servis a diagnostika zariadenia",
+					"width": 1024,
+					"height": 1024
+				}
+			}
+		},
+		{
+			"name": "logos",
+			"text": "Dôverujú nám firmy naprieč odvetviami",
+			"class": "pb-20 lg:pb-36",
+			"logos": [
+				"/assets/images/logos/coinbase.svg",
+				"/assets/images/logos/doocusign.svg",
+				"/assets/images/logos/drips.svg",
+				"/assets/images/logos/hopin.svg",
+				"/assets/images/logos/sisyphus.svg",
+				"/assets/images/logos/square.svg",
+				"/assets/images/logos/zapier.svg"
+			]
+		},
+		{
+			"name": "stepper",
+			"class": "decor bg-neutral-100",
+			"tagWhite": true,
+			"variant": "medium",
+			"tag": "Náš proces",
+			"title": "<span class='text-subtile'>Každý zásah</span> má plán,<br>zálohu aj overenie",
+			"image": {
+				"pictureClass": "picture size-full",
+				"image": {
+					"class": "size-full object-cover object-center",
+					"src": "94c053294a93bbbb03c7306a73d7550b9787cd42",
+					"ext": "jpg",
+					"webp": false,
+					"alt": "Plánovanie servisného a migračného zásahu",
+					"width": 1024,
+					"height": 1024
+				}
+			},
+			"items": [
+				{
+					"title": "Diagnostikujeme stav",
+					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+				},
+				{
+					"title": "Navrhneme postup",
+					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+				},
+				{
+					"title": "Pripravíme zálohu a plán",
+					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+				},
+				{
+					"title": "Zrealizujeme zásah",
+					"text": "Servis, diely, presun systému alebo upgrade"
+				},
+				{
+					"title": "Overíme funkčnosť",
+					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+				}
+			]
+		},
+		{
+			"name": "image_with_text",
+			"title": "Pre koho je služba vhodná?",
+			"paragraphs": [
+				"Firmy so staršou infraštruktúrou, kritickými zariadeniami, plánovanou migráciou, poruchou hardvéru, potrebou náhradných zariadení alebo technickou zmenou, ktorú nechcú robiť bez plánu."
+			],
+			"image": {
+				"pictureClass": "picture size-full",
+				"image": {
+					"class": "size-full object-cover object-center",
+					"src": "817cd27e4644c85c1065df06b3307501ab42e66b",
+					"ext": "jpg",
+					"webp": false,
+					"alt": "Technická infraštruktúra firmy",
+					"width": 1024,
+					"height": 1024
+				}
+			}
+		},
+		{
+			"name": "faq",
+			"title": "Často kladené otázky",
+			"open": "1",
+			"items": [
+				{
+					"title": "Viete zapožičať náhradné zariadenie?",
+					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+				},
+				{
+					"title": "Robíte aj migrácie systémov?",
+					"text": "Áno. Migrácie pripravujeme s dôrazom na zálohu, plán, testovanie a minimalizáciu prestoja."
+				},
+				{
+					"title": "Riešite pozáručné opravy?",
+					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+				}
+			]
+		}
+	]
+}

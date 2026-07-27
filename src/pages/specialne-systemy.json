@@ -1,0 +1,191 @@
+{
+	"title": "Špeciálne systémy",
+	"description": "Špeciálne systémy a prevádzková automatizácia.",
+	"flexible": [
+		{
+			"name": "hero_with_card",
+			"tag": "Špeciálne systémy a prevádzková automatizácia",
+			"title": "<span class='text-subtile'>Prevádzkové systémy,</span> ktoré prepájajú priestor, ľudí a technológie",
+			"text": "Pomáhame s návrhom a integráciou špeciálnych systémov, ako sú automatizované parkovanie, dochádzkové systémy, turnikety a prepojenie s prístupovými riešeniami. Tieto technológie prepájame s IT, bezpečnosťou a prevádzkovými procesmi firmy.",
+			"button": {
+				"class": "btn-purple",
+				"btn": {
+					"title": "Navrhnúť prevádzkovú integráciu",
+					"url": "#kontakt"
+				}
+			},
+			"image": {
+				"pictureClass": "picture size-full",
+				"image": {
+					"class": "size-full object-cover object-center",
+					"src": "f859fe3f789a706c2411bbfcf5b3f715d83f8729",
+					"ext": "jpg",
+					"webp": false,
+					"alt": "Vstupný turniket v administratívnej budove",
+					"width": 1376,
+					"height": 768
+				}
+			},
+			"card": {
+				"title": "Vstupy, dochádzka a parkovanie ako jeden riadený systém",
+				"text": "Keď parkovanie, dochádzka a vstupy fungujú oddelene od IT, vznikajú duplicity, ručná administrácia a nejasné oprávnenia."
+			}
+		},
+		{
+			"name": "services",
+			"variant": "icons",
+			"align": "left",
+			"center": true,
+			"loop": true,
+			"autoplay": true,
+			"autoplayDelay": 3000,
+			"nav": false,
+			"dots": true,
+			"tag": "Naše riešenie",
+			"title": "<span class='text-subtile'>Služba prepája</span> prevádzkové systémy s IT a bezpečnostnou vrstvou, zjednodušuje správu, zvyšuje kontrolu a vytvára jednotný prevádzkový model pre budovy aj areály.",
+			"subtitle": "Čo služba zahŕňa",
+			"class": "pt-20 md:pt-24 lg:pt-36",
+			"services": [
+				{
+					"icon": "user-screen",
+					"title": "Prepojenie s používateľmi, kartami alebo oprávneniami"
+				},
+				{
+					"icon": "parking-circle",
+					"title": "Automatizované parkovanie a parkovacie systémy"
+				},
+				{
+					"icon": "calendar-repeat",
+					"title": "Dochádzkové systémy a evidencia prítomnosti"
+				},
+				{
+					"icon": "door-enter",
+					"title": "Turnikety a kontrolované vstupy"
+				},
+				{
+					"icon": "plug-connected",
+					"title": "Integrácia s prístupovými systémami"
+				}
+			]
+		},
+		{
+			"name": "image_with_text",
+			"title": "Jeden systém<br>pre ľudí, vstupy<br>aj vozidlá",
+			"paragraphs": ["Keď sú oprávnenia, dochádzka a parkovanie prepojené, odpadá ručná správa a firma má reálny prehľad o tom, kto sa kde pohybuje."],
+			"items": [
+				"vyššia kontrola pohybu osôb a vozidiel",
+				"menej ručnej administrácie",
+				"jednotnejšie používateľské oprávnenia",
+				"lepšia bezpečnosť areálu alebo budovy",
+				"prehľadnejšia dochádzka a vstupy",
+				"možnosť integrácie s existujúcim IT"
+			],
+			"image": {
+				"pictureClass": "picture size-full",
+				"image": {
+					"class": "size-full object-cover object-center",
+					"src": "b711a5204616699dc2e711ad7864bc9602b1c1fc",
+					"ext": "jpg",
+					"webp": false,
+					"alt": "Automatizovaná vstupná brána",
+					"width": 1024,
+					"height": 1024
+				}
+			}
+		},
+		{
+			"name": "logos",
+			"text": "Dôverujú nám firmy naprieč odvetviami",
+			"class": "pb-20 lg:pb-36",
+			"logos": [
+				"/assets/images/logos/coinbase.svg",
+				"/assets/images/logos/doocusign.svg",
+				"/assets/images/logos/drips.svg",
+				"/assets/images/logos/hopin.svg",
+				"/assets/images/logos/sisyphus.svg",
+				"/assets/images/logos/square.svg",
+				"/assets/images/logos/zapier.svg"
+			]
+		},
+		{
+			"name": "stepper",
+			"class": "decor bg-neutral-100",
+			"tagWhite": true,
+			"variant": "medium",
+			"tag": "Náš proces",
+			"title": "<span class='text-subtile'>Integrujeme,</span> čo doteraz<br>fungovalo oddelene",
+			"image": {
+				"pictureClass": "picture size-full",
+				"image": {
+					"class": "size-full object-cover object-center",
+					"src": "0f86b3262a7dec6bc1b1a5890bc43173a1b4c1be",
+					"ext": "jpg",
+					"webp": false,
+					"alt": "Plánovanie integrácie prevádzkových systémov",
+					"width": 1024,
+					"height": 1024
+				}
+			},
+			"items": [
+				{
+					"title": "Analyzujeme prevádzku",
+					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+				},
+				{
+					"title": "Navrhneme integráciu",
+					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+				},
+				{
+					"title": "Dodáme alebo upravíme riešenie",
+					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+				},
+				{
+					"title": "Prepojíme procesy",
+					"text": "Správa používateľov, oprávnenia a reporting"
+				},
+				{
+					"title": "Zabezpečíme servis",
+					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+				}
+			]
+		},
+		{
+			"name": "image_with_text",
+			"title": "Pre koho je služba vhodná?",
+			"paragraphs": [
+				"Výrobné areály, administratívne budovy, školy, logistika, retail, parkovacie objekty, technické objekty a organizácie, ktoré potrebujú riadiť vstupy, dochádzku alebo parkovanie."
+			],
+			"image": {
+				"pictureClass": "picture size-full",
+				"image": {
+					"class": "size-full object-cover object-center",
+					"src": "dc29a194124ec55687c89f110c38d18362fa0bd0",
+					"ext": "jpg",
+					"webp": false,
+					"alt": "Automatizovaný vstup na parkovisko",
+					"width": 1024,
+					"height": 1024
+				}
+			}
+		},
+		{
+			"name": "faq",
+			"title": "Často kladené otázky",
+			"open": "1",
+			"items": [
+				{
+					"title": "Viete prepojiť turnikety s prístupovým systémom?",
+					"text": "Áno. Turnikety vieme prepojiť s používateľmi, kartami a oprávneniami tak, aby vstupy fungovali ako súčasť jedného riadeného systému."
+				},
+				{
+					"title": "Riešite automatizované parkovanie?",
+					"text": "Áno, podľa rozsahu projektu vieme pomôcť s návrhom, integráciou alebo technickou podporou parkovacích systémov."
+				},
+				{
+					"title": "Dá sa systém napojiť na dochádzku?",
+					"text": "Áno. Prístupový systém môžeme prepojiť s evidenciou dochádzky, správou používateľov a reportingom."
+				}
+			]
+		}
+	]
+}
