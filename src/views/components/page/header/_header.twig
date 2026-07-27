@@ -5,7 +5,7 @@
  # Created Date: Tuesday, March 31st 2026, 17:21:00
  # Author: Kirill Dorozhynskyi - kyrylo.dorozhynskyi@justdev.org
  # -----
- # Last Modified: Monday, July 27th 2026 10:47:38
+ # Last Modified: Monday, July 27th 2026 20:29:07
  # Modified By: Kirill Dorozhynskyi
  # -----
  # Copyright (c) 2026 justDev
@@ -16,8 +16,8 @@
 		#default="{ toggleMenu, menuOpened, toggleCart, closeCart, cartOpened, searchOpened, searchQuery, updateSearchQuery, openSearch, closeSearch, mobileSearchOpened, openMobileSearch, closeMobileSearch, mobileSubmenu, mobileSubmenuItem, openMobileSubmenu, openMobileSubmenuItem, closeMobileSubmenu, closeMobileSubmenuItem, activeSubmenu, activeSubmenuItem, openSubmenu, openSubmenuItem, closeSubmenu }"
 	>
 		<div class="container max-xl:max-w-full">
-			<div class="offset flex items-center gap-10 max-lg:justify-between xl:gap-16">
-				<a class="shrink-0 max-lg:[&_svg]:h-9.5 max-lg:[&_svg]:w-37" href="/" aria-label="{{ site_title }}">
+			<div class="offset flex items-center gap-10 max-xl:justify-between xl:gap-16">
+				<a class="shrink-0 max-xl:[&_svg]:h-9.5 max-xl:[&_svg]:w-37" href="/" aria-label="{{ site_title }}">
 					{% if logoRaw %}
 						{{ source(rootDir ~ '/public/assets/images/brand/logo.svg')|raw }}
 					{% else %}
@@ -25,11 +25,11 @@
 					{% endif %}
 				</a>
 
-				<div id="primary-navigation" class="max-lg:hidden">
+				<div id="primary-navigation" class="max-xl:hidden">
 					{% include 'main_navigation.twig' %}
 				</div>
 
-				<div class="ms-auto flex items-center gap-2 max-lg:hidden">
+				<div class="ms-auto flex items-center gap-2 max-xl:hidden">
 					<button
 						type="button"
 						class="btn-outline-neutral p-1.5 relative"
@@ -86,17 +86,15 @@
 							<div class="mt-5">
 								{% for item in cartItems %}
 									<article class="grid grid-cols-[6rem_minmax(0,1fr)_auto] gap-x-4 gap-y-2 border-b border-neutral-300 py-4 first:pt-0">
-										<img
-											src="/assets/images/products/product.png"
-											alt="{{ item.title }}"
-											class="row-span-2 size-24 object-contain"
-										/>
+										<img src="/assets/images/products/product.png" alt="{{ item.title }}" class="row-span-2 size-24 object-contain" />
 
-										<h3 class="text-balance font-serif font-semibold leading-tight">
-											{{ item.title }}
-										</h3>
+										<h3 class="text-balance font-serif font-semibold leading-tight tracking-tight">{{ item.title }}</h3>
 
-										<button type="button" class="self-start" aria-label="Odstrániť: {{ item.title }}">
+										<button
+											type="button"
+											class="transit flex size-10 cursor-pointer items-center justify-center rounded-sm hover:bg-neutral-100 hover:text-purple focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple"
+											aria-label="Odstrániť: {{ item.title }}"
+										>
 											{{ sprite('x') }}
 										</button>
 
@@ -110,14 +108,18 @@
 
 							<dl class="mt-5 flex flex-col gap-3">
 								<div class="flex items-center justify-between gap-4">
-									<dt>Spolu bez DPH</dt>
+									<dt>
+										Spolu bez DPH
+									</dt>
 									<dd class="font-serif text-lg font-semibold">13 829,23 €</dd>
 								</div>
-									<div class="flex items-center justify-between gap-4">
-										<dt>Spolu s DPH</dt>
-										<dd class="font-serif text-2xl font-semibold text-purple">17 829,23 €</dd>
-									</div>
-								</dl>
+								<div class="flex items-center justify-between gap-4">
+									<dt>
+										Spolu s DPH
+									</dt>
+									<dd class="font-serif text-2xl font-semibold text-purple">17 829,23 €</dd>
+								</div>
+							</dl>
 
 							<a href="/cart/" class="btn-purple mt-5 w-full justify-center">Prejsť do košíka</a>
 						</div>
@@ -139,7 +141,7 @@
 								<div class="flex h-12 items-center overflow-hidden rounded-sm bg-white p-1">
 									<button
 										type="button"
-										class="flex size-10 shrink-0 items-center justify-center cursor-pointer"
+										class="transit flex size-10 shrink-0 cursor-pointer items-center justify-center rounded-sm hover:bg-neutral-100 hover:text-purple focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple"
 										aria-label="Zatvoriť vyhľadávanie"
 										@click="closeSearch"
 									>
@@ -164,10 +166,30 @@
 								<div class="mt-3 max-h-[calc(100vh-6rem)] overflow-y-auto rounded-sm bg-white p-4">
 									<div class="flex flex-col gap-4">
 										<div class="flex flex-col gap-3">
-											<button type="button" class="text-left">acer</button>
-											<button type="button" class="text-left">acer <strong>aspire</strong></button>
-											<button type="button" class="text-left">acer <strong>nitro</strong></button>
-											<button type="button" class="text-left">acer <strong>predator</strong></button>
+											<button
+												type="button"
+												class="transit cursor-pointer text-left hover:text-purple focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple"
+											>
+												acer
+											</button>
+											<button
+												type="button"
+												class="transit cursor-pointer text-left hover:text-purple focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple"
+											>
+												acer <strong>aspire</strong>
+											</button>
+											<button
+												type="button"
+												class="transit cursor-pointer text-left hover:text-purple focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple"
+											>
+												acer <strong>nitro</strong>
+											</button>
+											<button
+												type="button"
+												class="transit cursor-pointer text-left hover:text-purple focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple"
+											>
+												acer <strong>predator</strong>
+											</button>
 										</div>
 
 										<div class="flex items-center gap-4">
@@ -219,7 +241,7 @@
 					</div>
 				</teleport>
 
-				<div class="relative z-3 flex items-center gap-2 lg:hidden">
+				<div class="relative z-3 flex items-center gap-2 xl:hidden">
 					<button
 						type="button"
 						class="btn-outline-neutral relative size-10 p-1.5"
@@ -251,18 +273,13 @@
 		<div
 			id="mobile-navigation"
 			v-show="menuOpened"
-			class="absolute inset-x-0 top-full z-30 h-[calc(100svh-5rem)] overflow-y-auto bg-white lg:hidden"
+			class="absolute inset-x-0 top-full z-30 h-[calc(100svh-5rem)] overflow-y-auto bg-white lg:h-[calc(100svh-5.5rem)] xl:hidden"
 			style="display: none"
 			@click.stop
 		>
 			<div class="container flex min-h-full flex-col px-6 pb-8">
 				<div class="mt-6">
-					<button
-						v-if="!mobileSearchOpened"
-						type="button"
-						class="btn-outline-neutral h-12 w-full justify-start gap-4 px-4"
-						@click="openMobileSearch"
-					>
+					<button v-if="!mobileSearchOpened" type="button" class="btn-outline-neutral h-12 w-full justify-start gap-4 px-4" @click="openMobileSearch">
 						{{ sprite('search', 'text-2xl!') }}
 						<span>Vyhľadávanie...</span>
 					</button>
@@ -270,7 +287,7 @@
 					<div v-else class="flex h-12 items-center rounded-sm border border-neutral-300 pl-1">
 						<button
 							type="button"
-							class="flex size-10 shrink-0 items-center justify-center"
+							class="transit flex size-10 shrink-0 cursor-pointer items-center justify-center rounded-sm hover:bg-neutral-100 hover:text-purple focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple"
 							aria-label="Zatvoriť vyhľadávanie"
 							@click="updateSearchQuery(''); closeMobileSearch()"
 						>
@@ -365,7 +382,11 @@
 										{{ sprite('chevron-right', 'size-4') }}
 									</button>
 								{% else %}
-									<a href="{{ item.url }}" class="flex w-full py-4 font-serif text-lg font-semibold leading-tight hover:text-purple" @click="toggleMenu()">
+									<a
+										href="{{ item.url }}"
+										class="flex w-full py-4 font-serif text-lg font-semibold leading-tight hover:text-purple"
+										@click="toggleMenu()"
+									>
 										{{ item.title }}
 									</a>
 								{% endif %}
@@ -411,7 +432,10 @@
 								{% if submenuItem.title == 'IT Komponenty' and item.submenu[0].submenu %}
 									{% set nestedItems = item.submenu[0].submenu %}
 								{% endif %}
-								<div v-show="!mobileSearchOpened && mobileSubmenu === {{ parentIndex }} && mobileSubmenuItem === {{ loop.index }}" class="mt-6 flex flex-col">
+								<div
+									v-show="!mobileSearchOpened && mobileSubmenu === {{ parentIndex }} && mobileSubmenuItem === {{ loop.index }}"
+									class="mt-6 flex flex-col"
+								>
 									<button
 										type="button"
 										class="flex items-center gap-2 py-4 text-left text-sm font-medium"

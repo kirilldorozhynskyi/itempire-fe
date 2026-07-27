@@ -17,6 +17,53 @@
 		background: color-mix(in srgb, var(--color-primary) 75%, transparent) !important;
 	}
 
+	.filter-drawer {
+		--p-drawer-background: var(--color-neutral-100);
+		--p-drawer-color: var(--color-primary);
+		--p-drawer-header-padding: 1.5rem;
+		--p-drawer-content-padding: 0 1.5rem 1.5rem;
+		--p-drawer-footer-padding: 1.5rem;
+
+		.p-drawer-header {
+			@apply gap-2;
+		}
+
+		.p-drawer-close-button {
+			@apply size-10 shrink-0 rounded-sm border border-neutral-300 bg-transparent;
+		}
+
+		.p-drawer-content {
+			@apply overflow-y-auto;
+		}
+
+		.p-drawer-footer {
+			@apply bg-white;
+		}
+	}
+
+	.profile-delete-dialog {
+		--p-dialog-background: var(--color-white);
+		--p-dialog-color: var(--color-primary);
+		--p-dialog-border-color: transparent;
+		--p-dialog-border-radius: 0;
+		--p-dialog-shadow: none;
+		--p-dialog-header-padding: 3rem 3rem 0;
+		--p-dialog-content-padding: 1rem 3rem 3rem;
+
+		.p-dialog-header {
+			@apply min-h-0;
+		}
+
+		.p-dialog-close-button {
+			@apply absolute top-2 right-2 size-10 rounded-sm border border-neutral-300 bg-white;
+		}
+
+		@media (max-width: 39.999rem) {
+			--p-dialog-header-padding: 3rem 1.5rem 0;
+			--p-dialog-content-padding: 1rem 1.5rem 1.5rem;
+		}
+	}
+
 	.p-tabpanels {
 		--p-tabs-tabpanel-background: transparent;
 		--p-tabs-tabpanel-color: var(--color-primary);
@@ -72,7 +119,7 @@
 		.p-inputtext,
 		.p-select,
 		.p-textarea {
-			@apply min-h-15 w-full bg-white px-4 shadow-none;
+			@apply min-h-15 w-full rounded-sm border border-neutral-300 bg-white px-4 shadow-none transition-colors;
 			--p-inputtext-border-color: var(--color-neutral-300);
 			--p-inputtext-placeholder-color: var(--color-subtile);
 			--p-inputtext-focus-border-color: var(--color-purple);
@@ -89,16 +136,32 @@
 			--p-select-border-radius: 0.25rem;
 		}
 
+		.p-inputtext:hover,
+		.p-inputtext:focus,
+		.p-textarea:hover,
+		.p-textarea:focus,
+		.p-select:hover,
+		.p-select.p-focus,
+		.p-select.p-select-open {
+			@apply border-purple border-2;
+		}
+
 		.p-select {
 			@apply px-0;
 		}
 
 		label {
-			@apply text-subtile left-4;
+			@apply text-primary left-4 text-sm leading-snug font-medium;
 		}
 
 		.p-select-label {
-			@apply flex items-end px-4 pt-6 pb-2 tracking-tight;
+			@apply text-subtile flex items-end px-4 pt-6 pb-2 tracking-tight;
+		}
+
+		.p-select:hover .p-select-label,
+		.p-select.p-focus .p-select-label,
+		.p-select.p-select-open .p-select-label {
+			@apply text-primary;
 		}
 
 		.p-textarea {
@@ -125,6 +188,29 @@
 		--p-accordion-header-padding: 0;
 		--p-accordion-content-padding: 1rem 0 0 0;
 		--p-accordion-header-font-size: 1.125rem;
+	}
+
+	.mobile-filters {
+		--p-accordion-header-padding: 0;
+		--p-accordion-content-padding: 1rem 0 0;
+		--p-accordion-header-font-size: 1rem;
+		--p-accordion-header-font-weight: 600;
+		--p-accordion-header-background: var(--color-white);
+		--p-accordion-header-hover-background: var(--color-white);
+		--p-accordion-header-active-background: var(--color-white);
+		--p-accordion-header-active-hover-background: var(--color-white);
+
+		.p-accordionpanel {
+			@apply border-0 bg-white p-4;
+		}
+
+		.p-accordionheader {
+			@apply min-h-6;
+		}
+
+		.p-accordioncontent-content {
+			@apply gap-4;
+		}
 	}
 
 	.faq-list {
@@ -199,18 +285,18 @@
 		--p-select-overlay-background: var(--color-white);
 		--p-select-overlay-border-color: var(--color-neutral-300);
 		--p-select-overlay-border-radius: 0.25rem;
-		--p-select-overlay-shadow: 0 0.5rem 1.5rem rgb(0 0 0 / 10%);
-		--p-select-list-padding: 0.25rem;
-		--p-select-list-gap: 0.125rem;
+		--p-select-overlay-shadow: 0 3.125rem 9rem rgb(62 0 53 / 10%);
+		--p-select-list-padding: 0.5rem 1rem 0.5rem 0.5rem;
+		--p-select-list-gap: 0;
 		--p-select-option-color: var(--color-primary);
-		--p-select-option-focus-color: var(--color-purple);
+		--p-select-option-focus-color: var(--color-primary);
 		--p-select-option-focus-background: var(--color-neutral-100);
-		--p-select-option-selected-color: var(--color-white);
-		--p-select-option-selected-background: var(--color-purple);
-		--p-select-option-selected-focus-color: var(--color-white);
-		--p-select-option-selected-focus-background: var(--color-purple);
+		--p-select-option-selected-color: var(--color-primary);
+		--p-select-option-selected-background: var(--color-neutral-100);
+		--p-select-option-selected-focus-color: var(--color-primary);
+		--p-select-option-selected-focus-background: var(--color-neutral-100);
 		--p-select-option-border-radius: 0.25rem;
-		--p-select-option-padding: 0.75rem 1rem;
+		--p-select-option-padding: 0.5rem;
 		--p-select-option-font-weight: 400;
 
 		.p-select-option {
@@ -231,6 +317,15 @@
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: 1.25rem 1.25rem;
+}
+
+.form-radio-input {
+	@apply focus-visible:outline-purple relative size-5 shrink-0 cursor-pointer appearance-none rounded-full border border-neutral-300 bg-white focus-visible:outline-2 focus-visible:outline-offset-2;
+}
+
+.form-radio-input:checked {
+	@apply border-purple;
+	background: radial-gradient(circle, var(--color-purple) 0 0.3125rem, var(--color-white) 0.375rem);
 }
 
 .form-check-label {

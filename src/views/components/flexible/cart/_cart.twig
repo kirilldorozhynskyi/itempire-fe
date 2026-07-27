@@ -16,9 +16,22 @@
 				{% for product in ce.products %}
 					<article class="flex flex-col gap-5 border-b border-neutral-300 py-6 first:pt-0 last:border-0 last:pb-0">
 						<div class="grid grid-cols-[5rem_minmax(0,1fr)] gap-4 lg:grid-cols-[5rem_minmax(0,1fr)_auto_auto_auto] lg:items-center">
-							<img src="/assets/images/products/product.png" alt="{{ product.title }}" class="size-20 object-contain" />
+							<a
+								href="{{ product.url }}"
+								class="cursor-pointer rounded-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple"
+								aria-label="{{ product.title }}"
+							>
+								<img src="/assets/images/products/product.png" alt="{{ product.title }}" class="size-20 object-contain" />
+							</a>
 							<div class="flex flex-col gap-2">
-								<h2 class="font-serif font-semibold">{{ product.title }}</h2>
+								<h2 class="font-serif font-semibold">
+									<a
+										href="{{ product.url }}"
+										class="cursor-pointer rounded-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple"
+									>
+										{{ product.title }}
+									</a>
+								</h2>
 								<div class="flex items-center gap-3 text-sm">
 									<span class="size-2 bg-success"></span>Na sklade
 								</div>
@@ -26,28 +39,53 @@
 							<div class="col-span-2 flex items-center justify-between gap-4 lg:col-span-3">
 								<quantity-input :model-value="99"></quantity-input>
 								<strong class="font-serif text-lg">{{ product.price }}</strong>
-								<button type="button" aria-label="Odstrániť produkt">{{ sprite('x') }}</button>
+								<button
+									type="button"
+									class="transit flex size-10 shrink-0 cursor-pointer items-center justify-center rounded-sm hover:bg-neutral-100 hover:text-purple focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple"
+									aria-label="Odstrániť produkt"
+								>
+									{{ sprite('x') }}
+								</button>
 							</div>
 						</div>
 
 						<div class="flex flex-col gap-3 text-sm">
 							<strong>Výnimočná starostlivosť</strong>
 							<label class="form-check">
-								<input class="form-check-input" type="checkbox" /><span>Predĺžená záruka + 1 rok</span><span class="ms-auto">183,00 €</span>
+								<input class="form-check-input" type="checkbox" /><span class="text-subtile">Predĺžená záruka + 1 rok</span><span class="ms-auto">183,00
+									€</span>
 							</label>
 							<label class="form-check">
-								<input class="form-check-input" type="checkbox" /><span>Predĺžená záruka + 2 roky</span><span class="ms-auto">183,00 €</span>
+								<input class="form-check-input" type="checkbox" /><span class="text-subtile">Predĺžená záruka + 2 roky</span><span class="ms-auto">183,00
+									€</span>
 							</label>
 						</div>
 
 						<div class="flex flex-col gap-2 text-sm">
 							<strong>Dokúpte si tiež</strong>
-							{% for accessory in 1..3 %}
+							{% for accessory in ce.accessories %}
 								<div class="grid grid-cols-[2.5rem_minmax(0,1fr)_auto_auto] items-center gap-3">
-									<img src="/assets/images/products/f82213b87f4721b0ada3b4323a151124e80dcf9f.png" alt="" class="size-10 object-contain" />
-									<span>Hyper HyperDrive Next 11 Port USB-C Hub - Midnight Blue</span>
-									<span>183,00 €</span>
-									<button type="button" aria-label="Pridať príslušenstvo">{{ sprite('plus') }}</button>
+									<a
+										href="{{ accessory.url }}"
+										class="cursor-pointer rounded-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple"
+										aria-label="{{ accessory.title }}"
+									>
+										<img src="{{ accessory.image }}" alt="{{ accessory.title }}" class="size-10 object-contain" />
+									</a>
+									<a
+										href="{{ accessory.url }}"
+										class="cursor-pointer rounded-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple"
+									>
+										{{ accessory.title }}
+									</a>
+									<span>{{ accessory.price }}</span>
+									<button
+										type="button"
+										class="transit flex size-10 shrink-0 cursor-pointer items-center justify-center rounded-sm hover:bg-neutral-100 hover:text-purple focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple"
+										aria-label="Pridať príslušenstvo"
+									>
+										{{ sprite('plus') }}
+									</button>
 								</div>
 							{% endfor %}
 						</div>

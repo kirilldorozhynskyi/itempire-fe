@@ -2,7 +2,7 @@
 	<div class="flex h-12 items-center rounded-sm border border-neutral-300 bg-transparent">
 		<button
 			type="button"
-			class="flex size-12 cursor-pointer items-center justify-center disabled:cursor-not-allowed disabled:opacity-40"
+			class="transit hover:text-purple focus-visible:outline-purple flex size-12 cursor-pointer items-center justify-center hover:bg-neutral-100 focus-visible:outline-2 focus-visible:outline-offset-2 disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:bg-transparent disabled:hover:text-current"
 			:disabled="value <= min"
 			aria-label="Decrease quantity"
 			@click="setValue(value - 1)"
@@ -22,7 +22,7 @@
 
 		<button
 			type="button"
-			class="flex size-12 cursor-pointer items-center justify-center disabled:cursor-not-allowed disabled:opacity-40"
+			class="transit hover:text-purple focus-visible:outline-purple flex size-12 cursor-pointer items-center justify-center hover:bg-neutral-100 focus-visible:outline-2 focus-visible:outline-offset-2 disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:bg-transparent disabled:hover:text-current"
 			:disabled="value >= max"
 			aria-label="Increase quantity"
 			@click="setValue(value + 1)"
@@ -39,16 +39,16 @@ import SvgIcon from './SvgIcon.vue'
 const props = defineProps({
 	modelValue: {
 		type: Number,
-		default: 1,
+		default: 1
 	},
 	min: {
 		type: Number,
-		default: 1,
+		default: 1
 	},
 	max: {
 		type: Number,
-		default: 99,
-	},
+		default: 99
+	}
 })
 
 const emit = defineEmits(['update:modelValue', 'change'])

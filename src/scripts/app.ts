@@ -31,9 +31,6 @@ import TabPanel from 'primevue/tabpanel'
 import TabPanels from 'primevue/tabpanels'
 import Tabs from 'primevue/tabs'
 
-// NOTE: Include if needed
-// import VueScrollTo from 'vue-scrollto'
-
 // Directives
 import PhotoSwipeDirective from './directives/photoswipe'
 import Animation from './directives/animation'
@@ -117,7 +114,6 @@ export const rootComponent = defineComponent({
 	directives: {
 		photoswipe: PhotoSwipeDirective,
 		jdAnimate: Animation,
-		// 'scroll-to': VueScrollTo,  //NOTE: Include if needed
 	},
 
 	/* ======== SETUP ======== */

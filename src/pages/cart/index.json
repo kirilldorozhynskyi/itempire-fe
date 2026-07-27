@@ -7,21 +7,45 @@
 			"products": [
 				{
 					"title": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
+					"url": "/products/detail",
 					"price": "93 799,00 €"
 				},
 				{
 					"title": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
+					"url": "/products/detail",
 					"price": "93 799,00 €"
 				},
 				{
 					"title": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
+					"url": "/products/detail",
 					"price": "93 799,00 €"
+				}
+			],
+			"accessories": [
+				{
+					"title": "Hyper HyperDrive Next 11 Port USB-C Hub - Midnight Blue",
+					"url": "/products/detail",
+					"price": "183,00 €",
+					"image": "/assets/images/products/f82213b87f4721b0ada3b4323a151124e80dcf9f.png"
+				},
+				{
+					"title": "Hyper HyperDrive Next 11 Port USB-C Hub - Midnight Blue",
+					"url": "/products/detail",
+					"price": "183,00 €",
+					"image": "/assets/images/products/f82213b87f4721b0ada3b4323a151124e80dcf9f.png"
+				},
+				{
+					"title": "Hyper HyperDrive Next 11 Port USB-C Hub - Midnight Blue",
+					"url": "/products/detail",
+					"price": "183,00 €",
+					"image": "/assets/images/products/f82213b87f4721b0ada3b4323a151124e80dcf9f.png"
 				}
 			]
 		},
 		{
-			"name": "related_products",
+			"name": "latest_products",
 			"title": "Príslušenstvo",
+			"items": [{ "title": "Všetko" }, { "title": "Hardvér" }, { "title": "Softvér" }],
 			"products": [
 				{
 					"title": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
@@ -75,6 +99,120 @@
 							"ext": "png",
 							"webp": false,
 							"alt": "Canon i-SENSYS MF655Cdw",
+							"width": 368,
+							"height": 304
+						}
+					}
+				},
+				{
+					"title": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
+					"url": "/products/detail",
+					"price": "881,05 €",
+					"tag": "Novinka",
+					"image": {
+						"pictureClass": "picture relative",
+						"image": {
+							"class": "size-full object-cover object-center",
+							"src": "products/19deb46150037510ac8feda299dd637815dab13e",
+							"src_2x": "products/19deb46150037510ac8feda299dd637815dab13e@2x",
+							"ext": "png",
+							"webp": false,
+							"alt": "Príslušenstvo",
+							"width": 368,
+							"height": 304
+						}
+					}
+				},
+				{
+					"title": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
+					"url": "/products/detail",
+					"price": "881,05 €",
+					"tag": "Novinka",
+					"image": {
+						"pictureClass": "picture relative",
+						"image": {
+							"class": "size-full object-cover object-center",
+							"src": "products/19deb46150037510ac8feda299dd637815dab13e",
+							"src_2x": "products/19deb46150037510ac8feda299dd637815dab13e@2x",
+							"ext": "png",
+							"webp": false,
+							"alt": "Príslušenstvo",
+							"width": 368,
+							"height": 304
+						}
+					}
+				},
+				{
+					"title": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
+					"url": "/products/detail",
+					"price": "881,05 €",
+					"tag": "Novinka",
+					"image": {
+						"pictureClass": "picture relative",
+						"image": {
+							"class": "size-full object-cover object-center",
+							"src": "products/19deb46150037510ac8feda299dd637815dab13e",
+							"src_2x": "products/19deb46150037510ac8feda299dd637815dab13e@2x",
+							"ext": "png",
+							"webp": false,
+							"alt": "Príslušenstvo",
+							"width": 368,
+							"height": 304
+						}
+					}
+				},
+				{
+					"title": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
+					"url": "/products/detail",
+					"price": "881,05 €",
+					"tag": "Novinka",
+					"image": {
+						"pictureClass": "picture relative",
+						"image": {
+							"class": "size-full object-cover object-center",
+							"src": "products/19deb46150037510ac8feda299dd637815dab13e",
+							"src_2x": "products/19deb46150037510ac8feda299dd637815dab13e@2x",
+							"ext": "png",
+							"webp": false,
+							"alt": "Príslušenstvo",
+							"width": 368,
+							"height": 304
+						}
+					}
+				},
+				{
+					"title": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
+					"url": "/products/detail",
+					"price": "881,05 €",
+					"tag": "Novinka",
+					"image": {
+						"pictureClass": "picture relative",
+						"image": {
+							"class": "size-full object-cover object-center",
+							"src": "products/19deb46150037510ac8feda299dd637815dab13e",
+							"src_2x": "products/19deb46150037510ac8feda299dd637815dab13e@2x",
+							"ext": "png",
+							"webp": false,
+							"alt": "Príslušenstvo",
+							"width": 368,
+							"height": 304
+						}
+					}
+				},
+				{
+					"title": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
+					"url": "/products/detail",
+					"price": "881,05 €",
+					"tag": "Novinka",
+					"image": {
+						"pictureClass": "picture relative",
+						"image": {
+							"class": "size-full object-cover object-center",
+							"src": "products/19deb46150037510ac8feda299dd637815dab13e",
+							"src_2x": "products/19deb46150037510ac8feda299dd637815dab13e@2x",
+							"ext": "png",
+							"webp": false,
+							"alt": "Príslušenstvo",
 							"width": 368,
 							"height": 304
 						}

@@ -5,7 +5,7 @@
  * Created Date: Friday, July 10th 2026, 14:04:34
  * Author: Kirill Dorozhynskyi - kyrylo.dorozhynskyi@justdev.org
  * -----
- * Last Modified: Monday, July 27th 2026 16:22:04
+ * Last Modified: Monday, July 27th 2026 20:31:00
  * Modified By: Kirill Dorozhynskyi
  * -----
  * Copyright (c) 2026 justDev
@@ -53,11 +53,18 @@
 @utility decor-md {
 	@apply relative;
 	clip-path: polygon(0 0, 40% 0, 40% 3rem, 60% 3rem, 60% 0, 100% 0, 100% 100%, 0 100%);
+
+	@media (max-width: 1024px) {
+		clip-path: polygon(0 0, 40% 0, 40% 2rem, 60% 2rem, 60% 0, 100% 0, 100% 100%, 0 100%);
+	}
 }
 
 @utility decor-sm {
 	@apply relative;
 	clip-path: polygon(0 0, 40% 0, 40% 2rem, 60% 2rem, 60% 0, 100% 0, 100% 100%, 0 100%);
+	@media (max-width: 1024px) {
+		clip-path: polygon(0 0, 40% 0, 40% 1.5rem, 60% 1.5rem, 60% 0, 100% 0, 100% 100%, 0 100%);
+	}
 }
 
 @utility decor-r {
@@ -140,4 +147,8 @@
 	@media (min-width: 64rem) {
 		clip-path: polygon(0 0, calc(100% - 5.5rem) 0, calc(100% - 5.5rem) 1.5rem, 100% 1.5rem, 100% 100%, 0 100%);
 	}
+}
+
+@utility form-check {
+	@apply cursor-pointer;
 }

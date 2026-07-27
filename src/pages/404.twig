@@ -1,11 +1,11 @@
 {#
  # File: /src/pages/404.twig
- # Project: starter_frontend_twig
- # Version: 3.2.0
+ # Project: itempire-fe
+ # Version: 1.0.0
  # Created Date: Friday, May 29th 2026, 11:52:55
  # Author: Kirill Dorozhynskyi - kyrylo.dorozhynskyi@justdev.org
  # -----
- # Last Modified: Friday, May 29th 2026 12:00:51
+ # Last Modified: Monday, July 27th 2026 19:38:10
  # Modified By: Kirill Dorozhynskyi
  # -----
  # Copyright (c) 2026 justDev
@@ -13,19 +13,33 @@
 
 {% extends 'views/layouts/main.twig' %}
 
-{% block page %}
-	<section class="content404 flex min-h-dvh items-center">
-		<div class="container">
-			<div class="max-w-xl">
-				<h1 class="content404__title text-7xl font-bold lg:text-9xl">404</h1>
-				<h3 class="mt-2 text-xl text-neutral-600">Sorry, this page does not appear to exist.</h3>
+{% set title = 'Stránka sa nenašla' %}
+{% set description = 'Stránka, ktorú hľadáte, sa presunula alebo už nie je dostupná.' %}
 
-				<div class="mt-6">
+{% block page %}
+	<section class="py-20 md:py-24">
+		<div class="container flex justify-center">
+			<div class="flex max-w-160 flex-col items-center gap-6 text-center">
+				<span class="tag">404</span>
+
+				<div class="flex flex-col items-center gap-6">
+					<h1 class="text-balance font-serif text-4xl font-semibold leading-tight lg:text-6xl">
+						<span class="text-primary-500/70">Stránka sa stratila.</span><br />
+						Vaše dáta nie.
+					</h1>
+
+					<p class="max-w-120 text-balance text-primary-500/70">
+						Stránka, ktorú hľadáte, sa presunula alebo už nie je dostupná.<br class="hidden sm:block" />
+						Ak potrebujete pomoc, sme tu.
+					</p>
+				</div>
+
+				<div>
 					{% include 'views/components/utils/_button.twig' with {
 						button: {
-							class: 'bg-neutral-900 text-white',
+							class: 'btn-purple',
 							btn: {
-								title: 'Home',
+								title: 'Späť na úvod',
 								url: '/'
 							}
 						}

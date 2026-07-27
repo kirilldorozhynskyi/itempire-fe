@@ -65,14 +65,11 @@
 										<label class="profile-field"><span>Mesto *</span><input name="city" value="Nitra" /></label>
 										<label class="profile-field"><span>PSČ*</span><input name="zip" value="949 01" /></label>
 									</div>
-									<label class="profile-field">
-										<span>Krajina</span>
-										<select name="country">
-											<option>
-												Slovensko
-											</option>
-										</select>
-									</label>
+									<float-field id="profile-country" label="Krajina" name="country" field-type="select" model-value="SK">
+										<option value="SK">
+											Slovensko
+										</option>
+									</float-field>
 								</div>
 
 								<div class="flex flex-col gap-4">
@@ -256,14 +253,11 @@
 				</label>
 			</div>
 
-			<label class="profile-field">
-				<span>Krajina</span>
-				<select name="country">
-					<option>
-						Slovensko
-					</option>
-				</select>
-			</label>
+			<float-field id="address-country" label="Krajina" name="country" field-type="select" model-value="SK">
+				<option value="SK">
+					Slovensko
+				</option>
+			</float-field>
 
 			<button type="submit" class="btn-purple w-full justify-center">Uložiť</button>
 			<button v-if="editing" type="button" class="btn-outline-neutral w-full justify-center" @click="close">Vrátiť späť</button>
@@ -279,7 +273,7 @@
 			<p>
 				Táto akcia je nevratná
 			</p>
-			<div class="flex flex-col gap-3">
+			<div class="flex flex-col gap-2.5">
 				<button type="button" class="btn-red w-full justify-center" @click="close">Odstrániť adresu</button>
 				<button type="button" class="btn-outline-neutral w-full justify-center" @click="close">Vrátiť späť</button>
 			</div>

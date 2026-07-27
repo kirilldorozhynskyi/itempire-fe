@@ -12,12 +12,12 @@
  #}
 
 {% if button.span %}
-	<button type="button" class="{{ button.class }}" aria-label="{{ button.btn.title ?? button.btn.label }}">
+	<span class="{{ button.class }}" aria-hidden="true">
 		{{ button.btn.title }}
 		{% if button.icon %}
 			{{ sprite(button.icon) }}
 		{% endif %}
-	</button>
+	</span>
 {% else %}
 	<a
 		href="{{ button.btn.url }}"

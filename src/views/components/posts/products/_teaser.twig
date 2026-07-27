@@ -11,8 +11,11 @@
  # Copyright (c) 2026 justDev
  #}
 
-<article class="bg-white hover:-translate-y-2 hover:shadow-2xl transit" {{ animation ? 'v-jd-animate' : '' }}>
-	<a href="{{ item.url }}" aria-label="{{ item.title }}">
+<article
+	class="transit group flex h-full flex-col bg-white hover:-translate-y-2 hover:shadow-2xl focus-within:-translate-y-2 focus-within:shadow-2xl"
+	{{ animation ? 'v-jd-animate' : '' }}
+>
+	<a href="{{ item.url }}" aria-label="{{ item.title }}" class="focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple">
 		<div class="aspect-368/304 relative">
 			<svg class="absolute top-0 left-0 w-13/20 h-auto" width="237" height="190" viewBox="0 0 237 190" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<g opacity="0.6">
@@ -29,33 +32,28 @@
 				</div>
 			</div>
 		</div>
+	</a>
 
-		<div class="flex flex-col gap-4 p-6 lg:gap-6 lg:p-8">
+	<div class="flex flex-1 flex-col gap-4 p-6 lg:gap-6 lg:p-8">
+		<a href="{{ item.url }}" class="transit hover:text-purple focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple">
 			<h4 class="text-balance text-sm leading-[1.3] font-medium text-subtile lg:text-base">{{ item.title }}</h4>
+		</a>
 
-			<div class="flex gap-4">
-				<div class="flex gap-6 flex-col flex-1">
-					<span class="text-balance font-serif text-lg leading-tight font-semibold lg:text-2xl">{{ item.price }}</span>
+		<div class="mt-auto flex gap-4">
+			<div class="flex flex-1 flex-col gap-6">
+				<span class="text-balance font-serif text-lg leading-tight font-semibold lg:text-2xl">{{ item.price }}</span>
 
-					<div class="flex items-center gap-4 text-sm font-medium leading-[1.3]">
-						<div class="size-2 bg-success"></div>
+				<div class="flex items-center gap-4 text-sm font-medium leading-[1.3]">
+					<div class="size-2 bg-success"></div>
 
-						<span>Na sklade</span>
-					</div>
-				</div>
-				<div class="flex items-end justify-end">
-					{% include '../../utils/_button.twig' with {
-						button: {
-							span: true,
-							icon: 'shopping-bag',
-							class: 'btn-purple p-2 [&_svg]:text-2xl!',
-							btn: {
-								label: 'Pridať do košíku: ' ~ item.title
-							}
-						}
-					} only %}
+					<span>Na sklade</span>
 				</div>
 			</div>
+			<div class="flex items-end justify-end">
+				<button type="button" class="btn-purple p-2 [&_svg]:text-2xl!" aria-label="Pridať do košíku: {{ item.title }}">
+					{{ sprite('shopping-bag') }}
+				</button>
+			</div>
 		</div>
-	</a>
+	</div>
 </article>

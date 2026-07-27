@@ -15,8 +15,22 @@
 			<div class="flex flex-col gap-6">
 				<form action="/shipping/" class="flex flex-col gap-5 border border-neutral-300 p-6">
 					<h2 class="font-serif text-2xl font-semibold">Prihláste sa</h2>
-					<label class="profile-field"><span>E-mail</span><input type="email" placeholder="Zadajte váš e-mail" /></label>
-					<label class="profile-field"><span>Heslo</span><input type="password" placeholder="Zadajte heslo" /></label>
+					<float-field
+						id="checkout-login-email"
+						label="E-mail"
+						name="login_email"
+						field-type="email"
+						autocomplete="email"
+						placeholder="Zadajte váš e-mail"
+					></float-field>
+					<float-field
+						id="checkout-login-password"
+						label="Heslo"
+						name="login_password"
+						field-type="password"
+						autocomplete="current-password"
+						placeholder="Zadajte heslo"
+					></float-field>
 					<a href="/" class="self-end text-sm text-purple underline">Zabudli ste heslo?</a>
 					<button type="submit" class="btn-purple w-full justify-center">Prihlásiť sa</button>
 					<p class="text-center">
@@ -31,38 +45,64 @@
 				<form action="/shipping/" class="flex flex-col gap-5 border border-neutral-300 p-6">
 					<h2 class="font-serif text-2xl font-semibold">Nemáte u nás účet?</h2>
 					<h3 class="font-serif text-lg font-semibold">Vaše údaje</h3>
-					<label class="profile-field"><span>E-mail</span><input type="email" placeholder="Zadajte váš e-mail" /></label>
+					<float-field
+						id="checkout-email"
+						label="E-mail"
+						name="email"
+						field-type="email"
+						autocomplete="email"
+						placeholder="Zadajte váš e-mail"
+					></float-field>
 					<div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
-						<label class="profile-field"><span>Meno*</span><input placeholder="Vaše meno" /></label>
-						<label class="profile-field"><span>Priezvisko*</span><input placeholder="Vaše priezvisko" /></label>
+						<float-field id="checkout-first-name" label="Meno*" name="first_name" autocomplete="given-name" placeholder="Vaše meno"></float-field>
+						<float-field
+							id="checkout-last-name"
+							label="Priezvisko*"
+							name="last_name"
+							autocomplete="family-name"
+							placeholder="Vaše priezvisko"
+						></float-field>
 					</div>
-					<label class="profile-field"><span>Tel. č.</span><input type="tel" placeholder="+421 900 000 000" /></label>
+					<float-field
+						id="checkout-phone"
+						label="Tel. č."
+						name="phone"
+						field-type="tel"
+						autocomplete="tel"
+						placeholder="+421 900 000 000"
+					></float-field>
 
 					<h3 class="font-serif text-lg font-semibold">Fakturačná adresa</h3>
 					<label class="form-check"><input class="form-check-input" type="checkbox" checked /><span>Som firma / živnostník</span></label>
 					<label class="form-check"><input class="form-check-input" type="checkbox" /><span>Dodacia adresa je iná ako fakturačná</span></label>
 					<div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
-						<label class="profile-field"><span>Názov firmy *</span><input placeholder="Zadajte názov" /></label>
-						<label class="profile-field"><span>IČ DPH</span><input placeholder="Zadajte IČ DPH" /></label>
-						<label class="profile-field"><span>IČO*</span><input placeholder="Zadajte IČO" /></label>
-						<label class="profile-field"><span>DIČ*</span><input placeholder="Zadajte DIČ" /></label>
-						<label class="profile-field sm:col-span-2"><span>Ulica a číslo *</span><input placeholder="Zadajte ulicu" /></label>
-						<label class="profile-field"><span>Mesto *</span><input placeholder="Názov mesta" /></label>
-						<label class="profile-field"><span>PSČ*</span><input placeholder="000 00" /></label>
+						<float-field
+							id="checkout-company"
+							label="Názov firmy *"
+							name="company"
+							autocomplete="organization"
+							placeholder="Zadajte názov"
+						></float-field>
+						<float-field id="checkout-vat-id" label="IČ DPH" name="vat_id" placeholder="Zadajte IČ DPH"></float-field>
+						<float-field id="checkout-company-id" label="IČO*" name="company_id" placeholder="Zadajte IČO"></float-field>
+						<float-field id="checkout-tax-id" label="DIČ*" name="tax_id" placeholder="Zadajte DIČ"></float-field>
+						<float-field
+							id="checkout-street"
+							label="Ulica a číslo *"
+							name="street"
+							autocomplete="street-address"
+							placeholder="Zadajte ulicu"
+							class="sm:col-span-2"
+						></float-field>
+						<float-field id="checkout-city" label="Mesto *" name="city" autocomplete="address-level2" placeholder="Názov mesta"></float-field>
+						<float-field id="checkout-postal-code" label="PSČ*" name="postal_code" autocomplete="postal-code" placeholder="000 00"></float-field>
 					</div>
-					<label class="profile-field">
-						<span>Krajina</span><select>
-							<option>
-								Slovensko
-							</option>
-						</select>
-					</label>
-					<label class="profile-field">
-						<span>Poznámka k nákupu</span><textarea
-							class="min-h-28 resize-none bg-transparent text-subtile outline-none"
-							placeholder="Vaša správa"
-						></textarea>
-					</label>
+					<float-field id="checkout-country" label="Krajina" name="country" field-type="select" model-value="SK">
+						<option value="SK">
+							Slovensko
+						</option>
+					</float-field>
+					<float-field id="checkout-note" label="Poznámka k nákupu" name="note" field-type="textarea" placeholder="Vaša správa"></float-field>
 					<button type="submit" class="btn-purple w-full justify-center xl:hidden">Pokračovať na dopravu a platbu</button>
 				</form>
 			</div>

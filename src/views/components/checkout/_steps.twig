@@ -22,7 +22,10 @@
 	<ol class="grid grid-cols-3 gap-3 sm:gap-8">
 		{% for item in steps %}
 			<li class="{{ loop.index == current ? 'border-purple text-purple' : 'border-transparent' }} border-b pb-4">
-				<a href="{{ item.url }}" class="flex items-center gap-3 text-sm font-medium sm:gap-4 sm:text-base">
+				<a
+					href="{{ item.url }}"
+					class="transit flex items-center gap-3 text-sm font-medium hover:text-purple focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple sm:gap-4 sm:text-base"
+				>
 					<span class="{{ loop.index <= current ? 'bg-purple text-white' : 'bg-neutral-100' }} flex size-10 shrink-0 items-center justify-center">
 						{% if loop.index < current %}
 							{{ sprite('check') }}

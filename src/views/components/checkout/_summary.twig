@@ -3,7 +3,7 @@
  # Project: itempire-fe
  #}
 
-<aside class="flex flex-col gap-8">
+<aside class="flex flex-col gap-8 sticky top-22">
 	<div class="decor-sm flex flex-col gap-6 bg-neutral-100 p-6 pt-12">
 		<h2 class="font-serif text-2xl font-semibold leading-tight">{{ title|default('Sumár košíka') }}</h2>
 
@@ -11,7 +11,10 @@
 			<div class="grid grid-cols-[2.5rem_1fr_auto] items-center gap-3 border-b border-neutral-300 pb-6">
 				<img src="/assets/images/products/product.png" alt="" class="size-10 object-contain" />
 				<span class="text-sm">ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver</span>
-				<span class="text-end text-sm">3ks<br /><strong>3 799,00 €</strong></span>
+				<div class="text-end text-sm flex flex-col gap-1">
+					<span class="text-subtile">3ks</span>
+					<span class="font-semibold">3 799,00 €</span>
+				</div>
 			</div>
 		{% endif %}
 
@@ -47,11 +50,19 @@
 		</dl>
 
 		{% if checks %}
-			<div class="flex flex-col gap-3 text-sm text-subtile">
-				<label class="form-check">
-					<input class="form-check-input" type="checkbox" required /><span>Potvrdzujem, že som sa oboznámil s obchodnými podmienkami.</span>
+			<div class="flex flex-col gap-3 text-sm leading-normal text-subtile">
+				<label class="form-check items-start">
+					<input class="form-check-input" type="checkbox" required />
+					<span>
+						Potvrdzujem, že som sa oboznámil s
+						<a href="/obchodne-podmienky/" class="text-purple underline">obchodnými podmienkami</a> a
+						<a href="/gdpr/" class="text-purple underline">zásadami ochrany osobných údajov</a>. *
+					</span>
 				</label>
-				<label class="form-check"><input class="form-check-input" type="checkbox" /><span>Súhlasím so spracovaním osobných údajov.</span></label>
+				<label class="form-check items-start">
+					<input class="form-check-input" type="checkbox" />
+					<span>Súhlasím so spracovaním <a href="/gdpr/" class="text-purple underline">osobných údajov</a> na marketingové účely.</span>
+				</label>
 			</div>
 		{% endif %}
 
