@@ -1,0 +1,18 @@
+{#
+ # File: /src/views/components/flexible/search_results_hero/_search_results_hero.twig
+ # Project: itempire-fe
+ #}
+
+<section class="py-12 lg:py-16">
+	<div class="container flex flex-col gap-4">
+		{% if ce.text %}
+			<p class="max-lg:tracking-tight lg:text-lg" v-jd-animate>
+				{{ ce.text }}
+			</p>
+		{% endif %}
+
+		{% if ce.query %}
+			<h1 class="text-balance font-serif text-2xl font-semibold leading-tight lg:text-5xl" v-jd-animate>“{{ ce.query }}”</h1>
+		{% endif %}
+	</div>
+</section>

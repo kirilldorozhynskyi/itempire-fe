@@ -2,7 +2,7 @@
 	<header
 		ref="headerEl"
 		class="transit sticky top-0"
-		:class="[hidden ? '-translate-y-full' : 'translate-y-0', solid || menuOpened || cartOpened || activeSubmenu !== null ? 'bg-white' : ' ']"
+		:class="[hidden ? '-translate-y-full' : 'translate-y-0', solid || menuOpened || cartOpened || searchOpened || activeSubmenu !== null ? 'bg-white' : ' ']"
 	>
 		<div>
 			<slot
@@ -11,6 +11,11 @@
 				:toggle-cart="toggleCart"
 				:close-cart="closeCart"
 				:cart-opened="cartOpened"
+				:search-opened="searchOpened"
+				:search-query="searchQuery"
+				:update-search-query="updateSearchQuery"
+				:open-search="openSearch"
+				:close-search="closeSearch"
 				:active-submenu="activeSubmenu"
 				:active-submenu-item="activeSubmenuItem"
 				:open-submenu="openSubmenu"
@@ -22,7 +27,7 @@
 </template>
 
 <script setup>
-import { onMounted, onBeforeUnmount, ref, watch } from 'vue'
+import { nextTick, onMounted, onBeforeUnmount, ref, watch } from 'vue'
 
 // Header reveal behavior (sticky, so it never shifts the page content):
 // - At the top of the page it sits in its natural position, transparent.
@@ -37,6 +42,8 @@ const hidden = ref(false) // slid up and out (scrolling down)
 const solid = ref(false) // opaque background once scrolled past the hero
 const menuOpened = ref(false)
 const cartOpened = ref(false)
+const searchOpened = ref(false)
+const searchQuery = ref('')
 const activeSubmenu = ref(null)
 const activeSubmenuItem = ref(1)
 
@@ -79,11 +86,31 @@ const closeCart = () => {
 	cartOpened.value = false
 }
 
+const closeSearch = () => {
+	searchOpened.value = false
+}
+
+const updateSearchQuery = (value) => {
+	searchQuery.value = value
+}
+
+const openSearch = () => {
+	searchOpened.value = true
+	menuOpened.value = false
+	closeCart()
+	closeSubmenu()
+
+	nextTick(() => {
+		document.querySelector('#header-search-input')?.focus()
+	})
+}
+
 const toggleCart = () => {
 	cartOpened.value = !cartOpened.value
 
 	if (cartOpened.value) {
 		menuOpened.value = false
+		closeSearch()
 		closeSubmenu()
 	}
 }
@@ -113,6 +140,7 @@ const openSubmenuItem = (index) => {
 const closeOverlays = () => {
 	closeSubmenu()
 	closeCart()
+	closeSearch()
 }
 
 const handleDocumentClick = (event) => {
@@ -123,8 +151,8 @@ const handleKeydown = (event) => {
 	if (event.key === 'Escape') closeOverlays()
 }
 
-watch(menuOpened, (isOpened) => {
-	document.body.classList.toggle('overflow-hidden', isOpened)
+watch([menuOpened, searchOpened], ([isMenuOpened, isSearchOpened]) => {
+	document.body.classList.toggle('overflow-hidden', isMenuOpened || isSearchOpened)
 })
 
 const handleScroll = () => {

@@ -13,7 +13,7 @@
 
 <page-header class="z-999 py-5 lg:py-6 bg-white">
 	<template
-		#default="{ toggleMenu, menuOpened, toggleCart, closeCart, cartOpened, activeSubmenu, activeSubmenuItem, openSubmenu, openSubmenuItem, closeSubmenu }"
+		#default="{ toggleMenu, menuOpened, toggleCart, closeCart, cartOpened, searchOpened, searchQuery, updateSearchQuery, openSearch, closeSearch, activeSubmenu, activeSubmenuItem, openSubmenu, openSubmenuItem, closeSubmenu }"
 	>
 		<div class="container max-xl:max-w-full">
 			<div class="offset flex items-center gap-10 xl:gap-16">
@@ -47,7 +47,17 @@
 
 						{{ sprite('shopping-bag', 'text-2xl!') }}
 					</button>
-					<button class="btn-outline-neutral p-1.5">{{ sprite('search', 'text-2xl!') }}</button>
+					<button
+						type="button"
+						class="btn-outline-neutral p-1.5"
+						:class="searchOpened ? 'bg-neutral-100 text-purple' : ''"
+						:aria-expanded="searchOpened ? 'true' : 'false'"
+						aria-controls="header-search"
+						aria-label="Otvoriť vyhľadávanie"
+						@click.stop="openSearch"
+					>
+						{{ sprite('search', 'text-2xl!') }}
+					</button>
 					<button class="btn-outline-neutral p-1.5">{{ sprite('user', 'text-2xl!') }}</button>
 					<button class="btn-outline-neutral px-2 py-2.75">EN</button>
 					{% include paths.btn_ex with {
@@ -64,6 +74,102 @@
 						</div>
 					</div>
 				</div>
+
+				<teleport to="body">
+					<div
+						v-show="searchOpened"
+						class="fixed inset-0 z-1000 bg-primary opacity-75"
+						style="display: none"
+						aria-hidden="true"
+						@click="closeSearch"
+					></div>
+
+					<div
+						id="header-search"
+						v-show="searchOpened"
+						class="pointer-events-none fixed inset-x-0 top-4 z-1001"
+						style="display: none"
+						@click.stop
+					>
+					<div class="container flex justify-end">
+						<div class="pointer-events-auto w-full max-w-162">
+							<div class="flex h-12 items-center overflow-hidden rounded-sm bg-white p-1">
+								<button type="button" class="flex size-10 shrink-0 items-center justify-center" aria-label="Zatvoriť vyhľadávanie" @click="closeSearch">
+									{{ sprite('x', 'text-2xl!') }}
+								</button>
+
+								<input
+									id="header-search-input"
+									:value="searchQuery"
+									type="search"
+									class="h-full min-w-0 flex-1 px-2 outline-none"
+									placeholder="Hľadať"
+									autocomplete="off"
+									@input="updateSearchQuery($event.target.value)"
+								/>
+
+								<button type="button" class="btn-purple flex size-10 shrink-0 items-center justify-center p-0" aria-label="Vyhľadať">
+									{{ sprite('search', 'text-2xl!') }}
+								</button>
+							</div>
+
+							<div class="mt-3 max-h-[calc(100vh-6rem)] overflow-y-auto rounded-sm bg-white p-4">
+								<div class="flex flex-col gap-4">
+									<div class="flex flex-col gap-3">
+										<button type="button" class="text-left">acer</button>
+										<button type="button" class="text-left">acer <strong>aspire</strong></button>
+										<button type="button" class="text-left">acer <strong>nitro</strong></button>
+										<button type="button" class="text-left">acer <strong>predator</strong></button>
+									</div>
+
+									<div class="flex items-center gap-4">
+										<strong>Tovar</strong>
+										<div class="h-px flex-1 bg-neutral-300"></div>
+									</div>
+
+									<div class="flex flex-col">
+										<a href="/" class="grid grid-cols-[2.5rem_1fr_auto] items-center gap-3 py-2">
+											<img src="/assets/images/products/product.png" alt="" class="size-10 object-contain" />
+											<span>Hyper HyperDrive Next 11 Port USB-C Hub - Midnight Blue</span>
+											<strong class="whitespace-nowrap font-normal">183,00 €</strong>
+										</a>
+										<a href="/" class="grid grid-cols-[2.5rem_1fr_auto] items-center gap-3 py-2">
+											<img src="/assets/images/products/product.png" alt="" class="size-10 object-contain" />
+											<span>ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver</span>
+											<strong class="whitespace-nowrap font-normal">683,00 €</strong>
+										</a>
+										<a href="/" class="grid grid-cols-[2.5rem_1fr_auto] items-center gap-3 py-2">
+											<img src="/assets/images/products/product.png" alt="" class="size-10 object-contain" />
+											<span>Hyper HyperDrive Next 11 Port USB-C Hub - Midnight Blue</span>
+											<strong class="whitespace-nowrap font-normal">183,00 €</strong>
+										</a>
+										<a href="/" class="grid grid-cols-[2.5rem_1fr_auto] items-center gap-3 py-2">
+											<img src="/assets/images/products/product.png" alt="" class="size-10 object-contain" />
+											<span>ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver</span>
+											<strong class="whitespace-nowrap font-normal">683,00 €</strong>
+										</a>
+									</div>
+
+									<div class="flex items-center gap-4">
+										<strong>Kategórie</strong>
+										<div class="h-px flex-1 bg-neutral-300"></div>
+									</div>
+
+									<div class="flex flex-col gap-4">
+										<a href="/">Mobilné a prenosné zariadenia</a>
+										<a href="/">Príslušenstvo</a>
+									</div>
+
+									<a href="/search/" class="btn-purple w-full justify-center gap-3">
+										{{ sprite('search', 'text-2xl!') }}
+										Zobraziť všetky výsledky
+									</a>
+								</div>
+							</div>
+							</div>
+						</div>
+					</div>
+				</teleport>
 
 				<div class="relative z-3 lg:hidden">
 					<button
