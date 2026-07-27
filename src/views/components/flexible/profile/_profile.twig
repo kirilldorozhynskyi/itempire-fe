@@ -9,9 +9,15 @@
 			<div class="container">
 				<div class="overflow-x-auto">
 					<tab-list class="min-w-150">
-						<tab value="0">Fakturačné údaje</tab>
-						<tab value="1">Doručovacie adresy</tab>
-						<tab value="2">Objednávky</tab>
+						<tab value="0">
+							Fakturačné údaje
+						</tab>
+						<tab value="1">
+							Doručovacie adresy
+						</tab>
+						<tab value="2">
+							Objednávky
+						</tab>
 					</tab-list>
 				</div>
 			</div>
@@ -28,8 +34,12 @@
 										{{ sprite('user-avatar') }}
 									</div>
 									<div>
-										<div class="font-serif text-lg font-semibold">{{ ce.user.name }}</div>
-										<div>{{ ce.user.email }}</div>
+										<div class="font-serif text-lg font-semibold">
+											{{ ce.user.name }}
+										</div>
+										<div>
+											{{ ce.user.email }}
+										</div>
 									</div>
 								</div>
 
@@ -47,7 +57,9 @@
 										<label class="profile-field"><span>IČ DPH</span><input name="vatId" value="SK2121834507" /></label>
 										<label class="profile-field"><span>IČO</span><input name="companyId" value="54 821 073" /></label>
 										<label class="profile-field"><span>DIČ</span><input name="taxId" value="2121 834 507" /></label>
-										<label class="profile-field md:col-span-2"><span>Ulica a číslo *</span><input name="street" value="Priemyselná 14" /></label>
+										<label class="profile-field md:col-span-2">
+											<span>Ulica a číslo *</span><input name="street" value="Priemyselná 14" />
+										</label>
 									</div>
 									<div class="grid grid-cols-[minmax(0,1fr)_minmax(0,2fr)] gap-4">
 										<label class="profile-field"><span>Mesto *</span><input name="city" value="Nitra" /></label>
@@ -55,7 +67,11 @@
 									</div>
 									<label class="profile-field">
 										<span>Krajina</span>
-										<select name="country"><option>Slovensko</option></select>
+										<select name="country">
+											<option>
+												Slovensko
+											</option>
+										</select>
 									</label>
 								</div>
 
@@ -82,7 +98,7 @@
 
 							<div class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
 								{% for address in ce.addresses %}
-									<article class="flex min-h-85 flex-col gap-6 bg-white p-6">
+									<article class="flex flex-col gap-6 bg-white p-6">
 										<div class="flex items-center gap-4">
 											<div class="flex size-12 items-center justify-center bg-neutral-100 text-2xl text-white">
 												{{ sprite('user-avatar') }}
@@ -111,9 +127,7 @@
 							</div>
 
 							<div>
-								<button type="button" class="btn-purple" @click="openAddress('add')">
-									{{ sprite('plus') }} Pridať novú adresu
-								</button>
+								<button type="button" class="btn-purple" @click="openAddress('add')">{{ sprite('plus') }} Pridať novú adresu</button>
 							</div>
 						</div>
 					</section>
@@ -126,21 +140,41 @@
 
 							<div class="bg-white p-4 lg:p-12">
 								<div class="hidden grid-cols-[1fr_2.5fr_1fr_1fr_auto] gap-6 px-2 pb-4 font-medium lg:grid">
-									<div>Dátum</div>
-									<div>Číslo objednávky</div>
-									<div>Suma</div>
-									<div>Stav</div>
-									<div>Faktúra</div>
+									<div>
+										Dátum
+									</div>
+									<div>
+										Číslo objednávky
+									</div>
+									<div>
+										Suma
+									</div>
+									<div>
+										Stav
+									</div>
+									<div>
+										Faktúra
+									</div>
 								</div>
 
 								<div>
 									{% for order in ce.orders %}
 										<details class="group {{ loop.index is odd ? 'bg-neutral-100' : '' }}" {{ order.open ? 'open' }}>
-											<summary class="grid cursor-pointer list-none grid-cols-2 gap-3 px-2 py-3 [&::-webkit-details-marker]:hidden lg:grid-cols-[1fr_2.5fr_1fr_1fr_auto] lg:gap-6">
-												<div><span class="text-subtile lg:hidden">Dátum: </span>{{ order.date }}</div>
-												<div><span class="text-subtile lg:hidden">Objednávka: </span>{{ order.number }}</div>
-												<div class="font-medium text-purple">{{ order.total }}</div>
-												<div>{{ order.status }}</div>
+											<summary
+												class="grid cursor-pointer list-none grid-cols-2 gap-3 px-2 py-3 [&::-webkit-details-marker]:hidden lg:grid-cols-[1fr_2.5fr_1fr_1fr_auto] lg:gap-6"
+											>
+												<div>
+													<span class="text-subtile lg:hidden">Dátum:&nbsp;</span>{{ order.date }}
+												</div>
+												<div>
+													<span class="text-subtile lg:hidden">Objednávka:&nbsp;</span>{{ order.number }}
+												</div>
+												<div class="font-medium text-purple">
+													{{ order.total }}
+												</div>
+												<div>
+													{{ order.status }}
+												</div>
 												<a href="/" class="btn-outline-neutral col-span-2 px-2 py-1 lg:col-span-1" @click.stop>
 													{{ sprite('file-description') }} Faktúra {{ order.number }}
 												</a>
@@ -225,7 +259,9 @@
 			<label class="profile-field">
 				<span>Krajina</span>
 				<select name="country">
-					<option>Slovensko</option>
+					<option>
+						Slovensko
+					</option>
 				</select>
 			</label>
 
@@ -240,7 +276,9 @@
 
 	<template #delete="{ close }">
 		<div class="flex flex-col gap-8">
-			<p>Táto akcia je nevratná</p>
+			<p>
+				Táto akcia je nevratná
+			</p>
 			<div class="flex flex-col gap-3">
 				<button type="button" class="btn-red w-full justify-center" @click="close">Odstrániť adresu</button>
 				<button type="button" class="btn-outline-neutral w-full justify-center" @click="close">Vrátiť späť</button>

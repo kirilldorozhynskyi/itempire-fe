@@ -12,7 +12,7 @@
  #}
 
 <section>
-	<div class="container py-16 text-center lg:py-20 flex flex-col gap-6 items-center">
+	<div class="container flex flex-col items-center gap-6 py-16 text-center lg:py-20">
 		<h1 class="text-balance font-serif text-4xl font-semibold leading-none lg:text-6xl">{{ ce.title }}</h1>
 		<p class="max-w-96 text-pretty text-subtile">
 			{{ ce.text }}
@@ -23,13 +23,15 @@
 		<div class="container">
 			<div class="grid grid-cols-1 items-stretch gap-16 lg:grid-cols-2">
 				<div class="grid content-between gap-12 lg:pt-12">
-					<div>
-						<h2 class="font-serif text-2xl font-semibold leading-tight">{{ ce.quickContact.title }}</h2>
-						<p class="mt-4 max-w-88 text-sm text-subtile">
-							{{ ce.quickContact.text }}
-						</p>
+					<div class="flex flex-col gap-8">
+						<div class="flex flex-col gap-4">
+							<h2 class="font-serif text-2xl font-semibold leading-tight">{{ ce.quickContact.title }}</h2>
+							<p class="max-w-88 text-sm text-subtile">
+								{{ ce.quickContact.text }}
+							</p>
+						</div>
 
-						<div class="mt-8 grid max-w-92 gap-2">
+						<div class="grid max-w-92 gap-2">
 							{% for item in ce.quickContact.items %}
 								<a href="{{ item.url }}" class="btn-outline-neutral w-full justify-start gap-3 bg-transparent">
 									{{ sprite(item.icon) }}
@@ -41,9 +43,9 @@
 
 					<div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
 						{% for card in ce.cards %}
-							<article class="bg-white p-6">
+							<article class="flex flex-col gap-4 bg-white p-6">
 								<h3 class="font-serif font-semibold">{{ card.title }}</h3>
-								<div class="mt-4 text-sm text-subtile flex flex-col gap-2">
+								<div class="flex flex-col gap-2 text-sm text-subtile">
 									{{ card.lines }}
 								</div>
 							</article>
@@ -52,9 +54,9 @@
 				</div>
 
 				<form action="" class="grid content-start gap-4 bg-white p-6 lg:p-12">
-					<div class="mb-4">
+					<div class="flex flex-col gap-4">
 						<h2 class="font-serif text-2xl font-semibold leading-tight">{{ ce.form.title }}</h2>
-						<p class="mt-4 max-w-96 text-sm text-subtile">
+						<p class="max-w-96 text-sm text-subtile">
 							{{ ce.form.text }}
 						</p>
 					</div>
@@ -87,14 +89,14 @@
 					</float-field>
 					<float-field id="contact-message" label="Správa" name="message" field-type="textarea" placeholder="Vaša správa"></float-field>
 
-					<label class="form-check mt-2 items-start">
+					<label class="form-check items-start">
 						<input class="form-check-input" type="checkbox" name="consent" />
 						<span class="text-sm text-subtile">
 							Súhlasím so spracovaním <a href="/gdpr/" class="text-purple underline">osobných údajov</a> na marketingové účely.
 						</span>
 					</label>
 
-					<button type="submit" class="btn-purple mt-2 w-full justify-center">{{ ce.form.submit }}</button>
+					<button type="submit" class="btn-purple w-full justify-center">{{ ce.form.submit }}</button>
 				</form>
 			</div>
 		</div>
