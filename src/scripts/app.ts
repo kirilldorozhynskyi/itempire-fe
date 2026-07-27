@@ -20,6 +20,7 @@ import LazyLoad from 'vanilla-lazyload'
 import PrimeVue from 'primevue/config'
 import { computed, createApp, defineAsyncComponent, defineComponent, onBeforeUnmount, onMounted, provide, ref } from 'vue'
 import Aura from '@primeuix/themes/aura'
+import { CustomMarker as GoogleMarker } from 'vue3-google-map'
 
 // NOTE: Include if needed
 // import VueScrollTo from 'vue-scrollto'
@@ -32,6 +33,7 @@ import Animation from './directives/animation'
 
 import PageHeader from './components/PageHeader.vue'
 import Benefits from './components/Benefits.vue'
+import FloatField from './components/FloatField.vue'
 
 const SliderWrapper = defineAsyncComponent(() => import('./components/Slider/SliderWrapper.vue'))
 // const SliderVideo = defineAsyncComponent(() => import('./components/Slider/SliderVideo.vue'))
@@ -45,6 +47,8 @@ const ProductGallery = defineAsyncComponent(() => import('./components/ProductGa
 const QuantityInput = defineAsyncComponent(() => import('./components/QuantityInput.vue'))
 const ReviewDrawer = defineAsyncComponent(() => import('./components/ReviewDrawer.vue'))
 const StarRating = defineAsyncComponent(() => import('./components/StarRating.vue'))
+const ProfileActions = defineAsyncComponent(() => import('./components/ProfileActions.vue'))
+const GoogleMap = defineAsyncComponent(() => import('./components/GoogleMap.vue'))
 
 const Tabs = defineAsyncComponent(() => import('primevue/tabs'))
 const TabList = defineAsyncComponent(() => import('primevue/tablist'))
@@ -97,10 +101,14 @@ export const rootComponent = defineComponent({
 		Range,
 		ShowMore,
 		DropDown,
+		FloatField,
 		ProductGallery,
 		QuantityInput,
 		ReviewDrawer,
 		StarRating,
+		ProfileActions,
+		GoogleMap,
+		GoogleMarker,
 	},
 
 	/* ======= OPTIONS ======= */

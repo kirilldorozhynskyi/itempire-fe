@@ -1,0 +1,96 @@
+{#
+ # File: /src/views/components/flexible/auth/_auth.twig
+ # Project: itempire-fe
+ # Version: 1.0.0
+ # Created Date: Monday, July 27th 2026, 10:58:28
+ # Author: Kirill Dorozhynskyi - kyrylo.dorozhynskyi@justdev.org
+ # -----
+ # Last Modified: Monday, July 27th 2026 11:18:35
+ # Modified By: Kirill Dorozhynskyi
+ # -----
+ # Copyright (c) 2026 justDev
+ #}
+
+<section class="container auth-shell">
+	<div class="auth-content">
+		<div class="auth-form-column">
+			<div class="flex w-full flex-col">
+				<h1 class="text-balance font-serif text-3xl font-semibold leading-tight lg:text-5xl">
+					{{ ce.type == 'login' ? 'Prihláste sa' : 'Registrácia' }}
+				</h1>
+
+				{% if ce.type == 'login' %}
+					<form action="/profile/" class="mt-8 flex flex-col gap-4">
+						<float-field id="login-email" label="E-mail" name="email" field-type="email" autocomplete="email" placeholder="Zadajte váš e-mail"></float-field>
+						<float-field id="login-password" label="Heslo" name="password" field-type="password" autocomplete="current-password" placeholder="Zadajte heslo"></float-field>
+						<a href="/" class="self-end text-sm text-purple underline">Zabudli ste heslo?</a>
+						<button type="submit" class="btn-purple w-full justify-center">Prihlásiť sa</button>
+						<p class="text-center">
+							Alebo sa prihláste cez:
+						</p>
+						<div class="grid grid-cols-2 gap-4">
+							<button type="button" class="btn-outline-neutral justify-center">{{ sprite('apple', 'text-2xl!') }} Apple</button>
+							<button type="button" class="btn-outline-neutral justify-center">{{ sprite('google', 'text-2xl!') }} Google</button>
+						</div>
+						<p class="text-center">
+							Nemáte účet? <a href="/registration/" class="font-medium text-purple underline">Registrujte sa.</a>
+						</p>
+					</form>
+				{% else %}
+					<div class="mt-10 lg:mt-12">
+						{% include '_steps.twig' with {
+							activeStep: ce.step|default(1)
+						} only %}
+					</div>
+
+					{% if (ce.step|default(1)) == 1 %}
+						<form action="/registration/company/" class="mt-10 flex flex-col gap-4">
+							<float-field id="registration-email" label="E-mail" name="email" field-type="email" autocomplete="email" placeholder="Zadajte váš e-mail"></float-field>
+							<div class="grid grid-cols-2 gap-4">
+								<float-field id="registration-first-name" label="Meno*" name="first_name" autocomplete="given-name" placeholder="Vaše meno"></float-field>
+								<float-field id="registration-last-name" label="Priezvisko*" name="last_name" autocomplete="family-name" placeholder="Vaše priezvisko"></float-field>
+							</div>
+							<float-field id="registration-phone" label="Tel. č." name="phone" field-type="tel" autocomplete="tel" placeholder="+421 900 000 000"></float-field>
+							<float-field id="registration-password" label="Heslo" name="password" field-type="password" autocomplete="new-password" placeholder="Zadajte heslo"></float-field>
+							<float-field id="registration-password-confirmation" label="Zopakujte heslo" name="password_confirmation" field-type="password" autocomplete="new-password" placeholder="Zadajte heslo"></float-field>
+							<button type="submit" class="btn-purple w-full justify-center">Pokračovať</button>
+							<p class="text-center">
+								Máte účet? <a href="/login/" class="font-medium text-purple underline">Prihláste sa.</a>
+							</p>
+						</form>
+					{% else %}
+						<form action="/profile/" class="mt-10 flex flex-col gap-4">
+							<label class="form-check max-sm:hidden">
+								<input class="form-check-input" type="checkbox" name="not_company" />
+								<span>Nie som firma</span>
+							</label>
+							<div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+								<float-field id="company-name" label="Názov firmy *" name="company" placeholder="Zadajte názov" class="max-sm:hidden"></float-field>
+								<float-field id="company-vat-id" label="IČ DPH" name="vat_id" placeholder="Zadajte IČ DPH"></float-field>
+								<float-field id="company-id" label="IČO*" name="company_id" placeholder="Zadajte IČO"></float-field>
+								<float-field id="company-tax-id" label="DIČ*" name="tax_id" placeholder="Zadajte DIČ"></float-field>
+							</div>
+							<float-field id="company-billing-name" label="Meno a priezvisko / (názov firmy) *" name="billing_name" placeholder="Zadajte názov"></float-field>
+							<float-field id="company-street" label="Ulica a číslo *" name="street" autocomplete="street-address" placeholder="Zadajte ulicu"></float-field>
+							<div class="grid grid-cols-1 gap-4 sm:grid-cols-[minmax(0,1fr)_9.25rem]">
+								<float-field id="company-city" label="Mesto *" name="city" autocomplete="address-level2" placeholder="Názov mesta" class="max-sm:order-2"></float-field>
+								<float-field id="company-postal-code" label="PSČ*" name="postal_code" autocomplete="postal-code" placeholder="000 00" class="max-sm:order-1"></float-field>
+							</div>
+							<float-field id="company-country" label="Krajina" name="country" field-type="select" model-value="SK" class="max-sm:-order-1">
+								<option value="SK">Slovensko</option>
+							</float-field>
+							<button type="submit" class="btn-purple w-full justify-center">Registrovať</button>
+							<p class="text-center">
+								Máte účet? <a href="/login/" class="font-medium text-purple underline">Prihláste sa.</a>
+							</p>
+						</form>
+					{% endif %}
+				{% endif %}
+			</div>
+		</div>
+
+		{% include '_promo.twig' with {
+			promo: ce.promo
+		} only %}
+	</div>
+</section>

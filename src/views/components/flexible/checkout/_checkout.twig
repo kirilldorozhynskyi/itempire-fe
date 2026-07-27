@@ -1,0 +1,66 @@
+{#
+ # File: /src/views/components/flexible/checkout/_checkout.twig
+ # Project: itempire-fe
+ #}
+
+<section class="py-12 lg:py-20">
+	<div class="container flex flex-col gap-12">
+		{% include '../../checkout/_steps.twig' with { current: 2 } only %}
+
+		<h1 class="font-serif text-4xl font-semibold leading-tight">Adresa a fakturácia</h1>
+
+		<div class="grid grid-cols-1 items-start gap-8 xl:grid-cols-[minmax(0,1fr)_minmax(20rem,1fr)]">
+			<div class="flex flex-col gap-6">
+				<form action="/shipping/" class="flex flex-col gap-5 border border-neutral-300 p-6">
+					<h2 class="font-serif text-2xl font-semibold">Prihláste sa</h2>
+					<label class="profile-field"><span>E-mail</span><input type="email" placeholder="Zadajte váš e-mail" /></label>
+					<label class="profile-field"><span>Heslo</span><input type="password" placeholder="Zadajte heslo" /></label>
+					<a href="/" class="self-end text-sm text-purple underline">Zabudli ste heslo?</a>
+					<button type="submit" class="btn-purple w-full justify-center">Prihlásiť sa</button>
+					<p class="text-center">Alebo sa prihláste cez:</p>
+					<div class="grid grid-cols-2 gap-4">
+						<button type="button" class="btn-outline-neutral">{{ sprite('apple') }} Apple</button>
+						<button type="button" class="btn-outline-neutral">{{ sprite('google') }} Google</button>
+					</div>
+				</form>
+
+				<form action="/shipping/" class="flex flex-col gap-5 border border-neutral-300 p-6">
+					<h2 class="font-serif text-2xl font-semibold">Nemáte u nás účet?</h2>
+					<h3 class="font-serif text-lg font-semibold">Vaše údaje</h3>
+					<label class="profile-field"><span>E-mail</span><input type="email" placeholder="Zadajte váš e-mail" /></label>
+					<div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+						<label class="profile-field"><span>Meno*</span><input placeholder="Vaše meno" /></label>
+						<label class="profile-field"><span>Priezvisko*</span><input placeholder="Vaše priezvisko" /></label>
+					</div>
+					<label class="profile-field"><span>Tel. č.</span><input type="tel" placeholder="+421 900 000 000" /></label>
+
+					<h3 class="font-serif text-lg font-semibold">Fakturačná adresa</h3>
+					<label class="form-check"><input class="form-check-input" type="checkbox" checked /><span>Som firma / živnostník</span></label>
+					<label class="form-check"><input class="form-check-input" type="checkbox" /><span>Dodacia adresa je iná ako fakturačná</span></label>
+					<div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+						<label class="profile-field"><span>Názov firmy *</span><input placeholder="Zadajte názov" /></label>
+						<label class="profile-field"><span>IČ DPH</span><input placeholder="Zadajte IČ DPH" /></label>
+						<label class="profile-field"><span>IČO*</span><input placeholder="Zadajte IČO" /></label>
+						<label class="profile-field"><span>DIČ*</span><input placeholder="Zadajte DIČ" /></label>
+						<label class="profile-field sm:col-span-2"><span>Ulica a číslo *</span><input placeholder="Zadajte ulicu" /></label>
+						<label class="profile-field"><span>Mesto *</span><input placeholder="Názov mesta" /></label>
+						<label class="profile-field"><span>PSČ*</span><input placeholder="000 00" /></label>
+					</div>
+					<label class="profile-field"><span>Krajina</span><select><option>Slovensko</option></select></label>
+					<label class="profile-field"><span>Poznámka k nákupu</span><textarea class="min-h-28 resize-none bg-transparent text-subtile outline-none" placeholder="Vaša správa"></textarea></label>
+					<button type="submit" class="btn-purple w-full justify-center xl:hidden">Pokračovať na dopravu a platbu</button>
+				</form>
+			</div>
+
+			{% include '../../checkout/_summary.twig' with {
+				title: 'Súhrn objednávky',
+				showProduct: true,
+				delivery: true,
+				checks: true,
+				total: '18 829,23 €',
+				nextUrl: '/shipping/',
+				button: 'Objednať s povinnosťou platby'
+			} only %}
+		</div>
+	</div>
+</section>

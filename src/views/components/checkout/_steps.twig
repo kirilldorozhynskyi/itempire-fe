@@ -1,0 +1,29 @@
+{#
+ # File: /src/views/components/checkout/_steps.twig
+ # Project: itempire-fe
+ #}
+
+{% set steps = [
+	{ title: 'Košík', url: '/cart/' },
+	{ title: 'Adresa a fakturácia', url: '/checkout/' },
+	{ title: 'Doprava a platba', url: '/shipping/' }
+] %}
+
+<nav aria-label="Priebeh objednávky" class="overflow-x-auto">
+	<ol class="grid min-w-180 grid-cols-3 gap-8">
+		{% for item in steps %}
+			<li class="{{ loop.index == current ? 'border-purple text-purple' : 'border-transparent' }} border-b pb-4">
+				<a href="{{ item.url }}" class="flex items-center gap-4 font-medium">
+					<span class="{{ loop.index <= current ? 'bg-purple text-white' : 'bg-neutral-100' }} flex size-10 shrink-0 items-center justify-center">
+						{% if loop.index < current %}
+							{{ sprite('check') }}
+						{% else %}
+							{{ loop.index }}
+						{% endif %}
+					</span>
+					{{ item.title }}
+				</a>
+			</li>
+		{% endfor %}
+	</ol>
+</nav>

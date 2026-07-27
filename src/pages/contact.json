@@ -1,0 +1,48 @@
+{
+	"template": "views/templates/page.twig",
+	"title": "Kontakt",
+	"body_class": "contact-page",
+	"flexible": [
+		{
+			"name": "contact",
+			"title": "Kontakt",
+			"text": "Máte otázku, technický problém alebo plánujete zmenu v IT infraštruktúre?",
+			"quickContact": {
+				"title": "Rýchly kontakt",
+				"text": "Napíšte alebo zavolajte — odpovieme v pracovných dňoch spravidla do niekoľkých hodín.",
+				"items": [
+					{ "icon": "mail", "title": "info@itempire.sk", "url": "mailto:info@itempire.sk" },
+					{ "icon": "phone", "title": "+421 905 41 41 41", "url": "tel:+421905414141" },
+					{ "icon": "map-pin", "title": "Štefánikova trieda 81, 949 01 Nitra", "url": "#map" }
+				]
+			},
+			"cards": [
+				{
+					"title": "Fakturačné údaje",
+					"lines": "<p>ITempire s.r.o.<br />Štefánikova trieda 81, <br />949 01 Nitra</p><p>IČO: 50235945<br />DIČ: 2120361767<br />IČ DPH: SK2120361767</p>"
+				},
+				{
+					"title": "Bankové spojenie",
+					"lines": "<p>Banka: <br />VÚB BANKA, a.s.<br />IBAN: <br />SK91 0200 0000 0033 0699 8433<br />SWIFT: <br />SUBASKBX</p>"
+				}
+			],
+			"form": {
+				"title": "Máte konkrétnu požiadavku?",
+				"text": "Vyplňte formulár, ozveme sa s návrhom riešenia alebo orientačnou cenou.",
+				"serviceOptions": [
+					{ "value": "support", "title": "Vyberte službu" },
+					{ "value": "infrastructure", "title": "IT infraštruktúra" },
+					{ "value": "security", "title": "Bezpečnosť" }
+				],
+				"submit": "Odoslať správu"
+			}
+		},
+		{
+			"name": "map",
+			"id": "map",
+			"apiKey": "",
+			"center": { "lat": 48.3077, "lng": 18.0864 },
+			"zoom": 14
+		}
+	]
+}

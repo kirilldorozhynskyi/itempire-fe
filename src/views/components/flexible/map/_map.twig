@@ -1,0 +1,26 @@
+{#
+ # File: /src/views/components/flexible/map/_map.twig
+ # Project: itempire-fe
+ #}
+
+<section id="{{ ce.id }}" class="h-112 sm:h-144">
+	<div class="size-full">
+		<google-map class="size-full overflow-hidden" api-key="" :center="{ lat: 48.300638530692545, lng: 18.08239208474751 }" :zoom="15">
+			<google-marker :options="{ position: { lat: 48.300638530692545, lng: 18.08239208474751 }, anchorPoint: 'BOTTOM' }">
+				<svg width="84" height="74" viewBox="0 0 84 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<g clip-path="url(#clip0_448_7904)">
+						<path d="M83.8749 -0.0991211V74.1056H0.0585938V50.9129H9.35417V23.087H0.0585938V-0.0991211H83.8749Z" fill="#5B2B62" />
+						<path d="M60.5981 32.3674V41.6406H32.6622V50.9137H23.3457V23.0878H32.6622V32.3674H60.5981Z" fill="white" />
+						<path d="M69.9097 13.8115H32.6621V23.0867H69.9097V13.8115Z" fill="white" />
+						<path d="M69.9116 50.9143H32.6641V60.1896H69.9116V50.9143Z" fill="white" />
+					</g>
+					<defs>
+						<clipPath id="clip0_448_7904">
+							<rect width="84" height="74" fill="white" />
+						</clipPath>
+					</defs>
+				</svg>
+			</google-marker>
+		</google-map>
+	</div>
+</section>

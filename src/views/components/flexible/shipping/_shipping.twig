@@ -1,0 +1,75 @@
+{#
+ # File: /src/views/components/flexible/shipping/_shipping.twig
+ # Project: itempire-fe
+ #}
+
+<section class="py-12 lg:py-20">
+	<div class="container flex flex-col gap-12">
+		{% include '../../checkout/_steps.twig' with { current: 3 } only %}
+
+		<h1 class="font-serif text-4xl font-semibold leading-tight">Doprava a platba</h1>
+
+		<div class="grid grid-cols-1 items-start gap-8 xl:grid-cols-[minmax(0,2fr)_minmax(20rem,1fr)]">
+			<form class="flex flex-col gap-6">
+				<fieldset class="border border-neutral-300 p-6">
+					<legend class="px-1 font-serif text-2xl font-semibold">Zvoľte dopravu</legend>
+					<label class="grid cursor-pointer grid-cols-[auto_minmax(0,1fr)_auto] gap-4 border-b border-neutral-300 py-5">
+						<input class="mt-1 size-5 accent-purple" type="radio" name="delivery" checked />
+						<span><strong>DPD: doručenie na adresu</strong><small class="mt-1 block text-subtile">Doručenie na adresu kuriérom DPD.</small></span>
+						<span class="text-end text-purple">Zadarmo<img src="/assets/images/elements/dpd.png" alt="DPD" class="ms-auto mt-2 h-7 w-auto" /></span>
+					</label>
+					<label class="grid cursor-pointer grid-cols-[auto_minmax(0,1fr)_auto] gap-4 py-5">
+						<input class="mt-1 size-5 accent-purple" type="radio" name="delivery" />
+						<span><strong>DPD: doručenie na výdajné miesto</strong><small class="mt-1 block text-subtile">Vyzdvihnutie vo výdajnom mieste DPD.</small></span>
+						<span class="text-end text-purple">Zadarmo<img src="/assets/images/elements/dpd.png" alt="DPD" class="ms-auto mt-2 h-7 w-auto" /></span>
+					</label>
+				</fieldset>
+
+				<fieldset class="border border-neutral-300 p-6">
+					<legend class="px-1 font-serif text-2xl font-semibold">Zvoľte spôsob platby</legend>
+					<label class="checkout-option">
+						<input class="size-5 accent-purple" type="radio" name="payment" checked />
+						<span><strong>Platba kartou online</strong><small>Platba kartou VISA a MasterCard.</small></span>
+						<span>Zadarmo<img src="/assets/images/elements/cards.svg" alt="Platobné karty" /></span>
+					</label>
+					<label class="checkout-option">
+						<input class="size-5 accent-purple" type="radio" name="payment" />
+						<span><strong>Apple Pay</strong><small>Zaplaťte Apple zariadením s Wallet.</small></span>
+						<span>Zadarmo<img src="/assets/images/elements/ApplePay.svg" alt="Apple Pay" /></span>
+					</label>
+					<label class="checkout-option">
+						<input class="size-5 accent-purple" type="radio" name="payment" />
+						<span><strong>Google Pay</strong><small>Platba Android zariadením s kartou.</small></span>
+						<span>Zadarmo<img src="/assets/images/elements/GooglePay.svg" alt="Google Pay" /></span>
+					</label>
+					<label class="checkout-option">
+						<input class="size-5 accent-purple" type="radio" name="payment" />
+						<span><strong>Faktúra so splatnosťou</strong><small>Splatnosť faktúry je 14 dní.</small></span>
+						<span>Zadarmo</span>
+					</label>
+					<label class="checkout-option border-0">
+						<input class="size-5 accent-purple" type="radio" name="payment" />
+						<span><strong>Bankový prevod</strong><small>Splatnosť faktúry je 14 dní.</small></span>
+						<span>Zadarmo{{ sprite('transfer', 'ms-auto mt-2 text-2xl') }}</span>
+					</label>
+				</fieldset>
+			</form>
+
+			<div class="flex flex-col gap-8">
+				{% include '../../checkout/_summary.twig' with {
+					title: 'Sumár košíka',
+					delivery: true,
+					total: '18 829,23 €',
+					nextUrl: '/checkout/',
+					button: 'Pokračovať na adresu'
+				} only %}
+
+				<div class="text-center">
+					<h2 class="font-serif text-2xl font-semibold">Vytvorte si účet</h2>
+					<p class="mb-6">Nemusíte vypĺňať fakturačné<br />a dopravné údaje</p>
+					<a href="/profile/" class="btn-outline-neutral w-full justify-center">Registrácia</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

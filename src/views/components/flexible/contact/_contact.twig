@@ -1,0 +1,102 @@
+{#
+ # File: /src/views/components/flexible/contact/_contact.twig
+ # Project: itempire-fe
+ # Version: 1.0.0
+ # Created Date: Monday, July 27th 2026, 11:53:58
+ # Author: Kirill Dorozhynskyi - kyrylo.dorozhynskyi@justdev.org
+ # -----
+ # Last Modified: Monday, July 27th 2026 12:20:20
+ # Modified By: Kirill Dorozhynskyi
+ # -----
+ # Copyright (c) 2026 justDev
+ #}
+
+<section>
+	<div class="container py-16 text-center lg:py-20">
+		<h1 class="text-balance font-serif text-5xl font-semibold leading-none lg:text-6xl">{{ ce.title }}</h1>
+		<p class="mx-auto mt-6 max-w-96 text-pretty text-subtile">
+			{{ ce.text }}
+		</p>
+	</div>
+
+	<div class="decor bg-neutral-100 py-20 lg:py-36">
+		<div class="container">
+			<div class="grid grid-cols-1 items-stretch gap-16 lg:grid-cols-2">
+				<div class="grid content-between gap-12 lg:pt-12">
+					<div>
+						<h2 class="font-serif text-2xl font-semibold leading-tight">{{ ce.quickContact.title }}</h2>
+						<p class="mt-4 max-w-88 text-sm text-subtile">
+							{{ ce.quickContact.text }}
+						</p>
+
+						<div class="mt-8 grid max-w-92 gap-2">
+							{% for item in ce.quickContact.items %}
+								<a href="{{ item.url }}" class="btn-outline-neutral w-full justify-start gap-3 bg-transparent">
+									{{ sprite(item.icon) }}
+									{{ item.title }}
+								</a>
+							{% endfor %}
+						</div>
+					</div>
+
+					<div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+						{% for card in ce.cards %}
+							<article class="bg-white p-6">
+								<h3 class="font-serif font-semibold">{{ card.title }}</h3>
+								<div class="mt-4 text-sm text-subtile flex flex-col gap-2">
+									{{ card.lines }}
+								</div>
+							</article>
+						{% endfor %}
+					</div>
+				</div>
+
+				<form action="" class="grid content-start gap-4 bg-white p-6 lg:p-12">
+					<div class="mb-4">
+						<h2 class="font-serif text-2xl font-semibold leading-tight">{{ ce.form.title }}</h2>
+						<p class="mt-4 max-w-96 text-sm text-subtile">
+							{{ ce.form.text }}
+						</p>
+					</div>
+
+					<float-field id="contact-name" label="Meno*" name="name" placeholder="Vaše meno"></float-field>
+					<div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+						<float-field
+							id="contact-email"
+							label="E-mail*"
+							name="email"
+							field-type="email"
+							autocomplete="email"
+							placeholder="Zadajte váš e-mail"
+						></float-field>
+						<float-field
+							id="contact-phone"
+							label="Tel. č.*"
+							name="phone"
+							field-type="tel"
+							autocomplete="tel"
+							placeholder="+421 900 000 000"
+						></float-field>
+					</div>
+					<float-field id="contact-service" label="Typ služby" name="service" field-type="select" model-value="support">
+						{% for option in ce.form.serviceOptions %}
+							<option value="{{ option.value }}">
+								{{ option.title }}
+							</option>
+						{% endfor %}
+					</float-field>
+					<float-field id="contact-message" label="Správa" name="message" field-type="textarea" placeholder="Vaša správa"></float-field>
+
+					<label class="form-check mt-2 items-start">
+						<input class="form-check-input" type="checkbox" name="consent" />
+						<span class="text-sm text-subtile">
+							Súhlasím so spracovaním <a href="/gdpr/" class="text-purple underline">osobných údajov</a> na marketingové účely.
+						</span>
+					</label>
+
+					<button type="submit" class="btn-purple mt-2 w-full justify-center">{{ ce.form.submit }}</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>

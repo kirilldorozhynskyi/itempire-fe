@@ -5,13 +5,18 @@
  * Created Date: Monday, July 20th 2026, 13:50:33
  * Author: Kirill Dorozhynskyi - kyrylo.dorozhynskyi@justdev.org
  * -----
- * Last Modified: Wednesday, July 22nd 2026 17:27:16
+ * Last Modified: Monday, July 27th 2026 12:16:25
  * Modified By: Kirill Dorozhynskyi
  * -----
  * Copyright (c) 2026 justDev
  */
 
 @layer primevue {
+	.p-dialog-mask,
+	.p-drawer-mask {
+		background: color-mix(in srgb, var(--color-primary) 75%, transparent) !important;
+	}
+
 	.p-tabpanels {
 		--p-tabs-tabpanel-background: transparent;
 		--p-tabs-tabpanel-color: var(--color-primary);
@@ -49,9 +54,56 @@
 
 	.p-floatlabel {
 		--p-floatlabel-focus-color: var(--color-primary);
-		--p-floatlabel-active-color: var(--color-subtile);
+		--p-floatlabel-color: var(--color-primary);
+		--p-floatlabel-active-color: var(--color-primary);
 		--p-floatlabel-active-font-size: 0.875rem;
-		--p-floatlabel-active-font-weight: 500;
+		--p-floatlabel-active-font-weight: 400;
+		--p-floatlabel-in-active-top: 0.625rem;
+		--p-inputtext-padding-x: 1rem;
+		--p-floatlabel-position-x: var(--p-inputtext-padding-x);
+		--p-select-padding-x: var(--p-inputtext-padding-x);
+		--p-textarea-padding-x: var(--p-inputtext-padding-x);
+	}
+
+	.float-field {
+		--p-floatlabel-in-input-padding-top: 1.625rem;
+		--p-floatlabel-in-input-padding-bottom: 0.5rem;
+
+		.p-inputtext,
+		.p-select,
+		.p-textarea {
+			@apply min-h-15 w-full bg-white px-4 shadow-none;
+			--p-inputtext-border-color: var(--color-neutral-300);
+			--p-inputtext-placeholder-color: var(--color-subtile);
+			--p-inputtext-focus-border-color: var(--color-purple);
+			--p-inputtext-hover-border-color: var(--color-purple);
+			--p-textarea-border-color: var(--color-neutral-300);
+			--p-textarea-placeholder-color: var(--color-subtile);
+			--p-textarea-focus-border-color: var(--color-purple);
+			--p-textarea-hover-border-color: var(--color-purple);
+			--p-select-border-color: var(--color-neutral-300);
+			--p-select-color: var(--color-primary);
+			--p-select-focus-border-color: var(--color-purple);
+			--p-select-hover-border-color: var(--color-purple);
+			--p-select-shadow: none;
+			--p-select-border-radius: 0.25rem;
+		}
+
+		.p-select {
+			@apply px-0;
+		}
+
+		label {
+			@apply text-subtile left-4;
+		}
+
+		.p-select-label {
+			@apply flex items-end px-4 pt-6 pb-2 tracking-tight;
+		}
+
+		.p-textarea {
+			@apply h-26 min-h-0 max-h-26 pt-7;
+		}
 	}
 
 	.p-inputtext {
@@ -103,6 +155,29 @@
 	.p-select-open {
 		.p-select-dropdown {
 			@apply rotate-180;
+		}
+	}
+
+	.float-field-select-panel {
+		--p-select-overlay-background: var(--color-white);
+		--p-select-overlay-border-color: var(--color-neutral-300);
+		--p-select-overlay-border-radius: 0.25rem;
+		--p-select-overlay-shadow: 0 0.5rem 1.5rem rgb(0 0 0 / 10%);
+		--p-select-list-padding: 0.25rem;
+		--p-select-list-gap: 0.125rem;
+		--p-select-option-color: var(--color-primary);
+		--p-select-option-focus-color: var(--color-purple);
+		--p-select-option-focus-background: var(--color-neutral-100);
+		--p-select-option-selected-color: var(--color-white);
+		--p-select-option-selected-background: var(--color-purple);
+		--p-select-option-selected-focus-color: var(--color-white);
+		--p-select-option-selected-focus-background: var(--color-purple);
+		--p-select-option-border-radius: 0.25rem;
+		--p-select-option-padding: 0.75rem 1rem;
+		--p-select-option-font-weight: 400;
+
+		.p-select-option {
+			@apply transit cursor-pointer tracking-tight;
 		}
 	}
 }

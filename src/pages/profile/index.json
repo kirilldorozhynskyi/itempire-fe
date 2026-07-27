@@ -1,0 +1,96 @@
+{
+	"template": "views/templates/page.twig",
+	"body_class": "page",
+	"flexible": [
+		{
+			"name": "profile",
+			"user": {
+				"name": "Martin Chynoranský",
+				"email": "chynoransky@gmail.com"
+			},
+			"addresses": [
+				{
+					"name": "Martin Chynoranský",
+					"street": "Priemyselná 14",
+					"city": "949 01 Nitra",
+					"country": "Slovenská republika",
+					"phone": "+421 37 640 2200",
+					"email": "chynoransky@gmail.com"
+				},
+				{
+					"name": "Peter Vlček",
+					"street": "Logistická 8",
+					"city": "821 04 Bratislava, Ružinov",
+					"country": "Slovenská republika",
+					"phone": "+421 905 228 441",
+					"email": "p.vlcek@novatech-log.sk"
+				},
+				{
+					"name": "Katarína Sirotová",
+					"street": "Moldavská cesta 32",
+					"city": "040 11 Košice, Juh",
+					"country": "Slovenská republika",
+					"phone": "+421 911 554 782",
+					"email": "k.sirotova@novatech-log.sk"
+				}
+			],
+			"moreCount": 74,
+			"orders": [
+				{
+					"date": "1. 5. 2026",
+					"number": "594522501",
+					"total": "93 799,00 €",
+					"status": "Vybavená"
+				},
+				{
+					"date": "1. 5. 2026",
+					"number": "594522501",
+					"total": "93 799,00 €",
+					"status": "Vybavená",
+					"open": true,
+					"items": [
+						{
+							"title": "Hyper HyperDrive Next 11 Port USB-C Hub - Midnight Blue",
+							"quantity": 3,
+							"price": "183,00 €"
+						},
+						{
+							"title": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
+							"quantity": 26,
+							"price": "16 183,00 €"
+						},
+						{
+							"title": "Hyper HyperDrive Next 11 Port USB-C Hub - Midnight Blue",
+							"quantity": 3,
+							"price": "183,00 €"
+						}
+					]
+				},
+				{
+					"date": "1. 5. 2026",
+					"number": "594522501",
+					"total": "93 799,00 €",
+					"status": "Vybavená"
+				},
+				{
+					"date": "1. 5. 2026",
+					"number": "594522501",
+					"total": "93 799,00 €",
+					"status": "Vybavená"
+				},
+				{
+					"date": "1. 5. 2026",
+					"number": "594522501",
+					"total": "93 799,00 €",
+					"status": "Vybavená"
+				},
+				{
+					"date": "1. 5. 2026",
+					"number": "594522501",
+					"total": "93 799,00 €",
+					"status": "Vybavená"
+				}
+			]
+		}
+	]
+}

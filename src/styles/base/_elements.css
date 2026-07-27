@@ -5,7 +5,7 @@
  * Created Date: Friday, July 10th 2026, 14:04:34
  * Author: Kirill Dorozhynskyi - kyrylo.dorozhynskyi@justdev.org
  * -----
- * Last Modified: Thursday, July 23rd 2026 10:15:10
+ * Last Modified: Monday, July 27th 2026 11:22:45
  * Modified By: Kirill Dorozhynskyi
  * -----
  * Copyright (c) 2026 justDev
@@ -43,6 +43,63 @@
 @utility decor-r {
 	@apply relative;
 	clip-path: polygon(0 0, 60% 0, 60% 3.5rem, 100% 3.5rem, 100% 100%, 0 100%);
+}
+
+@utility profile-field {
+	@apply focus-within:border-purple flex min-w-0 flex-col rounded-sm border border-neutral-300 px-4 py-2 transition-colors;
+
+	span {
+		@apply text-sm font-medium;
+	}
+
+	input,
+	select {
+		@apply text-subtile min-w-0 bg-transparent outline-none;
+	}
+
+	.drop-down {
+		--p-select-color: var(--color-subtile);
+	}
+}
+
+@utility checkout-option {
+	@apply grid cursor-pointer grid-cols-[auto_minmax(0,1fr)_auto] items-start gap-4 border-b border-neutral-300 py-5;
+
+	& > span:nth-child(2) {
+		@apply flex flex-col;
+	}
+
+	small {
+		@apply text-subtile mt-1;
+	}
+
+	& > span:last-child {
+		@apply text-purple flex flex-col items-end;
+	}
+
+	img {
+		@apply mt-2 h-7 w-auto max-w-18;
+	}
+}
+
+@utility auth-shell {
+	@apply min-h-[calc(100svh-5.5rem)] py-6 lg:py-12;
+}
+
+@utility auth-content {
+	@apply grid min-h-[calc(100svh-8.5rem)] min-w-0 grid-cols-1 items-center gap-12 lg:min-h-[calc(100svh-11.5rem)] lg:grid-cols-2;
+}
+
+@utility auth-form-column {
+	@apply relative flex h-full min-w-0 flex-col justify-center gap-12;
+}
+
+@utility auth-promo {
+	@apply bg-coffee-300 relative flex h-full min-h-136 min-w-0 flex-col items-center overflow-hidden px-6 pt-16 pb-8 lg:min-h-0 lg:px-12 lg:pt-20;
+}
+
+@utility auth-promo-notch {
+	@apply absolute top-0 left-1/2 z-1 h-8 w-34 -translate-x-1/2 bg-white lg:h-12 lg:w-52;
 }
 
 /*

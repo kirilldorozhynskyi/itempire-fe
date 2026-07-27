@@ -1,0 +1,30 @@
+<aside class="auth-promo">
+	<img
+		src="/assets/images/bg-account.jpg"
+		alt=""
+		class="absolute inset-0 size-full object-cover object-center"
+	/>
+
+	<div class="auth-promo-notch" aria-hidden="true"></div>
+
+	<h2 class="relative z-1 max-w-96 text-balance text-center font-serif text-2xl font-semibold leading-tight lg:text-4xl">
+		Spoľahlivé IT riešenia<br />pre vašu firmu
+	</h2>
+
+	<div class="relative z-1 mt-auto w-full">
+		<p class="text-center text-sm lg:text-lg">{{ promo.text }}</p>
+		<div class="-mx-6 mt-1 flex w-[calc(100%+3rem)] items-center overflow-hidden lg:-mx-12 lg:w-[calc(100%+6rem)]">
+			<benefits :count="{{ promo.logos|length }}">
+				{% for logo in promo.logos %}
+					<div class="rfm-child flex aspect-172/112 w-34 items-center lg:w-43">
+						<span
+							class="size-full bg-primary"
+							style="-webkit-mask: url('{{ logo }}') center / contain no-repeat; mask: url('{{ logo }}') center / contain no-repeat;"
+							aria-hidden="true"
+						></span>
+					</div>
+				{% endfor %}
+			</benefits>
+		</div>
+	</div>
+</aside>

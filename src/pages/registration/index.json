@@ -1,0 +1,25 @@
+{
+	"template": "views/templates/page.twig",
+	"title": "Registrácia",
+	"body_class": "auth-page",
+	"hide_footer": true,
+	"flexible": [
+		{
+			"name": "auth",
+			"type": "registration",
+			"step": 1,
+			"promo": {
+				"text": "Dôverujú nám firmy naprieč odvetviami",
+				"logos": [
+					"/assets/images/logos/coinbase.svg",
+					"/assets/images/logos/doocusign.svg",
+					"/assets/images/logos/drips.svg",
+					"/assets/images/logos/hopin.svg",
+					"/assets/images/logos/sisyphus.svg",
+					"/assets/images/logos/square.svg",
+					"/assets/images/logos/zapier.svg"
+				]
+			}
+		}
+	]
+}

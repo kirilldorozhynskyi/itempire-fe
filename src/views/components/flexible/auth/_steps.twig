@@ -1,0 +1,23 @@
+{% set activeStep = activeStep|default(1) %}
+
+<nav class="grid grid-cols-[minmax(0,1fr)_2.5rem] gap-6 sm:grid-cols-2" aria-label="Kroky registrácie">
+	<a
+		href="/registration/"
+		class="{{ activeStep == 1 ? 'border-purple text-purple' : 'border-transparent' }} flex items-center gap-4 border-b-2 pb-6"
+		aria-current="{{ activeStep == 1 ? 'step' : 'false' }}"
+	>
+		<span class="flex size-10 shrink-0 items-center justify-center bg-purple font-semibold text-white">
+			{% if activeStep == 2 %}{{ sprite('check') }}{% else %}1{% endif %}
+		</span>
+		<span class="{{ activeStep == 2 ? 'max-sm:hidden' : '' }} font-serif text-lg font-semibold">Údaje o účte</span>
+	</a>
+
+	<a
+		href="/registration/company/"
+		class="{{ activeStep == 2 ? 'border-purple text-purple' : 'border-transparent' }} flex items-center gap-4 border-b-2 pb-6"
+		aria-current="{{ activeStep == 2 ? 'step' : 'false' }}"
+	>
+		<span class="{{ activeStep == 2 ? 'bg-purple text-white' : 'bg-neutral-100' }} flex size-10 shrink-0 items-center justify-center font-semibold">2</span>
+		<span class="{{ activeStep == 1 ? 'max-sm:hidden' : '' }} font-serif text-lg font-semibold">Firemné údaje</span>
+	</a>
+</nav>

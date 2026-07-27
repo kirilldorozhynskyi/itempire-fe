@@ -46,7 +46,13 @@
 	<body class="{{ body_class }}">
 		<div id="app" class="flex flex-col min-h-screen">
 			{# Header #}
-			{% include '../components/page/header/_header.twig' %}
+			{% if not hide_header %}
+				{% include '../components/page/header/_header.twig' %}
+			{% elseif mobile_header %}
+				<div class="lg:hidden">
+					{% include '../components/page/header/_header.twig' %}
+				</div>
+			{% endif %}
 
 			{# Content #}
 			<main class="wrapper-content">
@@ -56,7 +62,9 @@
 			</main>
 
 			{# Footer #}
-			{% include '../components/page/footer/_footer.twig' %}
+			{% if not hide_footer %}
+				{% include '../components/page/footer/_footer.twig' %}
+			{% endif %}
 		</div>
 
 		<script type="module" src="/src/scripts/app.ts"></script>

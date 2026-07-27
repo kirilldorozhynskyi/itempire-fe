@@ -1,0 +1,9 @@
+{
+	"template": "views/templates/page.twig",
+	"body_class": "page",
+	"flexible": [
+		{
+			"name": "shipping"
+		}
+	]
+}

@@ -1,0 +1,105 @@
+{
+	"template": "views/templates/page.twig",
+	"body_class": "page",
+	"flexible": [
+		{
+			"name": "cart",
+			"products": [
+				{
+					"title": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
+					"price": "93 799,00 €"
+				},
+				{
+					"title": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
+					"price": "93 799,00 €"
+				},
+				{
+					"title": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
+					"price": "93 799,00 €"
+				}
+			]
+		},
+		{
+			"name": "related_products",
+			"title": "Príslušenstvo",
+			"products": [
+				{
+					"title": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
+					"url": "/products/detail",
+					"price": "881,05 €",
+					"tag": "Novinka",
+					"image": {
+						"pictureClass": "picture relative",
+						"image": {
+							"class": "size-full object-cover object-center",
+							"src": "products/product",
+							"src_2x": "products/product@2x",
+							"ext": "png",
+							"webp": false,
+							"alt": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
+							"width": 368,
+							"height": 304
+						}
+					}
+				},
+				{
+					"title": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
+					"url": "/products/detail",
+					"price": "881,05 €",
+					"tag": "Novinka",
+					"image": {
+						"pictureClass": "picture relative",
+						"image": {
+							"class": "size-full object-cover object-center",
+							"src": "products/f0bc8c757cf9ef3295dbba039dbb771562c5b0b8",
+							"src_2x": "products/f0bc8c757cf9ef3295dbba039dbb771562c5b0b8@2x",
+							"ext": "png",
+							"webp": false,
+							"alt": "Príslušenstvo",
+							"width": 368,
+							"height": 304
+						}
+					}
+				},
+				{
+					"title": "Canon i-SENSYS MF655Cdw",
+					"url": "/products/detail",
+					"price": "1 199 €",
+					"tag": "Novinka",
+					"image": {
+						"pictureClass": "picture relative",
+						"image": {
+							"class": "size-full object-cover object-center",
+							"src": "products/34677bd22b52074f11c98544dcd6c412decfe7b6",
+							"src_2x": "products/34677bd22b52074f11c98544dcd6c412decfe7b6@2x",
+							"ext": "png",
+							"webp": false,
+							"alt": "Canon i-SENSYS MF655Cdw",
+							"width": 368,
+							"height": 304
+						}
+					}
+				},
+				{
+					"title": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
+					"url": "/products/detail",
+					"price": "881,05 €",
+					"tag": "Novinka",
+					"image": {
+						"pictureClass": "picture relative",
+						"image": {
+							"class": "size-full object-cover object-center",
+							"src": "products/19deb46150037510ac8feda299dd637815dab13e",
+							"src_2x": "products/19deb46150037510ac8feda299dd637815dab13e@2x",
+							"ext": "png",
+							"webp": false,
+							"alt": "Príslušenstvo",
+							"width": 368,
+							"height": 304
+						}
+					}
+				}
+			]
+		}
+	]
+}

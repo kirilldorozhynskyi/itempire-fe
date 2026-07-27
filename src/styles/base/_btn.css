@@ -23,6 +23,10 @@
 	@apply btn hover:bg-purple/80 bg-purple border-purple hover:border-purple/10 text-white;
 }
 
+@utility btn-red {
+	@apply btn bg-error border-error text-white hover:opacity-80;
+}
+
 @utility btn-coffee {
 	@apply btn hover:bg-coffee-100 bg-coffee-300 border-coffee-300 hover:border-coffee-100 text-purple;
 }
