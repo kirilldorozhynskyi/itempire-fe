@@ -69,7 +69,7 @@
 						<div class="bg-coffee-300 py-1 px-2 tracking-tight uppercase font-medium text-sm">
 							{{ ce.tag }}
 						</div>
-						<h1 class="text-lg lg:text-2x font-serif leading-tight font-medium">{{ ce.title }}</h1>
+						<h1 class="font-serif text-lg leading-tight font-medium lg:text-2xl">{{ ce.title }}</h1>
 						<p class="text-subtile">
 							{{ ce.text }}
 						</p>
@@ -78,7 +78,9 @@
 					<div class="flex flex-col gap-8">
 						{% if ce.memoryOptions %}
 							<fieldset class="flex flex-col gap-4">
-								<legend class="mb-4 font-medium">Kapacita pamäte</legend>
+								<legend class="font-medium">
+									Kapacita pamäte
+								</legend>
 								<div class="flex flex-wrap gap-2">
 									{% for item in ce.memoryOptions %}
 										<div>
@@ -104,7 +106,9 @@
 
 						{% if ce.storageOptions %}
 							<fieldset class="flex flex-col gap-4">
-								<legend class="mb-4 font-medium">Kapacita disku</legend>
+								<legend class="font-medium">
+									Kapacita disku
+								</legend>
 								<div class="flex flex-wrap gap-2">
 									{% for item in ce.storageOptions %}
 										<div>
@@ -130,12 +134,17 @@
 
 						{% if ce.careOptions %}
 							<fieldset class="flex flex-col gap-4">
-								<legend class="mb-4 font-medium">Výnimočná starostlivosť</legend>
+								<legend class="font-medium">
+									Výnimočná starostlivosť
+								</legend>
 								<div class="flex flex-col gap-4">
 									{% for item in ce.careOptions %}
 										<div class="form-check flex items-center gap-3">
 											<input class="form-check-input" type="checkbox" name="care[]" value="{{ item.value }}" id="care-{{ loop.index }}" />
-											<label class="form-check-label flex min-w-0 flex-1 cursor-pointer items-center justify-between gap-4" for="care-{{ loop.index }}">
+											<label
+												class="form-check-label flex min-w-0 flex-1 cursor-pointer items-center justify-between gap-4"
+												for="care-{{ loop.index }}"
+											>
 												<span>{{ item.label }}</span>
 												<span class="shrink-0 text-primary">{{ item.price }}</span>
 											</label>

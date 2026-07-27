@@ -90,8 +90,94 @@
 			</div>
 		</div>
 
+		<filter-drawer>
+			<template #trigger="{ open }">
+				<button type="button" class="btn-outline-neutral w-full justify-center gap-3 lg:hidden" @click="open">
+					{{ sprite('adjustments', 'text-2xl!') }}
+					Filter (3)
+				</button>
+			</template>
+
+			<div class="mobile-product-filters filters flex flex-col gap-8">
+				<div class="relative w-full">
+					<div class="absolute top-1/2 left-4 flex -translate-y-1/2 items-center">
+						{{ sprite('search', 'text-2xl') }}
+					</div>
+					<input
+						class="transit flex w-full items-center gap-4 rounded-sm border border-neutral-300 py-4 ps-16 pe-4 font-medium text-primary hover:border-primary focus:border-primary focus:outline-none"
+						type="search"
+						placeholder="Vyhľadávanie..."
+					/>
+				</div>
+
+				<div class="flex flex-wrap gap-1">
+					<button class="btn-outline-neutral gap-1 px-2 py-1" type="button">
+						<span class="text-sm leading-snug">ASUS (32)</span>
+						{{ sprite('x') }}
+					</button>
+					<button class="btn-outline-neutral gap-1 px-2 py-1" type="button">
+						<span class="text-sm leading-snug">matný (70)</span>
+						{{ sprite('x') }}
+					</button>
+					<button class="btn-outline-neutral gap-1 px-2 py-1" type="button">
+						<span class="text-sm leading-snug">512 GB</span>
+						{{ sprite('x') }}
+					</button>
+				</div>
+
+				<accordion value="mobile-price" class="flex w-full flex-col gap-6">
+					<accordion-panel value="mobile-price">
+						<accordion-header>
+							Cena
+						</accordion-header>
+						<accordion-content>
+							<Range
+								:min="456.19"
+								:max="4349"
+								:current-min="456.19"
+								:current-max="4349"
+								id="mobile-price-range"
+								text-from="od"
+								text-to="do"
+							></Range>
+						</accordion-content>
+					</accordion-panel>
+					<accordion-panel value="mobile-developer">
+						<accordion-header>
+							Výrobca
+						</accordion-header>
+						<accordion-content>
+							<div class="flex flex-col gap-4">
+								{% for item in developer %}
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" value="{{ item.name }}" id="mobile-developer-{{ loop.index }}" />
+										<label class="form-check-label" for="mobile-developer-{{ loop.index }}">{{ item.name }} ({{ item.count }})</label>
+									</div>
+								{% endfor %}
+							</div>
+						</accordion-content>
+					</accordion-panel>
+					<accordion-panel value="mobile-product">
+						<accordion-header>
+							Typ produktu
+						</accordion-header>
+						<accordion-content>
+							<div class="flex flex-col gap-4">
+								{% for item in product %}
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" value="{{ item.name }}" id="mobile-product-{{ loop.index }}" />
+										<label class="form-check-label" for="mobile-product-{{ loop.index }}">{{ item.name }} ({{ item.count }})</label>
+									</div>
+								{% endfor %}
+							</div>
+						</accordion-content>
+					</accordion-panel>
+				</accordion>
+			</div>
+		</filter-drawer>
+
 		<div class="flex gap-4 pb-16">
-			<div class="w-75 uhd:w-100 shrink-0" v-jd-animate>
+			<div class="hidden w-75 shrink-0 lg:block uhd:w-100" v-jd-animate>
 				{# NOTE: <div class="sticky top-20 bg-white p-6 filters max-h-[80vh] overflow-y-auto"> Ak by sme chceli sticky #}
 				<div class="bg-white p-6 filters flex flex-col gap-8">
 					<div class="flex flex-col gap-4">

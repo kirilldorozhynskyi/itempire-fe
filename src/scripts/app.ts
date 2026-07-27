@@ -45,6 +45,7 @@ import Benefits from './components/Benefits.vue'
 import CustomScript from './components/CustomScript.vue'
 import CustomScriptSrc from './components/CustomScriptSrc.vue'
 import DropDown from './components/DropDown.vue'
+import FilterDrawer from './components/FilterDrawer.vue'
 import FloatField from './components/FloatField.vue'
 import GoogleMap from './components/GoogleMap.vue'
 import ProductGallery from './components/ProductGallery.vue'
@@ -98,6 +99,7 @@ export const rootComponent = defineComponent({
 		Range,
 		ShowMore,
 		DropDown,
+		FilterDrawer,
 		FloatField,
 		ProductGallery,
 		QuantityInput,

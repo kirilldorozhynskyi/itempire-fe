@@ -4,10 +4,12 @@
  #}
 
 <section class="py-12 lg:py-20">
-	<div class="container flex flex-col gap-12">
-		{% include '../../checkout/_steps.twig' with { current: 2 } only %}
+	<div class="container flex flex-col gap-8 lg:gap-12">
+		{% include '../../checkout/_steps.twig' with {
+			current: 2
+		} only %}
 
-		<h1 class="font-serif text-4xl font-semibold leading-tight">Adresa a fakturácia</h1>
+		<h1 class="font-serif text-2xl font-semibold leading-tight lg:text-4xl">Adresa a fakturácia</h1>
 
 		<div class="grid grid-cols-1 items-start gap-8 xl:grid-cols-[minmax(0,1fr)_minmax(20rem,1fr)]">
 			<div class="flex flex-col gap-6">
@@ -17,7 +19,9 @@
 					<label class="profile-field"><span>Heslo</span><input type="password" placeholder="Zadajte heslo" /></label>
 					<a href="/" class="self-end text-sm text-purple underline">Zabudli ste heslo?</a>
 					<button type="submit" class="btn-purple w-full justify-center">Prihlásiť sa</button>
-					<p class="text-center">Alebo sa prihláste cez:</p>
+					<p class="text-center">
+						Alebo sa prihláste cez:
+					</p>
 					<div class="grid grid-cols-2 gap-4">
 						<button type="button" class="btn-outline-neutral">{{ sprite('apple') }} Apple</button>
 						<button type="button" class="btn-outline-neutral">{{ sprite('google') }} Google</button>
@@ -46,8 +50,19 @@
 						<label class="profile-field"><span>Mesto *</span><input placeholder="Názov mesta" /></label>
 						<label class="profile-field"><span>PSČ*</span><input placeholder="000 00" /></label>
 					</div>
-					<label class="profile-field"><span>Krajina</span><select><option>Slovensko</option></select></label>
-					<label class="profile-field"><span>Poznámka k nákupu</span><textarea class="min-h-28 resize-none bg-transparent text-subtile outline-none" placeholder="Vaša správa"></textarea></label>
+					<label class="profile-field">
+						<span>Krajina</span><select>
+							<option>
+								Slovensko
+							</option>
+						</select>
+					</label>
+					<label class="profile-field">
+						<span>Poznámka k nákupu</span><textarea
+							class="min-h-28 resize-none bg-transparent text-subtile outline-none"
+							placeholder="Vaša správa"
+						></textarea>
+					</label>
 					<button type="submit" class="btn-purple w-full justify-center xl:hidden">Pokračovať na dopravu a platbu</button>
 				</form>
 			</div>

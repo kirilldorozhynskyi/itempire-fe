@@ -4,12 +4,12 @@
  #}
 
 <section class="py-12 lg:py-20">
-	<div class="container flex flex-col gap-12">
+	<div class="container flex flex-col gap-8 lg:gap-12">
 		{% include '../../checkout/_steps.twig' with {
 			current: 1
 		} only %}
 
-		<h1 class="font-serif text-4xl font-semibold leading-tight">Nákupný košík</h1>
+		<h1 class="font-serif text-2xl font-semibold leading-tight lg:text-4xl">Nákupný košík</h1>
 
 		<div class="grid grid-cols-1 items-start gap-8 xl:grid-cols-[minmax(0,2fr)_minmax(20rem,1fr)]">
 			<div class="border border-neutral-300 p-4 lg:p-8">

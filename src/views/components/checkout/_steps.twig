@@ -19,10 +19,10 @@
 ] %}
 
 <nav aria-label="Priebeh objednávky" class="overflow-x-auto">
-	<ol class="grid grid-cols-3 gap-3 md:min-w-180 md:gap-8">
+	<ol class="grid grid-cols-3 gap-3 sm:gap-8">
 		{% for item in steps %}
 			<li class="{{ loop.index == current ? 'border-purple text-purple' : 'border-transparent' }} border-b pb-4">
-				<a href="{{ item.url }}" class="flex flex-col items-start gap-2 text-sm font-medium sm:flex-row sm:items-center sm:gap-4 sm:text-base">
+				<a href="{{ item.url }}" class="flex items-center gap-3 text-sm font-medium sm:gap-4 sm:text-base">
 					<span class="{{ loop.index <= current ? 'bg-purple text-white' : 'bg-neutral-100' }} flex size-10 shrink-0 items-center justify-center">
 						{% if loop.index < current %}
 							{{ sprite('check') }}
@@ -30,7 +30,7 @@
 							{{ loop.index }}
 						{% endif %}
 					</span>
-					{{ item.title }}
+					<span class="{{ loop.index == current ? '' : 'max-sm:hidden' }} min-w-0 leading-tight">{{ item.title }}</span>
 				</a>
 			</li>
 		{% endfor %}

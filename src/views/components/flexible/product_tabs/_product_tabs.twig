@@ -8,38 +8,42 @@
  # Copyright (c) 2026 justDev
  #}
 
-<section class="py-20 overflow-hidden">
+<section class="overflow-hidden py-12 lg:py-20">
 	<div class="container">
 		<tabs value="0">
-			<tab-list>
-				<tab value="0">
-					Popis produktu
-				</tab>
-				<tab value="1">
-					Parametre
-				</tab>
-				<tab value="2">
-					Príslušenstvo
-				</tab>
-				<tab value="3">
-					Recenzie
-				</tab>
-			</tab-list>
+			<div class="overflow-x-auto">
+				<tab-list class="min-w-150">
+					<tab value="0">
+						Popis produktu
+					</tab>
+					<tab value="1">
+						Parametre
+					</tab>
+					<tab value="2">
+						Príslušenstvo
+					</tab>
+					<tab value="3">
+						Recenzie
+					</tab>
+				</tab-list>
+			</div>
 
 			<tab-panels class="pt-12!">
 				<tab-panel value="0">
-					{% if ce.description.title %}
-						<h2 class="text-balance text-center font-serif leading-tight font-semibold text-2xl lg:text-4xl my-12" v-jd-animate>
-							{{ ce.description.title }}
-						</h2>
-					{% endif %}
+					<div class="flex flex-col gap-12">
+						{% if ce.description.title %}
+							<h2 class="text-balance text-center font-serif text-2xl leading-tight font-semibold lg:text-4xl" v-jd-animate>
+								{{ ce.description.title }}
+							</h2>
+						{% endif %}
 
-					<div class="flex flex-col gap-8 lg:gap-12">
-						{% for item in ce.description.flexible %}
-							{% include './description/_' ~ item.name ~ '.twig' with {
-								ce: item
-							} only %}
-						{% endfor %}
+						<div class="flex flex-col gap-8 lg:gap-12">
+							{% for item in ce.description.flexible %}
+								{% include './description/_' ~ item.name ~ '.twig' with {
+									ce: item
+								} only %}
+							{% endfor %}
+						</div>
 					</div>
 				</tab-panel>
 
