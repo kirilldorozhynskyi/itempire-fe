@@ -14,7 +14,7 @@
 {% set fieldId = item.type ~ index %}
 
 <div class="form-field {{ item.error ? 'is-invalid' }} {{ item.class }}">
-	{% if item.label and item.type != 'checkbox' %}
+	{% if item.label and item.type != 'checkbox' and item.type != 'select' %}
 		<label class="mb-1 block text-sm font-medium" for="{{ fieldId }}">{{ item.label }}</label>
 	{% endif %}
 
@@ -41,14 +41,17 @@
 			id: index
 		} only %}
 	{% elseif item.type == 'select' %}
-		<select
-			class="block w-full rounded border border-neutral-300 px-3 py-2 outline-none focus:border-neutral-900"
-			name="{{ item.name ?? fieldId }}"
+		<float-field
 			id="{{ fieldId }}"
-			aria-label="{{ item.placeholder }}"
+			label="{{ item.label ?? item.placeholder }}"
+			name="{{ item.name ?? fieldId }}"
+			field-type="select"
+			model-value="{{ item.value }}"
+			placeholder="{{ item.placeholder }}"
+			{{ item.required ? 'required' }}
 		>
 			{% if item.placeholder %}
-				<option value="" disabled selected>
+				<option value="" disabled>
 					{{ item.placeholder }}
 				</option>
 			{% endif %}
@@ -57,7 +60,7 @@
 					{{ option.title }}
 				</option>
 			{% endfor %}
-		</select>
+		</float-field>
 	{% else %}
 		<input
 			type="{{ item.type }}"

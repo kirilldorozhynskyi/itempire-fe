@@ -51,19 +51,59 @@
 								<div class="flex flex-col gap-4">
 									<h2 class="font-serif text-2xl font-semibold">Základné informácie</h2>
 									<div class="grid grid-cols-1 gap-4 md:grid-cols-2">
-										<label class="profile-field"><span>Meno*</span><input name="firstName" value="Martin" /></label>
-										<label class="profile-field"><span>Priezvisko*</span><input name="lastName" value="Chynoranský" /></label>
-										<label class="profile-field"><span>Názov firmy</span><input name="company" value="NovaTech Logistika, s.r.o." /></label>
-										<label class="profile-field"><span>IČ DPH</span><input name="vatId" value="SK2121834507" /></label>
-										<label class="profile-field"><span>IČO</span><input name="companyId" value="54 821 073" /></label>
-										<label class="profile-field"><span>DIČ</span><input name="taxId" value="2121 834 507" /></label>
-										<label class="profile-field md:col-span-2">
-											<span>Ulica a číslo *</span><input name="street" value="Priemyselná 14" />
-										</label>
+										<float-field
+											id="profile-first-name"
+											label="Meno*"
+											name="firstName"
+											model-value="Martin"
+											autocomplete="given-name"
+											required
+										></float-field>
+										<float-field
+											id="profile-last-name"
+											label="Priezvisko*"
+											name="lastName"
+											model-value="Chynoranský"
+											autocomplete="family-name"
+											required
+										></float-field>
+										<float-field
+											id="profile-company"
+											label="Názov firmy"
+											name="company"
+											model-value="NovaTech Logistika, s.r.o."
+											autocomplete="organization"
+										></float-field>
+										<float-field id="profile-vat-id" label="IČ DPH" name="vatId" model-value="SK2121834507"></float-field>
+										<float-field id="profile-company-id" label="IČO" name="companyId" model-value="54 821 073"></float-field>
+										<float-field id="profile-tax-id" label="DIČ" name="taxId" model-value="2121 834 507"></float-field>
+										<float-field
+											id="profile-street"
+											label="Ulica a číslo *"
+											name="street"
+											model-value="Priemyselná 14"
+											autocomplete="street-address"
+											class="md:col-span-2"
+											required
+										></float-field>
 									</div>
 									<div class="grid grid-cols-1 gap-4 sm:grid-cols-[minmax(0,1fr)_minmax(0,2fr)]">
-										<label class="profile-field"><span>Mesto *</span><input name="city" value="Nitra" /></label>
-										<label class="profile-field"><span>PSČ*</span><input name="zip" value="949 01" /></label>
+										<float-field
+											id="profile-city"
+											label="Mesto *"
+											name="city"
+											model-value="Nitra"
+											autocomplete="address-level2"
+											required
+										></float-field>
+										<float-field
+											id="profile-zip"
+											label="PSČ*"
+											name="zip"
+											model-value="949 01"
+											autocomplete="postal-code"
+											required
+										></float-field>
 									</div>
 									<float-field id="profile-country" label="Krajina" name="country" field-type="select" model-value="SK">
 										<option value="SK">
@@ -75,8 +115,22 @@
 								<div class="flex flex-col gap-4">
 									<h2 class="font-serif text-2xl font-semibold">Kontaktné údaje</h2>
 									<div class="grid grid-cols-1 gap-4 md:grid-cols-2">
-										<label class="profile-field"><span>E-mail</span><input name="email" type="email" value="{{ ce.user.email }}" /></label>
-										<label class="profile-field"><span>Tel. číslo</span><input name="phone" type="tel" value="+421 37 640 2200" /></label>
+										<float-field
+											id="profile-email"
+											label="E-mail"
+											name="email"
+											field-type="email"
+											model-value="{{ ce.user.email }}"
+											autocomplete="email"
+										></float-field>
+										<float-field
+											id="profile-phone"
+											label="Tel. číslo"
+											name="phone"
+											field-type="tel"
+											model-value="+421 37 640 2200"
+											autocomplete="tel"
+										></float-field>
 									</div>
 								</div>
 
@@ -215,42 +269,81 @@
 	<template #address="{ close, editing }">
 		<form class="flex flex-col gap-4" @submit.prevent="close">
 			<div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
-				<label class="profile-field">
-					<span>Meno*</span>
-					<input name="firstName" type="text" :value="editing ? 'Martin' : ''" placeholder="Martin" required />
-				</label>
-				<label class="profile-field">
-					<span>Priezvisko*</span>
-					<input name="lastName" type="text" :value="editing ? 'Chynoranský' : ''" placeholder="Chynoranský" required />
-				</label>
-				<label class="profile-field">
-					<span>E-mail</span>
-					<input name="email" type="email" :value="editing ? 'chynoransky@gmail.com' : ''" placeholder="Zadajte váš e-mail" />
-				</label>
-				<label class="profile-field">
-					<span>Tel. č.</span>
-					<input name="phone" type="tel" :value="editing ? '+421 37 640 2200' : ''" placeholder="+421 900 000 000" />
-				</label>
+				<float-field
+					id="address-first-name"
+					label="Meno*"
+					name="firstName"
+					:model-value="editing ? 'Martin' : ''"
+					placeholder="Martin"
+					autocomplete="given-name"
+					required
+				></float-field>
+				<float-field
+					id="address-last-name"
+					label="Priezvisko*"
+					name="lastName"
+					:model-value="editing ? 'Chynoranský' : ''"
+					placeholder="Chynoranský"
+					autocomplete="family-name"
+					required
+				></float-field>
+				<float-field
+					id="address-email"
+					label="E-mail"
+					name="email"
+					field-type="email"
+					:model-value="editing ? 'chynoransky@gmail.com' : ''"
+					placeholder="Zadajte váš e-mail"
+					autocomplete="email"
+				></float-field>
+				<float-field
+					id="address-phone"
+					label="Tel. č."
+					name="phone"
+					field-type="tel"
+					:model-value="editing ? '+421 37 640 2200' : ''"
+					placeholder="+421 900 000 000"
+					autocomplete="tel"
+				></float-field>
 			</div>
 
-			<label class="profile-field">
-				<span>Názov firmy</span>
-				<input name="company" type="text" :value="editing ? 'NovaTech Logistika, s.r.o.' : ''" placeholder="NovaTech Logistika, s.r.o." />
-			</label>
-			<label class="profile-field">
-				<span>Ulica a číslo *</span>
-				<input name="street" type="text" :value="editing ? 'Priemyselná 14' : ''" placeholder="Zadajte ulicu" required />
-			</label>
+			<float-field
+				id="address-company"
+				label="Názov firmy"
+				name="company"
+				:model-value="editing ? 'NovaTech Logistika, s.r.o.' : ''"
+				placeholder="NovaTech Logistika, s.r.o."
+				autocomplete="organization"
+			></float-field>
+			<float-field
+				id="address-street"
+				label="Ulica a číslo *"
+				name="street"
+				:model-value="editing ? 'Priemyselná 14' : ''"
+				placeholder="Zadajte ulicu"
+				autocomplete="street-address"
+				required
+			></float-field>
 
 			<div class="grid grid-cols-[minmax(0,1fr)_7.75rem] gap-4">
-				<label class="profile-field">
-					<span>Mesto *</span>
-					<input name="city" type="text" :value="editing ? 'Nitra' : ''" placeholder="Názov mesta" required />
-				</label>
-				<label class="profile-field">
-					<span>PSČ*</span>
-					<input name="zip" type="text" :value="editing ? '949 01' : ''" placeholder="000 00" required />
-				</label>
+				<float-field
+					id="address-city"
+					label="Mesto *"
+					name="city"
+					:model-value="editing ? 'Nitra' : ''"
+					placeholder="Názov mesta"
+					autocomplete="address-level2"
+					required
+				></float-field>
+				<float-field
+					id="address-zip"
+					label="PSČ*"
+					name="zip"
+					:model-value="editing ? '949 01' : ''"
+					placeholder="000 00"
+					autocomplete="postal-code"
+					required
+				></float-field>
 			</div>
 
 			<float-field id="address-country" label="Krajina" name="country" field-type="select" model-value="SK">
@@ -274,8 +367,8 @@
 				Táto akcia je nevratná
 			</p>
 			<div class="flex flex-col gap-2.5">
-				<button type="button" class="btn-red w-full justify-center" @click="close">Odstrániť adresu</button>
-				<button type="button" class="btn-outline-neutral w-full justify-center" @click="close">Vrátiť späť</button>
+				<button type="button" class="btn-red h-12 w-full justify-center" @click="close">Odstrániť adresu</button>
+				<button type="button" class="btn-outline-neutral h-12 w-full justify-center" @click="close">Vrátiť späť</button>
 			</div>
 		</div>
 	</template>

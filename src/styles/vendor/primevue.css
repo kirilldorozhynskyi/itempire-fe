@@ -55,7 +55,7 @@
 		}
 
 		.p-dialog-close-button {
-			@apply absolute top-2 right-2 size-10 rounded-sm border border-neutral-300 bg-white;
+			@apply absolute! top-2! right-2! size-10! rounded-sm! border border-neutral-300 bg-white;
 		}
 
 		@media (max-width: 39.999rem) {
@@ -143,7 +143,7 @@
 		.p-select:hover,
 		.p-select.p-focus,
 		.p-select.p-select-open {
-			@apply border-purple border-2;
+			@apply border-purple;
 		}
 
 		.p-select {
@@ -260,8 +260,8 @@
 
 	.drop-down {
 		--p-select-shadow: none;
-		--p-select-background: none;
-		--p-select-border-radiu: 0;
+		--p-select-background: transparent;
+		--p-select-border-radius: 0.25rem;
 		--p-select-padding-y: 0;
 		--p-select-padding-x: 0;
 		--p-select-color: var(--color-primary);
@@ -269,15 +269,65 @@
 		--p-select-font-size: 1rem;
 		--px-icon-size: 1rem;
 		--p-select-dropdown-width: 1rem;
-		@apply gap-2 border-none! tracking-tight;
+		@apply gap-1 border-none! px-2 py-1 leading-6 tracking-tight transition-colors;
 	}
 
-	.p-select-dropdown {
+	.drop-down:not(.p-disabled):hover,
+	.drop-down.p-focus,
+	.drop-down.p-select-open {
+		--p-select-color: var(--color-purple);
+		--p-select-dropdown-color: var(--color-purple);
+		@apply bg-neutral-100;
+	}
+
+	.drop-down:not(.p-disabled) {
+		@apply cursor-pointer;
+	}
+
+	.drop-down.p-disabled {
+		@apply cursor-not-allowed;
+	}
+
+	.drop-down:has(.p-select-label:focus-visible) {
+		@apply outline-purple outline-2 outline-offset-2;
+	}
+
+	.drop-down .p-select-dropdown {
 		@apply transit;
 	}
-	.p-select-open {
-		.p-select-dropdown {
-			@apply rotate-180;
+
+	.drop-down.p-select-open .p-select-dropdown {
+		@apply rotate-180;
+	}
+
+	.drop-down-panel {
+		--p-select-overlay-background: var(--color-white);
+		--p-select-overlay-border-color: var(--color-neutral-300);
+		--p-select-overlay-border-radius: 0.25rem;
+		--p-select-list-padding: 0.5rem;
+		--p-select-list-gap: 0;
+		--p-select-option-color: var(--color-primary);
+		--p-select-option-focus-color: var(--color-purple);
+		--p-select-option-focus-background: var(--color-neutral-100);
+		--p-select-option-selected-color: var(--color-purple);
+		--p-select-option-selected-background: var(--color-neutral-100);
+		--p-select-option-selected-focus-color: var(--color-purple);
+		--p-select-option-selected-focus-background: var(--color-neutral-100);
+		--p-select-option-border-radius: 0.25rem;
+		--p-select-option-padding: 0.25rem 0.5rem;
+		--p-select-option-font-size: 1rem;
+		--p-select-option-font-weight: 400;
+
+		.p-select-option {
+			@apply leading-6 tracking-tight transition-colors;
+		}
+
+		.p-select-option:not(.p-disabled) {
+			@apply cursor-pointer;
+		}
+
+		.p-select-option.p-disabled {
+			@apply cursor-not-allowed;
 		}
 	}
 

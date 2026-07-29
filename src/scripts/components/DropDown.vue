@@ -7,6 +7,7 @@
 			:disabled="disabled"
 			option-label="label"
 			option-disabled="disabled"
+			overlay-class="drop-down-panel"
 			class="drop-down w-full"
 			@update:model-value="selectOption"
 		/>

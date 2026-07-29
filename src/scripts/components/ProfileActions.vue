@@ -9,7 +9,7 @@
 		<slot name="address" :close="closeAddress" :editing="editing"></slot>
 	</Drawer>
 
-	<Dialog v-model:visible="deleteVisible" modal :draggable="false" class="profile-delete-dialog mx-6 w-full max-w-145">
+	<Dialog v-model:visible="deleteVisible" modal :draggable="false" class="profile-delete-dialog w-[calc(100%_-_3rem)] max-w-145">
 		<template #header>
 			<slot name="delete-header"></slot>
 		</template>

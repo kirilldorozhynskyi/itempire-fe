@@ -2,10 +2,12 @@
 	<FloatLabel v-bind="$attrs" variant="in" class="float-field w-full">
 		<Select
 			v-if="fieldType === 'select'"
-			:id="id"
+			:input-id="id"
 			:model-value="selectedOption"
 			:options="options"
 			:placeholder="placeholder"
+			:required="required"
+			:aria-label="label"
 			option-label="label"
 			option-disabled="disabled"
 			overlay-class="float-field-select-panel"
@@ -18,12 +20,24 @@
 			:id="id"
 			:name="name"
 			:type="fieldType"
+			:model-value="modelValue"
 			:placeholder="placeholder"
 			:autocomplete="autocomplete"
+			:required="required"
 			class="w-full"
+			@update:model-value="updateValue"
 		/>
 
-		<Textarea v-else :id="id" :name="name" :placeholder="placeholder" class="h-26 max-h-26 w-full resize-none" />
+		<Textarea
+			v-else
+			:id="id"
+			:name="name"
+			:model-value="modelValue"
+			:placeholder="placeholder"
+			:required="required"
+			class="h-26 max-h-26 w-full resize-none"
+			@update:model-value="updateValue"
+		/>
 
 		<label :for="id">{{ label }}</label>
 	</FloatLabel>
@@ -70,11 +84,17 @@ const props = defineProps({
 		type: String,
 		default: ''
 	},
+	required: {
+		type: Boolean,
+		default: false
+	},
 	modelValue: {
 		type: [String, Number],
 		default: null
 	}
 })
+
+const emit = defineEmits(['update:modelValue', 'change'])
 
 const sourceSelect = ref(null)
 const options = ref([])
@@ -86,6 +106,12 @@ const syncSelectedOption = (value) => {
 
 const selectOption = (option) => {
 	selectedOption.value = option
+	updateValue(option?.value ?? null)
+}
+
+const updateValue = (value) => {
+	emit('update:modelValue', value)
+	emit('change', value)
 }
 
 watch(() => props.modelValue, syncSelectedOption)
