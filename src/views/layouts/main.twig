@@ -11,28 +11,38 @@
  # Copyright (c) 2026 justDev
  #}
 
+{% set normalized_site_url = siteURL|trim('/') %}
+{% set normalized_path = url|default('/')|trim('/') %}
+{% set canonical_path = normalized_path ? '/' ~ normalized_path ~ '/' : '/' %}
+{% set canonical_url = normalized_site_url ~ canonical_path %}
+{% set facebook_image_url = normalized_site_url ~ '/assets/system/facebook-og-image.jpg' %}
+{% set twitter_image_url = normalized_site_url ~ '/assets/system/twitter-og-image.jpg' %}
 <!DOCTYPE html>
 <html lang="{{ lang }}">
 	<head>
 		<meta charset="utf-8" />
 
-		<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
+		<meta name="robots" content="{{ robots|default('index, follow') }}" />
 
 		<meta name="viewport" content="width=device-width,initial-scale=1, shrink-to-fit=no" />
+		<meta name="theme-color" content="{{ theme_color }}" />
+		<link rel="canonical" href="{{ canonical_url }}" />
 
 		<title>
 			{{ title }} | {{ site_title }}
 		</title>
 		<meta name="description" content="{{ description }}" />
 
+		<meta property="og:site_name" content="{{ site_title }}" />
 		<meta property="og:description" content="{{ description }}" />
 		<meta property="og:title" content="{{ title }} | {{ site_title }}" />
 		<meta property="og:type" content="website" />
-		<meta property="og:url" content="{{ siteURL }}{{ page.url }}" />
-		<meta property="og:image" content="/assets/system/facebook-og-image.jpg" />
+		<meta property="og:url" content="{{ canonical_url }}" />
+		<meta property="og:image" content="{{ facebook_image_url }}" />
 		<meta name="twitter:description" content="{{ description }}" />
 		<meta name="twitter:title" content="{{ title }} | {{ site_title }}" />
-		<meta name="twitter:image:src" content="/assets/system/twitter-og-image.jpg" />
+		<meta name="twitter:url" content="{{ canonical_url }}" />
+		<meta name="twitter:image:src" content="{{ twitter_image_url }}" />
 		<meta name="twitter:card" content="summary_large_image" />
 
 		<script

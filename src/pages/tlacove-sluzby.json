@@ -1,6 +1,7 @@
 {
 	"title": "Tlačové a dokumentové služby",
-	"description": "Riadené tlačové a dokumentové služby pre firmy.",
+	"description": "Riadené tlačové a dokumentové služby pre firmy s dôrazom na bezpečnosť a efektivitu.",
+	"url": "/tlacove-sluzby/",
 	"flexible": [
 		{
 			"name": "hero_with_card",
@@ -11,7 +12,7 @@
 				"class": "btn-purple",
 				"btn": {
 					"title": "Dohodnúť audit tlače",
-					"url": "#kontakt"
+					"url": "/kontakt/"
 				}
 			},
 			"image": {

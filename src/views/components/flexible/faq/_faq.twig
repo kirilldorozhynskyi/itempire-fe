@@ -9,9 +9,11 @@
 						{{ item.title }}
 					</accordion-header>
 					<accordion-content>
-						<p class="text-base leading-normal tracking-tight text-subtile">
-							{{ item.text }}
-						</p>
+						{% if item.text and item.text != 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' %}
+							<p class="text-base leading-normal tracking-tight text-subtile">
+								{{ item.text }}
+							</p>
+						{% endif %}
 					</accordion-content>
 				</accordion-panel>
 			{% endfor %}

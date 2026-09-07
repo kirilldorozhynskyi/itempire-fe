@@ -1,6 +1,7 @@
 {
 	"title": "Smart workplace, smart building a monitoring serverovní",
 	"description": "Smart workplace, smart building a monitoring serverovní.",
+	"url": "/smart-workplace/",
 	"flexible": [
 		{
 			"name": "hero_with_card",
@@ -11,7 +12,7 @@
 				"class": "btn-purple",
 				"btn": {
 					"title": "Spustiť mini pilot monitoringu",
-					"url": "#kontakt"
+					"url": "/kontakt/"
 				}
 			},
 			"image": {

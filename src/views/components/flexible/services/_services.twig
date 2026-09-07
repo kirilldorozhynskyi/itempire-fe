@@ -5,13 +5,13 @@
  # Created Date: Thursday, July 16th 2026, 9:42:14
  # Author: Kirill Dorozhynskyi - kyrylo.dorozhynskyi@justdev.org
  # -----
- # Last Modified: Monday, July 27th 2026 16:57:10
+ # Last Modified: Monday, September 7th 2026 16:43:58
  # Modified By: Kirill Dorozhynskyi
  # -----
  # Copyright (c) 2026 justDev
  #}
 
-<section class="services overflow-hidden {{ ce.class|default('py-20 md:py-24 lg:py-36') }}">
+<section id="{{ ce.id|default('services') }}" class="services overflow-hidden {{ ce.class|default('py-20 md:py-24 lg:py-36') }}">
 	<div class="container flex flex-col gap-12 md:gap-16 lg:gap-20">
 		<div class="flex flex-col gap-6 {{ ce.align == 'left' ? 'items-start' : 'mx-auto max-w-145 items-center text-center' }}">
 			{% include '../title/_title_content.twig' with {
@@ -39,8 +39,12 @@
 				{% set repeats = ce.loop ? 2 : 1 %}
 				{% for repeat in 1..repeats %}
 					{% for item in ce.services %}
-						<slider-item class="basis-4/5 pe-2 md:basis-1/2 lg:basis-1/4 lg:pe-6" aria-hidden="{{ repeat > 1 ? 'true' : 'false' }}">
-							<div class="bg-remover bg-remover h-full" v-jd-animate="{{ ce.loop ? 'false' : '{ delay: ' ~ loop.index * 100 ~ ' }' }}">
+						<slider-item
+							class="basis-4/5 pe-2 md:basis-1/2 lg:basis-1/4 lg:pe-6"
+							aria-hidden="{{ repeat > 1 ? 'true' : 'false' }}"
+							v-jd-animate="{{ ce.loop ? 'false' : '{ delay: ' ~ loop.index * 100 ~ ' }' }}"
+						>
+							<div class="bg-remover bg-remover h-full">
 								{% if ce.variant == 'icons' %}
 									<div class="flex min-h-full flex-col gap-16 bg-neutral-100 p-6">
 										{{ sprite(item.icon, 'text-[3.5rem]') }}

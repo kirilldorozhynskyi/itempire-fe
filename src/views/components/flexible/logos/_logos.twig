@@ -11,19 +11,21 @@
  # Copyright (c) 2026 justDev
  #}
 
-<section class="flex flex-col gap-6 {{ ce.class|default('pt-12 md:pt-16 lg:pt-20') }}">
-	{% if ce.text %}
-		<div class="container">
-			<h3 class="text-center lg:text-lg leading-none text-subtile" v-jd-animate>{{ ce.text }}</h3>
+{% if ce.logos|length %}
+	<section class="flex flex-col gap-6 {{ ce.class|default('pt-12 md:pt-16 lg:pt-20') }}">
+		{% if ce.text %}
+			<div class="container">
+				<h3 class="text-center lg:text-lg leading-none text-subtile" v-jd-animate>{{ ce.text }}</h3>
+			</div>
+		{% endif %}
+		<div class="logos-wrapper relative flex w-full items-center overflow-hidden h-auto">
+			<benefits :count="{{ ce.logos|length }}">
+				{% for logo in ce.logos %}
+					<div class="rfm-child w-43 flex items-center aspect-172/112">
+						<object class="size-full object-contain object-center" lazy type="image/svg+xml" data-src="{{ logo }}"></object>
+					</div>
+				{% endfor %}
+			</benefits>
 		</div>
-	{% endif %}
-	<div class="logos-wrapper relative flex w-full items-center overflow-hidden h-auto">
-		<benefits :count="{{ ce.logos|length }}">
-			{% for logo in ce.logos %}
-				<div class="rfm-child w-43 flex items-center aspect-172/112">
-					<object class="size-full object-contain object-center" lazy type="image/svg+xml" data-src="{{ logo }}"></object>
-				</div>
-			{% endfor %}
-		</benefits>
-	</div>
-</section>
+	</section>
+{% endif %}

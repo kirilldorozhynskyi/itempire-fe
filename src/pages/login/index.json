@@ -2,6 +2,7 @@
 	"template": "views/templates/page.twig",
 	"build": "eshop",
 	"title": "Prihlásenie",
+	"url": "/login/",
 	"body_class": "auth-page",
 
 	"hide_footer": true,

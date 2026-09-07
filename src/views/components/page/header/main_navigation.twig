@@ -5,7 +5,7 @@
  # Created Date: Friday, May 29th 2026, 11:52:30
  # Author: Kirill Dorozhynskyi - kyrylo.dorozhynskyi@justdev.org
  # -----
- # Last Modified: Thursday, August 27th 2026 11:58:34
+ # Last Modified: Monday, September 7th 2026 16:40:12
  # Modified By: Kirill Dorozhynskyi
  # -----
  # Copyright (c) 2026 justDev
@@ -98,43 +98,46 @@
 												{% endfor %}
 											</div>
 										{% endif %}
+										{% if build_enabled('eshop') %}
+											<div class="flex flex-col gap-4 col-start-3">
+												<h3 class="text-lg font-semibold font-serif leading-tight">Aktuálna ponuka</h3>
 
-										<div class="flex flex-col gap-4 col-start-3">
-											<h3 class="text-lg font-semibold font-serif leading-tight">Aktuálna ponuka</h3>
+												<a href="{{ header.menu.url }}" class="aspect-340/280 relative flex max-lg:hidden rounded-sm overflow-hidden">
+													{{ image(header.menu.image) }}
+													<div class="absolute inset-0">
+														<div class="h-full flex gap-6 p-6">
+															<div class="flex flex-col gap-4">
+																{% if header.menu.title %}
+																	<h2
+																		class="text-balance font-serif leading-tight font-semibold text-white text-xl 2xl:text-2xl"
+																	>
+																		{{ header.menu.title }}
+																	</h2>
+																{% endif %}
 
-											<a href="{{ header.menu.url }}" class="aspect-340/280 relative flex max-lg:hidden rounded-sm overflow-hidden">
-												{{ image(header.menu.image) }}
-												<div class="absolute inset-0">
-													<div class="h-full flex gap-6 p-6">
-														<div class="flex flex-col gap-4">
-															{% if header.menu.title %}
-																<h2 class="text-balance font-serif leading-tight font-semibold text-white text-xl 2xl:text-2xl">
-																	{{ header.menu.title }}
-																</h2>
-															{% endif %}
-
-															<div class="flex">
-																{% include paths.btn_ex with {
-																	button: header.menu.btn
-																} only %}
+																<div class="flex">
+																	{% include paths.btn_ex with {
+																		button: header.menu.btn
+																	} only %}
+																</div>
 															</div>
-														</div>
-														<div class="absolute leading-none -translate-x-1/2 -translate-y-1/2 top-2/3 left-1/3 2xl:scale-110">
-															<div
-																class="absolute bg-white text-purple uppercase font-medium -right-6 w-fit top-1 py-1.5 px-2 -translate-y-full text-sm"
-															>
-																{{ header.menu.info.tag }}
-															</div>
-															<div
-																class="bg-purple px-4 py-2 text-balance font-serif leading-tight text-white font-semibold lg:text-lg"
-															>
-																{{ header.menu.info.price }}
+															<div class="absolute leading-none -translate-x-1/2 -translate-y-1/2 top-2/3 left-1/3 2xl:scale-110">
+																<div
+																	class="absolute bg-white text-purple uppercase font-medium -right-6 w-fit top-1 py-1.5 px-2 -translate-y-full text-sm"
+																>
+																	{{ header.menu.info.tag }}
+																</div>
+																<div
+																	class="bg-purple px-4 py-2 text-balance font-serif leading-tight text-white font-semibold lg:text-lg"
+																>
+																	{{ header.menu.info.price }}
+																</div>
 															</div>
 														</div>
 													</div>
-												</div>
-											</a>
-										</div>
+												</a>
+											</div>
+										{% endif %}
 									</div>
 								</div>
 							</div>

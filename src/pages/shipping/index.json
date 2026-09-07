@@ -1,6 +1,7 @@
 {
 	"template": "views/templates/page.twig",
 	"build": "eshop",
+	"url": "/shipping/",
 	"body_class": "page",
 	"flexible": [
 		{

@@ -30,6 +30,26 @@ import main from './src/data/main.json'
 
 const skipImagemin = process.env.SKIP_IMAGEMIN === 'true'
 
+const trailingSlashDev = {
+	name: 'itempire-trailing-slash-dev',
+	apply: 'serve',
+	enforce: 'pre',
+	configureServer(server) {
+		server.middlewares.use((request, _response, next) => {
+			const requestUrl = new URL(request.originalUrl || request.url, 'http://localhost')
+			const pathname = requestUrl.pathname
+
+			if (pathname !== '/' && pathname.endsWith('/') && !/\/[^/]*\.[^/]+(?:\/|$)/.test(pathname)) {
+				requestUrl.pathname = pathname.slice(0, -1)
+				request.url = requestUrl.pathname + requestUrl.search
+				request.originalUrl = request.url
+			}
+
+			next()
+		})
+	}
+}
+
 export default {
 	esbuild: {
 		drop: ['console', 'debugger']
@@ -56,7 +76,13 @@ export default {
 		}
 	},
 	plugins: [
-		vituum(),
+		trailingSlashDev,
+		vituum({
+			input: ['!./src/pages/navigation.twig'],
+			pages: {
+				ignoredPaths: ['navigation']
+			}
+		}),
 		pageFeatures({
 			pagesDir: path.resolve(process.cwd(), `${rootDir}/pages`),
 			isBuildEnabled

@@ -1,6 +1,7 @@
 {
 	"title": "Digitálne riešenia, weby, aplikácie a integrácie",
 	"description": "Digitálne riešenia, weby, aplikácie a integrácie pre firmy.",
+	"url": "/digitalne-riesenia/",
 	"flexible": [
 		{
 			"name": "hero_with_card",
@@ -11,7 +12,7 @@
 				"class": "btn-purple",
 				"btn": {
 					"title": "Navrhnúť digitálne riešenie",
-					"url": "#kontakt"
+					"url": "/kontakt/"
 				}
 			},
 			"image": {

@@ -1,6 +1,7 @@
 {
 	"template": "views/templates/homepage.twig",
 	"build": "eshop",
+	"url": "/news/",
 	"body_class": "home-page",
 	"flexible": [
 		{

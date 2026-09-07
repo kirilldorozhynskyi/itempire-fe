@@ -1,6 +1,7 @@
 {
 	"template": "views/templates/page.twig",
 	"build": "eshop",
+	"url": "/profile/",
 	"body_class": "page",
 	"flexible": [
 		{

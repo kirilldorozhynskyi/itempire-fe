@@ -1,13 +1,14 @@
 {
 	"title": "Používateľská podpora a firemná komunikácia",
 	"description": "Helpdesk, správa zariadení a moderná firemná komunikácia.",
+	"url": "/pouzivatelska-podpora/",
 	"flexible": [
 		{
 			"name": "hero_with_card",
 			"tag": "Používateľská podpora a firemná komunikácia",
 			"title": "<span class='text-subtile'>Ľudia potrebujú pracovať,</span> nie riešiť technické prekážky",
 			"text": "Helpdesk, správa zariadení, onboarding, offboarding, Teams volania, VoIP, SIP trunk, SBC a call centrum dávajú používateľom podporu, ktorá ich nezdržiava od práce. Komunikácia, zariadenia a podpora fungujú ako jeden celok.",
-			"button": { "class": "btn-purple", "btn": { "title": "Nastaviť helpdesk a firemnú komunikáciu", "url": "#kontakt" } },
+			"button": { "class": "btn-purple", "btn": { "title": "Nastaviť helpdesk a firemnú komunikáciu", "url": "/kontakt/" } },
 			"image": {
 				"pictureClass": "picture size-full",
 				"image": {

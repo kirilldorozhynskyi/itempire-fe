@@ -1,6 +1,8 @@
 {
 	"template": "views/templates/page.twig",
-	"title": "Kontakt",
+	"title": "Kontaktujte ITempire",
+	"url": "/kontakt/",
+	"description": "Kontaktujte ITempire a dohodnite si konzultáciu k firemnému IT, bezpečnosti alebo infraštruktúre.",
 	"body_class": "contact-page",
 	"flexible": [
 		{

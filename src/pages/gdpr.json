@@ -1,5 +1,7 @@
 {
-	"title": "Cookies",
+	"title": "Cookies a ochrana súkromia",
+	"url": "/gdpr/",
+	"description": "Informácie o používaní súborov cookie a ochrane súkromia na webe ITempire.",
 	"flexible": [
 		{
 			"name": "content",

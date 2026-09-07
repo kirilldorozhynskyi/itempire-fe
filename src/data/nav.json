@@ -154,7 +154,7 @@
 			]
 		},
 		{
-			"url": "/gdpr",
+			"url": "/products/",
 			"title": "Software",
 			"build": "eshop",
 			"submenu": [
@@ -165,69 +165,70 @@
 			]
 		},
 		{
-			"url": "/gdpr",
+			"url": "/#sluzby",
 			"title": "Služby",
 			"submenu": [
 				{
-					"url": "/riadene-it",
+					"url": "/riadene-it/",
 					"title": "Riadené IT a infraštruktúra"
 				},
 				{
-					"url": "/kyberneticka-bezpecnost",
+					"url": "/kyberneticka-bezpecnost/",
 					"title": "Kybernetická bezpečnosť"
 				},
 				{
-					"url": "/cloud-microsoft-365",
+					"url": "/cloud-microsoft-365/",
 					"title": "Cloud a Microsoft 365"
 				},
 				{
-					"url": "/pouzivatelska-podpora",
+					"url": "/pouzivatelska-podpora/",
 					"title": "Používateľská podpora"
 				},
 				{
-					"url": "/technologicke-dodavky",
+					"url": "/technologicke-dodavky/",
 					"title": "Technologické dodávky"
 				},
 				{
-					"url": "/fyzicka-infrastruktura",
+					"url": "/fyzicka-infrastruktura/",
 					"title": "Fyzická infraštruktúra"
 				},
 				{
-					"url": "/edu-technologie",
+					"url": "/edu-technologie/",
 					"title": "EDU technológie"
 				},
 				{
-					"url": "/specialne-systemy",
+					"url": "/specialne-systemy/",
 					"title": "Špeciálne systémy"
 				},
 				{
-					"url": "/servis-migracie",
+					"url": "/servis-migracie/",
 					"title": "Servis a migrácie"
 				},
 				{
-					"url": "/tlacove-sluzby",
+					"url": "/tlacove-sluzby/",
 					"title": "Tlačové služby"
 				},
 				{
-					"url": "/digitalne-riesenia",
+					"url": "/digitalne-riesenia/",
 					"title": "Digitálne riešenia"
 				},
 				{
-					"url": "/smart-workplace",
+					"url": "/smart-workplace/",
 					"title": "Smart workplace"
 				}
 			]
 		},
 		{
-			"url": "/news",
-			"title": "Newsroom"
+			"url": "/news/",
+			"title": "Newsroom",
+			"build": "eshop"
 		},
 		{
-			"url": "/financovanie",
+			"url": "/financovanie/",
 			"title": "Financovanie"
 		},
 		{
-			"url": "/o-nas",
+			"url": "/o-nas/",
 			"title": "O nás"
 		}
 	],
@@ -235,51 +236,51 @@
 		"title": "Služby",
 		"items": [
 			{
-				"url": "/riadene-it",
+				"url": "/riadene-it/",
 				"title": "Riadené IT"
 			},
 			{
-				"url": "/servis-migracie",
+				"url": "/servis-migracie/",
 				"title": "Servis a migrácie"
 			},
 			{
-				"url": "/tlacove-sluzby",
+				"url": "/tlacove-sluzby/",
 				"title": "Tlačové služby"
 			},
 			{
-				"url": "/specialne-systemy",
+				"url": "/specialne-systemy/",
 				"title": "Špeciálne systémy"
 			},
 			{
-				"url": "/kyberneticka-bezpecnost",
+				"url": "/kyberneticka-bezpecnost/",
 				"title": "Kybernetická bezpečnosť"
 			},
 			{
-				"url": "/cloud-microsoft-365",
+				"url": "/cloud-microsoft-365/",
 				"title": "Cloud a Microsoft 365"
 			},
 			{
-				"url": "/technologicke-dodavky",
+				"url": "/technologicke-dodavky/",
 				"title": "Dodávky a licencie"
 			},
 			{
-				"url": "/pouzivatelska-podpora",
+				"url": "/pouzivatelska-podpora/",
 				"title": "Používateľská podpora"
 			},
 			{
-				"url": "/fyzicka-infrastruktura",
+				"url": "/fyzicka-infrastruktura/",
 				"title": "Fyzická infraštruktúra"
 			},
 			{
-				"url": "/digitalne-riesenia",
+				"url": "/digitalne-riesenia/",
 				"title": "Digitálne riešenia"
 			},
 			{
-				"url": "/smart-workplace",
+				"url": "/smart-workplace/",
 				"title": "Smart workplace"
 			},
 			{
-				"url": "/edu-technologie",
+				"url": "/edu-technologie/",
 				"title": "EDU technológie"
 			}
 		]
@@ -293,26 +294,29 @@
 			},
 			{
 				"url": "/",
-				"title": "Hardware"
+				"title": "Hardware",
+				"build": "eshop"
 			},
 			{
 				"url": "/",
-				"title": "Software"
+				"title": "Software",
+				"build": "eshop"
 			},
 			{
-				"url": "/news",
-				"title": "Newsroom"
+				"url": "/news/",
+				"title": "Newsroom",
+				"build": "eshop"
 			},
 			{
-				"url": "/financovanie",
+				"url": "/financovanie/",
 				"title": "Financovanie"
 			},
 			{
-				"url": "/o-nas",
+				"url": "/o-nas/",
 				"title": "O nás"
 			},
 			{
-				"url": "/contact",
+				"url": "/kontakt/",
 				"title": "Kontakt"
 			}
 		]

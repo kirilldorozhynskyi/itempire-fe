@@ -1,6 +1,7 @@
 {
 	"template": "views/templates/page.twig",
 	"build": "eshop",
+	"url": "/search/",
 	"body_class": "page",
 	"flexible": [
 		{
@@ -44,7 +45,7 @@
 			"products": [
 				{
 					"title": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
-					"url": "/products/detail",
+					"url": "/products/detail/",
 					"price": "881,05 €",
 					"tag": "Novinka",
 					"image": {

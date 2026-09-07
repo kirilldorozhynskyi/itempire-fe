@@ -1,6 +1,7 @@
 {
 	"title": "Riadené IT a infraštruktúra pre firmy",
 	"description": "Riadená IT prevádzka, infraštruktúra, monitoring a zálohovanie pre firmy.",
+	"url": "/riadene-it/",
 	"flexible": [
 		{
 			"name": "hero_with_card",
@@ -11,7 +12,7 @@
 				"class": "btn-purple",
 				"btn": {
 					"title": "Dohodnúť audit infraštruktúry",
-					"url": "#kontakt"
+					"url": "/kontakt/"
 				}
 			},
 			"image": {

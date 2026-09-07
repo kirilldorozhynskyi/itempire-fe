@@ -5,7 +5,7 @@
  # Created Date: Wednesday, June 3rd 2026, 10:36:36
  # Author: Kirill Dorozhynskyi - kyrylo.dorozhynskyi@justdev.org
  # -----
- # Last Modified: Wednesday, June 3rd 2026 10:44:35
+ # Last Modified: Monday, September 7th 2026 16:33:21
  # Modified By: Kirill Dorozhynskyi
  # -----
  # Copyright (c) 2026 justDev
@@ -17,7 +17,9 @@
 
 		<ul class="flex flex-col gap-2 text-sm">
 			{% for item in menu.items %}
-				<li><a class="link-hover-underlined" href="{{ item.url }}" title="{{ item.title }}">{{ item.title }}</a></li>
+				{% if build_enabled(item.build) %}
+					<li><a class="link-hover-underlined" href="{{ item.url }}" title="{{ item.title }}">{{ item.title }}</a></li>
+				{% endif %}
 			{% endfor %}
 		</ul>
 	{% endif %}

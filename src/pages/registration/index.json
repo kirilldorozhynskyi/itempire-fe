@@ -2,6 +2,7 @@
 	"template": "views/templates/page.twig",
 	"build": "eshop",
 	"title": "Registrácia",
+	"url": "/registration/",
 	"body_class": "auth-page",
 	"hide_footer": true,
 	"flexible": [

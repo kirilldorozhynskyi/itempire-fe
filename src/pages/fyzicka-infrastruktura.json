@@ -1,13 +1,14 @@
 {
 	"title": "Fyzická infraštruktúra, kabeláž a bezpečnosť priestorov",
 	"description": "Kabeláž, racky, kamery, alarmy a prístupové systémy pre firmy.",
+	"url": "/fyzicka-infrastruktura/",
 	"flexible": [
 		{
 			"name": "hero_with_card",
 			"tag": "Fyzická infraštruktúra, kabeláž a bezpečnosť priestorov",
 			"title": "<span class='text-subtile'>Spoľahlivé IT</span> začína pri priestore, kábloch a prístupoch",
 			"text": "Realizujeme metalickú a optickú kabeláž, racky, merania, dokumentáciu, kamery, alarmy, prístupové systémy, dochádzku a turnikety. Fyzickú infraštruktúru navrhujeme tak, aby podporovala stabilnú prevádzku aj bezpečnosť firmy.",
-			"button": { "class": "btn-purple", "btn": { "title": "Dohodnúť obhliadku priestoru", "url": "#kontakt" } },
+			"button": { "class": "btn-purple", "btn": { "title": "Dohodnúť obhliadku priestoru", "url": "/kontakt/" } },
 			"image": {
 				"pictureClass": "picture size-full",
 				"image": {

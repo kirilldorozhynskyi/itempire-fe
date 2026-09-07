@@ -9,6 +9,54 @@ const SERVICE_LABELS = [
 	'security' => 'Bezpečnosť',
 ];
 
+function loadEnvironmentFile(string $path): void
+{
+	if (!is_readable($path)) {
+		return;
+	}
+
+	$lines = file($path, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+
+	if ($lines === false) {
+		return;
+	}
+
+	foreach ($lines as $line) {
+		$line = trim($line);
+
+		if ($line === '' || str_starts_with($line, '#')) {
+			continue;
+		}
+
+		$separator = strpos($line, '=');
+
+		if ($separator === false) {
+			continue;
+		}
+
+		$name = trim(substr($line, 0, $separator));
+		$value = trim(substr($line, $separator + 1));
+
+		if (preg_match('/^[A-Z_][A-Z0-9_]*$/', $name) !== 1) {
+			continue;
+		}
+
+		if (strlen($value) >= 2 && (($value[0] === '"' && $value[-1] === '"') || ($value[0] === "'" && $value[-1] === "'"))) {
+			$value = substr($value, 1, -1);
+		}
+
+		$currentValue = getenv($name);
+
+		if ($currentValue === false || trim($currentValue) === '') {
+			putenv($name . '=' . $value);
+		}
+	}
+}
+
+loadEnvironmentFile('/etc/itempire/.env');
+loadEnvironmentFile(dirname(__DIR__) . '/.env');
+loadEnvironmentFile(dirname(__DIR__, 2) . '/.env');
+
 header('Content-Type: application/json; charset=utf-8');
 header('Cache-Control: no-store');
 
@@ -26,20 +74,22 @@ function input(string $name): string
 	return is_string($value) ? trim($value) : '';
 }
 
-function environment(string $name, ?string $fallback = null): string
+function environmentAny(array $names, ?string $fallback = null): string
 {
-	$value = getenv($name);
-	$value = is_string($value) ? trim($value) : '';
+	foreach ($names as $name) {
+		$value = getenv($name);
+		$value = is_string($value) ? trim($value) : '';
 
-	if ($value !== '') {
-		return $value;
+		if ($value !== '') {
+			return $value;
+		}
 	}
 
 	if ($fallback !== null) {
 		return $fallback;
 	}
 
-	throw new RuntimeException(sprintf('Missing required environment variable: %s', $name));
+	throw new RuntimeException(sprintf('Missing required environment variable: %s', implode(' or ', $names)));
 }
 
 function post(string $url, string $body, array $headers): array
@@ -62,7 +112,6 @@ function post(string $url, string $body, array $headers): array
 	$responseBody = curl_exec($handle);
 	$status = (int) curl_getinfo($handle, CURLINFO_RESPONSE_CODE);
 	$error = curl_error($handle);
-	curl_close($handle);
 
 	if ($responseBody === false) {
 		throw new RuntimeException(sprintf('HTTP request failed: %s', $error));
@@ -109,11 +158,11 @@ if (!$isValid) {
 }
 
 try {
-	$tenantId = environment('MICROSOFT_TENANT_ID');
-	$clientId = environment('MICROSOFT_CLIENT_ID');
-	$clientSecret = environment('MICROSOFT_CLIENT_SECRET');
-	$senderEmail = environment('MICROSOFT_SENDER_EMAIL');
-	$recipientEmail = environment('CONTACT_RECIPIENT_EMAIL', $senderEmail);
+	$tenantId = environmentAny(['MICROSOFT_TENANT_ID', 'MICROSOFT_GRAPH_TENANT_ID']);
+	$clientId = environmentAny(['MICROSOFT_CLIENT_ID', 'MICROSOFT_GRAPH_CLIENT_ID']);
+	$clientSecret = environmentAny(['MICROSOFT_CLIENT_SECRET', 'MICROSOFT_GRAPH_CLIENT_SECRET']);
+	$senderEmail = environmentAny(['MICROSOFT_SENDER_EMAIL', 'MICROSOFT_GRAPH_SENDER_EMAIL', 'MAIL_FROM_ADDRESS', 'MAIL_USERNAME']);
+	$recipientEmail = environmentAny(['CONTACT_RECIPIENT_EMAIL', 'MAIL_TO_ADDRESS', 'MAIL_USERNAME'], $senderEmail);
 
 	if (filter_var($senderEmail, FILTER_VALIDATE_EMAIL) === false || filter_var($recipientEmail, FILTER_VALIDATE_EMAIL) === false) {
 		throw new RuntimeException('The configured sender or recipient email address is invalid.');

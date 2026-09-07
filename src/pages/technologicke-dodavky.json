@@ -1,13 +1,14 @@
 {
 	"title": "Technologické dodávky, licencie a financovanie IT",
 	"description": "Plánované dodávky technológií, licencie a financovanie IT.",
+	"url": "/technologicke-dodavky/",
 	"flexible": [
 		{
 			"name": "hero_with_card",
 			"tag": "Technologické dodávky, licencie a financovanie IT",
 			"title": "<span class='text-subtile'>Nakupujte</span> technológie podľa plánu, nie pod tlakom",
 			"text": "Pomáhame firmám vyberať, dodávať, financovať, nasadzovať a obnovovať hardvér, softvér a licencie tak, aby dávali zmysel technicky aj ekonomicky. Riešime procurement, logistiku, licenčnú optimalizáciu, financovanie a životný cyklus IT.",
-			"button": { "class": "btn-purple", "btn": { "title": "Pripraviť návrh technológií a financovania", "url": "#kontakt" } },
+			"button": { "class": "btn-purple", "btn": { "title": "Pripraviť návrh technológií a financovania", "url": "/kontakt/" } },
 			"image": {
 				"pictureClass": "picture size-full",
 				"image": {

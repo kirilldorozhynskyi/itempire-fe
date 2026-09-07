@@ -61,7 +61,7 @@ npm run i18n:remove
 
 ## Dokploy deployment
 
-The project is prepared for Dokploy as a static nginx container.
+The project is prepared for Dokploy as an nginx container with PHP-FPM for the contact form.
 
 ### Recommended: Application with Dockerfile
 
@@ -71,7 +71,8 @@ The project is prepared for Dokploy as a static nginx container.
 4. Add a domain in the Dokploy Domains tab and use port `80`.
 5. Deploy.
 
-The Dockerfile builds the Vite/Twig site and serves `dist/` from nginx. Extensionless static routes such as `/gdpr` are mapped to `gdpr.html`.
+The Dockerfile builds the Vite/Twig site and serves `dist/` from nginx. Extensionless static routes such as `/gdpr/` are mapped to `gdpr.html`.
+Public routes use extensionless URLs with a trailing slash (the root remains `/`); nginx redirects legacy `/route` URLs to `/route/`.
 
 ### Alternative: Docker Compose
 
@@ -113,7 +114,12 @@ docker run --rm -p 8080:80 static-frontend
 
 ### Contact form Microsoft 365 configuration
 
-The contact form endpoint at `src/public/send.php` requires PHP 8 with the cURL extension and these runtime environment variables:
+The contact form endpoint at `src/public/send.php` requires PHP 8 with the cURL extension. Put a local `.env` file in the repository root (copy `.env.example`), or provide the same variables in Dokploy.
+
+The Dockerfile copies the optional root file to `/etc/itempire/.env`, outside the public web root.
+Container variables provided by Dokploy take precedence over values from the file.
+
+Preferred variables:
 
 - `MICROSOFT_TENANT_ID`
 - `MICROSOFT_CLIENT_ID`
@@ -121,8 +127,12 @@ The contact form endpoint at `src/public/send.php` requires PHP 8 with the cURL 
 - `MICROSOFT_SENDER_EMAIL`
 - `CONTACT_RECIPIENT_EMAIL` (optional; defaults to the sender mailbox)
 
-The Microsoft Entra application must have the Microsoft Graph `Mail.Send` application permission with administrator consent. Never store the client secret in
-this repository or in browser-exposed environment variables.
+The existing `MICROSOFT_GRAPH_TENANT_ID`, `MICROSOFT_GRAPH_CLIENT_ID`, `MICROSOFT_GRAPH_CLIENT_SECRET`,
+`MAIL_FROM_ADDRESS`, and `MAIL_USERNAME` names are also accepted for compatibility.
+
+The Microsoft Entra application must have the Microsoft Graph `Mail.Send` application permission with administrator consent.
+
+Never commit `.env` or expose the client secret through browser-facing `VITE_*` variables.
 
 ## Working with pages
 

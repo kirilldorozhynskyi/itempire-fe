@@ -1,6 +1,7 @@
 {
 	"template": "views/templates/page.twig",
 	"build": "eshop",
+	"url": "/products/",
 	"body_class": "page",
 	"flexible": [
 		{
@@ -23,7 +24,7 @@
 			"category": [
 				{
 					"title": "Smartfóny a mobilné telefóny",
-					"url": "/products/notebooky",
+					"url": "/products/notebooky/",
 					"image": {
 						"pictureClass": "picture relative",
 						"image": {
@@ -40,7 +41,7 @@
 				},
 				{
 					"title": "Notebooky",
-					"url": "/products/notebooky",
+					"url": "/products/notebooky/",
 					"image": {
 						"pictureClass": "picture relative",
 						"image": {
@@ -57,7 +58,7 @@
 				},
 				{
 					"title": "Tablety",
-					"url": "/products/notebooky",
+					"url": "/products/notebooky/",
 					"image": {
 						"pictureClass": "picture relative",
 						"image": {
@@ -74,7 +75,7 @@
 				},
 				{
 					"title": "Príslušenstvo",
-					"url": "/products/notebooky",
+					"url": "/products/notebooky/",
 					"image": {
 						"pictureClass": "picture relative",
 						"image": {
@@ -128,7 +129,7 @@
 			"products": [
 				{
 					"title": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
-					"url": "/products/detail",
+					"url": "/products/detail/",
 					"price": "881,05 €",
 					"tag": "Novinka",
 					"image": {

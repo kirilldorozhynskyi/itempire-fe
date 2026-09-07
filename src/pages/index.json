@@ -1,5 +1,8 @@
 {
 	"template": "views/templates/homepage.twig",
+	"title": "IT riešenia pre firmy",
+	"url": "/",
+	"description": "Stabilné, bezpečné a efektívne IT riešenia pre firmy.",
 	"body_class": "home-page",
 	"flexible": [
 		{
@@ -11,7 +14,7 @@
 					"class": "btn-purple",
 					"btn": {
 						"title": "Nezáväzná konzultácia",
-						"url": "#kontakt"
+						"url": "/kontakt/"
 					}
 				},
 				{
@@ -55,6 +58,7 @@
 			]
 		},
 		{
+			"id": "sluzby",
 			"name": "services",
 			"title": "Technológie, <br>ktoré podporujú rast",
 			"text": "Pripravíme technické riešenie na mieru podľa vašich procesov, rozpočtu a dlhodobej stratégie.",
@@ -62,7 +66,7 @@
 				"class": "btn-purple",
 				"btn": {
 					"title": "Nezáväzná konzultácia",
-					"url": "#kontakt"
+					"url": "/kontakt/"
 				}
 			},
 			"services": [
@@ -70,25 +74,25 @@
 					"icon": "ruler",
 					"title": "Riešenie na mieru",
 					"text": "Pripravíme technické riešenie presne podľa vašich potrieb.",
-					"url": "#"
+					"url": "/digitalne-riesenia/"
 				},
 				{
 					"icon": "server",
 					"title": "Siete a servery",
 					"text": "Nastavíme spoľahlivú infraštruktúru pre vašu firmu.",
-					"url": "#"
+					"url": "/fyzicka-infrastruktura/"
 				},
 				{
 					"icon": "tool",
 					"title": "Potrebujem servis",
 					"text": "Poskytujeme profesionálnu a rýchlu technickú podporu.",
-					"url": "#"
+					"url": "/servis-migracie/"
 				},
 				{
 					"icon": "shield-check",
 					"title": "Lepšie zabezpečenie",
 					"text": "Ochráňte svoje dáta a systémy pred hrozbami.",
-					"url": "#"
+					"url": "/kyberneticka-bezpecnost/"
 				}
 			]
 		},
@@ -518,6 +522,7 @@
 		},
 		{
 			"name": "reviews",
+			"build": "testimonials",
 			"title": "Čo o nás hovoria klienti",
 			"reviews": [
 				{

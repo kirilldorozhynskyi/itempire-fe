@@ -1,6 +1,7 @@
 {
 	"title": "Servis, migrácie a životný cyklus zariadení",
 	"description": "Servis, migrácie, upgrady a podpora počas celého životného cyklu zariadení.",
+	"url": "/servis-migracie/",
 	"flexible": [
 		{
 			"name": "hero_with_card",
@@ -11,7 +12,7 @@
 				"class": "btn-purple",
 				"btn": {
 					"title": "Pripraviť servisný alebo migračný plán",
-					"url": "#kontakt"
+					"url": "/kontakt/"
 				}
 			},
 			"image": {

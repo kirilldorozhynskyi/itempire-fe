@@ -1,6 +1,7 @@
 {
 	"title": "Financovanie",
-	"description": "Moderné IT bez jednorazovej veľkej investície.",
+	"description": "Financovanie IT technológií pre firmy bez jednorazovej veľkej investície.",
+	"url": "/financovanie/",
 	"flexible": [
 		{
 			"name": "hero_with_card",
@@ -11,7 +12,7 @@
 				"class": "btn-purple",
 				"btn": {
 					"title": "Pripraviť návrh financovania",
-					"url": "#kontakt"
+					"url": "/kontakt/"
 				}
 			},
 			"image": {

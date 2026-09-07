@@ -1,13 +1,14 @@
 {
 	"title": "Kybernetická bezpečnosť a odolnosť firmy",
 	"description": "Riadená kybernetická bezpečnosť, ochrana dát a príprava na NIS2.",
+	"url": "/kyberneticka-bezpecnost/",
 	"flexible": [
 		{
 			"name": "hero_with_card",
 			"tag": "Kybernetická bezpečnosť a odolnosť firmy",
 			"title": "<span class='text-subtile'>Bezpečnosť,</span> ktorá chráni prevádzku, nie iba zariadenia",
 			"text": "Chránime zariadenia, identity, dáta, sieť, cloud a zálohy. Pomáhame firmám pripraviť sa na incidenty, audit, NIS2 a reálne bezpečnostné riziká bez zbytočnej paniky a bez prázdnych smerníc.",
-			"button": { "class": "btn-purple", "btn": { "title": "Začať bezpečnostnou gap analýzou", "url": "#kontakt" } },
+			"button": { "class": "btn-purple", "btn": { "title": "Začať bezpečnostnou gap analýzou", "url": "/kontakt/" } },
 			"image": {
 				"pictureClass": "picture size-full",
 				"image": {

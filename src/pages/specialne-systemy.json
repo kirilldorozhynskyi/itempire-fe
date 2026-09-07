@@ -1,6 +1,7 @@
 {
 	"title": "Špeciálne systémy",
-	"description": "Špeciálne systémy a prevádzková automatizácia.",
+	"description": "Špeciálne IT systémy a automatizácia prevádzky pre firmy s náročnými požiadavkami.",
+	"url": "/specialne-systemy/",
 	"flexible": [
 		{
 			"name": "hero_with_card",
@@ -11,7 +12,7 @@
 				"class": "btn-purple",
 				"btn": {
 					"title": "Navrhnúť prevádzkovú integráciu",
-					"url": "#kontakt"
+					"url": "/kontakt/"
 				}
 			},
 			"image": {

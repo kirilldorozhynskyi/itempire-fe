@@ -62,9 +62,11 @@
 							</div>
 
 							<div class="ps-16 md:ps-18" v-show="active === {{ loop.index }}">
-								<div class="text-subtile text-balance text-start tracking-tight max-w-107">
-									{{ item.text }}
-								</div>
+								{% if item.text and item.text != 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' %}
+									<div class="text-subtile text-balance text-start tracking-tight max-w-107">
+										{{ item.text }}
+									</div>
+								{% endif %}
 							</div>
 
 							<div class="absolute bottom-0 left-0 h-px bg-purple" v-show="active === {{ loop.index }}" :style="`width: ${ progross }%`"></div>

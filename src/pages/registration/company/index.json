@@ -2,6 +2,7 @@
 	"template": "views/templates/page.twig",
 	"build": "eshop",
 	"title": "Registrácia – firemné údaje",
+	"url": "/registration/company/",
 	"body_class": "auth-page",
 	"hide_footer": true,
 	"flexible": [

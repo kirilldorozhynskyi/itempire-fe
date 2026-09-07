@@ -1,6 +1,7 @@
 {
 	"template": "views/templates/page.twig",
 	"build": "eshop",
+	"url": "/cart/",
 	"body_class": "page",
 	"flexible": [
 		{
@@ -8,36 +9,36 @@
 			"products": [
 				{
 					"title": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
-					"url": "/products/detail",
+					"url": "/products/detail/",
 					"price": "93 799,00 €"
 				},
 				{
 					"title": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
-					"url": "/products/detail",
+					"url": "/products/detail/",
 					"price": "93 799,00 €"
 				},
 				{
 					"title": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
-					"url": "/products/detail",
+					"url": "/products/detail/",
 					"price": "93 799,00 €"
 				}
 			],
 			"accessories": [
 				{
 					"title": "Hyper HyperDrive Next 11 Port USB-C Hub - Midnight Blue",
-					"url": "/products/detail",
+					"url": "/products/detail/",
 					"price": "183,00 €",
 					"image": "/assets/images/products/f82213b87f4721b0ada3b4323a151124e80dcf9f.png"
 				},
 				{
 					"title": "Hyper HyperDrive Next 11 Port USB-C Hub - Midnight Blue",
-					"url": "/products/detail",
+					"url": "/products/detail/",
 					"price": "183,00 €",
 					"image": "/assets/images/products/f82213b87f4721b0ada3b4323a151124e80dcf9f.png"
 				},
 				{
 					"title": "Hyper HyperDrive Next 11 Port USB-C Hub - Midnight Blue",
-					"url": "/products/detail",
+					"url": "/products/detail/",
 					"price": "183,00 €",
 					"image": "/assets/images/products/f82213b87f4721b0ada3b4323a151124e80dcf9f.png"
 				}
@@ -50,7 +51,7 @@
 			"products": [
 				{
 					"title": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
-					"url": "/products/detail",
+					"url": "/products/detail/",
 					"price": "881,05 €",
 					"tag": "Novinka",
 					"image": {
@@ -69,7 +70,7 @@
 				},
 				{
 					"title": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
-					"url": "/products/detail",
+					"url": "/products/detail/",
 					"price": "881,05 €",
 					"tag": "Novinka",
 					"image": {
@@ -88,7 +89,7 @@
 				},
 				{
 					"title": "Canon i-SENSYS MF655Cdw",
-					"url": "/products/detail",
+					"url": "/products/detail/",
 					"price": "1 199 €",
 					"tag": "Novinka",
 					"image": {
@@ -107,7 +108,7 @@
 				},
 				{
 					"title": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
-					"url": "/products/detail",
+					"url": "/products/detail/",
 					"price": "881,05 €",
 					"tag": "Novinka",
 					"image": {
@@ -126,7 +127,7 @@
 				},
 				{
 					"title": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
-					"url": "/products/detail",
+					"url": "/products/detail/",
 					"price": "881,05 €",
 					"tag": "Novinka",
 					"image": {
@@ -145,7 +146,7 @@
 				},
 				{
 					"title": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
-					"url": "/products/detail",
+					"url": "/products/detail/",
 					"price": "881,05 €",
 					"tag": "Novinka",
 					"image": {
@@ -164,7 +165,7 @@
 				},
 				{
 					"title": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
-					"url": "/products/detail",
+					"url": "/products/detail/",
 					"price": "881,05 €",
 					"tag": "Novinka",
 					"image": {
@@ -183,7 +184,7 @@
 				},
 				{
 					"title": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
-					"url": "/products/detail",
+					"url": "/products/detail/",
 					"price": "881,05 €",
 					"tag": "Novinka",
 					"image": {
@@ -202,7 +203,7 @@
 				},
 				{
 					"title": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
-					"url": "/products/detail",
+					"url": "/products/detail/",
 					"price": "881,05 €",
 					"tag": "Novinka",
 					"image": {
@@ -221,7 +222,7 @@
 				},
 				{
 					"title": "ACER Aspire 14 AI A14-53M-56LA OLED Pure Silver",
-					"url": "/products/detail",
+					"url": "/products/detail/",
 					"price": "881,05 €",
 					"tag": "Novinka",
 					"image": {

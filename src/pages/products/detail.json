@@ -1,6 +1,7 @@
 {
 	"template": "views/templates/page.twig",
 	"build": "eshop",
+	"url": "/products/detail/",
 	"body_class": "page",
 	"flexible": [
 		{
@@ -20,7 +21,7 @@
 					"title": "Mobilné prenosné zariadenia"
 				},
 				{
-					"link": "/products/notebooky",
+					"link": "/products/notebooky/",
 					"title": "Notebooky"
 				},
 				{

@@ -1,8 +1,9 @@
 {
-	"lang": "en",
-	"title": "justDev Twig Starter",
-	"site_title": "justDev Twig Starter",
-	"description": "justDev Twig Starter",
+	"lang": "sk",
+	"title": "ITempire",
+	"site_title": "ITempire",
+	"description": "Stabilné, bezpečné a efektívne IT riešenia pre firmy.",
+	"siteURL": "https://itempire.justdev.link",
 	"background_color": "#fff",
 	"theme_color": "#fff",
 	"template": "views/templates/page.twig",
@@ -10,7 +11,7 @@
 	"scrollToTop": true,
 	"logoRaw": true,
 	"logo": {
-		"title": "justDev Twig Starter",
+		"title": "ITempire",
 		"width": "40",
 		"height": "32",
 		"src": "/brand/logo.svg"
@@ -28,19 +29,9 @@
 
 	"social": [
 		{
-			"title": "Instagram",
-			"icon": "instagram",
-			"url": "#"
-		},
-		{
 			"title": "Facebook",
 			"icon": "facebook",
-			"url": "#"
-		},
-		{
-			"title": "LinkedIn",
-			"icon": "linkedin",
-			"url": "#"
+			"url": "https://www.facebook.com/itempire.sk"
 		}
 	],
 	"footer": {
@@ -63,7 +54,7 @@
 			"class": "btn-coffee",
 			"btn": {
 				"title": "Nezáväzná konzultácia",
-				"url": "#kontakt"
+				"url": "/kontakt/"
 			}
 		},
 
@@ -74,7 +65,7 @@
 			"class": "btn-outline-neutral px-4 py-2.75",
 			"btn": {
 				"title": "Kontakt",
-				"url": "/kontakt"
+				"url": "/kontakt/"
 			}
 		},
 		"menu": {

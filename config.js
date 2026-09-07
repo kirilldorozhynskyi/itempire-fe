@@ -12,7 +12,8 @@
  */
 
 const features = {
-	eshop: false
+	eshop: false,
+	testimonials: false
 }
 
 const isBuildEnabled = (build) => {
