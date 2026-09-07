@@ -1,5 +1,6 @@
 {
 	"template": "views/templates/page.twig",
+	"build": "eshop",
 	"title": "Prihlásenie",
 	"body_class": "auth-page",
 

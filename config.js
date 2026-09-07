@@ -11,11 +11,32 @@
  * Copyright (c) 2026 justDev
  */
 
+const features = {
+	eshop: false
+}
+
+const isBuildEnabled = (build) => {
+	if (build === undefined) {
+		return true
+	}
+
+	if (typeof build !== 'string' || build.trim() === '') {
+		throw new TypeError('Build flag must be a non-empty string')
+	}
+
+	if (!Object.hasOwn(features, build)) {
+		throw new ReferenceError(`Unknown build flag: ${build}`)
+	}
+
+	return features[build] === true
+}
+
 const config = {
 	base: './',
 	rootDir: 'src',
 	buildDir: 'dist',
 	assetsDir: 'src/public/assets',
+	features,
 	fonts: {
 		dev: 'src/resources/fonts',
 		fix: '/assets/build/',
@@ -111,4 +132,5 @@ const config = {
 	}
 }
 
+export { features, isBuildEnabled }
 export default config

@@ -3,6 +3,7 @@
 		{
 			"url": "/",
 			"title": "Hardware",
+			"build": "eshop",
 			"submenu": [
 				{
 					"url": "/",
@@ -155,6 +156,7 @@
 		{
 			"url": "/gdpr",
 			"title": "Software",
+			"build": "eshop",
 			"submenu": [
 				{
 					"url": "/",

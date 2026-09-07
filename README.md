@@ -111,6 +111,19 @@ docker run --rm -p 8080:80 static-frontend
 - `src/resources/fonts/`: local font files
 - `doc/`: WordPress integration helpers
 
+### Contact form Microsoft 365 configuration
+
+The contact form endpoint at `src/public/send.php` requires PHP 8 with the cURL extension and these runtime environment variables:
+
+- `MICROSOFT_TENANT_ID`
+- `MICROSOFT_CLIENT_ID`
+- `MICROSOFT_CLIENT_SECRET`
+- `MICROSOFT_SENDER_EMAIL`
+- `CONTACT_RECIPIENT_EMAIL` (optional; defaults to the sender mailbox)
+
+The Microsoft Entra application must have the Microsoft Graph `Mail.Send` application permission with administrator consent. Never store the client secret in
+this repository or in browser-exposed environment variables.
+
 ## Working with pages
 
 The project supports both direct Twig pages and data-driven JSON pages.

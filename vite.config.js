@@ -9,7 +9,7 @@ import VitePluginSvgSpritemap from '@spiriit/vite-plugin-svg-spritemap'
 import vitePluginFaviconsInject from 'vite-plugin-favicons-inject'
 
 // Config
-import config from './config.js'
+import config, { isBuildEnabled } from './config.js'
 
 // Custom plugins
 import htmlMinifierPlugin from './scripts/htmlMinifier.js'
@@ -17,13 +17,14 @@ import htmlMinifierPlugin from './scripts/htmlMinifier.js'
 import fixCSSPlugin from './scripts/fixCss.js'
 
 import navigation from './scripts/navigation.js'
+import pageFeatures from './scripts/pageFeatures.js'
 
 // TWIG Custom functions
 import twigFunctionsSprite from './scripts/twig/sprite.js'
 import twigFunctionsImage from './scripts/twig/image.js'
 import twigFunctionsSvg from './scripts/twig/svg.js'
 
-const { base, rootDir, assetsDir, imagemin, htmlBeautify, fonts, SvgSpritemap } = config
+const { base, rootDir, assetsDir, imagemin, htmlBeautify, fonts, SvgSpritemap, features } = config
 
 import main from './src/data/main.json'
 
@@ -56,14 +57,22 @@ export default {
 	},
 	plugins: [
 		vituum(),
+		pageFeatures({
+			pagesDir: path.resolve(process.cwd(), `${rootDir}/pages`),
+			isBuildEnabled
+		}),
 		vue(),
 		twig({
 			root: `${rootDir}`,
 			globals: {
+				features,
 				navigation: navigation,
 				rootDir: path.resolve(__dirname, `${rootDir}`)
 			},
 			functions: {
+				build_enabled($build) {
+					return isBuildEnabled($build)
+				},
 				sprite($id, $classes) {
 					return twigFunctionsSprite($id, $classes)
 				},

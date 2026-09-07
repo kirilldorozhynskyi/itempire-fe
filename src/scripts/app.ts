@@ -12,6 +12,7 @@
  */
 
 import '../styles/app.css'
+import initializeCookieConsent from '../../cookie-bar-custom/cookie-lang.js'
 
 // NOTE: Include if needed
 // import AOS from 'aos'
@@ -39,6 +40,7 @@ import Animation from './directives/animation'
 
 import PageHeader from './components/PageHeader.vue'
 import Benefits from './components/Benefits.vue'
+import ContactForm from './components/ContactForm.vue'
 import CustomScript from './components/CustomScript.vue'
 import CustomScriptSrc from './components/CustomScriptSrc.vue'
 import DropDown from './components/DropDown.vue'
@@ -79,6 +81,7 @@ export const rootComponent = defineComponent({
 		PageHeader,
 		SimpleGallery,
 		Benefits,
+		ContactForm,
 		SliderWrapper,
 		SliderItem,
 		CustomScript,
@@ -269,4 +272,5 @@ const appRoot = document.querySelector('#app')
 
 if (appRoot) {
 	app.mount(appRoot)
+	initializeCookieConsent()
 }

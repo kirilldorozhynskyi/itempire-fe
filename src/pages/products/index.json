@@ -1,5 +1,6 @@
 {
 	"template": "views/templates/page.twig",
+	"build": "eshop",
 	"body_class": "page",
 	"flexible": [
 		{

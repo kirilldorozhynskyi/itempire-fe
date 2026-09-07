@@ -14,11 +14,13 @@
 {% extends layouts.default %}
 
 {% block page %}
-	{% if flexible %}
+	{% if build_enabled(build) and flexible %}
 		{% for item in flexible %}
-			{% include paths.components ~ '/flexible/' ~ item.name ~ '/_' ~ item.name ~ '.twig' with {
-				ce: item
-			} %}
+			{% if build_enabled(item.build) %}
+				{% include paths.components ~ '/flexible/' ~ item.name ~ '/_' ~ item.name ~ '.twig' with {
+					ce: item
+				} %}
+			{% endif %}
 		{% endfor %}
 	{% endif %}
 {% endblock %}

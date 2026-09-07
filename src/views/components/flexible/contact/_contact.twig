@@ -53,7 +53,7 @@
 					</div>
 				</div>
 
-				<form action="" class="grid content-start gap-4 bg-white p-6 lg:p-12">
+				<contact-form action="/send.php" method="post" submit-label="{{ ce.form.submit }}" class="grid content-start gap-4 bg-white p-6 lg:p-12">
 					<div class="flex flex-col gap-4">
 						<h2 class="font-serif text-2xl font-semibold leading-tight">{{ ce.form.title }}</h2>
 						<p class="max-w-96 text-sm text-subtile">
@@ -61,7 +61,7 @@
 						</p>
 					</div>
 
-					<float-field id="contact-name" label="Meno*" name="name" placeholder="Vaše meno"></float-field>
+					<float-field id="contact-name" label="Meno*" name="name" autocomplete="name" placeholder="Vaše meno" required></float-field>
 					<div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
 						<float-field
 							id="contact-email"
@@ -70,6 +70,7 @@
 							field-type="email"
 							autocomplete="email"
 							placeholder="Zadajte váš e-mail"
+							required
 						></float-field>
 						<float-field
 							id="contact-phone"
@@ -78,6 +79,7 @@
 							field-type="tel"
 							autocomplete="tel"
 							placeholder="+421 900 000 000"
+							required
 						></float-field>
 					</div>
 					<float-field id="contact-service" label="Typ služby" name="service" field-type="select" model-value="support">
@@ -96,8 +98,8 @@
 						</span>
 					</label>
 
-					<button type="submit" class="btn-purple w-full justify-center">{{ ce.form.submit }}</button>
-				</form>
+					<input type="text" name="website" class="hidden" tabindex="-1" autocomplete="off" aria-hidden="true" />
+				</contact-form>
 			</div>
 		</div>
 	</div>

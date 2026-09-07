@@ -94,6 +94,7 @@
 		},
 		{
 			"name": "cta_slider",
+			"build": "eshop",
 			"items": [
 				{
 					"image": {
@@ -160,6 +161,7 @@
 
 		{
 			"name": "stepper",
+			"class": "!pt-0",
 			"tag": "SLužby",
 			"title": "<span class='text-subtile'>Zabezpečujeme</span> kompletný servis IT technológií. Od návrhu infraštruktúry až po dlhodobú správu a podporu.",
 			"items": [
@@ -269,6 +271,7 @@
 		},
 
 		{
+			"build": "eshop",
 			"name": "latest_products",
 			"tag": "E-shop",
 			"title": "<span class='text-subtile'>Overené</span> IT produkty pre vašu firmu",
@@ -593,6 +596,7 @@
 		},
 		{
 			"name": "studies",
+			"build": "eshop",
 			"tag": "Prípadové štúdie",
 			"title": "<span class='text-subtile'>Reálne riešenia</span> <br>pre reálne firmy",
 			"button_side": {
