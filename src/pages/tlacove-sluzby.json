@@ -132,23 +132,23 @@
 			"items": [
 				{
 					"title": "Zmapujeme tlačové prostredie",
-					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+					"text": "Zanalyzujeme zariadenia, objem tlače, servisné požiadavky, spotrebný materiál a spôsob používania tlačiarní."
 				},
 				{
 					"title": "Vyhodnotíme úspory",
-					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+					"text": "Odhalíme nadbytočné zariadenia, neefektívnu prevádzku, plytvanie aj príležitosti na zníženie tlačových nákladov."
 				},
 				{
 					"title": "Navrhneme model",
-					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+					"text": "Odporučíme vhodné multifunkčné zariadenia, spôsob financovania, servisný model a pravidlá bezpečnej tlače."
 				},
 				{
 					"title": "Nasadíme riešenie",
-					"text": "Zariadenia, prístupy, pravidlá a servisný režim"
+					"text": "Zariadenia dodáme alebo prenajmeme, nakonfigurujeme ich a nastavíme používateľov, prístupy aj tlačové pravidlá."
 				},
 				{
 					"title": "Reportujeme a optimalizujeme",
-					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+					"text": "Sledujeme využitie zariadení, náklady a servisné potreby. Tlačové prostredie priebežne upravujeme podľa reálnej prevádzky."
 				}
 			]
 		},
@@ -178,15 +178,15 @@
 			"items": [
 				{
 					"title": "Čo je audit tlače?",
-					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+					"text": "Audit tlače analyzuje zariadenia, objem strán, spotrebu, servis a celkové náklady. Výstupom je návrh úspor a efektívnejšieho usporiadania tlačového prostredia."
 				},
 				{
 					"title": "Viete zabezpečiť bezpečnú tlač?",
-					"text": "Áno. Bezpečná tlač umožní uvoľniť dokument až po overení používateľa pri zariadení."
+					"text": "Áno. Vieme nastaviť autentifikáciu používateľov a uvoľnenie dokumentu až priamo pri zariadení, čím znižujeme riziko ponechaných alebo neoprávnene vytlačených dokumentov."
 				},
 				{
-					"title": "Riešite aj prenájom MFD?",
-					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+					"title": "Riešite aj prenájom multifunkčných zariadení?",
+					"text": "Áno. Zabezpečujeme predaj aj prenájom multifunkčných zariadení vrátane konfigurácie, servisu, spotrebného materiálu a pravidelného vyhodnocovania prevádzky."
 				}
 			]
 		}

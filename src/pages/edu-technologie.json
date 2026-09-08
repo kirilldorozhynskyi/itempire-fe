@@ -130,23 +130,23 @@
 			"items": [
 				{
 					"title": "Zmapujeme školské prostredie",
-					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+					"text": "Preveríme učebne, sieť, Wi-Fi, zariadenia, používateľské účty, bezpečnostné požiadavky a potreby učiteľov aj administratívy."
 				},
 				{
 					"title": "Navrhneme technický plán",
-					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+					"text": "Pripravíme návrh školskej infraštruktúry, interaktívnych technológií, správy zariadení a bezpečného prístupu k digitálnym službám."
 				},
 				{
 					"title": "Dodáme a nastavíme technológie",
-					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+					"text": "Zabezpečíme interaktívne tabule, počítače, notebooky, tablety, sieťové prvky a ich konfiguráciu pre školské prostredie"
 				},
 				{
 					"title": "Zaškolíme používateľov",
-					"text": "Učitelia, administrácia a správcovia"
+					"text": "Ukážeme pedagógom a správcovi, ako technológie používať, spravovať a bezpečne zapojiť do každodennej výučby."
 				},
 				{
 					"title": "Podporujeme prevádzku",
-					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+					"text": "Zabezpečíme servis, helpdesk, aktualizácie, správu zariadení, monitoring siete a ďalší rozvoj digitálneho prostredia školy."
 				}
 			]
 		},
@@ -176,15 +176,15 @@
 			"items": [
 				{
 					"title": "Riešite interaktívne tabule?",
-					"text": "Áno. Navrhneme vhodné prezentačné technológie, zabezpečíme dodanie, montáž, nastavenie aj zaškolenie používateľov."
+					"text": "Áno. Zabezpečíme interaktívne tabule, zobrazovaciu techniku, počítače, notebooky, tablety, príslušenstvo aj ich montáž a konfiguráciu."
 				},
 				{
 					"title": "Viete spravovať aj školské zariadenia?",
-					"text": "Áno. Pomocou MDM vieme centrálne spravovať notebooky a tablety, nastavovať prístupy, aplikácie aj bezpečnostné pravidlá."
+					"text": "Áno. Pomocou MDM môžeme centrálne spravovať školské tablety, notebooky a mobilné zariadenia, aplikácie, aktualizácie aj bezpečnostné pravidlá."
 				},
 				{
 					"title": "Pomáhate aj s Microsoft 365 pre školy?",
-					"text": "Áno. Pomôžeme s licenciami, účtami, Microsoft Teams, zdieľaním dokumentov, nastavením prístupov aj podporou používateľov."
+					"text": "Áno. Navrhujeme školské LAN a Wi-Fi siete, segmentáciu prístupov, ochranu zariadení, bezpečné identity, zálohovanie aj podporu používateľov."
 				}
 			]
 		}

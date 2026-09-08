@@ -115,11 +115,14 @@
 				}
 			},
 			"items": [
-				{ "title": "Zmapujeme stav", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
-				{ "title": "Určíme priority", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
-				{ "title": "Stabilizujeme", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
-				{ "title": "Nastavíme prevádzkový model", "text": "SLA, zodpovednosti, eskalácie, reporting a údržbu" },
-				{ "title": "Pripravíme rozvoj", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." }
+				{ "title": "Zmapujeme stav", "text": "Preveríme firemnú sieť, servery, zálohy, zariadenia, dokumentáciu aj spôsob poskytovania IT podpory." },
+				{ "title": "Určíme priority", "text": "Zistenia zoradíme podľa vplyvu na dostupnosť systémov, bezpečnosť dát, produktivitu používateľov a náklady." },
+				{ "title": "Stabilizujeme", "text": "Odstránime kritické slabé miesta, preveríme zálohovanie a stabilizujeme sieťové aj serverové prostredie." },
+				{
+					"title": "Nastavíme prevádzkový model",
+					"text": "Zavedieme monitoring IT, SLA, eskalácie, pravidelnú údržbu, dokumentáciu a jasné rozdelenie zodpovedností."
+				},
+				{ "title": "Pripravíme rozvoj", "text": "Vytvoríme plán obnovy a modernizácie IT infraštruktúry podľa potrieb a ďalšieho rastu firmy." }
 			]
 		},
 		{
@@ -146,12 +149,18 @@
 			"title": "Často kladené otázky",
 			"open": "1",
 			"items": [
-				{ "title": "Viete prevziať správu existujúcej infraštruktúry?", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+				{
+					"title": "Viete prevziať správu existujúcej infraštruktúry?",
+					"text": "Áno. Najskôr vykonáme audit súčasného IT prostredia, doplníme dokumentáciu a pripravíme kontrolovaný prechod správy bez zbytočného narušenia prevádzky."
+				},
 				{
 					"title": "Ako funguje monitoring a SLA?",
-					"text": "Monitoring, zodpovednosti, eskalácie a reakčné časy nastavíme podľa kritickosti vašej prevádzky."
+					"text": "Kritické systémy, servery, siete a zálohy priebežne monitorujeme. Reakčné časy, priority a eskalácie nastavíme podľa významu jednotlivých služieb pre vašu prevádzku."
 				},
-				{ "title": "Kontrolujete aj funkčnosť záloh?", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." }
+				{
+					"title": "Kontrolujete aj funkčnosť záloh?",
+					"text": "Áno. Overujeme priebeh zálohovania aj reálnu obnoviteľnosť dát. Podľa potrieb nastavíme testy obnovy, retenčné pravidlá a požadované parametre RPO a RTO."
+				}
 			]
 		}
 	]

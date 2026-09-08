@@ -107,11 +107,23 @@
 				}
 			},
 			"items": [
-				{ "title": "Zistíme potrebu", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
-				{ "title": "Navrhneme riešenie", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
-				{ "title": "Zabezpečíme dodávku", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
-				{ "title": "Nasadíme a zaevidujeme", "text": "Inventár, licencie, záruky, životný cyklus" },
-				{ "title": "Plánujeme obnovu", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." }
+				{
+					"title": "Zistíme potrebu",
+					"text": "Preveríme spôsob používania, technické požiadavky, existujúcu infraštruktúru, rozpočet a očakávanú životnosť riešenia."
+				},
+				{ "title": "Navrhneme riešenie", "text": "Odporučíme vhodný hardvér, softvér a licencie vrátane kompatibilných alternatív a možností financovania." },
+				{
+					"title": "Zabezpečíme dodávku",
+					"text": "Postaráme sa o obstaranie technológií, licencovanie, logistiku a koordináciu dodania na jednotlivé pracoviská."
+				},
+				{
+					"title": "Nasadíme a zaevidujeme",
+					"text": "Zariadenia nakonfigurujeme, zabezpečíme, priradíme používateľom a doplníme do evidencie firemného majetku."
+				},
+				{
+					"title": "Plánujeme obnovu",
+					"text": "Sledujeme životný cyklus, podporu výrobcu, záruky a licenčné obdobia, aby firma technológie obnovovala plánovane."
+				}
 			]
 		},
 		{
@@ -138,9 +150,18 @@
 			"title": "Často kladené otázky",
 			"open": "1",
 			"items": [
-				{ "title": "Viete dodať hardvér aj softvérové licencie?", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
-				{ "title": "Je možné technológie financovať?", "text": "Áno. Podľa projektu vieme pripraviť operatívny alebo finančný leasing cez partnera." },
-				{ "title": "Pomôžete aj s evidenciou a plánom obnovy?", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." }
+				{
+					"title": "Viete dodať hardvér aj softvérové licencie?",
+					"text": "Áno. Dodávame notebooky, pracovné stanice, servery, sieťové prvky a príslušenstvo aj Microsoft 365, bezpečnostné, zálohovacie a ďalšie softvérové licencie."
+				},
+				{
+					"title": "Je možné technológie financovať?",
+					"text": "Áno. Pri vhodných projektoch vieme cez finančného partnera pripraviť leasing alebo model hardvér ako služba s predvídateľnou mesačnou platbou."
+				},
+				{
+					"title": "Pomôžete aj s evidenciou a plánom obnovy?",
+					"text": "Áno. Zariadenia a licencie zaevidujeme, sledujeme ich životný cyklus a pripravíme plán obnovy podľa technického stavu, podpory výrobcu a potrieb firmy."
+				}
 			]
 		}
 	]

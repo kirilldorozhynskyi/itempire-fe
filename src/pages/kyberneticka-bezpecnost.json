@@ -109,11 +109,26 @@
 				}
 			},
 			"items": [
-				{ "title": "Zmapujeme riziká", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
-				{ "title": "Navrhneme opatrenia", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
-				{ "title": "Nasadíme ochranu", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
-				{ "title": "Doplníme procesy", "text": "Incident management, zodpovednosti, reportovanie a dokumentáciu" },
-				{ "title": "Otestujeme pripravenosť", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." }
+				{
+					"title": "Zmapujeme riziká",
+					"text": "Preveríme infraštruktúru, identity, zariadenia, cloud, zálohy a bezpečnostné procesy. Odhalíme zraniteľnosti, ktoré môžu ohroziť dáta alebo kontinuitu prevádzky."
+				},
+				{
+					"title": "Navrhneme opatrenia",
+					"text": "Pripravíme prioritizovaný bezpečnostný plán podľa závažnosti rizík, požiadaviek NIS2, potrieb firmy a dostupného rozpočtu."
+				},
+				{
+					"title": "Nasadíme ochranu",
+					"text": "Implementujeme vhodné technické opatrenia – napríklad MFA, EDR, firewall, segmentáciu siete, e-mailovú ochranu alebo SIEM/MDR dohľad."
+				},
+				{
+					"title": "Doplníme procesy",
+					"text": "Nastavíme zodpovednosti, incident response, bezpečnostnú dokumentáciu, pravidlá prístupov a postupy obnovy po kybernetickom incidente."
+				},
+				{
+					"title": "Otestujeme pripravenosť",
+					"text": "Overíme funkčnosť ochrany, obnoviteľnosť záloh a pripravenosť tímu. Výsledky vyhodnotíme a navrhneme ďalšie zlepšenia."
+				}
 			]
 		},
 		{
@@ -140,12 +155,18 @@
 			"title": "Často kladené otázky",
 			"open": "1",
 			"items": [
-				{ "title": "Pomôžete nám s prípravou na NIS2?", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+				{
+					"title": "Pomôžete nám s prípravou na NIS2?",
+					"text": "Áno. Zrealizujeme NIS2 gap analýzu, identifikujeme chýbajúce technické a organizačné opatrenia a pripravíme praktický plán ich zavedenia vrátane potrebnej dokumentácie."
+				},
 				{
 					"title": "Čo zahŕňa bezpečnostná gap analýza?",
-					"text": "Zmapujeme technické opatrenia, procesy, identity, zálohy, zraniteľnosti aj pripravenosť na incident."
+					"text": "Preveríme ochranu zariadení, identít, siete, cloudu, e-mailov, záloh aj reakcie na incidenty. Výstupom je prehľad rizík a odporúčania zoradené podľa priority a dopadu na firmu."
 				},
-				{ "title": "Viete zabezpečiť nepretržitý dohľad?", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." }
+				{
+					"title": "Viete zabezpečiť nepretržitý bezpečnostný dohľad?",
+					"text": "Áno. Pomocou SIEM/MDR služieb vieme monitorovať bezpečnostné udalosti, vyhodnocovať podozrivé správanie a zabezpečiť eskaláciu incidentov podľa dohodnutého SLA."
+				}
 			]
 		}
 	]

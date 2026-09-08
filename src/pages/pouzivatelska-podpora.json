@@ -109,11 +109,26 @@
 				}
 			},
 			"items": [
-				{ "title": "Nastavíme kanály podpory", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
-				{ "title": "Definujeme priority", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
-				{ "title": "Upravíme správu zariadení", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
-				{ "title": "Prepojíme komunikáciu", "text": "Teams, VoIP, SIP trunk, SBC, nahrávanie alebo call centrum" },
-				{ "title": "Meriame kvalitu", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." }
+				{
+					"title": "Nastavíme kanály podpory",
+					"text": "Zavedieme helpdesk a jasné kanály na nahlasovanie požiadaviek, aby sa žiadny incident nestratil medzi e-mailmi, telefonátmi a osobnými odkazmi."
+				},
+				{
+					"title": "Definujeme priority",
+					"text": "Nastavíme kategórie požiadaviek, SLA, reakčné časy a eskalácie podľa závažnosti problému a jeho vplyvu na prevádzku."
+				},
+				{
+					"title": "Upravíme správu zariadení",
+					"text": "Zjednotíme evidenciu, konfiguráciu, aktualizácie a zabezpečenie firemných počítačov, notebookov a mobilných zariadení."
+				},
+				{
+					"title": "Prepojíme komunikáciu",
+					"text": "Podľa potrieb nastavíme Microsoft Teams, VoIP, SIP trunk, firemné volania, nahrávanie hovorov alebo call centrum."
+				},
+				{
+					"title": "Meriame kvalitu",
+					"text": "Sledujeme reakčné časy, vyriešené požiadavky, opakované problémy, spokojnosť používateľov aj kvalitu firemných hovorov."
+				}
 			]
 		},
 		{
@@ -140,9 +155,18 @@
 			"title": "Často kladené otázky",
 			"open": "1",
 			"items": [
-				{ "title": "Ako môžu používatelia kontaktovať helpdesk?", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
-				{ "title": "Viete spravovať aj firemné volania?", "text": "Áno. Riešime Teams volania, VoIP, SIP trunk, SBC, nahrávanie aj call centrá." },
-				{ "title": "Pomôžete s onboardingom a offboardingom?", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." }
+				{
+					"title": "Ako môžu používatelia kontaktovať helpdesk?",
+					"text": "Požiadavky môžu nahlasovať cez dohodnutý helpdesk portál, e-mail alebo telefonický kontakt. Každá požiadavka dostane prioritu, zodpovednú osobu a sledovateľný stav."
+				},
+				{
+					"title": "Viete spravovať aj firemné volania?",
+					"text": "Áno. Zabezpečujeme Microsoft Teams telefonovanie, VoIP, SIP trunk, SBC, nahrávanie hovorov, call centrum aj monitoring kvality komunikácie."
+				},
+				{
+					"title": "Pomôžete s onboardingom a offboardingom?",
+					"text": "Áno. Pripravíme zariadenie, používateľský účet, licencie a prístupy pre nového zamestnanca. Pri odchode bezpečne odoberieme oprávnenia a zabezpečíme firemné dáta."
+				}
 			]
 		}
 	]

@@ -130,23 +130,23 @@
 			"items": [
 				{
 					"title": "Pochopíme cieľ",
-					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+					"text": "Zmapujeme používateľov, obchodné potreby, interné procesy, požadované funkcie a výsledky, ktoré má riešenie priniesť."
 				},
 				{
 					"title": "Navrhneme architektúru",
-					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+					"text": "Definujeme funkcionalitu, používateľské cesty, dátový model, integrácie, bezpečnosť a vhodnú technologickú platformu."
 				},
 				{
 					"title": "Vytvoríme riešenie",
-					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+					"text": "Vyvinieme webovú stránku, e-shop, zákaznícky portál, internú aplikáciu alebo digitálny nástroj podľa schváleného návrhu."
 				},
 				{
 					"title": "Prepojíme systémy",
-					"text": "CRM, ERP, platby, formuláre, analytika alebo automatizácie"
+					"text": "Pomocou API a konektorov napojíme riešenie na CRM, ERP, platobnú bránu, formuláre, databázy alebo Microsoft 365."
 				},
 				{
 					"title": "Prevádzkujeme a rozvíjame",
-					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+					"text": "Zabezpečíme hosting, DNS, monitoring, aktualizácie, technickú podporu a ďalší rozvoj podľa reálnych potrieb používateľov."
 				}
 			]
 		},
@@ -176,15 +176,15 @@
 			"items": [
 				{
 					"title": "Robíte aj digitálnu stratégiu?",
-					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+					"text": "Áno. Pomôžeme definovať cieľové skupiny, funkcie, obsah, používateľské cesty, integrácie a priority, aby digitálne riešenie podporovalo konkrétne obchodné ciele."
 				},
 				{
 					"title": "Viete napojiť web na CRM alebo ERP?",
-					"text": "Áno. Riešime API integrácie, formuláre, objednávky, zákaznícke dáta, platobné integrácie a workflow."
+					"text": "Áno. Web, e-shop alebo aplikáciu vieme prepojiť s CRM, ERP a ďalšími systémami prostredníctvom dostupného API, konektorov alebo integrácie na mieru."
 				},
 				{
 					"title": "Zabezpečujete hosting a DNS?",
-					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+					"text": "Áno. Postaráme sa o hosting, domény, DNS záznamy, SSL certifikáty, zálohovanie, monitoring aj technickú prevádzku digitálneho riešenia."
 				}
 			]
 		}

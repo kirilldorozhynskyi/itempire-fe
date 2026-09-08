@@ -90,19 +90,19 @@
 			"items": [
 				{
 					"title": "Operatívny leasing",
-					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+					"text": "Technológie používate počas dohodnutého obdobia za pravidelnú mesačnú platbu. Riešenie je vhodné pre firmy, ktoré chcú chrániť cash flow a pravidelne obnovovať IT vybavenie."
 				},
 				{
 					"title": "HaaS, Hardware as a Service",
-					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+					"text": "Zariadenia, servis a podľa dohody aj ich správa sú spojené do jednej pravidelnej platby. Získate funkčné IT vybavenie bez starostí s jeho obstaraním a životným cyklom."
 				},
 				{
 					"title": "Splátkový predaj",
-					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+					"text": "Technológie získate do vlastníctva a ich cenu rozložíte do dohodnutých splátok. Vhodné riešenie, ak chcete zariadenia dlhodobo vlastniť bez jednorazového zaťaženia rozpočtu."
 				},
 				{
 					"title": "Projektové financovanie",
-					"text": "Väčší IT projekt, migrácia, nová infraštruktúra alebo kompletné vybavenie prevádzky — financovaný ako celok s jednou mesačnou splátkou."
+					"text": "Komplexný IT projekt – od serverov a sietí až po bezpečnosť, pracoviská či kamerové systémy – rozložíme do predvídateľných platieb podľa rozsahu a harmonogramu realizácie."
 				}
 			]
 		},
@@ -158,23 +158,23 @@
 			"items": [
 				{
 					"title": "Aká je minimálna výška financovania?",
-					"text": "Minimálna výška závisí od zvoleného modelu a typu technológie. Konkrétne možnosti vám pripravíme podľa rozsahu riešenia."
+					"text": "Minimálna hodnota závisí od typu technológie, zvoleného modelu a podmienok finančného partnera. Po krátkom zadaní preveríme dostupné možnosti a pripravíme konkrétnu kalkuláciu."
 				},
 				{
 					"title": "Môžem financovať aj existujúce zariadenia?",
-					"text": "V niektorých prípadoch áno, formou spätného leasingu alebo refinancovania. Posúdime to individuálne."
+					"text": "V niektorých prípadoch áno – napríklad formou spätného leasingu alebo refinancovania. Rozhoduje vek, stav a hodnota zariadení, ako aj posúdenie finančného partnera."
 				},
 				{
 					"title": "Čo sa stane po skončení zmluvy?",
-					"text": "Podľa zvoleného modelu môžete zariadenia odkúpiť, vrátiť alebo ich nahradiť novou technológiou."
+					"text": "Závisí od zvoleného modelu a zmluvných podmienok. Zariadenia môžete odkúpiť, vrátiť, pokračovať v ich používaní alebo ich nahradiť novšou technológiou."
 				},
 				{
 					"title": "Kto je finančným partnerom?",
-					"text": "Spolupracujeme s overenými finančnými partnermi a vhodného vyberáme podľa typu a rozsahu projektu."
+					"text": "Financovanie zabezpečujeme prostredníctvom overených finančných partnerov. Konkrétneho partnera a podmienky vyberieme podľa hodnoty projektu, dĺžky financovania a zvoleného modelu."
 				},
 				{
 					"title": "Môžem kombinovať nákup a financovanie?",
-					"text": "Áno. Pri jednom projekte vieme skombinovať priamy nákup s financovaním vybraných zariadení alebo služieb."
+					"text": "Áno. Časť riešenia môžete kúpiť priamo a zvyšok financovať. Kombináciu vieme nastaviť aj podľa typu technológie, oddelenia alebo jednotlivých etáp projektu."
 				}
 			]
 		}

@@ -130,23 +130,23 @@
 			"items": [
 				{
 					"title": "Diagnostikujeme stav",
-					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+					"text": "Identifikujeme príčinu problému, technické obmedzenia, závislosti systémov a možné prevádzkové riziká."
 				},
 				{
 					"title": "Navrhneme postup",
-					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+					"text": "Pripravíme servisný alebo migračný plán vrátane harmonogramu, potrebných technológií a očakávanej odstávky."
 				},
 				{
 					"title": "Pripravíme zálohu a plán",
-					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+					"text": "Pred zásahom zabezpečíme dáta, overíme zálohy a stanovíme postup návratu do pôvodného stavu."
 				},
 				{
 					"title": "Zrealizujeme zásah",
-					"text": "Servis, diely, presun systému alebo upgrade"
+					"text": "Vykonáme opravu, upgrade alebo migráciu systému kontrolovane a s čo najmenším dopadom na prevádzku."
 				},
 				{
 					"title": "Overíme funkčnosť",
-					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+					"text": "Otestujeme zariadenia, aplikácie, prístupy a dáta. Výsledok zdokumentujeme a odporučíme ďalšie kroky."
 				}
 			]
 		},
@@ -176,15 +176,15 @@
 			"items": [
 				{
 					"title": "Viete zapožičať náhradné zariadenie?",
-					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+					"text": "Podľa dostupnosti vieme počas opravy alebo migrácie zabezpečiť náhradné zariadenie, aby používatelia mohli pokračovať v práci s minimálnym prestojom."
 				},
 				{
 					"title": "Robíte aj migrácie systémov?",
-					"text": "Áno. Migrácie pripravujeme s dôrazom na zálohu, plán, testovanie a minimalizáciu prestoja."
+					"text": "Áno. Realizujeme migrácie serverov, dát, aplikácií a vybraných cloudových služieb vrátane prípravy záloh, testovania a plánu návratu."
 				},
 				{
 					"title": "Riešite pozáručné opravy?",
-					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+					"text": "Áno. Zabezpečíme diagnostiku, náhradné diely a pozáručný servis IT zariadení. Pred opravou posúdime aj jej technickú a ekonomickú efektívnosť."
 				}
 			]
 		}

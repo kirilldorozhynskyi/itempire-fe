@@ -109,11 +109,26 @@
 				}
 			},
 			"items": [
-				{ "title": "Zhodnotíme prostredie", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
-				{ "title": "Navrhneme cieľový stav", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
-				{ "title": "Zrealizujeme migráciu alebo úpravy", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
-				{ "title": "Zabezpečíme prostredie", "text": "Identity, zariadenia, prístupy, dáta a bezpečnostné pravidlá" },
-				{ "title": "Podporíme adopciu", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." }
+				{
+					"title": "Zhodnotíme prostredie",
+					"text": "Preveríme Microsoft 365 tenant, licencie, identity, zariadenia, zdieľanie dát, bezpečnostné nastavenia a spôsob používania cloudu."
+				},
+				{
+					"title": "Navrhneme cieľový stav",
+					"text": "Definujeme architektúru, prístupy, správu zariadení, pravidlá zdieľania a Microsoft 365 governance podľa potrieb firmy."
+				},
+				{
+					"title": "Zrealizujeme migráciu alebo úpravy",
+					"text": "Kontrolovane presunieme e-maily, dokumenty a používateľov alebo upravíme existujúce cloudové prostredie."
+				},
+				{
+					"title": "Zabezpečíme prostredie",
+					"text": "Nastavíme Entra ID, MFA, podmienené prístupy, Intune, ochranu dát a podľa potreby aj zálohovanie Microsoft 365."
+				},
+				{
+					"title": "Podporíme adopciu",
+					"text": "Pomôžeme používateľom správne využívať Teams, SharePoint, OneDrive a ďalšie nástroje vrátane prípravy na Microsoft Copilot."
+				}
 			]
 		},
 		{
@@ -140,9 +155,15 @@
 			"title": "Často kladené otázky",
 			"open": "1",
 			"items": [
-				{ "title": "Pomôžete nám s migráciou do Microsoft 365?", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+				{
+					"title": "Pomôžete nám s migráciou do Microsoft 365?",
+					"text": "Áno. Zabezpečíme analýzu, migračný plán, presun e-mailov, dokumentov a používateľov aj následné overenie funkčnosti Microsoft 365 prostredia."
+				},
 				{ "title": "Viete optimalizovať existujúce licencie?", "text": "Áno. Skontrolujeme využitie licencií, funkcií aj prístupov a navrhneme cieľový stav." },
-				{ "title": "Pripravíte prostredie aj na Copilot?", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." }
+				{
+					"title": "Pripravíte prostredie aj na Copilot?",
+					"text": "Áno. Preveríme licencie, oprávnenia, kvalitu dát, nastavenie SharePointu, pravidlá zdieľania a bezpečnostné riziká, ktoré ovplyvňujú pripravenosť na Copilot."
+				}
 			]
 		}
 	]

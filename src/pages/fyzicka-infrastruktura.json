@@ -109,11 +109,20 @@
 				}
 			},
 			"items": [
-				{ "title": "Obhliadka priestoru", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
-				{ "title": "Návrh riešenia", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
-				{ "title": "Realizácia", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
-				{ "title": "Integrácia", "text": "Prepojenie s IT, prístupmi, sieťou alebo notifikáciami" },
-				{ "title": "Odovzdanie", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." }
+				{
+					"title": "Obhliadka priestoru",
+					"text": "Zmapujeme dátové trasy, technické miestnosti, racky, vstupy, kritické zóny a existujúcu kabeláž alebo bezpečnostné systémy."
+				},
+				{
+					"title": "Návrh riešenia",
+					"text": "Pripravíme návrh metalickej a optickej kabeláže, rackov, kamier, alarmov, prístupových alebo dochádzkových systémov."
+				},
+				{
+					"title": "Realizácia",
+					"text": "Zabezpečíme montáž, ukončenie a označenie kabeláže, zváranie optických vlákien aj inštaláciu bezpečnostných zariadení."
+				},
+				{ "title": "Integrácia", "text": "Prepojíme kamery, alarmy, prístupové body, dochádzku a sieťovú infraštruktúru do funkčného technologického celku." },
+				{ "title": "Odovzdanie", "text": "Vykonáme testovanie a merania, pripravíme dokumentáciu a zaškolíme zodpovedné osoby na používanie riešenia." }
 			]
 		},
 		{
@@ -140,12 +149,18 @@
 			"title": "Často kladené otázky",
 			"open": "1",
 			"items": [
-				{ "title": "Realizujete metalickú aj optickú kabeláž?", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+				{
+					"title": "Realizujete metalickú aj optickú kabeláž?",
+					"text": "Áno. Zabezpečujeme štruktúrovanú metalickú kabeláž, optické trasy, zváranie optických vlákien, ukončenie rozvodov, racky aj súvisiace dátové prvky."
+				},
 				{
 					"title": "Dostaneme po realizácii dokumentáciu a merania?",
-					"text": "Áno. Súčasťou odovzdania môže byť značenie, meracie protokoly aj dokumentácia použiteľná pri prevádzke a audite."
+					"text": "Áno. Odovzdáme označenie trás, technickú dokumentáciu a výsledky príslušných meraní vrátane OTDR merania optických vedení."
 				},
-				{ "title": "Viete integrovať kamery a prístupový systém?", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." }
+				{
+					"title": "Viete integrovať kamery a prístupový systém?",
+					"text": "Áno. Kamerové, prístupové, dochádzkové a alarmové systémy vieme prepojiť so sieťou, používateľskými oprávneniami a ďalšími bezpečnostnými procesmi."
+				}
 			]
 		}
 	]

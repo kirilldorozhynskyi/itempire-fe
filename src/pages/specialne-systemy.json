@@ -130,23 +130,23 @@
 			"items": [
 				{
 					"title": "Analyzujeme prevádzku",
-					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+					"text": "Zmapujeme pohyb osôb a vozidiel, používateľské roly, bezpečnostné požiadavky aj aktuálne technické prostredie."
 				},
 				{
 					"title": "Navrhneme integráciu",
-					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+					"text": "Pripravíme technický návrh prepojenia prístupového, dochádzkového, turniketového alebo parkovacieho systému."
 				},
 				{
 					"title": "Dodáme alebo upravíme riešenie",
-					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+					"text": "Zabezpečíme potrebné technológie, konfiguráciu a úpravy existujúcich systémov podľa potrieb prevádzky."
 				},
 				{
 					"title": "Prepojíme procesy",
-					"text": "Správa používateľov, oprávnenia a reporting"
+					"text": "Prepojíme zariadenia, používateľské oprávnenia, evidenciu dochádzky, návštevy a ďalšie firemné systémy."
 				},
 				{
 					"title": "Zabezpečíme servis",
-					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+					"text": "Po odovzdaní riešenia poskytujeme technickú podporu, údržbu, diagnostiku a ďalší rozvoj systému."
 				}
 			]
 		},
@@ -176,15 +176,15 @@
 			"items": [
 				{
 					"title": "Viete prepojiť turnikety s prístupovým systémom?",
-					"text": "Áno. Turnikety vieme prepojiť s používateľmi, kartami a oprávneniami tak, aby vstupy fungovali ako súčasť jedného riadeného systému."
+					"text": "Áno. Turnikety vieme integrovať s prístupovými kartami, oprávneniami používateľov, evidenciou návštev a podľa možností aj s existujúcim dochádzkovým systémom."
 				},
 				{
 					"title": "Riešite automatizované parkovanie?",
-					"text": "Áno, podľa rozsahu projektu vieme pomôcť s návrhom, integráciou alebo technickou podporou parkovacích systémov."
+					"text": "Áno. Navrhujeme parkovacie riešenia s riadením vjazdu, závorami, identifikáciou vozidiel, evidenciou návštev a prepojením na prístupové pravidlá."
 				},
 				{
 					"title": "Dá sa systém napojiť na dochádzku?",
-					"text": "Áno. Prístupový systém môžeme prepojiť s evidenciou dochádzky, správou používateľov a reportingom."
+					"text": "Áno. Možnosti integrácie závisia od používaného dochádzkového systému a dostupných rozhraní. Po technickej analýze navrhneme najvhodnejší spôsob prepojenia."
 				}
 			]
 		}

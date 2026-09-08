@@ -130,23 +130,23 @@
 			"items": [
 				{
 					"title": "Vyberieme kritické miesta",
-					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+					"text": "Určíme priestory a technológie, pri ktorých môže teplota, voda, dym, vlhkosť, otvorené dvere alebo výpadok napájania spôsobiť problém."
 				},
 				{
 					"title": "Navrhneme senzory",
-					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+					"text": "Vyberieme vhodné IoT senzory, PDU prvky, meranie spotreby a spôsob ich prepojenia s existujúcou infraštruktúrou."
 				},
 				{
 					"title": "Nasadíme pilot",
-					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+					"text": "Riešenie najskôr overíme v jednej serverovni, technickej miestnosti alebo vybranej časti pracoviska."
 				},
 				{
 					"title": "Nastavíme notifikácie",
-					"text": "Teams, SMS, e-mail a eskalačné pravidlá"
+					"text": "Definujeme hraničné hodnoty, zodpovedné osoby a upozornenia cez e-mail, Microsoft Teams alebo SMS."
 				},
 				{
 					"title": "Rozšírime scenáre",
-					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+					"text": "Po vyhodnotení pilotu doplníme ďalšie priestory, senzory, automatizácie, reporting alebo smart building scenáre."
 				}
 			]
 		},
@@ -176,15 +176,15 @@
 			"items": [
 				{
 					"title": "Dá sa začať malým pilotom?",
-					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+					"text": "Áno. Odporúčame začať jednou serverovňou alebo technickou miestnosťou, kde overíme senzory, konektivitu, notifikácie a praktický prínos monitoringu."
 				},
 				{
 					"title": "Ako prichádzajú upozornenia?",
-					"text": "Notifikácie môžu chodiť cez Teams, SMS alebo e-mail podľa dohody a kritickosti udalosti."
+					"text": "Upozornenia môžu byť odosielané cez e-mail, Microsoft Teams alebo SMS. Pravidlá nastavíme podľa typu udalosti, závažnosti a zodpovednosti jednotlivých osôb."
 				},
 				{
 					"title": "Viete sledovať aj spotrebu energie?",
-					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+					"text": "Áno. Pomocou vhodných meračov a inteligentných PDU vieme monitorovať spotrebu, napájanie aj vybrané prevádzkové hodnoty technických zariadení."
 				}
 			]
 		}

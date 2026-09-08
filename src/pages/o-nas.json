@@ -1,6 +1,6 @@
 {
 	"title": "O spoločnosti ITempire",
-	"description": "IT Empire je partner pre stabilné, bezpečné a efektívne firemné IT.",
+	"description": "ITempire je partner pre stabilné, bezpečné a efektívne firemné IT.",
 	"url": "/o-nas/",
 	"flexible": [
 		{
@@ -25,7 +25,7 @@
 			"name": "image_with_text",
 			"title": "Začínali sme<br>s jednoduchým presvedčením",
 			"paragraphs": [
-				"IT Empire vzniklo z presvedčenia, že firmy si zaslúžia IT partnera, ktorý rozumie nielen technológiám, ale aj prevádzke, ľuďom a rastu.",
+				"ITempire vzniklo z presvedčenia, že firmy si zaslúžia IT partnera, ktorý rozumie nielen technológiám, ale aj prevádzke, ľuďom a rastu.",
 				"Začínali sme s jasným cieľom: byť partnerom, nie len dodávateľom. Dnes pokrývame celé spektrum firemného IT, od infraštruktúry a bezpečnosti po cloud, digitálne riešenia a fyzické prostredie budov. Každý projekt riešime ako celok, nie ako súbor izolovaných zásahov."
 			],
 			"image": {
@@ -36,7 +36,7 @@
 					"src_2x": "ee0df8779582777ebb30b69c37cee4e90dfee640@2x",
 					"ext": "jpg",
 					"webp": false,
-					"alt": "Tím IT Empire pri pracovnom stretnutí",
+					"alt": "Tím ITempire pri pracovnom stretnutí",
 					"width": 580,
 					"height": 571
 				}
@@ -196,7 +196,7 @@
 			"title": "<span class='text-subtile'>Niekoľko čísel,</span><br>ktoré hovoria za nás",
 			"numbers": [
 				{
-					"number": "+15",
+					"number": "+25",
 					"title": "rokov skúseností"
 				},
 				{
@@ -219,7 +219,7 @@
 			"title": "Čo o nás hovoria klienti",
 			"reviews": [
 				{
-					"text": "„Spolupráca s IT Empire bola od začiatku veľmi efektívna a bezproblémová. Implementácia nášho IT riešenia prebehla rýchlo, v dohodnutom termíne a plne podľa našich potrieb. Už po krátkom čase sme zaznamenali výrazné zníženie technických problémov, menej výpadkov a vyššiu stabilitu systémov.“",
+					"text": "„Spolupráca s ITempire bola od začiatku veľmi efektívna a bezproblémová. Implementácia nášho IT riešenia prebehla rýchlo, v dohodnutom termíne a plne podľa našich potrieb. Už po krátkom čase sme zaznamenali výrazné zníženie technických problémov, menej výpadkov a vyššiu stabilitu systémov.“",
 					"author": {
 						"name": "Peter Novák",
 						"position": "Prevádzkový riaditeľ,<br>TechServis Group s.r.o.",
@@ -243,7 +243,7 @@
 					}
 				},
 				{
-					"text": "„Oceňujeme profesionálny prístup, spoľahlivú podporu a fakt, že naši zamestnanci môžu pracovať bez zbytočných obmedzení. IT Empire je partner, na ktorého sa môžeme spoľahnúť pri každodennej prevádzke aj ďalšom raste.“",
+					"text": "„Oceňujeme profesionálny prístup, spoľahlivú podporu a fakt, že naši zamestnanci môžu pracovať bez zbytočných obmedzení. ITempire je partner, na ktorého sa môžeme spoľahnúť pri každodennej prevádzke aj ďalšom raste.“",
 					"author": {
 						"name": "Jana Kováčová",
 						"position": "Finančná riaditeľka,<br>NovaTech s.r.o.",
