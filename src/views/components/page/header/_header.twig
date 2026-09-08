@@ -391,14 +391,36 @@
 							{% if build_enabled(item.build) %}
 								<li>
 									{% if item.submenu %}
-										<button
-											type="button"
-											class="flex w-full items-center justify-between py-4 text-left font-serif text-lg font-semibold leading-tight"
-											@click="openMobileSubmenu({{ loop.index }})"
-										>
-											<span>{{ item.title }}</span>
-											{{ sprite('chevron-right', 'size-4') }}
-										</button>
+										{% if item.submenuLink %}
+											<div class="flex items-center gap-2">
+												<a
+													href="{{ item.url }}"
+													class="flex-1 py-4 font-serif text-lg font-semibold leading-tight hover:text-purple focus-visible:outline-2 focus-visible:outline-purple"
+													@click="toggleMenu()"
+												>
+													{{ item.title }}
+												</a>
+												<button
+													type="button"
+													class="flex size-10 cursor-pointer items-center justify-center hover:text-purple focus-visible:outline-2 focus-visible:outline-purple"
+													aria-label="Podmenu: {{ item.title }}"
+													aria-controls="mobile-submenu-{{ loop.index }}"
+													:aria-expanded="mobileSubmenu === {{ loop.index }} ? 'true' : 'false'"
+													@click="openMobileSubmenu({{ loop.index }})"
+												>
+													{{ sprite('chevron-right', 'size-4') }}
+												</button>
+											</div>
+										{% else %}
+											<button
+												type="button"
+												class="flex w-full items-center justify-between py-4 text-left font-serif text-lg font-semibold leading-tight"
+												@click="openMobileSubmenu({{ loop.index }})"
+											>
+												<span>{{ item.title }}</span>
+												{{ sprite('chevron-right', 'size-4') }}
+											</button>
+										{% endif %}
 									{% else %}
 										<a
 											href="{{ item.url }}"
@@ -416,7 +438,11 @@
 
 				{% for item in header_menu %}
 					{% if item.submenu %}
-						<div v-show="!mobileSearchOpened && mobileSubmenu === {{ loop.index }} && mobileSubmenuItem === null" class="mt-6 flex flex-col">
+						<div
+							id="mobile-submenu-{{ loop.index }}"
+							v-show="!mobileSearchOpened && mobileSubmenu === {{ loop.index }} && mobileSubmenuItem === null"
+							class="mt-6 flex flex-col"
+						>
 							<button
 								type="button"
 								class="flex items-center gap-2 py-4 text-left text-sm font-medium"

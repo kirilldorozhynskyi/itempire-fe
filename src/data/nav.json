@@ -165,7 +165,7 @@
 			]
 		},
 		{
-			"url": "/#sluzby",
+			"url": "/sluzby/",
 			"title": "Služby",
 			"submenu": [
 				{
@@ -216,7 +216,8 @@
 					"url": "/smart-workplace/",
 					"title": "Smart workplace"
 				}
-			]
+			],
+			"submenuLink": true
 		},
 		{
 			"url": "/news/",

@@ -1,6 +1,7 @@
 <template>
 	<header
 		ref="headerEl"
+		@mouseleave="closeHoveredSubmenu"
 		class="transit sticky top-0"
 		:class="[hidden ? '-translate-y-full' : 'translate-y-0', solid || menuOpened || cartOpened || searchOpened || activeSubmenu !== null ? 'bg-white' : ' ']"
 	>
@@ -60,6 +61,7 @@ const activeSubmenu = ref(null)
 const activeSubmenuItem = ref(1)
 
 let ticking = false
+let submenuOpenedOnHover = false
 
 const update = () => {
 	ticking = false
@@ -177,18 +179,24 @@ const toggleCart = () => {
 }
 
 const closeSubmenu = () => {
+	submenuOpenedOnHover = false
 	activeSubmenu.value = null
 	activeSubmenuItem.value = 1
 }
 
-const openSubmenu = (index) => {
+const closeHoveredSubmenu = () => {
+	if (submenuOpenedOnHover && !headerEl.value?.contains(document.activeElement)) closeSubmenu()
+}
+
+const openSubmenu = (index, hover = false) => {
 	const nextIndex = Number(index)
 
-	if (activeSubmenu.value === nextIndex) {
+	if (activeSubmenu.value === nextIndex && !hover) {
 		closeSubmenu()
 		return
 	}
 
+	submenuOpenedOnHover = hover
 	activeSubmenu.value = nextIndex
 	activeSubmenuItem.value = 1
 	closeCart()

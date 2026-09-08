@@ -5,7 +5,7 @@
  # Created Date: Friday, May 29th 2026, 11:52:30
  # Author: Kirill Dorozhynskyi - kyrylo.dorozhynskyi@justdev.org
  # -----
- # Last Modified: Monday, September 7th 2026 16:40:12
+ # Last Modified: Tuesday, September 8th 2026 12:08:42
  # Modified By: Kirill Dorozhynskyi
  # -----
  # Copyright (c) 2026 justDev
@@ -15,21 +15,50 @@
 	<ul class="flex flex-col items-start justify-center lg:flex-row lg:items-center gap-1">
 		{% for item in header_menu %}
 			{% if build_enabled(item.build) %}
-				<li class="main-nav-item {{ item.submenu ? 'has-children' }}">
+				<li
+					class="main-nav-item {{ item.submenu ? 'has-children' }}"
+					@keydown.esc="{{ item.submenuLink ? "closeSubmenu(); $event.currentTarget.querySelector('button[aria-controls]').focus()" : '' }}"
+				>
 					{% if item.submenu %}
-						<button
-							type="button"
-							class="transit flex cursor-pointer items-center gap-2 rounded-sm p-2 hover:text-purple"
-							:class="activeSubmenu === {{ loop.index }} ? 'bg-neutral-100 text-purple' : ''"
-							:aria-expanded="activeSubmenu === {{ loop.index }} ? 'true' : 'false'"
-							aria-controls="submenu-{{ loop.index }}"
-							@click.stop="openSubmenu({{ loop.index }})"
-						>
-							<span>{{ item.title }}</span>
-							<span class="transition-transform" :class="activeSubmenu === {{ loop.index }} ? 'rotate-180' : ''">
-								{{ sprite('chevron-down', 'h-3 w-3') }}
-							</span>
-						</button>
+						{% if item.submenuLink %}
+							<div class="flex items-center">
+								<a
+									href="{{ item.url }}"
+									class="transit rounded-sm p-2 hover:text-purple focus-visible:outline-2 focus-visible:outline-purple"
+									@click="closeSubmenu()"
+								>
+									{{ item.title }}
+								</a>
+								<button
+									type="button"
+									class="transit flex size-10 cursor-pointer -ms-1 items-center justify-center rounded-sm hover:text-purple focus-visible:outline-2 focus-visible:outline-purple"
+									:class="activeSubmenu === {{ loop.index }} ? 'bg-neutral-100 text-purple' : ''"
+									:aria-expanded="activeSubmenu === {{ loop.index }} ? 'true' : 'false'"
+									aria-controls="submenu-{{ loop.index }}"
+									aria-label="Podmenu: {{ item.title }}"
+									@pointerenter="$event.pointerType === 'mouse' && openSubmenu({{ loop.index }}, true)"
+									@click.stop="openSubmenu({{ loop.index }})"
+								>
+									<span class="transition-transform" :class="activeSubmenu === {{ loop.index }} ? 'rotate-180' : ''">
+										{{ sprite('chevron-down', 'size-3') }}
+									</span>
+								</button>
+							</div>
+						{% else %}
+							<button
+								type="button"
+								class="transit flex cursor-pointer items-center gap-2 rounded-sm p-2 hover:text-purple"
+								:class="activeSubmenu === {{ loop.index }} ? 'bg-neutral-100 text-purple' : ''"
+								:aria-expanded="activeSubmenu === {{ loop.index }} ? 'true' : 'false'"
+								aria-controls="submenu-{{ loop.index }}"
+								@click.stop="openSubmenu({{ loop.index }})"
+							>
+								<span>{{ item.title }}</span>
+								<span class="transition-transform" :class="activeSubmenu === {{ loop.index }} ? 'rotate-180' : ''">
+									{{ sprite('chevron-down', 'h-3 w-3') }}
+								</span>
+							</button>
+						{% endif %}
 
 						{% set hasNestedSubmenu = false %}
 						{% for submenuItem in item.submenu %}

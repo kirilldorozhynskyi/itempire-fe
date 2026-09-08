@@ -24,69 +24,51 @@
 				<h3 class="text-center lg:text-lg leading-none text-subtile" v-jd-animate>{{ ce.subtitle }}</h3>
 			{% endif %}
 
-			<slider-wrapper
-				class="w-full"
-				:overflow="false"
-				wrapper-class="-me-2 lg:-me-6"
-				:dots="{{ ce.dots is same as(false) ? 'false' : 'true' }}"
-				:nav="{{ ce.nav ? 'true' : 'false' }}"
-				:loop="{{ ce.loop ? 'true' : 'false' }}"
-				:autoplay="{{ ce.autoplay ? 'true' : 'false' }}"
-				:autoplay-delay="{{ ce.autoplayDelay|default(3000) }}"
-				:dots-count="{{ ce.loop ? ce.services|length : 0 }}"
-				align="{{ ce.center ? 'center' : 'start' }}"
-			>
-				{% set repeats = ce.loop ? 2 : 1 %}
-				{% for repeat in 1..repeats %}
+			{% if ce.layout == 'grid' %}
+				<div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
 					{% for item in ce.services %}
-						<slider-item
-							class="basis-4/5 pe-2 md:basis-1/2 lg:basis-1/4 lg:pe-6"
-							aria-hidden="{{ repeat > 1 ? 'true' : 'false' }}"
-							v-jd-animate="{{ ce.loop ? 'false' : '{ delay: ' ~ loop.index * 100 ~ ' }' }}"
-						>
-							<div class="bg-remover bg-remover h-full">
-								{% if ce.variant == 'icons' %}
-									<div class="flex min-h-full flex-col gap-16 bg-neutral-100 p-6">
-										{{ sprite(item.icon, 'text-[3.5rem]') }}
-										<h3 class="mt-auto text-balance font-serif text-lg leading-tight font-semibold">{{ item.title }}</h3>
-									</div>
-								{% else %}
-									<a
-										href="{{ item.url }}"
-										aria-label="{{ item.title }}"
-										tabindex="{{ repeat > 1 ? '-1' : '0' }}"
-										class="bg-remover relative flex min-h-full flex-col gap-10 bg-neutral-100 p-6 lg:gap-16"
-									>
-										{{ sprite(item.icon, 'text-[3.5rem]') }}
-
-										<div class="flex flex-1 flex-col items-start justify-end gap-6">
-											<div class="flex flex-col gap-2">
-												<h3 class="text-balance font-serif text-base leading-tight font-semibold lg:text-lg">{{ item.title }}</h3>
-
-												<p class="text-sm leading-normal text-subtile">
-													{{ item.text }}
-												</p>
-											</div>
-											{% if ce.showArrows is not same as(false) %}
-												{% include paths.btn_ex with {
-													button: {
-														span: true,
-														icon: 'arrow-right',
-														class: 'btn-white p-2',
-														btn: {
-															label: 'Otvoriť: ' ~ item.title
-														}
-													}
-												} only %}
-											{% endif %}
-										</div>
-									</a>
-								{% endif %}
-							</div>
-						</slider-item>
+						<div class="min-w-0" v-jd-animate>
+							{% include '_service_card.twig' with {
+								ce: ce,
+								item: item,
+								repeat: 1,
+								paths: paths
+							} only %}
+						</div>
 					{% endfor %}
-				{% endfor %}
-			</slider-wrapper>
+				</div>
+			{% else %}
+				<slider-wrapper
+					class="w-full"
+					:overflow="false"
+					wrapper-class="-me-2 lg:-me-6"
+					:dots="{{ ce.dots is same as(false) ? 'false' : 'true' }}"
+					:nav="{{ ce.nav ? 'true' : 'false' }}"
+					:loop="{{ ce.loop ? 'true' : 'false' }}"
+					:autoplay="{{ ce.autoplay ? 'true' : 'false' }}"
+					:autoplay-delay="{{ ce.autoplayDelay|default(3000) }}"
+					:dots-count="{{ ce.loop ? ce.services|length : 0 }}"
+					align="{{ ce.center ? 'center' : 'start' }}"
+				>
+					{% set repeats = ce.loop ? 2 : 1 %}
+					{% for repeat in 1..repeats %}
+						{% for item in ce.services %}
+							<slider-item
+								class="basis-4/5 pe-2 md:basis-1/2 lg:basis-1/4 lg:pe-6"
+								aria-hidden="{{ repeat > 1 ? 'true' : 'false' }}"
+								v-jd-animate="{{ ce.loop ? 'false' : '{ delay: ' ~ loop.index * 100 ~ ' }' }}"
+							>
+								{% include '_service_card.twig' with {
+									ce: ce,
+									item: item,
+									repeat: repeat,
+									paths: paths
+								} only %}
+							</slider-item>
+						{% endfor %}
+					{% endfor %}
+				</slider-wrapper>
+			{% endif %}
 		</div>
 
 		{% if ce.btn %}

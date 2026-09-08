@@ -1,0 +1,97 @@
+{
+	"title": "Služby",
+	"url": "/sluzby/",
+	"description": "Pripravíme technické riešenie na mieru podľa vašich procesov, rozpočtu a dlhodobej stratégie.",
+	"flexible": [
+		{
+			"id": "sluzby",
+			"name": "services",
+			"title": "Technológie, <br>ktoré podporujú rast",
+			"text": "Pripravíme technické riešenie na mieru podľa vašich procesov, rozpočtu a dlhodobej stratégie.",
+			"btn": {
+				"class": "btn-purple",
+				"btn": {
+					"title": "Nezáväzná konzultácia",
+					"url": "/kontakt/"
+				}
+			},
+			"services": [
+				{
+					"icon": "server",
+					"title": "Riadené IT a infraštruktúra",
+					"url": "/riadene-it/",
+					"text": "Riadená IT prevádzka, infraštruktúra, monitoring a zálohovanie pre firmy."
+				},
+				{
+					"icon": "shield-check",
+					"title": "Kybernetická bezpečnosť",
+					"url": "/kyberneticka-bezpecnost/",
+					"text": "Riadená kybernetická bezpečnosť, ochrana dát a príprava na NIS2."
+				},
+				{
+					"icon": "brand-onedrive",
+					"title": "Cloud a Microsoft 365",
+					"url": "/cloud-microsoft-365/",
+					"text": "Bezpečný Microsoft 365, cloud, správa identít a moderné pracovisko."
+				},
+				{
+					"icon": "user-screen",
+					"title": "Používateľská podpora",
+					"url": "/pouzivatelska-podpora/",
+					"text": "Helpdesk, správa zariadení a moderná firemná komunikácia."
+				},
+				{
+					"icon": "devices",
+					"title": "Technologické dodávky",
+					"url": "/technologicke-dodavky/",
+					"text": "Plánované dodávky technológií, licencie a financovanie IT."
+				},
+				{
+					"icon": "server-2",
+					"title": "Fyzická infraštruktúra",
+					"url": "/fyzicka-infrastruktura/",
+					"text": "Kabeláž, racky, kamery, alarmy a prístupové systémy pre firmy."
+				},
+				{
+					"icon": "device-desktop-code",
+					"title": "EDU technológie",
+					"url": "/edu-technologie/",
+					"text": "Pomáhame školám a vzdelávacím organizáciám s bezpečnými a praktickými IT technológiami."
+				},
+				{
+					"icon": "settings-search",
+					"title": "Špeciálne systémy",
+					"url": "/specialne-systemy/",
+					"text": "Špeciálne IT systémy a automatizácia prevádzky pre firmy s náročnými požiadavkami."
+				},
+				{
+					"icon": "tool",
+					"title": "Servis a migrácie",
+					"url": "/servis-migracie/",
+					"text": "Servis, migrácie, upgrady a podpora počas celého životného cyklu zariadení."
+				},
+				{
+					"icon": "printer",
+					"title": "Tlačové služby",
+					"url": "/tlacove-sluzby/",
+					"text": "Riadené tlačové a dokumentové služby pre firmy s dôrazom na bezpečnosť a efektivitu."
+				},
+				{
+					"icon": "ruler",
+					"title": "Digitálne riešenia",
+					"url": "/digitalne-riesenia/",
+					"text": "Digitálne riešenia, weby, aplikácie a integrácie pre firmy."
+				},
+				{
+					"icon": "smart-home",
+					"title": "Smart workplace",
+					"url": "/smart-workplace/",
+					"text": "Smart workplace, smart building a monitoring serverovní."
+				}
+			],
+			"layout": "grid",
+			"heading": "h1",
+			"tag": "Služby"
+		}
+	]
+}

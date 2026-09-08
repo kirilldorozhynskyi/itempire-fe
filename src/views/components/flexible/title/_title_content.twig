@@ -15,7 +15,11 @@
 	<span class="{{ tag_white ? 'tag-white' : 'tag' }}" v-jd-animate>{{ ce.tag }}</span>
 {% endif %}
 {% if ce.title %}
-	<h2 class="text-balance font-serif leading-tight font-semibold text-2xl lg:text-5xl" v-jd-animate>{{ ce.title }}</h2>
+	{% if ce.heading == 'h1' %}
+		<h1 class="text-balance font-serif leading-tight font-semibold text-2xl lg:text-5xl" v-jd-animate>{{ ce.title }}</h1>
+	{% else %}
+		<h2 class="text-balance font-serif leading-tight font-semibold text-2xl lg:text-5xl" v-jd-animate>{{ ce.title }}</h2>
+	{% endif %}
 {% endif %}
 
 {% if ce.text %}
