@@ -12,20 +12,40 @@
  #}
 
 {% if ce.logos|length %}
-	<section class="flex flex-col gap-6 {{ ce.class|default('pt-12 md:pt-16 lg:pt-20') }}">
-		{% if ce.text %}
-			<div class="container">
-				<h3 class="text-center lg:text-lg leading-none text-subtile" v-jd-animate>{{ ce.text }}</h3>
+	<section {{ ce.id ? 'id="' ~ ce.id ~ '"' }} class="flex flex-col gap-6 {{ ce.class|default('pt-12 md:pt-16 lg:pt-20') }}">
+		{% if ce.title or ce.text %}
+			<div class="container flex flex-col items-center gap-4 text-center">
+				{% if ce.title %}
+					<h2 class="font-serif text-2xl font-semibold leading-tight lg:text-3xl" v-jd-animate>{{ ce.title }}</h2>
+				{% endif %}
+				{% if ce.text %}
+					<p class="text-subtile lg:text-lg" v-jd-animate>
+						{{ ce.text }}
+					</p>
+				{% endif %}
 			</div>
 		{% endif %}
-		<div class="logos-wrapper relative flex w-full items-center overflow-hidden h-auto">
-			<benefits :count="{{ ce.logos|length }}">
-				{% for logo in ce.logos %}
-					<div class="rfm-child w-43 flex items-center aspect-172/112">
-						<object class="size-full object-contain object-center" lazy type="image/svg+xml" data-src="{{ logo }}"></object>
-					</div>
-				{% endfor %}
-			</benefits>
-		</div>
+		<benefits :count="{{ ce.logos|length }}" direction="{{ ce.direction|default('left') }}" :pause-on-hover="true">
+			{% for logo in ce.logos %}
+				{% set logoSrc = logo.src|default(logo) %}
+				<div class="rfm-child logo-item flex shrink-0 items-center justify-center">
+					<img
+						class="logo-image {{ logo.monochrome ? 'logo-monochrome' }}"
+						src="{{ logoSrc }}"
+						alt="{{ logo.alt|default(
+							logoSrc
+								|split('/')
+								|last
+								|replace({
+									'.svg': '',
+									'-': ' '
+								})
+						) }}"
+						loading="lazy"
+						decoding="async"
+					/>
+				</div>
+			{% endfor %}
+		</benefits>
 	</section>
 {% endif %}
