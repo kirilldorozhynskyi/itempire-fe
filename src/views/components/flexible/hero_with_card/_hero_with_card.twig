@@ -12,9 +12,9 @@
  #}
 
 <section class="overflow-hidden">
-	<div class="container flex flex-col gap-12 pt-17.5 lg:gap-20 lg:pt-20">
+	<div class="container flex flex-col gap-12 lg:gap-20 {{ ce.contentClass|default('pt-17.5 lg:pt-20') }}">
 		<div class="flex max-w-220 flex-col items-start gap-6">
-			<span class="tag" v-jd-animate>{{ ce.tag }}</span>
+			<span class="tag {{ ce.tagClass }}" v-jd-animate>{{ ce.tag }}</span>
 
 			<h1 class="text-balance font-serif text-4xl leading-none font-semibold lg:text-6xl" v-jd-animate>{{ ce.title|raw }}</h1>
 
@@ -31,7 +31,7 @@
 	</div>
 
 	<div class="mt-12 px-6 lg:mt-20 lg:px-0">
-		<div class="relative aspect-342/551 w-full overflow-hidden lg:aspect-1280/624">
+		<div class="relative aspect-342/551 w-full overflow-hidden lg:aspect-1280/624 {{ ce.mediaClass }}">
 			{{
 				image(
 					ce.image,

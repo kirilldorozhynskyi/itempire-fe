@@ -99,13 +99,84 @@
 			"text": "Dôverujú nám firmy naprieč odvetviami",
 			"class": "pb-20 lg:pb-36",
 			"logos": [
-				"/assets/images/logos/coinbase.svg",
-				"/assets/images/logos/doocusign.svg",
-				"/assets/images/logos/drips.svg",
-				"/assets/images/logos/hopin.svg",
-				"/assets/images/logos/sisyphus.svg",
-				"/assets/images/logos/square.svg",
-				"/assets/images/logos/zapier.svg"
+				{
+					"src": "/assets/images/logos/customers/jaguar-land-rover.svg",
+					"alt": "Jaguar Land Rover (JLR)"
+				},
+				{
+					"src": "/assets/images/logos/customers/slovnaft.svg",
+					"alt": "Slovnaft"
+				},
+				{
+					"src": "/assets/images/logos/customers/orange-slovensko.svg",
+					"alt": "Orange Slovensko"
+				},
+				{
+					"src": "/assets/images/logos/customers/slovak-telekom.svg",
+					"alt": "Slovak Telekom",
+					"monochrome": true
+				},
+				{
+					"src": "/assets/images/logos/customers/foxconn.svg",
+					"alt": "Foxconn",
+					"monochrome": true
+				},
+				{
+					"src": "/assets/images/logos/customers/tesco.svg",
+					"alt": "Tesco"
+				},
+				{
+					"src": "/assets/images/logos/customers/ikea.svg",
+					"alt": "IKEA"
+				},
+				{
+					"src": "/assets/images/logos/customers/dhl.svg",
+					"alt": "DHL"
+				},
+				{
+					"src": "/assets/images/logos/customers/omv.svg",
+					"alt": "OMV"
+				},
+				{
+					"src": "/assets/images/logos/customers/bosch.svg",
+					"alt": "Bosch"
+				},
+				{
+					"src": "/assets/images/logos/customers/muhlbauer.svg",
+					"alt": "Mühlbauer"
+				},
+				{
+					"src": "/assets/images/logos/customers/allianz.svg",
+					"alt": "Allianz"
+				},
+				{
+					"src": "/assets/images/logos/customers/marel.svg",
+					"alt": "Marel"
+				},
+				{
+					"src": "/assets/images/logos/customers/nitriansky-samospravny-kraj.svg",
+					"alt": "Nitriansky samosprávny kraj"
+				},
+				{
+					"src": "/assets/images/logos/customers/slovenska-polnohospodarska-univerzita.svg",
+					"alt": "Slovenská poľnohospodárska univerzita v Nitre"
+				},
+				{
+					"src": "/assets/images/logos/customers/fakultna-nemocnica-nitra.svg",
+					"alt": "Fakultná nemocnica Nitra"
+				},
+				{
+					"src": "/assets/images/logos/customers/stanter.svg",
+					"alt": "STANTER"
+				},
+				{
+					"src": "/assets/images/logos/customers/agromont.svg",
+					"alt": "Agromont Nitra"
+				},
+				{
+					"src": "/assets/images/logos/customers/sisme-slovakia.svg",
+					"alt": "SISME Slovakia / SISME Group (electric motors)"
+				}
 			]
 		},
 		{

@@ -1,0 +1,292 @@
+{
+	"title": "Digitalizácia procesov a AI automatizácia",
+	"description": "Zjednodušujeme firemné procesy a bezpečne ich automatizujeme pomocou workflow, integrácií, RPA a AI.",
+	"url": "/digitalizacia-procesov/",
+	"flexible": [
+		{
+			"name": "hero_with_card",
+			"tag": "Digitalizácia procesov a AI automatizácia",
+			"title": "<span class='text-subtile'>Procesy,</span><br class='sm:hidden'> ktoré pracujú<br>inteligentnejšie",
+			"text": "Zjednodušujeme firemné procesy a bezpečne ich automatizujeme pomocou workflow, integrácií, RPA a AI, s ľudskou kontrolou tam, kde je potrebná.",
+			"button": {
+				"class": "btn-purple",
+				"btn": {
+					"title": "Nájsť procesy",
+					"url": "/kontakt/"
+				}
+			},
+			"image": {
+				"pictureClass": "picture size-full",
+				"image": {
+					"class": "size-full object-cover object-center",
+					"src": "digitalizacia/hero",
+					"ext": "png",
+					"webp": false,
+					"alt": "Spracovanie dokumentov vo firme",
+					"width": 2752,
+					"height": 1536
+				}
+			},
+			"card": {
+				"title": "Rutina, ktorá zbytočne zaťažuje tím",
+				"text": "Objednávky prichádzajú e-mailom, dáta sa prepisujú do ERP a schválenia čakajú v inboxoch. S rastúcim objemom pribúdajú chyby aj čas strávený agendou, ktorá by mohla bežať sama."
+			},
+			"contentClass": "pt-6 lg:pt-20",
+			"tagClass": "max-w-full truncate text-sm",
+			"mediaClass": "decor-md"
+		},
+		{
+			"name": "services",
+			"variant": "icons",
+			"align": "left",
+			"center": true,
+			"loop": true,
+			"autoplay": true,
+			"autoplayDelay": 3000,
+			"nav": false,
+			"dots": true,
+			"tag": "Naše riešenie",
+			"title": "<span class='text-subtile'>Služba spája procesnú analýzu,</span> digitalizáciu a automatizáciu do jedného postupu. AI nasadíme tam, kde bezpečne pracuje s textom a dokumentmi, výnimky zostávajú pod kontrolou človeka.",
+			"subtitle": "Čo služba zahŕňa",
+			"class": "pt-20 md:pt-24 lg:pt-36",
+			"services": [
+				{
+					"icon": "digitalizacia-controls",
+					"title": "Bezpečnostné pravidlá, ľudská kontrola a auditná stopa"
+				},
+				{
+					"icon": "digitalizacia-ai",
+					"title": "RPA, AI asistenti a inteligentné spracovanie obsahu"
+				},
+				{
+					"icon": "digitalizacia-audit",
+					"title": "Procesný audit a mapovanie súčasného aj cieľového stavu"
+				},
+				{
+					"icon": "digitalizacia-documents",
+					"title": "Digitálne formuláre, OCR a AI extrakcia údajov"
+				},
+				{
+					"icon": "digitalizacia-workflow",
+					"title": "Workflow, schvaľovanie, notifikácie a eskalácie"
+				}
+			]
+		},
+		{
+			"name": "image_with_text",
+			"title": "Menej rutiny,<br>viac priestoru<br>na rozhodovanie",
+			"paragraphs": ["Každý automatizovaný krok šetrí čas, znižuje chybovosť a dáva tímu jasný prehľad o tom, kde sa proces práve nachádza."],
+			"items": [
+				"menej ručného prepisovania a opakovaných úloh",
+				"kratší čas vybavenia požiadaviek a schválení",
+				"nižšia chybovosť a konzistentnejšie dáta",
+				"rýchlejší prístup k informáciám pre rozhodovanie",
+				"jasný stav procesu a auditná stopa",
+				"vyššia kapacita tímu bez nutnosti navyšovať administratívu"
+			],
+			"image": {
+				"pictureClass": "picture size-full",
+				"image": {
+					"class": "size-full object-cover object-center",
+					"src": "digitalizacia/benefits",
+					"ext": "png",
+					"webp": false,
+					"alt": "Práca s digitálnymi firemnými procesmi",
+					"width": 2048,
+					"height": 2048
+				}
+			},
+			"titleClass": "text-[26px] lg:text-5xl"
+		},
+		{
+			"name": "logos",
+			"text": "Dôverujú nám firmy naprieč odvetviami",
+			"class": "pb-20 lg:pb-36",
+			"logos": [
+				{
+					"src": "/assets/images/logos/customers/jaguar-land-rover.svg",
+					"alt": "Jaguar Land Rover (JLR)"
+				},
+				{
+					"src": "/assets/images/logos/customers/slovnaft.svg",
+					"alt": "Slovnaft"
+				},
+				{
+					"src": "/assets/images/logos/customers/orange-slovensko.svg",
+					"alt": "Orange Slovensko"
+				},
+				{
+					"src": "/assets/images/logos/customers/slovak-telekom.svg",
+					"alt": "Slovak Telekom",
+					"monochrome": true
+				},
+				{
+					"src": "/assets/images/logos/customers/foxconn.svg",
+					"alt": "Foxconn",
+					"monochrome": true
+				},
+				{
+					"src": "/assets/images/logos/customers/tesco.svg",
+					"alt": "Tesco"
+				},
+				{
+					"src": "/assets/images/logos/customers/ikea.svg",
+					"alt": "IKEA"
+				},
+				{
+					"src": "/assets/images/logos/customers/dhl.svg",
+					"alt": "DHL"
+				},
+				{
+					"src": "/assets/images/logos/customers/omv.svg",
+					"alt": "OMV"
+				},
+				{
+					"src": "/assets/images/logos/customers/bosch.svg",
+					"alt": "Bosch"
+				},
+				{
+					"src": "/assets/images/logos/customers/muhlbauer.svg",
+					"alt": "Mühlbauer"
+				},
+				{
+					"src": "/assets/images/logos/customers/allianz.svg",
+					"alt": "Allianz"
+				},
+				{
+					"src": "/assets/images/logos/customers/marel.svg",
+					"alt": "Marel"
+				},
+				{
+					"src": "/assets/images/logos/customers/nitriansky-samospravny-kraj.svg",
+					"alt": "Nitriansky samosprávny kraj"
+				},
+				{
+					"src": "/assets/images/logos/customers/slovenska-polnohospodarska-univerzita.svg",
+					"alt": "Slovenská poľnohospodárska univerzita v Nitre"
+				},
+				{
+					"src": "/assets/images/logos/customers/fakultna-nemocnica-nitra.svg",
+					"alt": "Fakultná nemocnica Nitra"
+				},
+				{
+					"src": "/assets/images/logos/customers/stanter.svg",
+					"alt": "STANTER"
+				},
+				{
+					"src": "/assets/images/logos/customers/agromont.svg",
+					"alt": "Agromont Nitra"
+				},
+				{
+					"src": "/assets/images/logos/customers/sisme-slovakia.svg",
+					"alt": "SISME Slovakia / SISME Group (electric motors)"
+				}
+			]
+		},
+		{
+			"name": "stepper",
+			"class": "decor bg-neutral-100",
+			"tagWhite": true,
+			"variant": "medium",
+			"tag": "Náš proces",
+			"title": "<span class='text-subtile'>Od jedného procesu</span><br>po škálovanú automatizáciu",
+			"image": {
+				"pictureClass": "picture size-full",
+				"image": {
+					"class": "size-full object-cover object-center",
+					"src": "digitalizacia/process",
+					"ext": "png",
+					"webp": false,
+					"alt": "Spoločné plánovanie automatizácie",
+					"width": 2048,
+					"height": 2048
+				}
+			},
+			"items": [
+				{
+					"title": "Vyberieme vhodný proces",
+					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+				},
+				{
+					"title": "Zmapujeme realitu",
+					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+				},
+				{
+					"title": "Navrhneme cieľový stav",
+					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+				},
+				{
+					"title": "Nasadíme pilot",
+					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+				},
+				{
+					"title": "Meriame a rozširujeme",
+					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+				}
+			]
+		},
+		{
+			"name": "image_with_text",
+			"title": "Pre koho je služba vhodná?",
+			"paragraphs": [
+				"Firmy s opakovanou administratívou, veľkým objemom dokumentov alebo procesmi naprieč oddeleniami — financie, nákup, obchod, HR, logistika, servis aj výroba."
+			],
+			"image": {
+				"pictureClass": "picture size-full",
+				"image": {
+					"class": "size-full object-cover object-center",
+					"src": "digitalizacia/audience",
+					"ext": "png",
+					"webp": false,
+					"alt": "Firemný tím pri spolupráci",
+					"width": 2048,
+					"height": 2048
+				}
+			},
+			"titleClass": "text-[26px] lg:text-5xl"
+		},
+		{
+			"name": "faq",
+			"title": "Často kladené otázky",
+			"open": "0",
+			"items": [
+				{
+					"title": "Kde má pri automatizácii zmysel využívať AI?",
+					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+				},
+				{
+					"title": "Musíme vymeniť existujúce ERP alebo CRM?",
+					"text": "Nie. Často je efektívnejšie existujúce systémy prepojiť alebo automatizovať kroky medzi nimi."
+				},
+				{
+					"title": "Ako zabezpečíte kontrolu nad AI výstupmi a dátami?",
+					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+				}
+			]
+		}
+	],
+	"footer": {
+		"title": "<span class='opacity-70'>Kde vo vašej firme</span> vzniká najviac ručnej práce?",
+		"text": "Začnite auditom jedného procesu. Zmapujeme kroky, dáta a systémy a navrhneme pilot s jasným cieľom.",
+		"image": {
+			"pictureClass": "picture relative size-full",
+			"image": {
+				"class": "size-full object-cover object-center",
+				"src": "digitalizacia/consultation",
+				"ext": "jpg",
+				"webp": false,
+				"alt": "Konzultácia firemných procesov",
+				"width": 4096,
+				"height": 2732
+			}
+		},
+		"button": {
+			"class": "btn-coffee",
+			"btn": {
+				"title": "Dohodnúť audit procesov",
+				"url": "/kontakt/"
+			}
+		},
+		"copyright": "ITempire s.r.o. Všetky práva vyhradené."
+	}
+}

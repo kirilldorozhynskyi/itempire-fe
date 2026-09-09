@@ -14,7 +14,9 @@
 <section class="py-20 lg:py-36">
 	<div class="container grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
 		<div class="flex flex-col gap-6 max-w-120">
-			<h2 class="text-balance font-serif text-4xl leading-tight font-semibold lg:text-5xl" v-jd-animate>{{ ce.title|raw }}</h2>
+			<h2 class="text-balance font-serif leading-tight font-semibold {{ ce.titleClass|default('text-4xl lg:text-5xl') }}" v-jd-animate>
+				{{ ce.title|raw }}
+			</h2>
 
 			<div class="flex flex-col gap-4 text-base tracking-tight text-subtile" v-jd-animate>
 				{% for paragraph in ce.paragraphs %}

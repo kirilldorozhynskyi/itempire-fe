@@ -83,6 +83,12 @@
 					"text": "Digitálne riešenia, weby, aplikácie a integrácie pre firmy."
 				},
 				{
+					"icon": "digitalizacia-workflow",
+					"title": "Digitalizácia procesov a AI automatizácia",
+					"url": "/digitalizacia-procesov/",
+					"text": "Zjednodušujeme firemné procesy a bezpečne ich automatizujeme pomocou workflow, integrácií, RPA a AI."
+				},
+				{
 					"icon": "smart-home",
 					"title": "Smart workplace",
 					"url": "/smart-workplace/",
