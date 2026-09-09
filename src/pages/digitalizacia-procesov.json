@@ -252,7 +252,7 @@
 			"items": [
 				{
 					"title": "Kde má pri automatizácii zmysel využívať AI?",
-					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+					"text": "Najmä tam, kde proces pracuje s textom, dokumentmi, e-mailmi alebo znalosťami – napríklad pri triedení a extrakcii údajov, sumarizácii, návrhoch odpovedí, vyhľadávaní informácií alebo podpore rozhodovania. Predvídateľné pravidlá riešime klasickou automatizáciou; AI používame tam, kde prináša reálnu hodnotu."
 				},
 				{
 					"title": "Musíme vymeniť existujúce ERP alebo CRM?",
@@ -260,7 +260,7 @@
 				},
 				{
 					"title": "Ako zabezpečíte kontrolu nad AI výstupmi a dátami?",
-					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+					"text": "Nastavujeme prístupové pravidlá, schválené dátové zdroje, auditnú stopu a podľa rizika aj povinnú kontrolu človekom. AI automatizácia musí rešpektovať bezpečnosť, zodpovednosť a interné pravidlá firmy."
 				}
 			]
 		}
