@@ -3,10 +3,9 @@ FROM node:22-bookworm-slim AS builder
 WORKDIR /app
 
 COPY package*.json ./
-RUN if [ -f package-lock.json ]; then npm ci --ignore-scripts; else npm install --ignore-scripts; fi
+RUN if [ -f package-lock.json ]; then npm ci --include=dev --include=optional; else npm install --include=dev --include=optional; fi
 
 COPY . .
-ENV SKIP_IMAGEMIN=true
 RUN npm run build
 RUN if [ -f .env ]; then cp .env /tmp/itempire.env; else : > /tmp/itempire.env; fi
 

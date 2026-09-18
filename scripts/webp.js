@@ -11,47 +11,21 @@
  * Copyright (c) 2024 justDev
  */
 
-import imagemin from 'imagemin'
-import imageminWebp from 'imagemin-webp'
-import fs from 'fs'
+import sharp from 'sharp'
+import { readdir } from 'node:fs/promises'
+import path from 'node:path'
 
-function getFiles(dir, files = []) {
-	const fileList = fs.readdirSync(dir)
-	for (const file of fileList) {
-		const name = `${dir}/${file}`
-		if (fs.statSync(name).isDirectory()) {
-			getFiles(name, files)
-		} else {
-			if (file != '.DS_Store') {
-				if (file.includes('jpg') || file.includes('png')) {
-					files.push({ name: name, file: file, dir: dir })
-				}
-			}
+async function convertImages(directory) {
+	for (const entry of await readdir(directory, { withFileTypes: true })) {
+		const source = path.join(directory, entry.name)
+		if (entry.isDirectory()) {
+			await convertImages(source)
+		} else if (entry.isFile() && /\.(jpg|png)$/i.test(entry.name)) {
+			const destination = source.replace(/\.(jpg|png)$/i, '.webp')
+			await sharp(source).webp({ quality: 50 }).toFile(destination)
 		}
 	}
-
-	return files
 }
 
-function getUniqueDirs(jsonArray) {
-	const uniqueDirs = Array.from(new Set(jsonArray.map((item) => item.dir)))
-	return uniqueDirs
-}
-
-;(async () => {
-	const dir = './src/public/assets/images'
-
-	let uniqueDirs = getUniqueDirs(getFiles(dir))
-
-	uniqueDirs.forEach(async (img) => {
-		await imagemin([img + '/*.{jpg,png}'], {
-			destination: img,
-			plugins: [
-				imageminWebp({
-					quality: 50
-				})
-			]
-		})
-	})
-	console.log('Images converted to webp 🏞')
-})()
+await convertImages('./src/public/assets/images')
+console.log('Images converted to webp 🏞')

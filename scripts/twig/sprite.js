@@ -12,7 +12,7 @@
  */
 
 const twigFunctionsSprite = (id, classes) => {
-	const path = process.env.NODE_ENV != 'development' ? '/assets/spritemap.svg' : ''
+	const path = process.env.NODE_ENV != 'development' ? '/__spritemap' : ''
 	return `<svg class="sprite-icon icon-${id}${
 		classes ? ' ' + classes : ''
 	}" aria-hidden="true" focusable="false"><use xlink:href="${path}#icon-${id}"></use></svg>`

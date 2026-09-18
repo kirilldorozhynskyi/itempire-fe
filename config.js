@@ -66,32 +66,34 @@ const config = {
 			enabled: false
 		}
 	},
-	imagemin: {
-		gifsicle: {
-			optimizationLevel: 7,
-			interlaced: false
+	imageOptimizer: {
+		test: /\.(jpe?g|png|gif|webp|svg)$/i,
+		png: {
+			quality: 90,
+			compressionLevel: 9
+		},
+		jpeg: {
+			quality: 20,
+			mozjpeg: true
+		},
+		jpg: {
+			quality: 20,
+			mozjpeg: true
 		},
 		webp: {
-			quality: 75
+			quality: 75,
+			lossless: false
 		},
-		optipng: {
-			optimizationLevel: 7
-		},
-		mozjpeg: {
-			quality: 20
-		},
-		pngquant: {
-			quality: [0.8, 0.9],
-			speed: 4
-		},
-		svgo: {
+		svg: {
 			plugins: [
 				{
-					name: 'removeViewBox'
-				},
-				{
-					name: 'removeEmptyAttrs',
-					active: false
+					name: 'preset-default',
+					params: {
+						overrides: {
+							cleanupIds: false,
+							removeHiddenElems: false
+						}
+					}
 				}
 			]
 		}
@@ -99,7 +101,7 @@ const config = {
 	SvgSpritemap: {
 		prefix: 'icon-',
 		output: {
-			filename: '[name][extname]',
+			filename: '[name]-[hash][extname]',
 			name: 'spritemap.svg',
 			view: true,
 			use: true
@@ -129,7 +131,7 @@ const config = {
 				}
 			]
 		},
-		injectSVGOnDev: true
+		injectSvgOnDev: true
 	}
 }
 

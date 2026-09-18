@@ -1,10 +1,10 @@
-import path, { dirname } from 'path'
+import path from 'node:path'
 import vue from '@vitejs/plugin-vue'
 import vituum from 'vituum'
 import tailwindcss from '@tailwindcss/vite'
 import twig from '@vituum/vite-plugin-twig'
 import beautify from 'vite-plugin-beautify'
-import viteImagemin from 'vite-plugin-imagemin'
+import { ViteImageOptimizer } from 'vite-plugin-image-optimizer'
 import VitePluginSvgSpritemap from '@spiriit/vite-plugin-svg-spritemap'
 import vitePluginFaviconsInject from 'vite-plugin-favicons-inject'
 
@@ -18,17 +18,18 @@ import fixCSSPlugin from './scripts/fixCss.js'
 
 import navigation from './scripts/navigation.js'
 import pageFeatures from './scripts/pageFeatures.js'
+import spritemapHtml from './scripts/spritemapHtml.js'
 
 // TWIG Custom functions
 import twigFunctionsSprite from './scripts/twig/sprite.js'
 import twigFunctionsImage from './scripts/twig/image.js'
 import twigFunctionsSvg from './scripts/twig/svg.js'
 
-const { base, rootDir, assetsDir, imagemin, htmlBeautify, fonts, SvgSpritemap, features } = config
+const { base, rootDir, assetsDir, imageOptimizer, htmlBeautify, fonts, SvgSpritemap, features } = config
 
-import main from './src/data/main.json'
+import main from './src/data/main.json' with { type: 'json' }
 
-const skipImagemin = process.env.SKIP_IMAGEMIN === 'true'
+const skipImageOptimization = process.env.SKIP_IMAGE_OPTIMIZATION === 'true' || process.env.SKIP_IMAGEMIN === 'true'
 
 const trailingSlashDev = {
 	name: 'itempire-trailing-slash-dev',
@@ -70,8 +71,8 @@ export default {
 	},
 	resolve: {
 		alias: {
-			'~bootstrap': path.resolve(__dirname, 'node_modules/bootstrap'),
-			'~fonts': path.resolve(__dirname, fonts.dev),
+			'~bootstrap': path.resolve(import.meta.dirname, 'node_modules/bootstrap'),
+			'~fonts': path.resolve(import.meta.dirname, fonts.dev),
 			vue: 'vue/dist/vue.esm-bundler.js'
 		}
 	},
@@ -93,7 +94,7 @@ export default {
 			globals: {
 				features,
 				navigation: navigation,
-				rootDir: path.resolve(__dirname, `${rootDir}`)
+				rootDir: path.resolve(import.meta.dirname, `${rootDir}`)
 			},
 			functions: {
 				build_enabled($build) {
@@ -110,8 +111,9 @@ export default {
 				}
 			}
 		}),
-		skipImagemin ? false : viteImagemin(imagemin),
+		skipImageOptimization ? false : ViteImageOptimizer(imageOptimizer),
 		VitePluginSvgSpritemap(path.resolve(process.cwd(), `${assetsDir}/icons/*.svg`), SvgSpritemap),
+		spritemapHtml(),
 		fixCSSPlugin(),
 		tailwindcss(),
 		process.env.NODE_ENV == 'production'

@@ -20,6 +20,6 @@ const props = withDefaults(
 )
 
 const iconHref = computed(() => {
-	return import.meta.env.DEV ? `#icon-${props.name}` : `./assets/spritemap.svg#icon-${props.name}`
+	return import.meta.env.DEV ? `#icon-${props.name}` : `/__spritemap#icon-${props.name}`
 })
 </script>

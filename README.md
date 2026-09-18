@@ -11,7 +11,7 @@ Starter template for static frontends built with Vite, Twig, Vue 3, and Tailwind
 - `vanilla-lazyload`
 - `vue-i18n`
 - `@spiriit/vite-plugin-svg-spritemap`
-- `vite-plugin-imagemin`
+- `vite-plugin-image-optimizer` with `sharp` and `svgo`
 
 ## Requirements
 
@@ -22,6 +22,9 @@ Starter template for static frontends built with Vite, Twig, Vue 3, and Tailwind
 ## Installation
 
 ### Use this repository directly
+
+Image optimization uses Sharp with native binaries for macOS ARM and Linux. Rosetta and Homebrew image tools are not required.
+Keep npm optional dependencies enabled; Docker installs them with `npm ci --include=dev --include=optional`.
 
 ```sh
 npm install
@@ -253,7 +256,7 @@ Main build options live in `config.js`.
 - `fonts`: font source and output path settings
 - `htmlMinify`: HTML minification options
 - `htmlBeautify`: optional beautify step after build
-- `imagemin`: image optimization settings
+- `imageOptimizer`: image optimization settings
 - `SvgSpritemap`: SVG spritemap generation settings
 
 Production favicon files are generated from `src/public/assets/favicon.svg`.
