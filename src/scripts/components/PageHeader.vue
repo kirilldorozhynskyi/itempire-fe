@@ -1,7 +1,6 @@
 <template>
 	<header
 		ref="headerEl"
-		@mouseleave="closeHoveredSubmenu"
 		class="transit sticky top-0"
 		:class="[hidden ? '-translate-y-full' : 'translate-y-0', solid || menuOpened || cartOpened || searchOpened || activeSubmenu !== null ? 'bg-white' : ' ']"
 	>
@@ -28,7 +27,7 @@
 				:close-mobile-submenu-item="closeMobileSubmenuItem"
 				:active-submenu="activeSubmenu"
 				:active-submenu-item="activeSubmenuItem"
-				:open-submenu="openSubmenu"
+				:sync-submenu="syncSubmenu"
 				:open-submenu-item="openSubmenuItem"
 				:close-submenu="closeSubmenu"
 			/>
@@ -61,7 +60,6 @@ const activeSubmenu = ref(null)
 const activeSubmenuItem = ref(1)
 
 let ticking = false
-let submenuOpenedOnHover = false
 
 const update = () => {
 	ticking = false
@@ -179,27 +177,22 @@ const toggleCart = () => {
 }
 
 const closeSubmenu = () => {
-	submenuOpenedOnHover = false
+	headerEl.value?.querySelectorAll('[popover]:popover-open').forEach((submenu) => submenu.hidePopover())
 	activeSubmenu.value = null
 	activeSubmenuItem.value = 1
 }
 
-const closeHoveredSubmenu = () => {
-	if (submenuOpenedOnHover && !headerEl.value?.contains(document.activeElement)) closeSubmenu()
-}
-
-const openSubmenu = (index, hover = false) => {
+const syncSubmenu = (index, event) => {
 	const nextIndex = Number(index)
 
-	if (activeSubmenu.value === nextIndex && !hover) {
-		closeSubmenu()
-		return
+	if (event.newState === 'open') {
+		activeSubmenu.value = nextIndex
+		activeSubmenuItem.value = 1
+		closeCart()
+	} else if (activeSubmenu.value === nextIndex) {
+		activeSubmenu.value = null
+		activeSubmenuItem.value = 1
 	}
-
-	submenuOpenedOnHover = hover
-	activeSubmenu.value = nextIndex
-	activeSubmenuItem.value = 1
-	closeCart()
 }
 
 const openSubmenuItem = (index) => {
@@ -219,7 +212,7 @@ const handleDocumentClick = (event) => {
 }
 
 const handleKeydown = (event) => {
-	if (event.key === 'Escape') closeOverlays()
+	if (event.key === 'Escape' && activeSubmenu.value === null) closeOverlays()
 }
 
 watch([menuOpened, searchOpened], ([isMenuOpened, isSearchOpened]) => {

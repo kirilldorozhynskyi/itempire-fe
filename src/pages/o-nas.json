@@ -160,6 +160,7 @@
 			]
 		},
 		{
+			"build": "eshop",
 			"name": "team",
 			"tag": "Náš tím",
 			"title": "<span class='text-subtile'>Technológie</span> sú len také dobré,<br>ako ľudia, ktorí za nimi stoja",

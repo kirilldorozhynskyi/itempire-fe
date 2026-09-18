@@ -15,10 +15,7 @@
 	<ul class="flex flex-col items-start justify-center lg:flex-row lg:items-center gap-1">
 		{% for item in header_menu %}
 			{% if build_enabled(item.build) %}
-				<li
-					class="main-nav-item {{ item.submenu ? 'has-children' }}"
-					@keydown.esc="{{ item.submenuLink ? "closeSubmenu(); $event.currentTarget.querySelector('button[aria-controls]').focus()" : '' }}"
-				>
+				<li class="main-nav-item {{ item.submenu ? 'has-children' }}">
 					{% if item.submenu %}
 						{% if item.submenuLink %}
 							<div class="flex items-center">
@@ -33,11 +30,9 @@
 									type="button"
 									class="transit flex size-10 cursor-pointer -ms-1 items-center justify-center rounded-sm hover:text-purple focus-visible:outline-2 focus-visible:outline-purple"
 									:class="activeSubmenu === {{ loop.index }} ? 'bg-neutral-100 text-purple' : ''"
-									:aria-expanded="activeSubmenu === {{ loop.index }} ? 'true' : 'false'"
 									aria-controls="submenu-{{ loop.index }}"
 									aria-label="Podmenu: {{ item.title }}"
-									@pointerenter="$event.pointerType === 'mouse' && openSubmenu({{ loop.index }}, true)"
-									@click.stop="openSubmenu({{ loop.index }})"
+									popovertarget="submenu-{{ loop.index }}"
 								>
 									<span class="transition-transform" :class="activeSubmenu === {{ loop.index }} ? 'rotate-180' : ''">
 										{{ sprite('chevron-down', 'size-3') }}
@@ -49,9 +44,8 @@
 								type="button"
 								class="transit flex cursor-pointer items-center gap-2 rounded-sm p-2 hover:text-purple"
 								:class="activeSubmenu === {{ loop.index }} ? 'bg-neutral-100 text-purple' : ''"
-								:aria-expanded="activeSubmenu === {{ loop.index }} ? 'true' : 'false'"
 								aria-controls="submenu-{{ loop.index }}"
-								@click.stop="openSubmenu({{ loop.index }})"
+								popovertarget="submenu-{{ loop.index }}"
 							>
 								<span>{{ item.title }}</span>
 								<span class="transition-transform" :class="activeSubmenu === {{ loop.index }} ? 'rotate-180' : ''">
@@ -69,8 +63,9 @@
 
 						<div
 							id="submenu-{{ loop.index }}"
-							v-show="activeSubmenu === {{ loop.index }}"
-							class="fixed top-22 pointer-events-none left-1/2 z-20 w-full -translate-x-1/2"
+							popover="auto"
+							@beforetoggle="syncSubmenu({{ loop.index }}, $event)"
+							class="pointer-events-none fixed inset-x-0 top-22 bottom-auto m-0 w-full overflow-visible border-0 bg-transparent p-0 text-inherit max-xl:hidden"
 							@click.stop
 						>
 							<div class="container">

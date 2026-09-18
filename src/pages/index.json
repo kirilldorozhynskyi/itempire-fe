@@ -130,6 +130,7 @@
 			"id": "zakaznici"
 		},
 		{
+			"build": "eshop",
 			"id": "technologie",
 			"name": "logos",
 			"title": "Technológie, na ktorých staviame naše riešenia",
