@@ -205,23 +205,23 @@
 			"items": [
 				{
 					"title": "Vyberieme vhodný proces",
-					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+					"text": "Začíname tam, kde môže digitalizácia a automatizácia priniesť najväčší efekt. Posúdime objem rutiny, chybovosť, dostupnosť dát, systémové závislosti aj očakávaný prínos."
 				},
 				{
 					"title": "Zmapujeme realitu",
-					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+					"text": "Zmapujeme súčasný priebeh procesu, vstupy, rozhodnutia, výnimky a zodpovednosti. Odhalíme zdržania, ručné prepisovanie aj miesta, kde sa strácajú údaje alebo kontrola."
 				},
 				{
 					"title": "Navrhneme cieľový stav",
-					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+					"text": "Navrhneme digitálny workflow, systémové integrácie a vhodné využitie AI. Súčasťou návrhu sú bezpečnostné pravidlá, ľudská kontrola a merateľné ciele automatizácie."
 				},
 				{
 					"title": "Nasadíme pilot",
-					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+					"text": "Riešenie najskôr overíme na vybranom procese a reálnych dátach. Získame spätnú väzbu, doladíme výnimky a znížime riziko pred nasadením do bežnej prevádzky."
 				},
 				{
 					"title": "Meriame a rozširujeme",
-					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+					"text": "Sledujeme čas spracovania, chybovosť, využitie automatizácie a ušetrenú kapacitu tímu. Overené riešenie následne rozširujeme na ďalšie oddelenia, systémy alebo procesy."
 				}
 			]
 		},
