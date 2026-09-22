@@ -21,29 +21,36 @@
 				} %}
 			{% endif %}
 		</div>
-		<benefits :count="{{ ce.logos|length }}" direction="{{ ce.direction|default('left') }}" :pause-on-hover="true" :focus-center="true">
-			{% for logo in ce.logos %}
-				{% set logoSrc = logo.src|default(logo) %}
-				<div class="rfm-child technology-logo flex size-16 shrink-0 items-center justify-center">
-					<div class="technology-logo-tile flex size-full items-center justify-center bg-neutral-100 p-2">
-						<img
-							class="size-full object-contain {{ logo.monochrome ? 'logo-monochrome' }}"
-							src="{{ logoSrc }}"
-							alt="{{ logo.alt|default(
-								logoSrc
-									|split('/')
-									|last
-									|replace({
-										'.svg': '',
-										'-': ' '
-									})
-							) }}"
-							loading="lazy"
-							decoding="async"
-						/>
+		<div class="technology-logos relative grid items-center">
+			<benefits :count="{{ ce.logos|length }}" direction="{{ ce.direction|default('left') }}" :pause-on-hover="true">
+				{% for logo in ce.logos %}
+					{% set logoSrc = logo.src|default(logo) %}
+					<div class="rfm-child technology-logo flex size-16 shrink-0 items-center justify-center">
+						<div class="technology-logo-tile flex size-full items-center justify-center bg-neutral-100 p-2">
+							<img
+								class="size-full object-contain {{ logo.monochrome ? 'logo-monochrome' }}"
+								src="{{ logoSrc }}"
+								alt="{{ logo.alt|default(
+									logoSrc
+										|split('/')
+										|last
+										|replace({
+											'.svg': '',
+											'-': ' '
+										})
+								) }}"
+								loading="lazy"
+								decoding="async"
+							/>
+						</div>
 					</div>
-				</div>
-			{% endfor %}
-		</benefits>
+				{% endfor %}
+			</benefits>
+			<div
+				class="technology-logos-brand pointer-events-none absolute left-1/2 z-10 flex aspect-214/104 w-53.5 -translate-x-1/2 items-center justify-center"
+			>
+				<img class="aspect-118/104 w-29.5 object-contain" src="/assets/images/brand/emblem.svg" alt="ITempire" width="118" height="104" />
+			</div>
+		</div>
 	</section>
 {% endif %}

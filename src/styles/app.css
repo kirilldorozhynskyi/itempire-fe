@@ -96,15 +96,13 @@ body {
 }
 
 .logo-item {
-	width: clamp(6.5rem, 10vw, 11rem);
-	height: 4.5rem;
+	width: clamp(8.4375rem, 10vw, 10.75rem);
+	height: clamp(5.5rem, 10vw, 7rem);
 }
 
 .logo-image {
-	width: auto;
 	height: auto;
-	max-width: 100%;
-	max-height: 2.625rem;
+	width: 100%;
 	opacity: 0.6;
 	filter: grayscale(1);
 	transition: opacity 200ms;
@@ -209,22 +207,26 @@ body {
 	}
 }
 
-.technology-logos {
-	padding-block: 1.5rem;
+.technology-logos .logos-wrapper {
+	padding-block: 1.25rem;
 	mask-image: linear-gradient(90deg, transparent, var(--color-white) 28%, var(--color-white) 72%, transparent);
 }
 
 .technology-logos .rfm-group {
-	gap: 4rem;
-	padding-inline-end: 4rem;
+	gap: 2rem;
+	padding-inline-end: 2rem;
 }
 
-.technology-logo-tile {
-	transform: scale(var(--logo-scale, 1));
+.technology-logos-brand {
+	background: linear-gradient(90deg, transparent, var(--color-white) 22%, var(--color-white) 78%, transparent);
 }
 
 @media (prefers-reduced-motion: reduce) {
 	.technology-logos {
+		gap: 2rem;
+	}
+
+	.technology-logos .logos-wrapper {
 		mask-image: none;
 		padding-inline: 1.5rem;
 	}
@@ -233,7 +235,10 @@ body {
 		padding-inline-end: 0;
 	}
 
-	.technology-logo-tile {
+	.technology-logos-brand {
+		position: static;
+		order: -1;
+		justify-self: center;
 		transform: none;
 	}
 }
