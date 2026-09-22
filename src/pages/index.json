@@ -130,99 +130,6 @@
 			"id": "zakaznici"
 		},
 		{
-			"build": "eshop",
-			"id": "technologie",
-			"name": "logos",
-			"title": "Technológie, na ktorých staviame naše riešenia",
-			"text": "Staviame na overených enterprise technológiách pre infraštruktúru, cloud a kybernetickú bezpečnosť.",
-			"direction": "right",
-			"logos": [
-				{
-					"src": "/assets/images/logos/technologies/check-point.svg",
-					"alt": "Check Point"
-				},
-				{
-					"src": "/assets/images/logos/technologies/microsoft.svg",
-					"alt": "Microsoft"
-				},
-				{
-					"src": "/assets/images/logos/technologies/hpe.svg",
-					"alt": "Hewlett Packard Enterprise",
-					"monochrome": true
-				},
-				{
-					"src": "/assets/images/logos/technologies/cisco.svg",
-					"alt": "Cisco"
-				},
-				{
-					"src": "/assets/images/logos/technologies/fortinet.svg",
-					"alt": "Fortinet"
-				},
-				{
-					"src": "/assets/images/logos/technologies/heimdal-security.svg",
-					"alt": "Heimdal Security"
-				},
-				{
-					"src": "/assets/images/logos/technologies/dell-technologies.svg",
-					"alt": "Dell Technologies"
-				},
-				{
-					"src": "/assets/images/logos/technologies/lenovo.svg",
-					"alt": "Lenovo"
-				},
-				{
-					"src": "/assets/images/logos/technologies/eset.svg",
-					"alt": "ESET"
-				},
-				{
-					"src": "/assets/images/logos/technologies/veeam.svg",
-					"alt": "Veeam"
-				},
-				{
-					"src": "/assets/images/logos/technologies/vmware.svg",
-					"alt": "VMware"
-				},
-				{
-					"src": "/assets/images/logos/technologies/ubiquiti.svg",
-					"alt": "Ubiquiti"
-				},
-				{
-					"src": "/assets/images/logos/technologies/synology.svg",
-					"alt": "Synology"
-				},
-				{
-					"src": "/assets/images/logos/technologies/aruba.svg",
-					"alt": "Aruba / HPE Aruba Networking"
-				},
-				{
-					"src": "/assets/images/logos/technologies/sophos.svg",
-					"alt": "Sophos",
-					"monochrome": true
-				},
-				{
-					"src": "/assets/images/logos/technologies/acronis.svg",
-					"alt": "Acronis"
-				},
-				{
-					"src": "/assets/images/logos/technologies/schneider-electric.svg",
-					"alt": "Schneider Electric"
-				},
-				{
-					"src": "/assets/images/logos/technologies/apc.svg",
-					"alt": "APC"
-				},
-				{
-					"src": "/assets/images/logos/technologies/tp-link-omada.svg",
-					"alt": "TP-Link Omada",
-					"monochrome": true
-				},
-				{
-					"src": "/assets/images/logos/technologies/kaseya.svg",
-					"alt": "Kaseya"
-				}
-			]
-		},
-		{
 			"id": "sluzby",
 			"name": "services",
 			"title": "Technológie, <br>ktoré podporujú rast",
@@ -682,6 +589,98 @@
 				{
 					"number": "99 %",
 					"title": "dostupnosť služieb"
+				}
+			]
+		},
+		{
+			"id": "technologie",
+			"name": "technology_logos",
+			"title": "<span class=\"text-subtile\">Softvér</span> a technológie,<br>s ktorými pracujeme",
+			"btn": { "class": "btn-purple", "btn": { "title": "Nezáväzná konzultácia", "url": "/kontakt/" } },
+			"direction": "right",
+			"logos": [
+				{
+					"src": "/assets/images/logos/technologies/check-point.svg",
+					"alt": "Check Point"
+				},
+				{
+					"src": "/assets/images/logos/technologies/microsoft.svg",
+					"alt": "Microsoft"
+				},
+				{
+					"src": "/assets/images/logos/technologies/hpe.svg",
+					"alt": "Hewlett Packard Enterprise",
+					"monochrome": true
+				},
+				{
+					"src": "/assets/images/logos/technologies/cisco.svg",
+					"alt": "Cisco"
+				},
+				{
+					"src": "/assets/images/logos/technologies/fortinet.svg",
+					"alt": "Fortinet"
+				},
+				{
+					"src": "/assets/images/logos/technologies/heimdal-security.svg",
+					"alt": "Heimdal Security"
+				},
+				{
+					"src": "/assets/images/logos/technologies/dell-technologies.svg",
+					"alt": "Dell Technologies"
+				},
+				{
+					"src": "/assets/images/logos/technologies/lenovo.svg",
+					"alt": "Lenovo"
+				},
+				{
+					"src": "/assets/images/logos/technologies/eset.svg",
+					"alt": "ESET"
+				},
+				{
+					"src": "/assets/images/logos/technologies/veeam.svg",
+					"alt": "Veeam"
+				},
+				{
+					"src": "/assets/images/logos/technologies/vmware.svg",
+					"alt": "VMware"
+				},
+				{
+					"src": "/assets/images/logos/technologies/ubiquiti.svg",
+					"alt": "Ubiquiti"
+				},
+				{
+					"src": "/assets/images/logos/technologies/synology.svg",
+					"alt": "Synology"
+				},
+				{
+					"src": "/assets/images/logos/technologies/aruba.svg",
+					"alt": "Aruba / HPE Aruba Networking"
+				},
+				{
+					"src": "/assets/images/logos/technologies/sophos.svg",
+					"alt": "Sophos",
+					"monochrome": true
+				},
+				{
+					"src": "/assets/images/logos/technologies/acronis.svg",
+					"alt": "Acronis"
+				},
+				{
+					"src": "/assets/images/logos/technologies/schneider-electric.svg",
+					"alt": "Schneider Electric"
+				},
+				{
+					"src": "/assets/images/logos/technologies/apc.svg",
+					"alt": "APC"
+				},
+				{
+					"src": "/assets/images/logos/technologies/tp-link-omada.svg",
+					"alt": "TP-Link Omada",
+					"monochrome": true
+				},
+				{
+					"src": "/assets/images/logos/technologies/kaseya.svg",
+					"alt": "Kaseya"
 				}
 			]
 		},

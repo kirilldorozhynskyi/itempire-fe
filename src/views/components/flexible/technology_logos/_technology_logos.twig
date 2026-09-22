@@ -1,0 +1,49 @@
+{#
+ # File: /src/views/components/flexible/technology_logos/_technology_logos.twig
+ # Project: itempire-fe
+ # Version: 1.0.0
+ # Created Date: Tuesday, September 22nd 2026, 9:29:26
+ # Author: Kirill Dorozhynskyi - kyrylo.dorozhynskyi@justdev.org
+ # -----
+ # Last Modified: Tuesday, September 22nd 2026 9:49:58
+ # Modified By: Kirill Dorozhynskyi
+ # -----
+ # Copyright (c) 2026 justDev
+ #}
+
+{% if ce.logos|length %}
+	<section {{ ce.id ? 'id="' ~ ce.id ~ '"' }} class="flex flex-col gap-12 pb-20 lg:gap-20 lg:pb-36">
+		<div class="container flex flex-col items-center gap-8 text-center">
+			<h2 class="max-w-5xl font-serif text-3xl font-semibold leading-tight lg:text-5xl" v-jd-animate>{{ ce.title }}</h2>
+			{% if ce.btn %}
+				{% include paths.btn_ex with {
+					button: ce.btn
+				} %}
+			{% endif %}
+		</div>
+		<benefits :count="{{ ce.logos|length }}" direction="{{ ce.direction|default('left') }}" :pause-on-hover="true" :focus-center="true">
+			{% for logo in ce.logos %}
+				{% set logoSrc = logo.src|default(logo) %}
+				<div class="rfm-child technology-logo flex size-16 shrink-0 items-center justify-center">
+					<div class="technology-logo-tile flex size-full items-center justify-center bg-neutral-100 p-2">
+						<img
+							class="size-full object-contain {{ logo.monochrome ? 'logo-monochrome' }}"
+							src="{{ logoSrc }}"
+							alt="{{ logo.alt|default(
+								logoSrc
+									|split('/')
+									|last
+									|replace({
+										'.svg': '',
+										'-': ' '
+									})
+							) }}"
+							loading="lazy"
+							decoding="async"
+						/>
+					</div>
+				</div>
+			{% endfor %}
+		</benefits>
+	</section>
+{% endif %}

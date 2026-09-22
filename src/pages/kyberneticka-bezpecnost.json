@@ -50,6 +50,32 @@
 		},
 		{
 			"name": "image_with_text",
+			"variant": "expertise",
+			"tag": "Odborné zázemie",
+			"title": "Odbornosť, ktorá stojí<br>za vašou bezpečnosťou",
+			"paragraphs": [
+				"Vlastný tím ITempire spája kompetencie v riadení kybernetickej bezpečnosti a audite. Opatrenia posudzujeme z pohľadu vašej prevádzky, rizík aj požiadaviek auditu."
+			],
+			"credentials": [
+				{
+					"icon": "shield-check",
+					"title": "Manažér kybernetickej bezpečnosti",
+					"text": "Riadenie bezpečnosti a rizík"
+				},
+				{
+					"icon": "file-description",
+					"title": "Certifikovaný audítor ISO 27001",
+					"text": "Systém riadenia informačnej bezpečnosti"
+				},
+				{
+					"icon": "search",
+					"title": "Audítor kybernetickej bezpečnosti",
+					"text": "Posúdenie bezpečnostných opatrení"
+				}
+			]
+		},
+		{
+			"name": "image_with_text",
 			"title": "Menej zraniteľností,<br>viac istoty",
 			"paragraphs": [
 				"Každé opatrenie, ktoré zavedieme, má merateľný dopad na odolnosť vašej firmy, či už ide o správu prístupov, zálohovaciu politiku alebo pripravenosť tímu na incident."
