@@ -1,0 +1,14 @@
+{
+	"template": "views/templates/page.twig",
+	"build": "eshop",
+	"title": "Prázdny košík",
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+	"robots": "noindex, follow",
+	"url": "/cart-empty/",
+	"body_class": "page",
+	"flexible": [
+		{
+			"name": "cart_empty"
+		}
+	]
+}

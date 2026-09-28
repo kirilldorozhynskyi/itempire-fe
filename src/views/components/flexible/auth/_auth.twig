@@ -14,12 +14,29 @@
 <section class="container auth-shell">
 	<div class="auth-content">
 		<div class="auth-form-column">
-			<div class="flex w-full flex-col">
+			<div class="flex w-full flex-col {{ ce.type == 'forgot-password' ? 'gap-8' : '' }}">
 				<h1 class="text-balance font-serif text-3xl font-semibold leading-tight lg:text-5xl">
-					{{ ce.type == 'login' ? 'Prihláste sa' : 'Registrácia' }}
+					{{ ce.type == 'forgot-password' ? 'Zabudli ste heslo?' : ce.type == 'login' ? 'Prihláste sa' : 'Registrácia' }}
 				</h1>
 
-				{% if ce.type == 'login' %}
+				{% if ce.type == 'forgot-password' %}
+					<form class="flex flex-col gap-4" @submit.prevent>
+						<p class="text-subtile">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						</p>
+						<float-field
+							id="forgot-password-email"
+							label="E-mail"
+							name="email"
+							field-type="email"
+							autocomplete="email"
+							placeholder="Zadajte váš e-mail"
+							:required="true"
+						></float-field>
+						<button type="submit" class="btn-purple w-full justify-center">Obnoviť heslo</button>
+						<a href="/login/" class="self-center font-medium text-purple underline">Späť na prihlásenie</a>
+					</form>
+				{% elseif ce.type == 'login' %}
 					<form action="/profile/" class="mt-8 flex flex-col gap-4">
 						<float-field
 							id="login-email"
@@ -37,7 +54,7 @@
 							autocomplete="current-password"
 							placeholder="Zadajte heslo"
 						></float-field>
-						<a href="/" class="self-end text-sm text-purple underline">Zabudli ste heslo?</a>
+						<a href="/forgot-password/" class="self-end text-sm text-purple underline">Zabudli ste heslo?</a>
 						<button type="submit" class="btn-purple w-full justify-center">Prihlásiť sa</button>
 						<p class="text-center">
 							Alebo sa prihláste cez:

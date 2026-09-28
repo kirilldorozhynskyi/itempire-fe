@@ -1,3 +1,4 @@
+import fs from 'node:fs'
 import path from 'node:path'
 import vue from '@vitejs/plugin-vue'
 import vituum from 'vituum'
@@ -40,8 +41,11 @@ const trailingSlashDev = {
 			const requestUrl = new URL(request.originalUrl || request.url, 'http://localhost')
 			const pathname = requestUrl.pathname
 
-			if (pathname !== '/' && pathname.endsWith('/') && !/\/[^/]*\.[^/]+(?:\/|$)/.test(pathname)) {
-				requestUrl.pathname = pathname.slice(0, -1)
+			if (pathname !== '/' && !/\/[^/]*\.[^/]+(?:\/|$)/.test(pathname)) {
+				const pagePath = pathname.replace(/\/$/, '')
+				const indexFile = path.join(import.meta.dirname, rootDir, 'pages', pagePath, 'index.json')
+
+				requestUrl.pathname = fs.existsSync(indexFile) ? `${pagePath}/` : pagePath
 				request.url = requestUrl.pathname + requestUrl.search
 				request.originalUrl = request.url
 			}

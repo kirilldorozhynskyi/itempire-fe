@@ -237,7 +237,6 @@
 
 		{
 			"name": "stepper",
-			"class": "!pt-0",
 			"tag": "SLužby",
 			"title": "<span class='text-subtile'>Zabezpečujeme</span> kompletný servis IT technológií. Od návrhu infraštruktúry až po dlhodobú správu a podporu.",
 			"items": [

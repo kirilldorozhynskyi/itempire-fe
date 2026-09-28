@@ -41,6 +41,7 @@ import Animation from './directives/animation'
 import PageHeader from './components/PageHeader.vue'
 import Benefits from './components/Benefits.vue'
 import ContactForm from './components/ContactForm.vue'
+import CheckoutLogin from './components/CheckoutLogin.vue'
 import CustomScript from './components/CustomScript.vue'
 import CustomScriptSrc from './components/CustomScriptSrc.vue'
 import DropDown from './components/DropDown.vue'
@@ -82,6 +83,7 @@ export const rootComponent = defineComponent({
 		SimpleGallery,
 		Benefits,
 		ContactForm,
+		CheckoutLogin,
 		SliderWrapper,
 		SliderItem,
 		CustomScript,

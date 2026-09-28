@@ -14,36 +14,10 @@
 		<div class="grid grid-cols-1 items-start gap-8 xl:grid-cols-[minmax(0,1fr)_minmax(20rem,1fr)]">
 			<div class="flex flex-col gap-6">
 				<form action="/shipping/" class="flex flex-col gap-5 border border-neutral-300 p-6">
-					<h2 class="font-serif text-2xl font-semibold">Prihláste sa</h2>
-					<float-field
-						id="checkout-login-email"
-						label="E-mail"
-						name="login_email"
-						field-type="email"
-						autocomplete="email"
-						placeholder="Zadajte váš e-mail"
-					></float-field>
-					<float-field
-						id="checkout-login-password"
-						label="Heslo"
-						name="login_password"
-						field-type="password"
-						autocomplete="current-password"
-						placeholder="Zadajte heslo"
-					></float-field>
-					<a href="/" class="self-end text-sm text-purple underline">Zabudli ste heslo?</a>
-					<button type="submit" class="btn-purple w-full justify-center">Prihlásiť sa</button>
-					<p class="text-center">
-						Alebo sa prihláste cez:
-					</p>
-					<div class="grid grid-cols-2 gap-4">
-						<button type="button" class="btn-outline-neutral">{{ sprite('apple') }} Apple</button>
-						<button type="button" class="btn-outline-neutral">{{ sprite('google') }} Google</button>
+					<div class="flex flex-wrap items-center justify-between gap-3">
+						<h2 class="font-serif text-2xl font-semibold">Nemáte u nás účet?</h2>
+						<checkout-login></checkout-login>
 					</div>
-				</form>
-
-				<form action="/shipping/" class="flex flex-col gap-5 border border-neutral-300 p-6">
-					<h2 class="font-serif text-2xl font-semibold">Nemáte u nás účet?</h2>
 					<h3 class="font-serif text-lg font-semibold">Vaše údaje</h3>
 					<float-field
 						id="checkout-email"
