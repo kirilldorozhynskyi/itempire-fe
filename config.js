@@ -73,15 +73,15 @@ const config = {
 			compressionLevel: 9
 		},
 		jpeg: {
-			quality: 20,
+			quality: 90,
 			mozjpeg: true
 		},
 		jpg: {
-			quality: 20,
+			quality: 90,
 			mozjpeg: true
 		},
 		webp: {
-			quality: 75,
+			quality: 90,
 			lossless: false
 		},
 		svg: {
